@@ -33,6 +33,12 @@ venv/
 # Specifically: goals/brief_sunday_audit.md and the three retired DFB specs.
 
 # Runtime JSON artifacts emitted by build_*.py scripts. The build helper
-# re-adds the specific file it just wrote (so the publication IS tracked),
-# but stray test runs shouldn't pollute git history.
+# explicitly re-adds the date JSON it just wrote (so the publication IS
+# tracked), but stray test runs shouldn't pollute git history.
 out/
+# Exception: the manifest is needed by the Vercel prebuild — it lists
+# all published dates so the site doesn't have to call the rate-limited
+# GH trees API.
+!out/manifest.json
+!out/dfb/
+!out/lifestyle/

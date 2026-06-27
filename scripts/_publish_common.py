@@ -190,9 +190,15 @@ def write_and_ship(edition: dict, day: str, today_iso: str, dry_run: bool, skip_
         print(f"[build_lifestyle_json] DRY RUN — would commit + push + deploy", file=sys.stderr)
         return 0
 
+    # Write manifest first (lists all dates), so the JSON commit can
+    # include both the new edition and the updated manifest in one push.
+    _write_manifest()
+
     # Git commit + push.
     try:
-        subprocess.run(["git", "add", str(out_path.relative_to(REPO_ROOT))],
+        subprocess.run(["git", "add",
+                        str(out_path.relative_to(REPO_ROOT)),
+                        "out/manifest.json"],
                        cwd=REPO_ROOT, check=True, timeout=15)
         subprocess.run(["git", "commit", "-m",
                         f"chore(lifestyle): {day} edition {today_iso}"],
@@ -244,6 +250,24 @@ def main() -> int:
     edition = assemble(args.day, today_iso, weekday)
     print(json.dumps(edition, ensure_ascii=False, indent=2))
     return write_and_ship(edition, args.day, today_iso, args.dry_run, args.skip_deploy)
+
+
+def _write_manifest() -> None:
+    """
+    Scan out/dfb/ and out/lifestyle/, write out/manifest.json with the
+    list of all published dates per kind. The website prebuild reads this
+    one file instead of calling the rate-limited GH trees API.
+    """
+    dfb_dir = REPO_ROOT / "out" / "dfb"
+    life_dir = REPO_ROOT / "out" / "lifestyle"
+    manifest = {
+        "generatedAt": datetime.now(timezone.utc).isoformat(),
+        "dfb": sorted(p.stem for p in dfb_dir.glob("*.json") if p.stem != "latest"),
+        "lifestyle": sorted(p.stem for p in life_dir.glob("*.json") if p.stem != "latest"),
+    }
+    out_path = REPO_ROOT / "out" / "manifest.json"
+    out_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+    print(f"[build_lifestyle_json] wrote {out_path}", file=sys.stderr)
 
 
 if __name__ == "__main__":
