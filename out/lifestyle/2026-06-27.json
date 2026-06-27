@@ -2,7 +2,7 @@
   "date": "2026-06-27",
   "weekday": "Saturday",
   "kind": "lifestyle",
-  "generatedAt": "2026-06-27T16:51:20.120756+00:00",
+  "generatedAt": "2026-06-27T18:26:12.274317+00:00",
   "zip": "63025",
   "location": {
     "label": "Eureka, MO",
@@ -12,39 +12,981 @@
   "fetchers": {
     "weather": {
       "status": "ok",
-      "elapsed_s": 0.31
+      "elapsed_s": 0.27
     },
     "stlEvents": {
       "explorestl": {
         "status": "fallback",
-        "elapsed_s": 0.63
+        "elapsed_s": 0.55
       }
     },
     "calendar": {},
     "mail": {},
-    "portfolio": {}
+    "portfolio": {},
+    "treasury": "ok",
+    "health": "ok",
+    "rss": {
+      "stories": 60,
+      "sections": [
+        "ai",
+        "crypto",
+        "mag7"
+      ]
+    }
+  },
+  "rawInputs": {
+    "treasury": {
+      "generatedAt": "2026-06-27T18:26:05.464394+00:00",
+      "status": "ok",
+      "treasury": {
+        "status": "ok",
+        "latestDate": "06/26/2026",
+        "yieldCurve": [
+          {
+            "date": "06/26/2026",
+            "1m": 3.7,
+            "3m": 3.83,
+            "6m": 3.94,
+            "1y": 3.94,
+            "2y": 4.07,
+            "5y": 4.12,
+            "10y": 4.38,
+            "30y": 4.87
+          },
+          {
+            "date": "06/25/2026",
+            "1m": 3.7,
+            "3m": 3.84,
+            "6m": 3.95,
+            "1y": 3.96,
+            "2y": 4.09,
+            "5y": 4.15,
+            "10y": 4.4,
+            "30y": 4.86
+          },
+          {
+            "date": "06/24/2026",
+            "1m": 3.66,
+            "3m": 3.85,
+            "6m": 3.95,
+            "1y": 3.99,
+            "2y": 4.11,
+            "5y": 4.17,
+            "10y": 4.41,
+            "30y": 4.86
+          },
+          {
+            "date": "06/23/2026",
+            "1m": 3.65,
+            "3m": 3.85,
+            "6m": 3.96,
+            "1y": 4.01,
+            "2y": 4.16,
+            "5y": 4.27,
+            "10y": 4.5,
+            "30y": 4.94
+          },
+          {
+            "date": "06/22/2026",
+            "1m": 3.66,
+            "3m": 3.85,
+            "6m": 3.98,
+            "1y": 4.04,
+            "2y": 4.24,
+            "5y": 4.29,
+            "10y": 4.51,
+            "30y": 4.95
+          },
+          {
+            "date": "06/18/2026",
+            "1m": 3.69,
+            "3m": 3.83,
+            "6m": 3.92,
+            "1y": 4.0,
+            "2y": 4.19,
+            "5y": 4.23,
+            "10y": 4.46,
+            "30y": 4.9
+          },
+          {
+            "date": "06/17/2026",
+            "1m": 3.68,
+            "3m": 3.83,
+            "6m": 3.91,
+            "1y": 3.98,
+            "2y": 4.2,
+            "5y": 4.27,
+            "10y": 4.49,
+            "30y": 4.93
+          },
+          {
+            "date": "06/16/2026",
+            "1m": 3.67,
+            "3m": 3.79,
+            "6m": 3.81,
+            "1y": 3.84,
+            "2y": 4.05,
+            "5y": 4.16,
+            "10y": 4.43,
+            "30y": 4.93
+          },
+          {
+            "date": "06/15/2026",
+            "1m": 3.69,
+            "3m": 3.79,
+            "6m": 3.81,
+            "1y": 3.84,
+            "2y": 4.07,
+            "5y": 4.18,
+            "10y": 4.47,
+            "30y": 4.97
+          },
+          {
+            "date": "06/12/2026",
+            "1m": 3.69,
+            "3m": 3.78,
+            "6m": 3.82,
+            "1y": 3.86,
+            "2y": 4.09,
+            "5y": 4.21,
+            "10y": 4.48,
+            "30y": 4.97
+          }
+        ],
+        "source": "home.treasury.gov"
+      },
+      "indexQuotes": {
+        "sp500": {
+          "symbol": "^GSPC",
+          "price": 7354.02,
+          "shortName": "S&P 500",
+          "longName": "S&P 500",
+          "change5dPct": -1.59
+        },
+        "nasdaq": {
+          "symbol": "^IXIC",
+          "price": 25297.617,
+          "shortName": "NASDAQ Composite",
+          "longName": "NASDAQ Composite",
+          "change5dPct": -3.32
+        },
+        "dxy": {
+          "symbol": "DX-Y.NYB",
+          "price": 101.366,
+          "shortName": "ICE US Dollar Index - Index - C",
+          "longName": "US Dollar Index",
+          "change5dPct": 0.34
+        },
+        "btc": {
+          "symbol": "BTC-USD",
+          "price": 60383.12,
+          "shortName": "Bitcoin USD",
+          "longName": "Bitcoin USD",
+          "change5dPct": -3.65
+        }
+      }
+    },
+    "health": {
+      "stories": [
+        {
+          "topic": "cardiac",
+          "title": "Immersive virtual reality with synchronous neurostimulation for upper-limb recovery after stroke: a randomized feasibility trial",
+          "url": "https://www.nature.com/articles/s41591-026-04486-4",
+          "published": "2026-06-26",
+          "source": "nature_medicine",
+          "summary": "Nature Medicine, Published online: 26 June 2026; doi:10.1038/s41591-026-04486-4A multimodal platform combining immersive virtual reality with a synchronous sensory neurostimulation protocol outperformed conventional rehabilitation in individuals with chronic stroke, driving upper-limb motor gains, r"
+        },
+        {
+          "topic": "cardiac",
+          "title": "Cliramitug for depletion of cardiac amyloid transthyretin: long-term follow-up of the NI006-101 trial",
+          "url": "https://www.nature.com/articles/s41591-026-04487-3",
+          "published": "2026-06-26",
+          "source": "nature_medicine",
+          "summary": "Nature Medicine, Published online: 26 June 2026; doi:10.1038/s41591-026-04487-3In an open-label extension study of the NI006-101 trial, in which patients with transthyretin amyloidosis cardiomyopathy were treated with the monoclonal antibody cliramitug, which targets misfolded transthyretin, long-te"
+        },
+        {
+          "topic": "cardiac",
+          "title": "[Comment] Tirofiban and thrombectomy for acute ischaemic stroke",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01232-8/fulltext?rss=yes",
+          "published": "2026-06-24T22:30:01Z",
+          "source": "lancet",
+          "summary": "For more than 10 years, the stroke research community has sought and investigated drugs that could enhance or strengthen the effect of thrombectomy for acute ischaemic stroke caused by large-vessel occlusion. Thrombectomy is a very effective treatment that involves the mechanical removal of the thro"
+        },
+        {
+          "topic": "cardiac",
+          "title": "[Comment] Oral ghrelin receptor agonist: a new promise for the improvement of systolic function",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01023-8/fulltext?rss=yes",
+          "published": "2026-06-24T22:30:01Z",
+          "source": "lancet",
+          "summary": "Heart failure remains a substantial cause of morbidity and mortality. Despite numerous therapeutic advancements over the past decade, there are populations in whom therapy is insufficient, particularly patients with advanced heart failure. Since the inception of therapy for heart failure with reduce"
+        },
+        {
+          "topic": "cardiac",
+          "title": "[Articles] Efficacy and safety of tirofiban after successful endovascular reperfusion in acute ischaemic stroke (ATTRACTION) in China: a multicentre, double-blind, randomised controlled trial",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)00983-9/fulltext?rss=yes",
+          "published": "2026-06-24T22:30:01Z",
+          "source": "lancet",
+          "summary": "In patients with acute ischaemic stroke due to anterior-circulation large-vessel occlusion achieving successful reperfusion, adjunctive tirofiban increased the likelihood of functional independence compared with placebo. Although symptomatic intracranial haemorrhage occurred numerically more often w"
+        },
+        {
+          "topic": "cardiac",
+          "title": "[Articles] Safety, pharmacokinetics, and exploratory efficacy of the oral ghrelin receptor agonist AC01 in heart failure with reduced ejection fraction (GOAL-HF1): a randomised, double-blind, placebo-controlled, phase 1b/2a study",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)00904-9/fulltext?rss=yes",
+          "published": "2026-06-24T22:30:01Z",
+          "source": "lancet",
+          "summary": "In patients with HFrEF, AC01 over 28 days appeared safe and well tolerated, and no major harms were identified in this early-phase study. These findings support further investigations of AC01 in larger studies."
+        },
+        {
+          "topic": "nutrition",
+          "title": "[Comment] Pakistan and Afghanistan: a call for health diplomacy and restraint",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01189-X/fulltext?rss=yes",
+          "published": "2026-06-19T22:30:01Z",
+          "source": "lancet",
+          "summary": "The cross-border conflict affecting the border regions of Afghanistan and Pakistan has received scant global attention amid conflict in the Gulf region and the Middle East. Some 50 million civilians live across the long porous border between the countries,1 and face enormous health and nutrition cha"
+        },
+        {
+          "topic": "cardiac",
+          "title": "[Comment] Can oral GLP-1 receptor agonists ACHIEVE the same as SGLT2 inhibitors?",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01040-8/fulltext?rss=yes",
+          "published": "2026-06-08T18:30:01Z",
+          "source": "lancet",
+          "summary": "Pharmacotherapy for the treatment of type 2 diabetes has changed profoundly. SGLT2 inhibitors and GLP-1 receptor agonists are now well recognised for their improvements in metabolic control and, importantly, cardiovascular and kidney protective effects.1 As a consequence, the glucose-centric treatme"
+        },
+        {
+          "topic": "glp-1",
+          "title": "[Articles] Orforglipron compared with dapagliflozin in adults with type 2 diabetes and inadequate glycaemic control with metformin (ACHIEVE-2): a multicentre, randomised, non-inferiority, open-label, phase 3 trial",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)00800-7/fulltext?rss=yes",
+          "published": "2026-06-08T18:30:01Z",
+          "source": "lancet",
+          "summary": "Orforglipron demonstrated superior glycaemic control compared with dapagliflozin, with a tolerability profile consistent with the GLP-1 receptor agonist class, including increased rates of discontinuation due to adverse events, positioning it as a potential effective oral treatment option for type 2"
+        },
+        {
+          "topic": "glp-1",
+          "title": "[Articles] Cagrilintide–semaglutide (CagriSema) as an add-on to basal insulin in adults with type 2 diabetes (REIMAGINE 3): a randomised, double-blind, placebo-controlled, multicentre, phase 3 study",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01022-6/fulltext?rss=yes",
+          "published": "2026-06-07T21:30:01Z",
+          "source": "lancet",
+          "summary": "Cagrilintide–semaglutide at doses of 2·4 mg each and 1·0 mg each met the primary endpoint, with statistically significant and clinically relevant HbA1c reductions versus placebo when added to basal insulin-treated type 2 diabetes. These reductions were accompanied by robust bodyweight reduction and "
+        },
+        {
+          "topic": "longevity",
+          "title": "[Comment] Advances in ophthalmic artificial intelligence",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)00961-X/fulltext?rss=yes",
+          "published": "2026-05-27T22:30:01Z",
+          "source": "lancet",
+          "summary": "The global burden of eye disease is increasing substantially. WHO estimates that at least 2·2 billion people globally have a visual impairment, of which over 1 billion instances could have been prevented or remain unaddressed.1 As the population ages, the number of people affected by age-related eye"
+        },
+        {
+          "topic": "cardiac",
+          "title": "[Comment] Meningococcal B resurgence in the UK: implications for updating global vaccine strategies",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)00863-9/fulltext?rss=yes",
+          "published": "2026-05-08T22:30:02Z",
+          "source": "lancet",
+          "summary": "Invasive meningococcal disease caused by Neisseria meningitidis is primarily associated with serogroups A, B, C, W, X, and Y and is characterised by its sudden, unpredictable nature and devastating consequences, predominantly affecting children, adolescents, and young adults.1,2 Case-fatality rates "
+        },
+        {
+          "topic": "cardiac",
+          "title": "[Viewpoint] The role of community-based blood pressure screening in improving hypertension care",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)00379-X/fulltext?rss=yes",
+          "published": "2026-05-06T22:30:01Z",
+          "source": "lancet",
+          "summary": "In their recent Viewpoint, Frieden and colleagues argue that mass blood pressure screening diverts resources from improving hypertension care. We present a counterargument that community-based blood pressure screening can complement health-care services by increasing hypertension detection, particul"
+        },
+        {
+          "topic": "cardiac",
+          "title": "[Perspectives] Visualising relationships between the arts and health",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)01918-X/fulltext?rss=yes",
+          "published": "2025-09-23T22:30:02Z",
+          "source": "lancet",
+          "summary": "The American photographer Irving Penn (1917–2009) described a good photograph as one “that communicates a fact, touches the heart and leaves the viewer a changed person for having seen it”. This photography feature bears eloquent testimony to the health initiatives around the world that are supporte"
+        },
+        {
+          "topic": "longevity",
+          "title": "[Comment] Reflecting on progress, envisioning the future for research in Down syndrome",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)00510-0/fulltext?rss=yes",
+          "published": "2025-03-20T23:30:01Z",
+          "source": "lancet",
+          "summary": "Individuals with Down syndrome are at risk for several neurodevelopmental and neurodegenerative conditions that cause cognitive, behavioural, and functional decline across the lifespan.1 Two conditions contributing to these challenges are Down syndrome regression disorder and Down syndrome-related A"
+        },
+        {
+          "topic": "longevity",
+          "title": "[Review] Current approach of the axilla in patients with early-stage breast cancer",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(17)31451-4/fulltext?rss=yes",
+          "published": "2017-08-14T22:30:03Z",
+          "source": "lancet",
+          "summary": "The surgical approach of the axilla in patients with early-stage breast cancer has witnessed considerable evolution during the past 25 years. The previously undisputed gold standard of axillary-lymph-node dissection for staging has now been replaced by sentinel-lymph-node biopsy for patients with cl"
+        }
+      ],
+      "feeds": {
+        "lancet": {
+          "status": "ok",
+          "fetched": 79,
+          "matched": 14
+        },
+        "nature_medicine": {
+          "status": "ok",
+          "fetched": 8,
+          "matched": 2
+        },
+        "jama": {
+          "status": "unreachable",
+          "error": "HTTP Error 404: Not Found"
+        }
+      }
+    },
+    "rss": {
+      "stories": [
+        {
+          "section": "crypto",
+          "title": "DCG-backed Yuma launches fund offering institutional exposure to Bittensor",
+          "url": "https://cointelegraph.com/news/yuma-bittensor-fund-institutional-tao-decentralized-ai?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-06-27T17:59:31+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/yuma-bittensor-fund-institutional-tao-decentralized-ai",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/the-decentralized-ai-of-the-future.jpg\" alt=\"DCG-backed Yuma launches fund offering institutional exposure to Bittensor\" class=\"type:primaryImage\"></p><p>The new investment vehicle arrives as asset managers expand TAO offerings and decentralized AI gains momentum following recent …"
+        },
+        {
+          "section": "crypto",
+          "title": "Coinbase, Circle underperform Big Tech as crypto stock slump deepens",
+          "url": "https://cointelegraph.com/news/crypto-stocks-underperform-tech-market-slump?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-06-27T16:02:38+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/crypto-stocks-underperform-tech-market-slump",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/red-rain-coins.jpg\" alt=\"Coinbase, Circle underperform Big Tech as crypto stock slump deepens\" class=\"type:primaryImage\"></p><p>Coinbase and Circle have posted steeper losses than Oracle, Netflix and Salesforce, highlighting the widening gap between crypto equities and the broader…"
+        },
+        {
+          "section": "crypto",
+          "title": "SecondFi targets two-week recovery after Cardano wallet exploit",
+          "url": "https://cointelegraph.com/news/secondfi-two-week-recovery-cardano-wallet-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-06-27T12:00:56+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/secondfi-two-week-recovery-cardano-wallet-exploit",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-spotlight-for-crypto-recovery.jpg\" alt=\" SecondFi targets two-week recovery after Cardano wallet exploit\" class=\"type:primaryImage\"></p><p>SecondFi says it has completed forensic investigations, taken a final balance snapshot and is preparing to return assets.</p>"
+        },
+        {
+          "section": "crypto",
+          "title": "Here’s what happened in crypto today",
+          "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-06-27T11:30:05+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/what-happened-in-crypto-today",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/article-covers-110589-what-happened-in-crypto-today.jpg\" alt=\"Here’s what happened in crypto today\" class=\"type:primaryImage\"></p><p>Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and c…"
+        },
+        {
+          "section": "crypto",
+          "title": "EU lawmakers urge assessing DeFi, staking, NFT regulation",
+          "url": "https://cointelegraph.com/news/eu-lawmakers-assessing-defi-staking-nft-regulation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-06-27T08:21:04+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/eu-lawmakers-assessing-defi-staking-nft-regulation",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-european-union-moves-to-regulate-crypto-asset-market2.jpg\" alt=\"EU lawmakers urge assessing DeFi, staking, NFT regulation\" class=\"type:primaryImage\"></p><p>The nonbinding report outlines Parliament's vision for future EU crypto regulation and warns against national MiCA rules.<…"
+        },
+        {
+          "section": "crypto",
+          "title": "Securitize expects to raise $400M ahead of public debut",
+          "url": "https://cointelegraph.com/news/securitize-expects-to-raise-400m-ahead-of-public-debut?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-06-27T05:35:27+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/securitize-expects-to-raise-400m-ahead-of-public-debut",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-types-of-consensus-mechanisms-in-blockchain-1.jpg\" alt=\"Securitize expects to raise $400M ahead of public debut\" class=\"type:primaryImage\"></p><p>Securitize says less than 30% of shareholders in the acquisition firm taking it public elected to redeem, giving it an expected $400…"
+        },
+        {
+          "section": "crypto",
+          "title": "SOL reclaims $72, but onchain data flags weakening momentum",
+          "url": "https://cointelegraph.com/markets/sol-reclaims-72-but-onchain-data-flags-weakening-momentum?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-06-27T02:47:59+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/markets/sol-reclaims-72-but-onchain-data-flags-weakening-momentum",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/article-covers-202708-legacy-altcoins-surge-is-a-new-altcoin-season-starting-to-emerge.jpg\" alt=\"SOL reclaims $72, but onchain data flags weakening momentum\" class=\"type:primaryImage\"></p><p>Solana found strength from tokenized stock trading on its network, but a declining TVL and…"
+        },
+        {
+          "section": "crypto",
+          "title": "US senators urge CFTC probe Polymarket over ‘deceptive marketing’",
+          "url": "https://cointelegraph.com/news/us-senators-urge-cftc-probe-polymarket-over-report-deceptive-marketing?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-06-27T02:16:06+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/us-senators-urge-cftc-probe-polymarket-over-report-deceptive-marketing",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/analys-analytics-bisiness-man-woman-up-city-takeoff-cftc.jpg\" alt=\"US senators urge CFTC probe Polymarket over ‘deceptive marketing’\" class=\"type:primaryImage\"></p><p>Senators John Curtis and Adam Schiff are concerned about the CFTC’s enforcement ability after a “troubling” report…"
+        },
+        {
+          "section": "crypto",
+          "title": "Old Ether wallets move 37,806 ETH as whale conviction faces key test at $1.5K",
+          "url": "https://cointelegraph.com/markets/old-ether-wallets-move-37806-eth-as-whale-conviction-faces-key-test?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-06-26T22:18:07+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/markets/old-ether-wallets-move-37806-eth-as-whale-conviction-faces-key-test",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/article-covers-189124-ethereum-bulls-show-interest-as-traders-confidence-in-eth-s-1-8-k-level-improves.jpg\" alt=\"Old Ether wallets move 37,806 ETH as whale conviction faces key test at $1.5K\" class=\"type:primaryImage\"></p><p>Old Ether wallets moved 37,806 ETH as long-term whale pr…"
+        },
+        {
+          "section": "crypto",
+          "title": "Spain regulator rules out extension for non-MiCA compliant crypto companies",
+          "url": "https://cointelegraph.com/news/spain-no-extension-mica-compliance-crypto-companies?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-06-26T19:20:33+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/spain-no-extension-mica-compliance-crypto-companies",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/cryptocurrency-coin-pressure-machine-regulation-government-law-mica-1.jpg\" alt=\"Spain regulator rules out extension for non-MiCA compliant crypto companies\" class=\"type:primaryImage\"></p><p>Carlos San Basilio said that “there will be no exceptions ​or extensions” to the MiCA deadl…"
+        },
+        {
+          "section": "crypto",
+          "title": "SEC, CFTC seek input on unified portfolio margin rules across securities and derivatives",
+          "url": "https://cointelegraph.com/news/sec-cftc-portfolio-margin-rules?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-06-26T17:43:33+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/sec-cftc-portfolio-margin-rules",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-big-executives-that-joined-crypto-cftc-sec.jpg\" alt=\"SEC, CFTC seek input on unified portfolio margin rules across securities and derivatives\" class=\"type:primaryImage\"></p><p>The regulatory agencies are seeking public feedback on cross-margining, collateral and risk management…"
+        },
+        {
+          "section": "crypto",
+          "title": "Ethereum whale who shorted October 2025 crash opens $19.7M ETH short position",
+          "url": "https://cointelegraph.com/markets/ethereum-whale-who-shorted-october-2025-crash-returns-with-a-197m-short-eth-bet?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-06-26T17:02:33+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/markets/ethereum-whale-who-shorted-october-2025-crash-returns-with-a-197m-short-eth-bet",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/article-covers-184294-whales-and-sp-500-are-about-to-crush-ethereum-by-up-to-90-against-bitcoin-expert.jpg\" alt=\"Ethereum whale who shorted October 2025 crash opens $19.7M ETH short position\" class=\"type:primaryImage\"></p><p>Ether’s technical setup points to a potential drop to $1…"
+        },
+        {
+          "section": "crypto",
+          "title": "Crypto Biz: The cost of stacking sats",
+          "url": "https://cointelegraph.com/news/cryptoquant-strategy-bitcoin-cboe-perpetual-futures-chainlink-stablecoin-fx?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-06-26T16:23:34+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/cryptoquant-strategy-bitcoin-cboe-perpetual-futures-chainlink-stablecoin-fx",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/saylor-in-elevator.png\" alt=\"Crypto Biz: The cost of stacking sats\" class=\"type:primaryImage\"></p><p>CryptoQuant urged Strategy to pause Bitcoin buying as dividend coverage shrank. Meanwhile, CBOE eyes crypto perpetual futures and Chainlink joins a stablecoin FX project.</p>"
+        },
+        {
+          "section": "crypto",
+          "title": "US senators push to end CFTC ‘assault’ on state oversight of prediction markets",
+          "url": "https://cointelegraph.com/news/us-senators-cftc-assault-state-prediction-markets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-06-26T16:10:37+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/us-senators-cftc-assault-state-prediction-markets",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-us-cftc-announces-contest-stablecoin.jpg\" alt=\"US senators push to end CFTC ‘assault’ on state oversight of prediction markets\" class=\"type:primaryImage\"></p><p>A group of 17 Democratic senators went after the CFTC’s funding for lawsuits over prediction markets, calling it an “…"
+        },
+        {
+          "section": "crypto",
+          "title": "Bitcoin makes first sub-$60K close since Q3 2024 as tech stocks enter ‘deep bear market’",
+          "url": "https://cointelegraph.com/markets/bitcoin-sees-first-close-below-60k-since-q3-2024-with-tech-stocks-in-deep-bear-market-zone?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-06-26T15:55:56+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/markets/bitcoin-sees-first-close-below-60k-since-q3-2024-with-tech-stocks-in-deep-bear-market-zone",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/analysic-analytics-coat-of-arms-red-bear-bitcoin.jpg\" alt=\"Bitcoin makes first sub-$60K close since Q3 2024 as tech stocks enter ‘deep bear market’\" class=\"type:primaryImage\"></p><p>Bitcoin risked turning $60,000 into resistance as BTC price weakness persisted following another te…"
+        },
+        {
+          "section": "crypto",
+          "title": "Framework Ventures raises $400M to invest beyond crypto: Report",
+          "url": "https://cointelegraph.com/news/framework-ventures-raise-400-million-push-beyond-crypto-ai?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-06-26T13:58:28+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/framework-ventures-raise-400-million-push-beyond-crypto-ai",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-how-stablecoin-yields-could-trigger-deposit-outflows-from-us-banks-according-to-aba2.jpg\" alt=\"Framework Ventures raises $400M to invest beyond crypto: Report\" class=\"type:primaryImage\"></p><p>Framework Ventures raises $400 million fourth fund as it expands into AI, robotics an…"
+        },
+        {
+          "section": "crypto",
+          "title": "Hyperliquid added to Singapore's Investor Alert List",
+          "url": "https://cointelegraph.com/news/hyperliquid-singapore-mas-investor-alert-list?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-06-26T13:11:29+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/hyperliquid-singapore-mas-investor-alert-list",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-singapore-law-kicks-in.jpg\" alt=\"Hyperliquid added to Singapore's Investor Alert List\" class=\"type:primaryImage\"></p><p>Singapore’s financial regulator added Hyperliquid to its Investor Alert List, as a reminder that the decentralized exchange was not licensed in the region.</p…"
+        },
+        {
+          "section": "crypto",
+          "title": "Australian regulator extends no-action period for crypto licensing",
+          "url": "https://cointelegraph.com/news/australia-asic-extends-crypto-licensing-relief-september?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-06-26T12:14:31+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/australia-asic-extends-crypto-licensing-relief-september",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-why-atb-coins-legal-encounter-sets-precedent-in-australia-for-future-securities-violations.jpg\" alt=\"Australian regulator extends no-action period for crypto licensing\" class=\"type:primaryImage\"></p><p>Australia’s financial regulator extended temporary enforcement relief for di…"
+        },
+        {
+          "section": "crypto",
+          "title": "AscendEX withdrawal complaints mount as ZachXBT questions reserves",
+          "url": "https://cointelegraph.com/news/ascendex-exchange-reportedly-faces-liquidity-issues-claims-zachxbt?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-06-26T11:47:02+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/ascendex-exchange-reportedly-faces-liquidity-issues-claims-zachxbt",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-cryptocurrency-data-aggregators-and-fake-exchange-volumes.jpg\" alt=\"AscendEX withdrawal complaints mount as ZachXBT questions reserves\" class=\"type:primaryImage\"></p><p>Multiple users reported delayed AscendEX withdrawals after ZachXBT flagged potential liquidity issues and urg…"
+        },
+        {
+          "section": "crypto",
+          "title": "Bitcoin ETFs post June's biggest daily outflows as BTC falls below $60K",
+          "url": "https://cointelegraph.com/news/bitcoin-etfs-biggest-outflows-june-btc-below-60k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-06-26T09:36:34+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/bitcoin-etfs-biggest-outflows-june-btc-below-60k",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/dollardambawaterfallmoneyfiat11111.jpg\" alt=\"Bitcoin ETFs post June's biggest daily outflows as BTC falls below $60K\" class=\"type:primaryImage\"></p><p>US Bitcoin ETFs recorded $696.3 million in outflows as Bitcoin slipped below $60,000, lifting year-to-date losses to $4.6 billion.…"
+        },
+        {
+          "section": "ai",
+          "title": "Phishing scammers using AI to create convincing fake delivery texts and emails after big online shopping events like Prime Day - ABC7 Chicago",
+          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPT1YzRGZQX0czUS1TVkctaHBhNHZmUU5VbWljNmxiWEx0RFpDOXUtSldPaWJWQUdwcDNoaThOTklNVy1HMWxRWnJmdThWelB5WndfSkJlZkdQc3A2djJRaEZXam9VYlFZZWtiWlU4UVNFSVQ0U3NYY0JjT3lxdDNzdGZRcnNYd2VjdDBqODFja2ZmQVNCN2lKZHp5UmIzSkktOThtT1RoNWw4bDd1cjVwd0JrZjBGNEVzSkdZcTNiLTB0SzZ5SmpDa0RrLXBpQnhpV0FneUFMVl9nNTdhSDZ0aGwyUXpobUnSAewBQVVfeXFMTzZjN1ZBY2t6YjFQOVhmb0duU3k1d2FacE45MkwxcXljekQwc1NWd1lhdl95ZWM2Vmh4U3BxV1BxcUZHWGNkS1VfckZRY1BEUGJ1bE54czgzTTBBbjNxZjJQamx5OHNBbExHaEFMOHE2Tms2dUdVTklLVDA1ZDJ4REdGN2FHLXJXTlFPQ0VPY2ZwTlpFY3dZc0JXQllPMHdRNGRIaFI4X0xXVjR1emhnT3BfS2JzQVZlZm5tbzVaX3V2V1ctaVdNbVlZWTBmNXVwQlRSTjJuY3M3WmUwem9DZDhWeV82aW1SYUFpTnQ?oc=5",
+          "published": "2026-06-27T23:17:00+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPT1YzRGZQX0czUS1TVkctaHBhNHZmUU5VbWljNmxiWEx0RFpDOXUtSldPaWJWQUdwcDNoaThOTklNVy1HMWxRWnJmdThWelB5WndfSkJlZkdQc3A2djJRaEZXam9VYlFZZWtiWlU4UVNFSVQ0U3NYY0JjT3lxdDNzdGZRcnNYd2VjdDBqODFja2ZmQVNCN2lKZHp5UmIzSkktOThtT1RoNWw4bDd1cjVwd0JrZjBGNEVzSkdZcTNiLTB0SzZ5SmpDa0RrLXBpQnhpV0FneUFMVl9nNTdhSDZ0aGwyUXpobUnSAewBQVVfeXFMTzZjN1ZBY2t6YjFQOVhmb0duU3k1d2FacE45MkwxcXljekQwc1NWd1lhdl95ZWM2Vmh4U3BxV1BxcUZHWGNkS1VfckZRY1BEUGJ1bE54czgzTTBBbjNxZjJQamx5OHNBbExHaEFMOHE2Tms2dUdVTklLVDA1ZDJ4REdGN2FHLXJXTlFPQ0VPY2ZwTlpFY3dZc0JXQllPMHdRNGRIaFI4X0xXVjR1emhnT3BfS2JzQVZlZm5tbzVaX3V2V1ctaVdNbVlZWTBmNXVwQlRSTjJuY3M3WmUwem9DZDhWeV82aW1SYUFpTnQ?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMi5wFBVV95cUxPT1YzRGZQX0czUS1TVkctaHBhNHZmUU5VbWljNmxiWEx0RFpDOXUtSldPaWJWQUdwcDNoaThOTklNVy1HMWxRWnJmdThWelB5WndfSkJlZkdQc3A2djJRaEZXam9VYlFZZWtiWlU4UVNFSVQ0U3NYY0JjT3lxdDNzdGZRcnNYd2VjdDBqODFja2ZmQVNCN2lKZHp5UmIzSkktOThtT1RoNWw4bDd1cjVwd0JrZjBGNEVzSkdZcTNiLTB0SzZ5SmpDa0RrLXBpQnhpV0FneUFMVl9nNTdhSDZ0aGwyUXpobUnSAewBQVVfeXFMTzZjN1ZBY2t6YjFQOVhmb0duU3…"
+        },
+        {
+          "section": "ai",
+          "title": "TherapyGo Announces Milestone as AI-Powered Mental Health Platform Expands Access to Licensed Psychologists - markets.businessinsider.com",
+          "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNS0RNaGJ1SnlRNnpmUTZDS3BOanRLd1RVYkNjNGM4cFVyaXFOeVJZeHVHWmNZM1Q5OHo5azI1MzgtYUZoTGlvc1NVR1VETUc0UFJMc3lxNlZxdS10bFlFVVRkZWZUdW1GaVpkX0poenV6SUVNSGJabDZVUG55Wm5WWENyNTc3b0JLbGs4T0cxQ2xvRXk2YVVzRHNVVFNvVDRrWnFmbWFyU2o1M290WElZYzRyRFgtSDJubnd0NjVoUTNNU25rbkNJb182VzdpTzhFMi1Kb3d3anNDYVQxZVBUbmI0Qms1NVpxZTlkQTh2MDVGVGdLNTd5SmtR?oc=5",
+          "published": "2026-06-27T23:13:34+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNS0RNaGJ1SnlRNnpmUTZDS3BOanRLd1RVYkNjNGM4cFVyaXFOeVJZeHVHWmNZM1Q5OHo5azI1MzgtYUZoTGlvc1NVR1VETUc0UFJMc3lxNlZxdS10bFlFVVRkZWZUdW1GaVpkX0poenV6SUVNSGJabDZVUG55Wm5WWENyNTc3b0JLbGs4T0cxQ2xvRXk2YVVzRHNVVFNvVDRrWnFmbWFyU2o1M290WElZYzRyRFgtSDJubnd0NjVoUTNNU25rbkNJb182VzdpTzhFMi1Kb3d3anNDYVQxZVBUbmI0Qms1NVpxZTlkQTh2MDVGVGdLNTd5SmtR?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMi-gFBVV95cUxNS0RNaGJ1SnlRNnpmUTZDS3BOanRLd1RVYkNjNGM4cFVyaXFOeVJZeHVHWmNZM1Q5OHo5azI1MzgtYUZoTGlvc1NVR1VETUc0UFJMc3lxNlZxdS10bFlFVVRkZWZUdW1GaVpkX0poenV6SUVNSGJabDZVUG55Wm5WWENyNTc3b0JLbGs4T0cxQ2xvRXk2YVVzRHNVVFNvVDRrWnFmbWFyU2o1M290WElZYzRyRFgtSDJubnd0NjVoUTNNU25rbkNJb182VzdpTzhFMi1Kb3d3anNDYVQxZVBUbmI0Qms1NVpxZTlkQTh2MDVGVGdLNTd5SmtR?oc=5\" target=…"
+        },
+        {
+          "section": "ai",
+          "title": "In the News: Manjeet Rege on AI and Cybersecurity Threats - Newsroom | University of St. Thomas",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQcDVtM0tlTmVwejFac09FMlR1dl9rd2ctMlZERE4zMjMxWDMzcjZjUVRaT1VKX2FTSmtqZkMwWmY4Ykp0Rm9KYjRJcnhNeW1xYm8zZDdjcndKUnNiNmJ2ME9TbVVhMmJJRHFzSUkxbkxTQ25ibTFLZ0J5SE41ZG9KSTFwWmphaEVMVXdr?oc=5",
+          "published": "2026-06-27T22:51:17+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQcDVtM0tlTmVwejFac09FMlR1dl9rd2ctMlZERE4zMjMxWDMzcjZjUVRaT1VKX2FTSmtqZkMwWmY4Ykp0Rm9KYjRJcnhNeW1xYm8zZDdjcndKUnNiNmJ2ME9TbVVhMmJJRHFzSUkxbkxTQ25ibTFLZ0J5SE41ZG9KSTFwWmphaEVMVXdr?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxQcDVtM0tlTmVwejFac09FMlR1dl9rd2ctMlZERE4zMjMxWDMzcjZjUVRaT1VKX2FTSmtqZkMwWmY4Ykp0Rm9KYjRJcnhNeW1xYm8zZDdjcndKUnNiNmJ2ME9TbVVhMmJJRHFzSUkxbkxTQ25ibTFLZ0J5SE41ZG9KSTFwWmphaEVMVXdr?oc=5\" target=\"_blank\">In the News: Manjeet Rege on AI and Cybersecurity Threats</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Newsroom | University of St. Thomas</font>"
+        },
+        {
+          "section": "ai",
+          "title": "Interdicasterial Commission on Artificial Intelligence meets for the first time - Vatican News",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPYXFhbVdLWHJrWE9PckZ6dWZXbzR4MXdtTi00WVoxYzB0QmZnclY1eUI5VklrNTA2cUF3Q3VGVmk0MjR3Z0JncTJKaUtqNENzNS0zTi1HZFB1MEpfelk3d2dncDA5c0pFZmg5N2pLMEpBZHUyVjU3cUF0emNSangyVTlQbk52alZReW5nQzRWcThXVFRQdjRoMExJd1lFQl9HR1VSemZiclpzZ3RVRmVDTjZnV2tpd1VJYjNZZ3RlQUhiQQ?oc=5",
+          "published": "2026-06-27T22:44:50+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPYXFhbVdLWHJrWE9PckZ6dWZXbzR4MXdtTi00WVoxYzB0QmZnclY1eUI5VklrNTA2cUF3Q3VGVmk0MjR3Z0JncTJKaUtqNENzNS0zTi1HZFB1MEpfelk3d2dncDA5c0pFZmg5N2pLMEpBZHUyVjU3cUF0emNSangyVTlQbk52alZReW5nQzRWcThXVFRQdjRoMExJd1lFQl9HR1VSemZiclpzZ3RVRmVDTjZnV2tpd1VJYjNZZ3RlQUhiQQ?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxPYXFhbVdLWHJrWE9PckZ6dWZXbzR4MXdtTi00WVoxYzB0QmZnclY1eUI5VklrNTA2cUF3Q3VGVmk0MjR3Z0JncTJKaUtqNENzNS0zTi1HZFB1MEpfelk3d2dncDA5c0pFZmg5N2pLMEpBZHUyVjU3cUF0emNSangyVTlQbk52alZReW5nQzRWcThXVFRQdjRoMExJd1lFQl9HR1VSemZiclpzZ3RVRmVDTjZnV2tpd1VJYjNZZ3RlQUhiQQ?oc=5\" target=\"_blank\">Interdicasterial Commission on Artificial Intelligence meets for …"
+        },
+        {
+          "section": "ai",
+          "title": "In the News: Manjeet Rege on Generative AI Job Scams - Newsroom | University of St. Thomas",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNUGxZaHlndl9USU5IendvbktvSGZPVjFCaWs2WHlBeE5adEVrR3VLZjF0UmIzQTB6elNxaTgzYjN1ZnJsX0NyRVZsWmJ5RDlnTTJNWTdxTVJXVVlBVk9FOVJUWGdET01vazF0SUhFdC1DZ1BiSnZjdDlSMldTd3daRURsVjg?oc=5",
+          "published": "2026-06-27T22:40:03+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNUGxZaHlndl9USU5IendvbktvSGZPVjFCaWs2WHlBeE5adEVrR3VLZjF0UmIzQTB6elNxaTgzYjN1ZnJsX0NyRVZsWmJ5RDlnTTJNWTdxTVJXVVlBVk9FOVJUWGdET01vazF0SUhFdC1DZ1BiSnZjdDlSMldTd3daRURsVjg?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxNUGxZaHlndl9USU5IendvbktvSGZPVjFCaWs2WHlBeE5adEVrR3VLZjF0UmIzQTB6elNxaTgzYjN1ZnJsX0NyRVZsWmJ5RDlnTTJNWTdxTVJXVVlBVk9FOVJUWGdET01vazF0SUhFdC1DZ1BiSnZjdDlSMldTd3daRURsVjg?oc=5\" target=\"_blank\">In the News: Manjeet Rege on Generative AI Job Scams</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Newsroom | University of St. Thomas</font>"
+        },
+        {
+          "section": "ai",
+          "title": "Tips on turning AI into a competitive business advantage and not annoying interference - Daily Herald",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPekU1Rlp3Nnp2b1BJS20xSURiYlVucHdwNzRUN1Foa3FlZHE0c01mYWcwUTItQ3BqUmJjTHB5cWw1OVZ0d0J6a3c4dDNXVy1rQkFGY0xxc1Y0dUlPbE1Zc2VPMUJsRUdFdHN5Wm1OYkNqV0tYcUhnaUxfLU9vdWp1RHJCV3ZFazZZMDVZSGlTay1wTlFQRW1VaVVGUVhGUzFSLTRyelBlR0JLWnVHNmFNY0lpS1BjZnNKTERUMjhJWm9ZMDFUSjdmenV5VDZXdw?oc=5",
+          "published": "2026-06-27T22:39:00+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPekU1Rlp3Nnp2b1BJS20xSURiYlVucHdwNzRUN1Foa3FlZHE0c01mYWcwUTItQ3BqUmJjTHB5cWw1OVZ0d0J6a3c4dDNXVy1rQkFGY0xxc1Y0dUlPbE1Zc2VPMUJsRUdFdHN5Wm1OYkNqV0tYcUhnaUxfLU9vdWp1RHJCV3ZFazZZMDVZSGlTay1wTlFQRW1VaVVGUVhGUzFSLTRyelBlR0JLWnVHNmFNY0lpS1BjZnNKTERUMjhJWm9ZMDFUSjdmenV5VDZXdw?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMizgFBVV95cUxPekU1Rlp3Nnp2b1BJS20xSURiYlVucHdwNzRUN1Foa3FlZHE0c01mYWcwUTItQ3BqUmJjTHB5cWw1OVZ0d0J6a3c4dDNXVy1rQkFGY0xxc1Y0dUlPbE1Zc2VPMUJsRUdFdHN5Wm1OYkNqV0tYcUhnaUxfLU9vdWp1RHJCV3ZFazZZMDVZSGlTay1wTlFQRW1VaVVGUVhGUzFSLTRyelBlR0JLWnVHNmFNY0lpS1BjZnNKTERUMjhJWm9ZMDFUSjdmenV5VDZXdw?oc=5\" target=\"_blank\">Tips on turning AI into a competitive business ad…"
+        },
+        {
+          "section": "ai",
+          "title": "Margaret Atwood Talks AI, U.S. Politics & Censorship At Babell Fest - Deadline",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNVm9EeXdlZ3JBdjVaWDdpS0FYTE5vLXZNUG5XcUVuejd1UUY4dXZrQkMyZWJwTVJ2dU5BdlJQbWNDcFBPMG1ySDF2QmQ2MUtiRldoR0NyV2IyMURGNFhNZ0ZmZGdhdFdiUm9LNklJZ0d0LUh4Y05UZ3dBYmJYS0tHZ1RnQkE4dTRLblM2NTh6bTNlQmJlcHc?oc=5",
+          "published": "2026-06-27T22:34:00+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNVm9EeXdlZ3JBdjVaWDdpS0FYTE5vLXZNUG5XcUVuejd1UUY4dXZrQkMyZWJwTVJ2dU5BdlJQbWNDcFBPMG1ySDF2QmQ2MUtiRldoR0NyV2IyMURGNFhNZ0ZmZGdhdFdiUm9LNklJZ0d0LUh4Y05UZ3dBYmJYS0tHZ1RnQkE4dTRLblM2NTh6bTNlQmJlcHc?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxNVm9EeXdlZ3JBdjVaWDdpS0FYTE5vLXZNUG5XcUVuejd1UUY4dXZrQkMyZWJwTVJ2dU5BdlJQbWNDcFBPMG1ySDF2QmQ2MUtiRldoR0NyV2IyMURGNFhNZ0ZmZGdhdFdiUm9LNklJZ0d0LUh4Y05UZ3dBYmJYS0tHZ1RnQkE4dTRLblM2NTh6bTNlQmJlcHc?oc=5\" target=\"_blank\">Margaret Atwood Talks AI, U.S. Politics & Censorship At Babell Fest</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Deadline</font>"
+        },
+        {
+          "section": "ai",
+          "title": "Microsoft Stock (MSFT) Opinions on AI Capital Expenditure Worries - Quiver Quantitative",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQejV6dnFyNjU5eHZLM25NZk1HM2M1blZVNmx6Rl81bVFXUGJvSHF1bDJKZ1hwTGp1WjRZRjUwaXV0S0dVNXZ4YXZwVzcwUzBsME9WVllkZjk3S0YzekNqLXFRWG1wS3Znay1PNllhcmRwaTVqZG1VUWs0UkIzMTFVcU5yb1hKOS1MdXkyd0Jhb1hvY3dQZGdzb0x3Wmp3cml1SE82WQ?oc=5",
+          "published": "2026-06-27T22:32:00+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQejV6dnFyNjU5eHZLM25NZk1HM2M1blZVNmx6Rl81bVFXUGJvSHF1bDJKZ1hwTGp1WjRZRjUwaXV0S0dVNXZ4YXZwVzcwUzBsME9WVllkZjk3S0YzekNqLXFRWG1wS3Znay1PNllhcmRwaTVqZG1VUWs0UkIzMTFVcU5yb1hKOS1MdXkyd0Jhb1hvY3dQZGdzb0x3Wmp3cml1SE82WQ?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQejV6dnFyNjU5eHZLM25NZk1HM2M1blZVNmx6Rl81bVFXUGJvSHF1bDJKZ1hwTGp1WjRZRjUwaXV0S0dVNXZ4YXZwVzcwUzBsME9WVllkZjk3S0YzekNqLXFRWG1wS3Znay1PNllhcmRwaTVqZG1VUWs0UkIzMTFVcU5yb1hKOS1MdXkyd0Jhb1hvY3dQZGdzb0x3Wmp3cml1SE82WQ?oc=5\" target=\"_blank\">Microsoft Stock (MSFT) Opinions on AI Capital Expenditure Worries</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Qu…"
+        },
+        {
+          "section": "ai",
+          "title": "FIT president talks AI, future careers in creative arts - Spectrum News NY1",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPeXpDR1I3QUthYy1fWlNKV2RGUGkzR1BTT1N2ZjZFUVl0S0U4Mk9zNl9ib0p6dzcwWWNma3ctSEMtbWQ3b2N3NE8xNlNLOWp2dHptNk9DWDQyUUNzVTB3Nl8wSHFzVWRXRzlsSHdEcmdpSkhtN3Zpb00yWEt0djYwdkF0NGtRWExxRlBHQ1pYWjFzX2lRZWxMRUJZdTZhd2t5YjQ2NWpsWQ?oc=5",
+          "published": "2026-06-27T22:24:00+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPeXpDR1I3QUthYy1fWlNKV2RGUGkzR1BTT1N2ZjZFUVl0S0U4Mk9zNl9ib0p6dzcwWWNma3ctSEMtbWQ3b2N3NE8xNlNLOWp2dHptNk9DWDQyUUNzVTB3Nl8wSHFzVWRXRzlsSHdEcmdpSkhtN3Zpb00yWEt0djYwdkF0NGtRWExxRlBHQ1pYWjFzX2lRZWxMRUJZdTZhd2t5YjQ2NWpsWQ?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPeXpDR1I3QUthYy1fWlNKV2RGUGkzR1BTT1N2ZjZFUVl0S0U4Mk9zNl9ib0p6dzcwWWNma3ctSEMtbWQ3b2N3NE8xNlNLOWp2dHptNk9DWDQyUUNzVTB3Nl8wSHFzVWRXRzlsSHdEcmdpSkhtN3Zpb00yWEt0djYwdkF0NGtRWExxRlBHQ1pYWjFzX2lRZWxMRUJZdTZhd2t5YjQ2NWpsWQ?oc=5\" target=\"_blank\">FIT president talks AI, future careers in creative arts</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Spectrum…"
+        },
+        {
+          "section": "ai",
+          "title": "What 2 hours at Aspen Ideas revealed about AI - AspenTimes.com",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPN1lEc3pXZjN1SUQ2VVdacTU5SFJ2MHlMZmtmcTIyQVRhWnpzWFp1bWZHRWY4SndobWRsZ2F1RUZoalEzTFJ0VzRVU0haMEpHV2k0dTQ0bmd2ZEthaDVfUThjQmlEd1VrYWdaN2ROb1dKZVctd296Ny1YSXlOdF9jaGpfaVQ?oc=5",
+          "published": "2026-06-27T22:15:09+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPN1lEc3pXZjN1SUQ2VVdacTU5SFJ2MHlMZmtmcTIyQVRhWnpzWFp1bWZHRWY4SndobWRsZ2F1RUZoalEzTFJ0VzRVU0haMEpHV2k0dTQ0bmd2ZEthaDVfUThjQmlEd1VrYWdaN2ROb1dKZVctd296Ny1YSXlOdF9jaGpfaVQ?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxPN1lEc3pXZjN1SUQ2VVdacTU5SFJ2MHlMZmtmcTIyQVRhWnpzWFp1bWZHRWY4SndobWRsZ2F1RUZoalEzTFJ0VzRVU0haMEpHV2k0dTQ0bmd2ZEthaDVfUThjQmlEd1VrYWdaN2ROb1dKZVctd296Ny1YSXlOdF9jaGpfaVQ?oc=5\" target=\"_blank\">What 2 hours at Aspen Ideas revealed about AI</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AspenTimes.com</font>"
+        },
+        {
+          "section": "ai",
+          "title": "Pope Leo says AI cannot be ‘morally neutral’ - KXAN Austin",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1MeGtYX3JvM1NSaDZVU2dEYkhSWThPdFV4aVM2ZnprVGJlcDZjcTg4amU0UEZOeFpQS1Z6QjlHSm1saWJxZlo0MGYzOTJMTW1LaU1MeTFTTDd2dkFwVndnUXFaaGQzZWptNmZaaGlUbl8xNDBDVzNDZtIBfkFVX3lxTE9KTGREQnVSbWdUN0I3aUdkTW05X0J0NjJKTVRTcEFQbmt4Snhqd1F6UEUtQldYQW0tUzViQjFZOGpaelkyNjM3VjZIalhwTkhSMHVyYzI5dEt6MTRqZjRjMlRSN3RKdGJzSUE0U1JIa0taejVzT3pqdEN6S3lFZw?oc=5",
+          "published": "2026-06-27T22:11:08+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1MeGtYX3JvM1NSaDZVU2dEYkhSWThPdFV4aVM2ZnprVGJlcDZjcTg4amU0UEZOeFpQS1Z6QjlHSm1saWJxZlo0MGYzOTJMTW1LaU1MeTFTTDd2dkFwVndnUXFaaGQzZWptNmZaaGlUbl8xNDBDVzNDZtIBfkFVX3lxTE9KTGREQnVSbWdUN0I3aUdkTW05X0J0NjJKTVRTcEFQbmt4Snhqd1F6UEUtQldYQW0tUzViQjFZOGpaelkyNjM3VjZIalhwTkhSMHVyYzI5dEt6MTRqZjRjMlRSN3RKdGJzSUE0U1JIa0taejVzT3pqdEN6S3lFZw?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTE1MeGtYX3JvM1NSaDZVU2dEYkhSWThPdFV4aVM2ZnprVGJlcDZjcTg4amU0UEZOeFpQS1Z6QjlHSm1saWJxZlo0MGYzOTJMTW1LaU1MeTFTTDd2dkFwVndnUXFaaGQzZWptNmZaaGlUbl8xNDBDVzNDZtIBfkFVX3lxTE9KTGREQnVSbWdUN0I3aUdkTW05X0J0NjJKTVRTcEFQbmt4Snhqd1F6UEUtQldYQW0tUzViQjFZOGpaelkyNjM3VjZIalhwTkhSMHVyYzI5dEt6MTRqZjRjMlRSN3RKdGJzSUE0U1JIa0taejVzT3pqdEN6S3lFZw?oc=5\" target=\"_…"
+        },
+        {
+          "section": "ai",
+          "title": "Novara Acquires Ensogo to Expand AI and Sustainability Capabilities - For Construction Pros",
+          "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOWDVSS3NXcDluYm1DUFFMQi1CRHpIVEFvRTVKWGhUeUk5TVYzUU9qdEFIVmdkZUk4bjNfY3NMTldWT0VwU2dpR25MQldlQVNrTmF5QnB6QWFQNWlFcUdtSzc3d09mcURjWHRGeWhnTklSQUEtaHBTTGZUZi1Ld0J5NGFhZUd4bF8xZVFkUDJyWDFfeGhpVFBkOUVGaWs3em5YREVUMVNYOHF4STZHdjltMEowS3U0SzlaWFdfX0JGUG9DRlRKZDRrcGp4QlBZWUFKNlI4S1ltZktlMUNtTlZSYXZzVVpFRGJna2J5RFhXbGNweHJCMlNR?oc=5",
+          "published": "2026-06-27T22:07:19+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOWDVSS3NXcDluYm1DUFFMQi1CRHpIVEFvRTVKWGhUeUk5TVYzUU9qdEFIVmdkZUk4bjNfY3NMTldWT0VwU2dpR25MQldlQVNrTmF5QnB6QWFQNWlFcUdtSzc3d09mcURjWHRGeWhnTklSQUEtaHBTTGZUZi1Ld0J5NGFhZUd4bF8xZVFkUDJyWDFfeGhpVFBkOUVGaWs3em5YREVUMVNYOHF4STZHdjltMEowS3U0SzlaWFdfX0JGUG9DRlRKZDRrcGp4QlBZWUFKNlI4S1ltZktlMUNtTlZSYXZzVVpFRGJna2J5RFhXbGNweHJCMlNR?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMi9wFBVV95cUxOWDVSS3NXcDluYm1DUFFMQi1CRHpIVEFvRTVKWGhUeUk5TVYzUU9qdEFIVmdkZUk4bjNfY3NMTldWT0VwU2dpR25MQldlQVNrTmF5QnB6QWFQNWlFcUdtSzc3d09mcURjWHRGeWhnTklSQUEtaHBTTGZUZi1Ld0J5NGFhZUd4bF8xZVFkUDJyWDFfeGhpVFBkOUVGaWs3em5YREVUMVNYOHF4STZHdjltMEowS3U0SzlaWFdfX0JGUG9DRlRKZDRrcGp4QlBZWUFKNlI4S1ltZktlMUNtTlZSYXZzVVpFRGJna2J5RFhXbGNweHJCMlNR?oc=5\" target=\"_bl…"
+        },
+        {
+          "section": "ai",
+          "title": "Your health insurer shouldn’t decide your treatment plan. That’s what your doctor — and possibly AI — should be doing. - MarketWatch",
+          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQX25ZeUp1c0lOQUNJbGFGbUtVdDJPdUZZbmVzelhPZUdiLXZLVDlCdHdvTlQ1czEyVjRCN2N6UjNrY05SUUJwQ3lIY0VoNklYdlRXVm9TN0R1TVZJVnZlWDlEWkI4LVBCUGtRbC1KckdlaVpHM3BHb0JqdXNZRmdIbEg5VjQzVXhhOF95VWRBT2w1NlJ6aURRYlhNdU1lY094TGVXTGM3bTZpR2hObjhyS01OSFdZcW5QejYwVkY3U0toS2EyR3BReEp1bURZaTRJSVpUR2wyWHlHS21ySF9vRGhVYzZLdmRO?oc=5",
+          "published": "2026-06-27T21:41:00+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQX25ZeUp1c0lOQUNJbGFGbUtVdDJPdUZZbmVzelhPZUdiLXZLVDlCdHdvTlQ1czEyVjRCN2N6UjNrY05SUUJwQ3lIY0VoNklYdlRXVm9TN0R1TVZJVnZlWDlEWkI4LVBCUGtRbC1KckdlaVpHM3BHb0JqdXNZRmdIbEg5VjQzVXhhOF95VWRBT2w1NlJ6aURRYlhNdU1lY094TGVXTGM3bTZpR2hObjhyS01OSFdZcW5QejYwVkY3U0toS2EyR3BReEp1bURZaTRJSVpUR2wyWHlHS21ySF9vRGhVYzZLdmRO?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMi6AFBVV95cUxQX25ZeUp1c0lOQUNJbGFGbUtVdDJPdUZZbmVzelhPZUdiLXZLVDlCdHdvTlQ1czEyVjRCN2N6UjNrY05SUUJwQ3lIY0VoNklYdlRXVm9TN0R1TVZJVnZlWDlEWkI4LVBCUGtRbC1KckdlaVpHM3BHb0JqdXNZRmdIbEg5VjQzVXhhOF95VWRBT2w1NlJ6aURRYlhNdU1lY094TGVXTGM3bTZpR2hObjhyS01OSFdZcW5QejYwVkY3U0toS2EyR3BReEp1bURZaTRJSVpUR2wyWHlHS21ySF9vRGhVYzZLdmRO?oc=5\" target=\"_blank\">Your health ins…"
+        },
+        {
+          "section": "ai",
+          "title": "Machine Learning Is Enabling A New Era For Precision Medicine And Pharmacogenomics - Forbes",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQdW1PZy1IbFgwbFJ2d2V1YkZkRi1ZV3pNVUVrckVqa1dJZFBBdW1mNWt2WFpOd3BXZlNxODU3LUYzdzJNN1RSeEFjdHdGSXY0di1UY3NiSkxXS2lPTmNvTHE2QWs3bkk2VC1yYmhkbzRNaEliekRab0p2WnJGWTRqT3F5bHAyZjV1b2w5UFd3OFhFQU5DM2hTV18yXzRlNXdmRnllYjBscHNncjFHUTEtV3FrVHhkYnJza2pqdVViTDVsa0haT2RBeWxtcw?oc=5",
+          "published": "2026-06-27T21:35:17+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQdW1PZy1IbFgwbFJ2d2V1YkZkRi1ZV3pNVUVrckVqa1dJZFBBdW1mNWt2WFpOd3BXZlNxODU3LUYzdzJNN1RSeEFjdHdGSXY0di1UY3NiSkxXS2lPTmNvTHE2QWs3bkk2VC1yYmhkbzRNaEliekRab0p2WnJGWTRqT3F5bHAyZjV1b2w5UFd3OFhFQU5DM2hTV18yXzRlNXdmRnllYjBscHNncjFHUTEtV3FrVHhkYnJza2pqdVViTDVsa0haT2RBeWxtcw?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMiywFBVV95cUxQdW1PZy1IbFgwbFJ2d2V1YkZkRi1ZV3pNVUVrckVqa1dJZFBBdW1mNWt2WFpOd3BXZlNxODU3LUYzdzJNN1RSeEFjdHdGSXY0di1UY3NiSkxXS2lPTmNvTHE2QWs3bkk2VC1yYmhkbzRNaEliekRab0p2WnJGWTRqT3F5bHAyZjV1b2w5UFd3OFhFQU5DM2hTV18yXzRlNXdmRnllYjBscHNncjFHUTEtV3FrVHhkYnJza2pqdVViTDVsa0haT2RBeWxtcw?oc=5\" target=\"_blank\">Machine Learning Is Enabling A New Era For Precision …"
+        },
+        {
+          "section": "ai",
+          "title": "Nextech3D.ai CEO discusses strongest quarterly results yet - ICYMI - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPRWFlZzR2bnU1NkNFMUw2RkVld1lySDBoWjByNlliakIxX0pjSl9jUGVld1hLRWJBcktsenIxTzQzS1FsSWI4UFZETExTa2xENE83TDM2Vk1FbHZEeXMySHVpWjVmOTVEQWhKYURjZkg3UFNacnM1WFNRcmhEOEo2OGFiQVRHcGVqMG91d0NqRDdLcE02ZEhaY29zWUNLVkwxSVE?oc=5",
+          "published": "2026-06-27T21:30:00+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPRWFlZzR2bnU1NkNFMUw2RkVld1lySDBoWjByNlliakIxX0pjSl9jUGVld1hLRWJBcktsenIxTzQzS1FsSWI4UFZETExTa2xENE83TDM2Vk1FbHZEeXMySHVpWjVmOTVEQWhKYURjZkg3UFNacnM1WFNRcmhEOEo2OGFiQVRHcGVqMG91d0NqRDdLcE02ZEhaY29zWUNLVkwxSVE?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxPRWFlZzR2bnU1NkNFMUw2RkVld1lySDBoWjByNlliakIxX0pjSl9jUGVld1hLRWJBcktsenIxTzQzS1FsSWI4UFZETExTa2xENE83TDM2Vk1FbHZEeXMySHVpWjVmOTVEQWhKYURjZkg3UFNacnM1WFNRcmhEOEo2OGFiQVRHcGVqMG91d0NqRDdLcE02ZEhaY29zWUNLVkwxSVE?oc=5\" target=\"_blank\">Nextech3D.ai CEO discusses strongest quarterly results yet - ICYMI</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yaho…"
+        },
+        {
+          "section": "ai",
+          "title": "Digging Out From The AI Money Pit - Forbes",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPWVlrS2dGRnJFYTVYSnY0V3MwNW04dkxtY2dCSHYzSkJxVWQybm9jdUtFeG5WLXRkbW40MTZrcHZRY1djd0UtTkpfU3JjclBFajZPSmxSZzdLTTNxRVRuOE1CRUIxVUFZa3dWUFhUZjU2UmdqeWVRdmVNcGoxTTZuNW1vaU1NdWwtbVFpRHJCMkRVdw?oc=5",
+          "published": "2026-06-27T21:28:14+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPWVlrS2dGRnJFYTVYSnY0V3MwNW04dkxtY2dCSHYzSkJxVWQybm9jdUtFeG5WLXRkbW40MTZrcHZRY1djd0UtTkpfU3JjclBFajZPSmxSZzdLTTNxRVRuOE1CRUIxVUFZa3dWUFhUZjU2UmdqeWVRdmVNcGoxTTZuNW1vaU1NdWwtbVFpRHJCMkRVdw?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxPWVlrS2dGRnJFYTVYSnY0V3MwNW04dkxtY2dCSHYzSkJxVWQybm9jdUtFeG5WLXRkbW40MTZrcHZRY1djd0UtTkpfU3JjclBFajZPSmxSZzdLTTNxRVRuOE1CRUIxVUFZa3dWUFhUZjU2UmdqeWVRdmVNcGoxTTZuNW1vaU1NdWwtbVFpRHJCMkRVdw?oc=5\" target=\"_blank\">Digging Out From The AI Money Pit</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Forbes</font>"
+        },
+        {
+          "section": "ai",
+          "title": "Digging Out From The AI Money Pit - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPSkpwOU41bU9xbWNJZGlWSVRzRmZhbm5MQldzRkxKUWppNk81emNFSm5VUWVqaHVjbmlWME9Cd1B5eGR5M3poMEliSVNLelgyQ3JlcWFYYUVyTC1WeEtrNWxhaVZOUXRwVW84b0owYjd3ZFI5ZzlXdVVPRjJSTktDUXpFNzQ4a3dTODFLaA?oc=5",
+          "published": "2026-06-27T21:28:14+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPSkpwOU41bU9xbWNJZGlWSVRzRmZhbm5MQldzRkxKUWppNk81emNFSm5VUWVqaHVjbmlWME9Cd1B5eGR5M3poMEliSVNLelgyQ3JlcWFYYUVyTC1WeEtrNWxhaVZOUXRwVW84b0owYjd3ZFI5ZzlXdVVPRjJSTktDUXpFNzQ4a3dTODFLaA?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxPSkpwOU41bU9xbWNJZGlWSVRzRmZhbm5MQldzRkxKUWppNk81emNFSm5VUWVqaHVjbmlWME9Cd1B5eGR5M3poMEliSVNLelgyQ3JlcWFYYUVyTC1WeEtrNWxhaVZOUXRwVW84b0owYjd3ZFI5ZzlXdVVPRjJSTktDUXpFNzQ4a3dTODFLaA?oc=5\" target=\"_blank\">Digging Out From The AI Money Pit</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo Finance</font>"
+        },
+        {
+          "section": "ai",
+          "title": "Diagnostic Accuracy of Artificial Intelligence for Detection of Intracranial Haemorrhage on Non-contrast CT Head: A Systematic Review - Cureus",
+          "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNOHVDTnljNENwd201QzVvZmZTYkthX3hXVjJhRTFWczNUZmVNY3l1SFZSSHdBcWgwZURWYkt2bzI0b1N1Yi1RUEYzVTUwNlhCc2dIZnRySUlGbk81cFQtNWpEZTlzOHRzSWktcEs1RXMxeElnZ1Z6SUE1SG51dlZ2UDFIYXcydTVQbTZrM0pKYnp2OG5vRVpQckZsWUhWSF8zVkFiUWhfNVdCLXU3ekx0UC1BdEpqSzFqU184ODBzVUpjT000RXF3VWlWcGdfU2NGdWs5ZGc2bU5aa1dNaU1TT0RaRTBTX24wdjB0MFp1QWJmWkYxN21MMXVHVG9WZ29T?oc=5",
+          "published": "2026-06-27T21:21:12+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNOHVDTnljNENwd201QzVvZmZTYkthX3hXVjJhRTFWczNUZmVNY3l1SFZSSHdBcWgwZURWYkt2bzI0b1N1Yi1RUEYzVTUwNlhCc2dIZnRySUlGbk81cFQtNWpEZTlzOHRzSWktcEs1RXMxeElnZ1Z6SUE1SG51dlZ2UDFIYXcydTVQbTZrM0pKYnp2OG5vRVpQckZsWUhWSF8zVkFiUWhfNVdCLXU3ekx0UC1BdEpqSzFqU184ODBzVUpjT000RXF3VWlWcGdfU2NGdWs5ZGc2bU5aa1dNaU1TT0RaRTBTX24wdjB0MFp1QWJmWkYxN21MMXVHVG9WZ29T?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMigAJBVV95cUxNOHVDTnljNENwd201QzVvZmZTYkthX3hXVjJhRTFWczNUZmVNY3l1SFZSSHdBcWgwZURWYkt2bzI0b1N1Yi1RUEYzVTUwNlhCc2dIZnRySUlGbk81cFQtNWpEZTlzOHRzSWktcEs1RXMxeElnZ1Z6SUE1SG51dlZ2UDFIYXcydTVQbTZrM0pKYnp2OG5vRVpQckZsWUhWSF8zVkFiUWhfNVdCLXU3ekx0UC1BdEpqSzFqU184ODBzVUpjT000RXF3VWlWcGdfU2NGdWs5ZGc2bU5aa1dNaU1TT0RaRTBTX24wdjB0MFp1QWJmWkYxN21MMXVHVG9WZ29T?oc=5\"…"
+        },
+        {
+          "section": "ai",
+          "title": "How AI-Powered Public Comments Are Entering US Climate Politics - Bloomberg",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOQ0xXZklxN2NQOU5MQ2phcDNfbUtVc3hfazNTVTloR1FjdEdVcjNtenYwWktmMndTQVBSbzRsYjNrbmNKQS05ZFRYVVZMeFFkcHZmSkF1RzdzVnhlenUyRnJGQ3Fabng2RERyUFZWelVQYTJJOG4yV3ZaeEJMWl85blVEVGVrTzR2eVlmcnJ5ZUxkanVBdVA1OWVPZlFWRjhtbWgwUFlBbnlwRWp1MTF6c2Z4N3A3c1Rs?oc=5",
+          "published": "2026-06-27T20:59:34+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOQ0xXZklxN2NQOU5MQ2phcDNfbUtVc3hfazNTVTloR1FjdEdVcjNtenYwWktmMndTQVBSbzRsYjNrbmNKQS05ZFRYVVZMeFFkcHZmSkF1RzdzVnhlenUyRnJGQ3Fabng2RERyUFZWelVQYTJJOG4yV3ZaeEJMWl85blVEVGVrTzR2eVlmcnJ5ZUxkanVBdVA1OWVPZlFWRjhtbWgwUFlBbnlwRWp1MTF6c2Z4N3A3c1Rs?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxOQ0xXZklxN2NQOU5MQ2phcDNfbUtVc3hfazNTVTloR1FjdEdVcjNtenYwWktmMndTQVBSbzRsYjNrbmNKQS05ZFRYVVZMeFFkcHZmSkF1RzdzVnhlenUyRnJGQ3Fabng2RERyUFZWelVQYTJJOG4yV3ZaeEJMWl85blVEVGVrTzR2eVlmcnJ5ZUxkanVBdVA1OWVPZlFWRjhtbWgwUFlBbnlwRWp1MTF6c2Z4N3A3c1Rs?oc=5\" target=\"_blank\">How AI-Powered Public Comments Are Entering US Climate Politics</a>&nbsp;&nbsp;…"
+        },
+        {
+          "section": "ai",
+          "title": "The New PBS Film ‘Declarations’ Connects History To Present Through AI And Storytelling - Forbes",
+          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOdVlQd0V6NFFJX3U2MmFRTmVwM2pHU2NQc2p1V3dHNFlJSmU2c04tSXRaOW4weHItZWNPQ2VTUVJObXlUYlplSUdTUUdOUlotSkVjaVlhTTVxOVlCZWJtenIyRk9aM05ZM3Z6ZF9fV2o4TVNfMWFDTkpkNlcyTFpEN25VQnVFUHRXY0hqTGFhcDlxeEFDRlREV2dfYnhKZEpDa2UzTzd6SzI4bVU1QTBrdlVxanpXMnRUZEoyOERUNDZySEZsVEthNFI4YzByeXd3V19LRFpn?oc=5",
+          "published": "2026-06-27T20:53:28+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOdVlQd0V6NFFJX3U2MmFRTmVwM2pHU2NQc2p1V3dHNFlJSmU2c04tSXRaOW4weHItZWNPQ2VTUVJObXlUYlplSUdTUUdOUlotSkVjaVlhTTVxOVlCZWJtenIyRk9aM05ZM3Z6ZF9fV2o4TVNfMWFDTkpkNlcyTFpEN25VQnVFUHRXY0hqTGFhcDlxeEFDRlREV2dfYnhKZEpDa2UzTzd6SzI4bVU1QTBrdlVxanpXMnRUZEoyOERUNDZySEZsVEthNFI4YzByeXd3V19LRFpn?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxOdVlQd0V6NFFJX3U2MmFRTmVwM2pHU2NQc2p1V3dHNFlJSmU2c04tSXRaOW4weHItZWNPQ2VTUVJObXlUYlplSUdTUUdOUlotSkVjaVlhTTVxOVlCZWJtenIyRk9aM05ZM3Z6ZF9fV2o4TVNfMWFDTkpkNlcyTFpEN25VQnVFUHRXY0hqTGFhcDlxeEFDRlREV2dfYnhKZEpDa2UzTzd6SzI4bVU1QTBrdlVxanpXMnRUZEoyOERUNDZySEZsVEthNFI4YzByeXd3V19LRFpn?oc=5\" target=\"_blank\">The New PBS Film ‘Declarations’ Connect…"
+        },
+        {
+          "section": "mag7",
+          "title": "Palantir (NASDAQ: PLTR) Wins Role As Data Architecture Backbone For US Army's NGC2 Command Program - foreignpolicyjournal.com",
+          "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNR05ObkJ3cDZ0MUxOdmMwR3JWTGxYQUJ0aDczX0IwaGVIbUxlem9NT0pQOXZLUU9lUnlndl85NFg4VXV0UmZYcWxnVllwLUM2bEFDQmloVzZGTUNxbzA0cnpNaGNQSmxSVGhwbWlTQXdPNFJYME1wTllzczI4cmNZQ1F3X3pkMGxSRmJwdTFWTTRLd3p3bXRPZnBuaGIwcUtULV9PZEJ0M3F3NHFzejZITUtTWVczcVpjLVFhaXlmT0owWVpaZGhiZVdtdE5qNU9xVW85RDhDWG94OUU?oc=5",
+          "published": "2026-06-27T23:03:00+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNR05ObkJ3cDZ0MUxOdmMwR3JWTGxYQUJ0aDczX0IwaGVIbUxlem9NT0pQOXZLUU9lUnlndl85NFg4VXV0UmZYcWxnVllwLUM2bEFDQmloVzZGTUNxbzA0cnpNaGNQSmxSVGhwbWlTQXdPNFJYME1wTllzczI4cmNZQ1F3X3pkMGxSRmJwdTFWTTRLd3p3bXRPZnBuaGIwcUtULV9PZEJ0M3F3NHFzejZITUtTWVczcVpjLVFhaXlmT0owWVpaZGhiZVdtdE5qNU9xVW85RDhDWG94OUU?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMi2wFBVV95cUxNR05ObkJ3cDZ0MUxOdmMwR3JWTGxYQUJ0aDczX0IwaGVIbUxlem9NT0pQOXZLUU9lUnlndl85NFg4VXV0UmZYcWxnVllwLUM2bEFDQmloVzZGTUNxbzA0cnpNaGNQSmxSVGhwbWlTQXdPNFJYME1wTllzczI4cmNZQ1F3X3pkMGxSRmJwdTFWTTRLd3p3bXRPZnBuaGIwcUtULV9PZEJ0M3F3NHFzejZITUtTWVczcVpjLVFhaXlmT0owWVpaZGhiZVdtdE5qNU9xVW85RDhDWG94OUU?oc=5\" target=\"_blank\">Palantir (NASDAQ: PLTR) Wins Rol…"
+        },
+        {
+          "section": "mag7",
+          "title": "Apple lobbying to buy memory chips from blacklisted Chinese firm: FT - Seeking Alpha",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOS0JZczhGUF9PU0N4SUpmTVVnX0pYNDhHakUxNWp4NlhCeTU1WHJmazJpMUhnV1NzaDRXb2ZxMHZvZ1l3bU1nemRwTVJhNS1qTjFRLWljNnEwYmJMR3NKdW9KVC15eUYxUmtWM3k4cW1EVDlyLUpYM2V4WExVMi1YXzN4ekFOM3Q4WVhmMUhWeHZDMjQ?oc=5",
+          "published": "2026-06-27T23:00:06+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOS0JZczhGUF9PU0N4SUpmTVVnX0pYNDhHakUxNWp4NlhCeTU1WHJmazJpMUhnV1NzaDRXb2ZxMHZvZ1l3bU1nemRwTVJhNS1qTjFRLWljNnEwYmJMR3NKdW9KVC15eUYxUmtWM3k4cW1EVDlyLUpYM2V4WExVMi1YXzN4ekFOM3Q4WVhmMUhWeHZDMjQ?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxOS0JZczhGUF9PU0N4SUpmTVVnX0pYNDhHakUxNWp4NlhCeTU1WHJmazJpMUhnV1NzaDRXb2ZxMHZvZ1l3bU1nemRwTVJhNS1qTjFRLWljNnEwYmJMR3NKdW9KVC15eUYxUmtWM3k4cW1EVDlyLUpYM2V4WExVMi1YXzN4ekFOM3Q4WVhmMUhWeHZDMjQ?oc=5\" target=\"_blank\">Apple lobbying to buy memory chips from blacklisted Chinese firm: FT</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seeking Alpha</font>"
+        },
+        {
+          "section": "mag7",
+          "title": "Where Will Nvidia Stock Be in 2030? - The Motley Fool",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQTkliTWJfOEZRRHZ6aUJNYlBKd3lVMktib1V0UTVWcVR3U1NXOGdvdGNWeXpISkd3RElObkJmWFlRVUdmMmVlZ0dhT0d1YkpPb2JVdFhKbzB5ZTF6VzdzamZ0WkE3T3lKV1lfdVdvY3JvR3JGNVVwYzVfaGNFTGR1bkI2UQ?oc=5",
+          "published": "2026-06-27T22:27:33+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQTkliTWJfOEZRRHZ6aUJNYlBKd3lVMktib1V0UTVWcVR3U1NXOGdvdGNWeXpISkd3RElObkJmWFlRVUdmMmVlZ0dhT0d1YkpPb2JVdFhKbzB5ZTF6VzdzamZ0WkE3T3lKV1lfdVdvY3JvR3JGNVVwYzVfaGNFTGR1bkI2UQ?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxQTkliTWJfOEZRRHZ6aUJNYlBKd3lVMktib1V0UTVWcVR3U1NXOGdvdGNWeXpISkd3RElObkJmWFlRVUdmMmVlZ0dhT0d1YkpPb2JVdFhKbzB5ZTF6VzdzamZ0WkE3T3lKV1lfdVdvY3JvR3JGNVVwYzVfaGNFTGR1bkI2UQ?oc=5\" target=\"_blank\">Where Will Nvidia Stock Be in 2030?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Motley Fool</font>"
+        },
+        {
+          "section": "mag7",
+          "title": "Tyler, The Creator Continues His War Against AI, Says Meta Glasses ‘Need to Be Banned’ - VICE",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPOHU2RmZ1WTR0cWp6Qlk2SlQ0R3FCeHIxeU04TGVINGo2MTRRWDhicVp6TXBXTHVKVUNYNHVnREF1cFVJSUZFRUhJNWxGbVVtZ0VZZnBhNVBLYmRLUGdGWk5KMXVIU3NWYXdHcHJuTWFWRW1iTWw0S2Rnc25jVWxTS19BdEM0ZWxxaWRBRjM3QXFKRXhTTmctUXBUb1NWckZoek1kWFpObnJMSTZUV0MwSF8xVHNxZw?oc=5",
+          "published": "2026-06-27T22:00:00+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPOHU2RmZ1WTR0cWp6Qlk2SlQ0R3FCeHIxeU04TGVINGo2MTRRWDhicVp6TXBXTHVKVUNYNHVnREF1cFVJSUZFRUhJNWxGbVVtZ0VZZnBhNVBLYmRLUGdGWk5KMXVIU3NWYXdHcHJuTWFWRW1iTWw0S2Rnc25jVWxTS19BdEM0ZWxxaWRBRjM3QXFKRXhTTmctUXBUb1NWckZoek1kWFpObnJMSTZUV0MwSF8xVHNxZw?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPOHU2RmZ1WTR0cWp6Qlk2SlQ0R3FCeHIxeU04TGVINGo2MTRRWDhicVp6TXBXTHVKVUNYNHVnREF1cFVJSUZFRUhJNWxGbVVtZ0VZZnBhNVBLYmRLUGdGWk5KMXVIU3NWYXdHcHJuTWFWRW1iTWw0S2Rnc25jVWxTS19BdEM0ZWxxaWRBRjM3QXFKRXhTTmctUXBUb1NWckZoek1kWFpObnJMSTZUV0MwSF8xVHNxZw?oc=5\" target=\"_blank\">Tyler, The Creator Continues His War Against AI, Says Meta Glasses ‘Need to Be Ba…"
+        },
+        {
+          "section": "mag7",
+          "title": "Meta wants to avoid California fines over child safety failures - Mashable",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1OcVZISWVNdnF3RElrR3dtOWxqbC1kQUZNSE1Vc0NtbTk4VnNrUnhtVnltcFR4TXpPakZCOThmWDVsVDJfUnBTd0tTRGh2Mnp6TDFDQXo0UXlVaEtSRDdoZkZkcU9YejlJNmRLRHNHME03UkdRMDQ2VEJvSmUyU28?oc=5",
+          "published": "2026-06-27T21:29:54+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1OcVZISWVNdnF3RElrR3dtOWxqbC1kQUZNSE1Vc0NtbTk4VnNrUnhtVnltcFR4TXpPakZCOThmWDVsVDJfUnBTd0tTRGh2Mnp6TDFDQXo0UXlVaEtSRDdoZkZkcU9YejlJNmRLRHNHME03UkdRMDQ2VEJvSmUyU28?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE1OcVZISWVNdnF3RElrR3dtOWxqbC1kQUZNSE1Vc0NtbTk4VnNrUnhtVnltcFR4TXpPakZCOThmWDVsVDJfUnBTd0tTRGh2Mnp6TDFDQXo0UXlVaEtSRDdoZkZkcU9YejlJNmRLRHNHME03UkdRMDQ2VEJvSmUyU28?oc=5\" target=\"_blank\">Meta wants to avoid California fines over child safety failures</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Mashable</font>"
+        },
+        {
+          "section": "mag7",
+          "title": "Nvidia: 3 Key Threats Are Gaining Momentum And Visibility (NASDAQ:NVDA) - Seeking Alpha",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNYXdkTmxFRXhvblpJS1dwaTZWSFRXckxMY0hRaUduWUt2bHRhNzE1SkNqVWVxYzdNZGtoZHUxeDdtYmpPNkNpOXVsVU51MHhlMThTUVFyRE82NERNTjdDU25tb1NFdlUyU2FDWlBDU0d0c2FTc29jdXhpbmZKMWZYVTBwUFFFWnV0VmNmcUlzeTJkdFRLVnhvV3hDZFdQQQ?oc=5",
+          "published": "2026-06-27T21:29:34+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMingFBVV95cUxNYXdkTmxFRXhvblpJS1dwaTZWSFRXckxMY0hRaUduWUt2bHRhNzE1SkNqVWVxYzdNZGtoZHUxeDdtYmpPNkNpOXVsVU51MHhlMThTUVFyRE82NERNTjdDU25tb1NFdlUyU2FDWlBDU0d0c2FTc29jdXhpbmZKMWZYVTBwUFFFWnV0VmNmcUlzeTJkdFRLVnhvV3hDZFdQQQ?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxNYXdkTmxFRXhvblpJS1dwaTZWSFRXckxMY0hRaUduWUt2bHRhNzE1SkNqVWVxYzdNZGtoZHUxeDdtYmpPNkNpOXVsVU51MHhlMThTUVFyRE82NERNTjdDU25tb1NFdlUyU2FDWlBDU0d0c2FTc29jdXhpbmZKMWZYVTBwUFFFWnV0VmNmcUlzeTJkdFRLVnhvV3hDZFdQQQ?oc=5\" target=\"_blank\">Nvidia: 3 Key Threats Are Gaining Momentum And Visibility (NASDAQ:NVDA)</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seek…"
+        },
+        {
+          "section": "mag7",
+          "title": "Decibel Expands Onchain Perpetuals Trading To Include Apple (NASDAQ: AAPL), Meta (NASDAQ: META) And Microsoft (NASDAQ: MSFT) With Round-The-Clock Access - foreignpolicyjournal.com",
+          "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxNX2QxOThzRVoxZ2Rpc3JOZFZnZU9WSldFX3djOVRjUWlVT05NM1ItZEdySHJOZmgtU0xfRnJXemFxXzR4c3JBalJtOE9PLUdvVk05U1dsQXJmeXV6eF9uUXhBRElNU1J6Q2pNVHpTMFA1dnpxUGpnSi1wUVFkYVBLbjNvTEJJcW1uNk56UDdxVmlpd1ZscWt6cnljUEJndzFvdkFyd0hXb2dXVWJyZ05zYXEwb1JLeWNiLXZsNUpxNG1BWmtuX1BZdWxNclJ3QzNyRTFkZzZhUVh3M2R5cHdJbGRleTNFX2lDdVdaTlh3S2Q1YTVWLWtWYnpEeVZKajUxOEhpdTNpcFB3X0tDNkJLZGx0ZTQ4cW0zZl93?oc=5",
+          "published": "2026-06-27T21:26:51+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMimwJBVV95cUxNX2QxOThzRVoxZ2Rpc3JOZFZnZU9WSldFX3djOVRjUWlVT05NM1ItZEdySHJOZmgtU0xfRnJXemFxXzR4c3JBalJtOE9PLUdvVk05U1dsQXJmeXV6eF9uUXhBRElNU1J6Q2pNVHpTMFA1dnpxUGpnSi1wUVFkYVBLbjNvTEJJcW1uNk56UDdxVmlpd1ZscWt6cnljUEJndzFvdkFyd0hXb2dXVWJyZ05zYXEwb1JLeWNiLXZsNUpxNG1BWmtuX1BZdWxNclJ3QzNyRTFkZzZhUVh3M2R5cHdJbGRleTNFX2lDdVdaTlh3S2Q1YTVWLWtWYnpEeVZKajUxOEhpdTNpcFB3X0tDNkJLZGx0ZTQ4cW0zZl93?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMimwJBVV95cUxNX2QxOThzRVoxZ2Rpc3JOZFZnZU9WSldFX3djOVRjUWlVT05NM1ItZEdySHJOZmgtU0xfRnJXemFxXzR4c3JBalJtOE9PLUdvVk05U1dsQXJmeXV6eF9uUXhBRElNU1J6Q2pNVHpTMFA1dnpxUGpnSi1wUVFkYVBLbjNvTEJJcW1uNk56UDdxVmlpd1ZscWt6cnljUEJndzFvdkFyd0hXb2dXVWJyZ05zYXEwb1JLeWNiLXZsNUpxNG1BWmtuX1BZdWxNclJ3QzNyRTFkZzZhUVh3M2R5cHdJbGRleTNFX2lDdVdaTlh3S2Q1YTVWLWtWYnpEeVZKajUxOEhpdT…"
+        },
+        {
+          "section": "mag7",
+          "title": "Meta is pushing for social media exclusions in new child safety regulation - Mashable SEA",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPd2lXMUFaQ1ZIaVRHZldQY0xicmVkWmVtaTUxejQ0d05HNU5rMkx0RktIYmFVMndpMFhXd1kzVDhZMHNhalRabGdSXzIyZVJfRzVremZBZERWejdRSXR0ZFRSRDlHdzBmOHNUdThTeUtHclJtT1hQdkhaN002U25mbWVEczEtS0NGd1h5bDNpOFFBWENySmtoSVRfQ2lmMjRjdmtYUDFENVdDZ2RkVGlUM0RqRDB1ZE45WGk4?oc=5",
+          "published": "2026-06-27T21:18:39+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPd2lXMUFaQ1ZIaVRHZldQY0xicmVkWmVtaTUxejQ0d05HNU5rMkx0RktIYmFVMndpMFhXd1kzVDhZMHNhalRabGdSXzIyZVJfRzVremZBZERWejdRSXR0ZFRSRDlHdzBmOHNUdThTeUtHclJtT1hQdkhaN002U25mbWVEczEtS0NGd1h5bDNpOFFBWENySmtoSVRfQ2lmMjRjdmtYUDFENVdDZ2RkVGlUM0RqRDB1ZE45WGk4?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxPd2lXMUFaQ1ZIaVRHZldQY0xicmVkWmVtaTUxejQ0d05HNU5rMkx0RktIYmFVMndpMFhXd1kzVDhZMHNhalRabGdSXzIyZVJfRzVremZBZERWejdRSXR0ZFRSRDlHdzBmOHNUdThTeUtHclJtT1hQdkhaN002U25mbWVEczEtS0NGd1h5bDNpOFFBWENySmtoSVRfQ2lmMjRjdmtYUDFENVdDZ2RkVGlUM0RqRDB1ZE45WGk4?oc=5\" target=\"_blank\">Meta is pushing for social media exclusions in new child safety regulation<…"
+        },
+        {
+          "section": "mag7",
+          "title": "Palantir (PLTR) Selected as Data Architecture for US Army’s NGC2 Program - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNUjhxMW9Zbnp0Nk05MHlRUlhZSnNULThrczJ3MVB1dTBOdVVvMDhFUHhSeXNFT1ZQNEJsRVhVMkxnQnpJaFA4a3cxRVNiemwxdnFVWTdEd3dTaWpYNy1JUzJ2bXhoT0c1eTBpSW43UFZxdHhhU0FodE43aXZTU0FPeHdMbXZ6bnJxb1lVUUlvWmNCc0VlTUdlcl9BOE9YUEM2dHJ0Y3FXQQ?oc=5",
+          "published": "2026-06-27T21:16:08+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNUjhxMW9Zbnp0Nk05MHlRUlhZSnNULThrczJ3MVB1dTBOdVVvMDhFUHhSeXNFT1ZQNEJsRVhVMkxnQnpJaFA4a3cxRVNiemwxdnFVWTdEd3dTaWpYNy1JUzJ2bXhoT0c1eTBpSW43UFZxdHhhU0FodE43aXZTU0FPeHdMbXZ6bnJxb1lVUUlvWmNCc0VlTUdlcl9BOE9YUEM2dHJ0Y3FXQQ?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNUjhxMW9Zbnp0Nk05MHlRUlhZSnNULThrczJ3MVB1dTBOdVVvMDhFUHhSeXNFT1ZQNEJsRVhVMkxnQnpJaFA4a3cxRVNiemwxdnFVWTdEd3dTaWpYNy1JUzJ2bXhoT0c1eTBpSW43UFZxdHhhU0FodE43aXZTU0FPeHdMbXZ6bnJxb1lVUUlvWmNCc0VlTUdlcl9BOE9YUEM2dHJ0Y3FXQQ?oc=5\" target=\"_blank\">Palantir (PLTR) Selected as Data Architecture for US Army’s NGC2 Program</a>&nbsp;&nbsp;<font color=\"…"
+        },
+        {
+          "section": "mag7",
+          "title": "Apple Just Did Something It Wouldn't Even Do During COVID, and Wall Street Is Freaking Out - 24/7 Wall St.",
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOOU9odzQxclFHd0NuZWZfN2h1ek5NaFdheE1hTnQzVEI5RllzdXBWeXo1UGgzV1MxZHY4a0ZuenJQcWVNZXNVUWlZdU1oWF9yOXZSYVhpYllxbHBpSlR4anVxdFh1R0g4LWdkRUdDdHZVSDA3cFJkMUxpZlFlemwxaUtMV3J1MmNnaVJ0WFY3eTdzUnVZNEwzb3VIaWRHNU1pemNXQjRDSUlsSGpNT0pLTGoxRnZGR3BlRHRBdjZrWXRNS0N3elVid3dpQXE?oc=5",
+          "published": "2026-06-27T21:15:28+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOOU9odzQxclFHd0NuZWZfN2h1ek5NaFdheE1hTnQzVEI5RllzdXBWeXo1UGgzV1MxZHY4a0ZuenJQcWVNZXNVUWlZdU1oWF9yOXZSYVhpYllxbHBpSlR4anVxdFh1R0g4LWdkRUdDdHZVSDA3cFJkMUxpZlFlemwxaUtMV3J1MmNnaVJ0WFY3eTdzUnVZNEwzb3VIaWRHNU1pemNXQjRDSUlsSGpNT0pLTGoxRnZGR3BlRHRBdjZrWXRNS0N3elVid3dpQXE?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxOOU9odzQxclFHd0NuZWZfN2h1ek5NaFdheE1hTnQzVEI5RllzdXBWeXo1UGgzV1MxZHY4a0ZuenJQcWVNZXNVUWlZdU1oWF9yOXZSYVhpYllxbHBpSlR4anVxdFh1R0g4LWdkRUdDdHZVSDA3cFJkMUxpZlFlemwxaUtMV3J1MmNnaVJ0WFY3eTdzUnVZNEwzb3VIaWRHNU1pemNXQjRDSUlsSGpNT0pLTGoxRnZGR3BlRHRBdjZrWXRNS0N3elVid3dpQXE?oc=5\" target=\"_blank\">Apple Just Did Something It Wouldn't Even Do During …"
+        },
+        {
+          "section": "mag7",
+          "title": "Multiverse Computing Launches Pulsar 16B Reasoning Model Powered by NVIDIA (NVDA) Architecture - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSzNWZ21oQWxjaGRvTGFtNzA5YmpieXY1VnV6SEF3SGozRzQ3a192TjYzdlpKdGlBTkVPZ1dEdUhHc3MyNUFGSEV6N190aXh3aU1QUG1OYXNBZXp5cjFQdGdJbmlRYmtzeHYyZ0RlWC1zNlFFRXBBVHpFNWQ3emh4YWFBcVdKSWMwbHlXTlhQQzQ2RmV5TEF5amlEZmlRb1hPV1ZZM0hKbw?oc=5",
+          "published": "2026-06-27T21:15:27+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSzNWZ21oQWxjaGRvTGFtNzA5YmpieXY1VnV6SEF3SGozRzQ3a192TjYzdlpKdGlBTkVPZ1dEdUhHc3MyNUFGSEV6N190aXh3aU1QUG1OYXNBZXp5cjFQdGdJbmlRYmtzeHYyZ0RlWC1zNlFFRXBBVHpFNWQ3emh4YWFBcVdKSWMwbHlXTlhQQzQ2RmV5TEF5amlEZmlRb1hPV1ZZM0hKbw?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNSzNWZ21oQWxjaGRvTGFtNzA5YmpieXY1VnV6SEF3SGozRzQ3a192TjYzdlpKdGlBTkVPZ1dEdUhHc3MyNUFGSEV6N190aXh3aU1QUG1OYXNBZXp5cjFQdGdJbmlRYmtzeHYyZ0RlWC1zNlFFRXBBVHpFNWQ3emh4YWFBcVdKSWMwbHlXTlhQQzQ2RmV5TEF5amlEZmlRb1hPV1ZZM0hKbw?oc=5\" target=\"_blank\">Multiverse Computing Launches Pulsar 16B Reasoning Model Powered by NVIDIA (NVDA) Architecture</a>&nb…"
+        },
+        {
+          "section": "mag7",
+          "title": "Is NVIDIA Corporation (NVDA) One of the Best Brain-Computer Interface Stocks to Buy? - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPMmNyZTNFblpYTHJTbFRvckVHTXlfZUo0ckMwTzlCMWZPeWFQUzJIU1ZfWmp4N3hhdzlGelo2UEFoNGFadE8wRFFIdWdGYV9maEFPbHp1TEhrX1lJa0M1ZVQzenVfZnZxLTlIRGFsZnRhaGp5TnF2aVFsMzZxRjlMN1h5SVVfYlVibTdhMk56SlgtLU5UcTFRYUFKcm1GUQ?oc=5",
+          "published": "2026-06-27T20:32:45+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMingFBVV95cUxPMmNyZTNFblpYTHJTbFRvckVHTXlfZUo0ckMwTzlCMWZPeWFQUzJIU1ZfWmp4N3hhdzlGelo2UEFoNGFadE8wRFFIdWdGYV9maEFPbHp1TEhrX1lJa0M1ZVQzenVfZnZxLTlIRGFsZnRhaGp5TnF2aVFsMzZxRjlMN1h5SVVfYlVibTdhMk56SlgtLU5UcTFRYUFKcm1GUQ?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPMmNyZTNFblpYTHJTbFRvckVHTXlfZUo0ckMwTzlCMWZPeWFQUzJIU1ZfWmp4N3hhdzlGelo2UEFoNGFadE8wRFFIdWdGYV9maEFPbHp1TEhrX1lJa0M1ZVQzenVfZnZxLTlIRGFsZnRhaGp5TnF2aVFsMzZxRjlMN1h5SVVfYlVibTdhMk56SlgtLU5UcTFRYUFKcm1GUQ?oc=5\" target=\"_blank\">Is NVIDIA Corporation (NVDA) One of the Best Brain-Computer Interface Stocks to Buy?</a>&nbsp;&nbsp;<font color=\"…"
+        },
+        {
+          "section": "mag7",
+          "title": "Mark Zuckerberg Sure Sounds Eager to Get Young People Hooked on Online Gambling - Mother Jones",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOcVJyVnZLVmlSOEVXb2hFVHZiWHpkaloxbWtPM2RodmxQa0ZZV1QwY0dNYUdSQm9GSXpXOHcteDRtTm1KaUI3c0NlWDBDV2pkWmNLdlYwUDRtcG00NEZuQ0FRR2FJa0F1Y2pQREUwZjZCX2lHcjNmdjQtMWRjWHpwXzlnenFzYUVLaGpndVpR?oc=5",
+          "published": "2026-06-27T20:24:42+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOcVJyVnZLVmlSOEVXb2hFVHZiWHpkaloxbWtPM2RodmxQa0ZZV1QwY0dNYUdSQm9GSXpXOHcteDRtTm1KaUI3c0NlWDBDV2pkWmNLdlYwUDRtcG00NEZuQ0FRR2FJa0F1Y2pQREUwZjZCX2lHcjNmdjQtMWRjWHpwXzlnenFzYUVLaGpndVpR?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxOcVJyVnZLVmlSOEVXb2hFVHZiWHpkaloxbWtPM2RodmxQa0ZZV1QwY0dNYUdSQm9GSXpXOHcteDRtTm1KaUI3c0NlWDBDV2pkWmNLdlYwUDRtcG00NEZuQ0FRR2FJa0F1Y2pQREUwZjZCX2lHcjNmdjQtMWRjWHpwXzlnenFzYUVLaGpndVpR?oc=5\" target=\"_blank\">Mark Zuckerberg Sure Sounds Eager to Get Young People Hooked on Online Gambling</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Mother Jones</font…"
+        },
+        {
+          "section": "mag7",
+          "title": "Meta’s Speech Muzzle - status.news",
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNRGk1UUMwcjVRN2xPVEVBU0Vqb2tCWXpUS3hvMzdWX29OWExLbkxQYXM4RWhpRVpJN2laTF9MaFJTbHZEbUh0V25RNW1KVGxPNTdSd2VlWFFwYmNjcUFud1l3ZWswU2VLM29KWDJ6a1dSV18xc25NTHU3bWcyYlFnTGpDSzk3R3pMWmc?oc=5",
+          "published": "2026-06-27T18:49:14+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNRGk1UUMwcjVRN2xPVEVBU0Vqb2tCWXpUS3hvMzdWX29OWExLbkxQYXM4RWhpRVpJN2laTF9MaFJTbHZEbUh0V25RNW1KVGxPNTdSd2VlWFFwYmNjcUFud1l3ZWswU2VLM29KWDJ6a1dSV18xc25NTHU3bWcyYlFnTGpDSzk3R3pMWmc?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxNRGk1UUMwcjVRN2xPVEVBU0Vqb2tCWXpUS3hvMzdWX29OWExLbkxQYXM4RWhpRVpJN2laTF9MaFJTbHZEbUh0V25RNW1KVGxPNTdSd2VlWFFwYmNjcUFud1l3ZWswU2VLM29KWDJ6a1dSV18xc25NTHU3bWcyYlFnTGpDSzk3R3pMWmc?oc=5\" target=\"_blank\">Meta’s Speech Muzzle</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">status.news</font>"
+        },
+        {
+          "section": "mag7",
+          "title": "Apple (AAPL) Poised for Record Market Share Growth Across Key Pr - GuruFocus",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPaDVKeDRFcTNVY001UnNUS05pSGFXSkxwb2xDckNtN3BHOEFOZ3FRcHhzd1VKbklCMGhvMnd6WlZ4Vm5lOUtwNlRiOFFwcC05VHF3WnlaODUycWN5N1lFOXFnQ3lGRGg0bGxtR21BTTNEYVA4RmVoZGRFcUtWMlJQYmhaejRva254eVdrVUNpcFEzeFJ5UkdfUktMZ0Q5S0wyZmw4bXJiOS1CcnNvd2swZVFn?oc=5",
+          "published": "2026-06-27T18:03:13+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPaDVKeDRFcTNVY001UnNUS05pSGFXSkxwb2xDckNtN3BHOEFOZ3FRcHhzd1VKbklCMGhvMnd6WlZ4Vm5lOUtwNlRiOFFwcC05VHF3WnlaODUycWN5N1lFOXFnQ3lGRGg0bGxtR21BTTNEYVA4RmVoZGRFcUtWMlJQYmhaejRva254eVdrVUNpcFEzeFJ5UkdfUktMZ0Q5S0wyZmw4bXJiOS1CcnNvd2swZVFn?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPaDVKeDRFcTNVY001UnNUS05pSGFXSkxwb2xDckNtN3BHOEFOZ3FRcHhzd1VKbklCMGhvMnd6WlZ4Vm5lOUtwNlRiOFFwcC05VHF3WnlaODUycWN5N1lFOXFnQ3lGRGg0bGxtR21BTTNEYVA4RmVoZGRFcUtWMlJQYmhaejRva254eVdrVUNpcFEzeFJ5UkdfUktMZ0Q5S0wyZmw4bXJiOS1CcnNvd2swZVFn?oc=5\" target=\"_blank\">Apple (AAPL) Poised for Record Market Share Growth Across Key Pr</a>&nbsp;&nbsp;<font c…"
+        },
+        {
+          "section": "mag7",
+          "title": "Is Palantir Technologies (PLTR) Undervalued After Its Selloff Despite Strong Growth And New Contracts? - simplywall.st",
+          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQS20wUW9zYTRFRnpKMmtiOHktdWdsYVJhQzZxYjRLNEhNREdOcnZjVkdXMHNNT0VIaUlGLUNyTDhoVE1keWdOUU1nUXFBTjdzY3pHUUdUTFhrSlRVRE1RZHNHNnZ4YWRWTTRndzVEaUxWX1FaNUl3YXJaVXpYX0FidDVSdjRfSzAxX01IV2ViamJHd1BNOVp5NkswaG1MSFFqd3hRcl80eW44SkIzdzlRY0F5clF3Z0w2Q0djT0RpaEJPcWZ0aktINTJRNmVEcXhvT05kSmx30gHbAUFVX3lxTE9NeGpyRk9kblUzakVFdnlJSU1NUTY2ZzZ4WEg5S2k3cDlwbTJEZEFYX2dxdTV5Q3dZOEF1TDg1TF9VcEJOQllvSjBmMk5GcG8ySE1JZ09WRXNuanJFckM4RDNnUkZSbE5fUjFKTy1FRXB1N24yeXZNNWloR3NweVBpaEdBanJNV0YydWRsMy1UX0hHZjRRT0pzbXZhTll1ZG11S2pEbXhZQWliVjd4Y1hHbUh2OGpTRVR5TWoya0NNVEZjdjdJX19XQ2prWlpZX05iNG5XRllfNmJMZw?oc=5",
+          "published": "2026-06-27T17:34:54+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQS20wUW9zYTRFRnpKMmtiOHktdWdsYVJhQzZxYjRLNEhNREdOcnZjVkdXMHNNT0VIaUlGLUNyTDhoVE1keWdOUU1nUXFBTjdzY3pHUUdUTFhrSlRVRE1RZHNHNnZ4YWRWTTRndzVEaUxWX1FaNUl3YXJaVXpYX0FidDVSdjRfSzAxX01IV2ViamJHd1BNOVp5NkswaG1MSFFqd3hRcl80eW44SkIzdzlRY0F5clF3Z0w2Q0djT0RpaEJPcWZ0aktINTJRNmVEcXhvT05kSmx30gHbAUFVX3lxTE9NeGpyRk9kblUzakVFdnlJSU1NUTY2ZzZ4WEg5S2k3cDlwbTJEZEFYX2dxdTV5Q3dZOEF1TDg1TF9VcEJOQllvSjBmMk5GcG8ySE1JZ09WRXNuanJFckM4RDNnUkZSbE5fUjFKTy1FRXB1N24yeXZNNWloR3NweVBpaEdBanJNV0YydWRsMy1UX0hHZjRRT0pzbXZhTll1ZG11S2pEbXhZQWliVjd4Y1hHbUh2OGpTRVR5TWoya0NNVEZjdjdJX19XQ2prWlpZX05iNG5XRllfNmJMZw?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxQS20wUW9zYTRFRnpKMmtiOHktdWdsYVJhQzZxYjRLNEhNREdOcnZjVkdXMHNNT0VIaUlGLUNyTDhoVE1keWdOUU1nUXFBTjdzY3pHUUdUTFhrSlRVRE1RZHNHNnZ4YWRWTTRndzVEaUxWX1FaNUl3YXJaVXpYX0FidDVSdjRfSzAxX01IV2ViamJHd1BNOVp5NkswaG1MSFFqd3hRcl80eW44SkIzdzlRY0F5clF3Z0w2Q0djT0RpaEJPcWZ0aktINTJRNmVEcXhvT05kSmx30gHbAUFVX3lxTE9NeGpyRk9kblUzakVFdnlJSU1NUTY2ZzZ4WEg5S2k3cDlwbT…"
+        },
+        {
+          "section": "mag7",
+          "title": "$NVIDIA (NVDA.US)$ - Moomoo",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOcm9GQzI5TlB1dFk0dmtKVHRIUUMwTzhxV1JxME84d2VNQ0hDaGFMa2pveFcxYnM4QndOLTlmbkd3bXJ3V3NETlAtS1RYZXNjOWRPdGN5NWxmaEw4ZVZiMS1oMUFmTnQzdFZaVjJKQUhyb3NyS3Z0VUUyZXNhMEU1eGJnM0JlNTQ4Rl83X3pIVkNvTHNpRXZ4aFdvQWdnV3IySUxQRWlYWUI4T2hhOHc?oc=5",
+          "published": "2026-06-27T17:29:01+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOcm9GQzI5TlB1dFk0dmtKVHRIUUMwTzhxV1JxME84d2VNQ0hDaGFMa2pveFcxYnM4QndOLTlmbkd3bXJ3V3NETlAtS1RYZXNjOWRPdGN5NWxmaEw4ZVZiMS1oMUFmTnQzdFZaVjJKQUhyb3NyS3Z0VUUyZXNhMEU1eGJnM0JlNTQ4Rl83X3pIVkNvTHNpRXZ4aFdvQWdnV3IySUxQRWlYWUI4T2hhOHc?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxOcm9GQzI5TlB1dFk0dmtKVHRIUUMwTzhxV1JxME84d2VNQ0hDaGFMa2pveFcxYnM4QndOLTlmbkd3bXJ3V3NETlAtS1RYZXNjOWRPdGN5NWxmaEw4ZVZiMS1oMUFmTnQzdFZaVjJKQUhyb3NyS3Z0VUUyZXNhMEU1eGJnM0JlNTQ4Rl83X3pIVkNvTHNpRXZ4aFdvQWdnV3IySUxQRWlYWUI4T2hhOHc?oc=5\" target=\"_blank\">$NVIDIA (NVDA.US)$</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Moomoo</font>"
+        },
+        {
+          "section": "mag7",
+          "title": "Meta, Mortenson Contribute $12.5K To BeaverFest 2026 - Daily Dodge",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1rN3Z1eWNnOUFGZnRROEdJZXlZQTJrS192Yl9rNUs1b1pHRzUzajV0Z1VId05iajNyX2p1STdzanQxNXpNQ0NmN3h1dmJZYjczN1dRLTh2T1Q2STQtWC01REdWLXhpOGRjV1pzS0JLN3NqZWNBOTJnZ2xiV0V6Q3M?oc=5",
+          "published": "2026-06-27T16:52:00+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1rN3Z1eWNnOUFGZnRROEdJZXlZQTJrS192Yl9rNUs1b1pHRzUzajV0Z1VId05iajNyX2p1STdzanQxNXpNQ0NmN3h1dmJZYjczN1dRLTh2T1Q2STQtWC01REdWLXhpOGRjV1pzS0JLN3NqZWNBOTJnZ2xiV0V6Q3M?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE1rN3Z1eWNnOUFGZnRROEdJZXlZQTJrS192Yl9rNUs1b1pHRzUzajV0Z1VId05iajNyX2p1STdzanQxNXpNQ0NmN3h1dmJZYjczN1dRLTh2T1Q2STQtWC01REdWLXhpOGRjV1pzS0JLN3NqZWNBOTJnZ2xiV0V6Q3M?oc=5\" target=\"_blank\">Meta, Mortenson Contribute $12.5K To BeaverFest 2026</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Daily Dodge</font>"
+        },
+        {
+          "section": "mag7",
+          "title": "Meta loses bid to exclude internal evidence before August trial - Daily Journal",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxObENYYXlxYVN1VDVwNHhNRk10d1lfRWxjdnJSaEdKTnI5Y3dOUHFpeWZpMFFLbWUyWlhvQ2lrSldtT0V5Rk9PMTJIQ2dhRjRQVjZYYmdsWXpLMmtsUFRIZEVrbV9rck5LSkJoOUhINEpDbDZub0ZkOEhaZmVxNEloM0JtMElmZVdjOWdlU1NGUkJpVDVOTFZaTjdrTnZvM1hBaEpSTUhubUpiSUE?oc=5",
+          "published": "2026-06-27T16:46:13+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxObENYYXlxYVN1VDVwNHhNRk10d1lfRWxjdnJSaEdKTnI5Y3dOUHFpeWZpMFFLbWUyWlhvQ2lrSldtT0V5Rk9PMTJIQ2dhRjRQVjZYYmdsWXpLMmtsUFRIZEVrbV9rck5LSkJoOUhINEpDbDZub0ZkOEhaZmVxNEloM0JtMElmZVdjOWdlU1NGUkJpVDVOTFZaTjdrTnZvM1hBaEpSTUhubUpiSUE?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxObENYYXlxYVN1VDVwNHhNRk10d1lfRWxjdnJSaEdKTnI5Y3dOUHFpeWZpMFFLbWUyWlhvQ2lrSldtT0V5Rk9PMTJIQ2dhRjRQVjZYYmdsWXpLMmtsUFRIZEVrbV9rck5LSkJoOUhINEpDbDZub0ZkOEhaZmVxNEloM0JtMElmZVdjOWdlU1NGUkJpVDVOTFZaTjdrTnZvM1hBaEpSTUhubUpiSUE?oc=5\" target=\"_blank\">Meta loses bid to exclude internal evidence before August trial</a>&nbsp;&nbsp;<font color=\"#6f6…"
+        },
+        {
+          "section": "mag7",
+          "title": "Meta Stock Just Got Dangerous Lamine Yamal (JqspKDDVFN) - Fathom Journal",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1vR28wenpSTGJ1aWNxaGcwWmEtb3NjRnc1MkJTNi1pdnlJT1dfT3NFb2plcFNEcWFtR1hZYTlJNUh4V19HR095WGdEX0UtMDgwdF9WTlpXb3hvOTE4OTZFU0RsZUg?oc=5",
+          "published": "2026-06-27T16:38:13+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1vR28wenpSTGJ1aWNxaGcwWmEtb3NjRnc1MkJTNi1pdnlJT1dfT3NFb2plcFNEcWFtR1hZYTlJNUh4V19HR095WGdEX0UtMDgwdF9WTlpXb3hvOTE4OTZFU0RsZUg?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE1vR28wenpSTGJ1aWNxaGcwWmEtb3NjRnc1MkJTNi1pdnlJT1dfT3NFb2plcFNEcWFtR1hZYTlJNUh4V19HR095WGdEX0UtMDgwdF9WTlpXb3hvOTE4OTZFU0RsZUg?oc=5\" target=\"_blank\">Meta Stock Just Got Dangerous Lamine Yamal (JqspKDDVFN)</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Fathom Journal</font>"
+        }
+      ],
+      "feeds": {
+        "seekingalpha": {
+          "status": "ok",
+          "count": 30,
+          "elapsed_s": 0.1
+        },
+        "yahoo_finance": {
+          "status": "ok",
+          "count": 42,
+          "elapsed_s": 0.14
+        },
+        "cointelegraph": {
+          "status": "ok",
+          "count": 30,
+          "elapsed_s": 0.1
+        },
+        "google_news_ai": {
+          "status": "ok",
+          "count": 100,
+          "elapsed_s": 0.63
+        },
+        "google_news_mag7": {
+          "status": "ok",
+          "count": 100,
+          "elapsed_s": 0.6
+        }
+      }
+    }
   },
   "pillars": {
     "weather": {
       "today": {
-        "name": "Today",
+        "name": "This Afternoon",
         "temperature": 85,
         "temperatureUnit": "F",
         "windSpeed": "3 mph",
         "windDirection": "SW",
         "shortForecast": "Chance Showers And Thunderstorms",
         "detailedForecast": "A chance of showers and thunderstorms. Partly sunny, with a high near 85. Southwest wind around 3 mph. Chance of precipitation is 50%.",
-        "precipChance": 53
+        "precipChance": 47
       },
       "tonight": {
         "name": "Tonight",
         "temperature": 71,
         "temperatureUnit": "F",
         "windSpeed": "2 mph",
-        "windDirection": "SE",
+        "windDirection": "S",
         "shortForecast": "Chance Showers And Thunderstorms",
-        "detailedForecast": "A chance of showers and thunderstorms. Partly cloudy, with a low around 71. Southeast wind around 2 mph. Chance of precipitation is 40%.",
-        "precipChance": 35
+        "detailedForecast": "A chance of showers and thunderstorms. Partly cloudy, with a low around 71. South wind around 2 mph. Chance of precipitation is 30%.",
+        "precipChance": 34
       },
       "tomorrow": {
         "name": "Sunday",
@@ -53,15 +995,16 @@
         "windSpeed": "1 to 7 mph",
         "windDirection": "S",
         "shortForecast": "Sunny",
-        "detailedForecast": "Sunny, with a high near 93. Heat index values as high as 109. South wind 1 to 7 mph.",
+        "detailedForecast": "Sunny, with a high near 93. Heat index values as high as 103. South wind 1 to 7 mph.",
         "precipChance": 12
       },
-      "whatToWear": null,
+      "whatToWear": "Light breathable layers + packable rain shell today (53% storm chance after 2pm). Tomorrow's the bigger weather story — 93°F with heat index pushing 109°F. Hydrate aggressively; outdoor plans should shift to morning or after 7pm.",
       "source": "ok"
     },
     "life": {
       "calendarToday": [],
-      "oneThing": null,
+      "oneThing": "Take the Meramec River trail at Pacific Palways (10 min drive) this morning before the storms fire — shaded, paved, dog-friendly. Better default than the couch if you're a fair-weather wanderer.",
+      "oneThingToPlan": null,
       "localPicks": [
         {
           "title": "St. Louis Art Museum",
@@ -94,7 +1037,13 @@
           "venue": "730 Carroll St"
         }
       ],
-      "rec": null
+      "localPicksNextWeekend": null,
+      "rec": {
+        "title": "The Courage to Be Disliked",
+        "type": "book",
+        "blurb": "Re-read on a stormy Saturday morning. Adler's individual psychology lands differently when you're not chasing the next task — sit with the 'task is to be yourself' chapter and the weekend reshapes from there.",
+        "url": "https://www.goodreads.com/book/show/43306267-the-courage-to-be-disliked"
+      }
     },
     "vacation": {
       "upcomingTravel": [],
@@ -119,26 +1068,372 @@
           "distance": "",
           "blurb": "3 hr. Bass Pro flagship + Wonders of Wildlife",
           "region": "Missouri"
-        },
-        {
-          "name": "Eureka Springs, AR",
-          "where": "",
-          "distance": "",
-          "blurb": "4 hr (borderline 3). Victorian town,",
-          "region": "Arkansas"
-        },
-        {
-          "name": "Mammoth Cave National Park",
-          "where": "",
-          "distance": "",
-          "blurb": "4 hr (borderline 3). Largest cave",
-          "region": "Kentucky"
         }
       ]
     },
     "retirement": {
       "portfolioState": {},
-      "planningNote": null
+      "planningNote": "Q3 estimated-tax payment due September 15. When you're back at the desk Monday, block 30 minutes to confirm YTD vs. the cap — easy to lose track of in summer. If TWS is offline, no action."
+    },
+    "executiveSummary": {
+      "opportunities": [
+        {
+          "category": "tax-planning",
+          "title": "Q3 estimated-tax payment due September 15",
+          "blurb": "Calendar block 30 min Mon to confirm YTD income vs. cap. If under-withheld, top up before Sep 15 to avoid Q4 underpayment penalties.",
+          "expiresLabel": "Sep 15"
+        },
+        {
+          "category": "ai-tools",
+          "title": "Anthropic Claude Sonnet 4.5 — agent loop improvements",
+          "blurb": "Sonnet 4.5 brings strong improvements on long-horizon agent tasks. Worth a 30-min spike this weekend to see if it replaces your default Sonnet model for delegate_task work.",
+          "sourceUrl": "https://www.anthropic.com/news"
+        },
+        {
+          "category": "investment",
+          "title": "10Y Treasury at 4.38% — best WTD jump in 2 weeks",
+          "blurb": "Rates pulled back 10bps this week. If you've been waiting to top up I-Bonds or T-Bill ladders, this is a decent entry. Watch for FOMC minutes Sep 17."
+        },
+        {
+          "category": "software",
+          "title": "Vercel deploy hook for scheduled jobs",
+          "blurb": "Now that daily-brief deploys are working end-to-end, consider extending the pattern to other repos (personal dashboards, status pages).",
+          "sourceUrl": "https://vercel.com/docs/deploy-hooks"
+        },
+        {
+          "category": "health",
+          "title": "Strength training window after the storm passes",
+          "blurb": "Storms cut the outdoor window. Indoor session — 30 min compound lifts — is the highest-leverage thing for 60+ longevity per this week's research."
+        }
+      ],
+      "summaryBullets": [
+        "Markets sold off this week — S&P -1.6%, Nasdaq -3.3% on AI multiple compression. Stay the course on your themes.",
+        "Biggest change: MSTR volatility picked up after STRC dividend cut chatter. Not actionable yet, but on the watchlist.",
+        "Ignore: altcoin noise. Bitcoin ETF flows are what matters for your exposure thesis.",
+        "Biggest opportunity: 10Y at 4.38% is your best T-Bill ladder entry in 3 weeks.",
+        "Biggest risk: rate-path repricing into Sep 17 FOMC — could compress MSTR mark if BTC also wobbles."
+      ],
+      "actionItems": [
+        {
+          "rank": 1,
+          "title": "Block 30 min Mon for Q3 estimated-tax YTD review",
+          "rationale": "Sep 15 deadline + easy to lose track of in summer.",
+          "byWhen": "Mon AM",
+          "effortHours": 0.5
+        },
+        {
+          "rank": 2,
+          "title": "Spike-test Sonnet 4.5 on one delegate_task",
+          "rationale": "Frontier-model move is meaningful for retirement-business AI capability.",
+          "byWhen": "Sun",
+          "effortHours": 0.5
+        },
+        {
+          "rank": 3,
+          "title": "Top up T-Bill ladder at 4.38% 10Y",
+          "rationale": "Best rates in 3 weeks; lock before Sep 17 FOMC.",
+          "byWhen": "Tue",
+          "effortHours": 1
+        },
+        {
+          "rank": 4,
+          "title": "Indoor strength session after the storm",
+          "rationale": "Compound lifts are highest-leverage for 60+ longevity per current research.",
+          "byWhen": "Today PM",
+          "effortHours": 0.5
+        },
+        {
+          "rank": 5,
+          "title": "Read Courage to Be Disliked 'task is to be yourself' chapter",
+          "rationale": "Reflective lens for Sunday planning.",
+          "byWhen": "Sun AM",
+          "effortHours": 1
+        }
+      ],
+      "funFact": {
+        "domain": "economics",
+        "fact": "The 10Y Treasury yield has been below the S&P 500 dividend yield for only 4 of the last 25 years. We're in one of those rare windows right now — last seen briefly in mid-2022.",
+        "source": "YCharts historical series"
+      }
+    },
+    "markets": {
+      "indicators": [
+        {
+          "label": "S&P 500",
+          "current": 7354.02,
+          "changeWtd": "-1.59%",
+          "source": "S&P 500"
+        },
+        {
+          "label": "Nasdaq Composite",
+          "current": 25297.617,
+          "changeWtd": "-3.32%",
+          "source": "NASDAQ Composite"
+        },
+        {
+          "label": "Bitcoin",
+          "current": 60383.12,
+          "changeWtd": "-3.65%",
+          "source": "Bitcoin USD"
+        },
+        {
+          "label": "U.S. Dollar (DXY)",
+          "current": 101.366,
+          "changeWtd": "+0.34%",
+          "source": "ICE US Dollar Index - Index - C"
+        },
+        {
+          "label": "3M Treasury",
+          "current": "3.83%",
+          "changeWtd": "+5 bps",
+          "source": "home.treasury.gov"
+        },
+        {
+          "label": "2Y Treasury",
+          "current": "4.07%",
+          "changeWtd": "-2 bps",
+          "source": "home.treasury.gov"
+        },
+        {
+          "label": "10Y Treasury",
+          "current": "4.38%",
+          "changeWtd": "-10 bps",
+          "source": "home.treasury.gov"
+        },
+        {
+          "label": "30Y Treasury",
+          "current": "4.87%",
+          "changeWtd": "-10 bps",
+          "source": "home.treasury.gov"
+        }
+      ],
+      "whyParagraph": "Markets sold off this week as a stronger-than-expected June jobs report pushed the 10Y yield from 4.28% to 4.38% — a 10bps jump in five sessions. The Nasdaq took the worst of it (-3.3%) because long-duration growth names are most sensitive to discount-rate shifts. Bitcoin tracked equities (BTC -3.5%) and the DXY firmed slightly (+0.3%). The setup into next week's CPI print is the key driver — a softer print would unwind the rate move and relieve the multiple compression."
+    },
+    "investingThemes": {
+      "themes": [
+        {
+          "ticker": "PALANT",
+          "displayName": "Palantir (NASDAQ: PLTR) Wins Role As Data Architecture Backbone For US Army's NG",
+          "trendLine": "Palantir (NASDAQ: PLTR) Wins Role As Data Architecture Backbone For US Army's NGC2 Command Program - foreignpolicyjournal.com",
+          "source": "google_news_mag7",
+          "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNR05ObkJ3cDZ0MUxOdmMwR3JWTGxYQUJ0aDczX0IwaGVIbUxlem9NT0pQOXZLUU9lUnlndl85NFg4VXV0UmZYcWxnVllwLUM2bEFDQmloVzZGTUNxbzA0cnpNaGNQSmxSVGhwbWlTQXdPNFJYME1wTllzczI4cmNZQ1F3X3pkMGxSRmJwdTFWTTRLd3p3bXRPZnBuaGIwcUtULV9PZEJ0M3F3NHFzejZITUtTWVczcVpjLVFhaXlmT0owWVpaZGhiZVdtdE5qNU9xVW85RDhDWG94OUU?oc=5"
+        },
+        {
+          "ticker": "APPLE",
+          "displayName": "Apple lobbying to buy memory chips from blacklisted Chinese firm: FT - Seeking A",
+          "trendLine": "Apple lobbying to buy memory chips from blacklisted Chinese firm: FT - Seeking Alpha",
+          "source": "google_news_mag7",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOS0JZczhGUF9PU0N4SUpmTVVnX0pYNDhHakUxNWp4NlhCeTU1WHJmazJpMUhnV1NzaDRXb2ZxMHZvZ1l3bU1nemRwTVJhNS1qTjFRLWljNnEwYmJMR3NKdW9KVC15eUYxUmtWM3k4cW1EVDlyLUpYM2V4WExVMi1YXzN4ekFOM3Q4WVhmMUhWeHZDMjQ?oc=5"
+        },
+        {
+          "ticker": "WHERE",
+          "displayName": "Where Will Nvidia Stock Be in 2030? - The Motley Fool",
+          "trendLine": "Where Will Nvidia Stock Be in 2030? - The Motley Fool",
+          "source": "google_news_mag7",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQTkliTWJfOEZRRHZ6aUJNYlBKd3lVMktib1V0UTVWcVR3U1NXOGdvdGNWeXpISkd3RElObkJmWFlRVUdmMmVlZ0dhT0d1YkpPb2JVdFhKbzB5ZTF6VzdzamZ0WkE3T3lKV1lfdVdvY3JvR3JGNVVwYzVfaGNFTGR1bkI2UQ?oc=5"
+        },
+        {
+          "ticker": "TYLER,",
+          "displayName": "Tyler, The Creator Continues His War Against AI, Says Meta Glasses ‘Need to Be B",
+          "trendLine": "Tyler, The Creator Continues His War Against AI, Says Meta Glasses ‘Need to Be Banned’ - VICE",
+          "source": "google_news_mag7",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPOHU2RmZ1WTR0cWp6Qlk2SlQ0R3FCeHIxeU04TGVINGo2MTRRWDhicVp6TXBXTHVKVUNYNHVnREF1cFVJSUZFRUhJNWxGbVVtZ0VZZnBhNVBLYmRLUGdGWk5KMXVIU3NWYXdHcHJuTWFWRW1iTWw0S2Rnc25jVWxTS19BdEM0ZWxxaWRBRjM3QXFKRXhTTmctUXBUb1NWckZoek1kWFpObnJMSTZUV0MwSF8xVHNxZw?oc=5"
+        },
+        {
+          "ticker": "META",
+          "displayName": "Meta wants to avoid California fines over child safety failures - Mashable",
+          "trendLine": "Meta wants to avoid California fines over child safety failures - Mashable",
+          "source": "google_news_mag7",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1OcVZISWVNdnF3RElrR3dtOWxqbC1kQUZNSE1Vc0NtbTk4VnNrUnhtVnltcFR4TXpPakZCOThmWDVsVDJfUnBTd0tTRGh2Mnp6TDFDQXo0UXlVaEtSRDdoZkZkcU9YejlJNmRLRHNHME03UkdRMDQ2VEJvSmUyU28?oc=5"
+        },
+        {
+          "ticker": "NVIDIA",
+          "displayName": "Nvidia: 3 Key Threats Are Gaining Momentum And Visibility (NASDAQ:NVDA) - Seekin",
+          "trendLine": "Nvidia: 3 Key Threats Are Gaining Momentum And Visibility (NASDAQ:NVDA) - Seeking Alpha",
+          "source": "google_news_mag7",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNYXdkTmxFRXhvblpJS1dwaTZWSFRXckxMY0hRaUduWUt2bHRhNzE1SkNqVWVxYzdNZGtoZHUxeDdtYmpPNkNpOXVsVU51MHhlMThTUVFyRE82NERNTjdDU25tb1NFdlUyU2FDWlBDU0d0c2FTc29jdXhpbmZKMWZYVTBwUFFFWnV0VmNmcUlzeTJkdFRLVnhvV3hDZFdQQQ?oc=5"
+        }
+      ],
+      "noMeaningfulNews": null
+    },
+    "retirementWatch": {
+      "items": [
+        {
+          "topic": "tax-law",
+          "headline": "Q3 estimated-tax payment — Sep 15 deadline",
+          "detail": "Confirm YTD income vs. safe-harbor thresholds. If you're under-withheld by 10%+, top up before Sep 15 to avoid Q4 penalties."
+        },
+        {
+          "topic": "irmaa",
+          "headline": "2026 IRMAA brackets — income thresholds held flat",
+          "detail": "Social Security released 2026 Medicare Part B/D IRMAA brackets last week. Holding flat from 2025 is good news for retirees on Medicare.",
+          "source": "ssa.gov"
+        },
+        {
+          "topic": "roth-conversion",
+          "headline": "Q4 Roth conversion window opening",
+          "detail": "If your ACAs dropped on Jan 1, 2026 income, you have a one-time conversion opportunity before Dec 31. Worth modeling in your retirement income stack."
+        },
+        {
+          "topic": "rmd",
+          "headline": "RMD age moved to 73, then 75 for those born 1960+",
+          "detail": "Confirm your RMD start year against your birth year. Missing the deadline triggers a 25% excise penalty.",
+          "source": "irs.gov"
+        }
+      ],
+      "noMeaningfulNews": null,
+      "planningNote": null,
+      "weekEndReflection": null
+    },
+    "aiLandscape": {
+      "entries": [
+        {
+          "company": "Other",
+          "oneLiner": "Phishing scammers using AI to create convincing fake delivery texts and emails after big online shopping events like Prime Day - ABC7 Chicago",
+          "source": "google_news_ai",
+          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPT1YzRGZQX0czUS1TVkctaHBhNHZmUU5VbWljNmxiWEx0RFpDOXUtSldPaWJWQUdwcDNoaThOTklNVy1HMWxRWnJmdThWelB5WndfSkJlZkdQc3A2djJRaEZXam9VYlFZZWtiWlU4UVNFSVQ0U3NYY0JjT3lxdDNzdGZRcnNYd2VjdDBqODFja2ZmQVNCN2lKZHp5UmIzSkktOThtT1RoNWw4bDd1cjVwd0JrZjBGNEVzSkdZcTNiLTB0SzZ5SmpDa0RrLXBpQnhpV0FneUFMVl9nNTdhSDZ0aGwyUXpobUnSAewBQVVfeXFMTzZjN1ZBY2t6YjFQOVhmb0duU3k1d2FacE45MkwxcXljekQwc1NWd1lhdl95ZWM2Vmh4U3BxV1BxcUZHWGNkS1VfckZRY1BEUGJ1bE54czgzTTBBbjNxZjJQamx5OHNBbExHaEFMOHE2Tms2dUdVTklLVDA1ZDJ4REdGN2FHLXJXTlFPQ0VPY2ZwTlpFY3dZc0JXQllPMHdRNGRIaFI4X0xXVjR1emhnT3BfS2JzQVZlZm5tbzVaX3V2V1ctaVdNbVlZWTBmNXVwQlRSTjJuY3M3WmUwem9DZDhWeV82aW1SYUFpTnQ?oc=5"
+        },
+        {
+          "company": "Other",
+          "oneLiner": "TherapyGo Announces Milestone as AI-Powered Mental Health Platform Expands Access to Licensed Psychologists - markets.businessinsider.com",
+          "source": "google_news_ai",
+          "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNS0RNaGJ1SnlRNnpmUTZDS3BOanRLd1RVYkNjNGM4cFVyaXFOeVJZeHVHWmNZM1Q5OHo5azI1MzgtYUZoTGlvc1NVR1VETUc0UFJMc3lxNlZxdS10bFlFVVRkZWZUdW1GaVpkX0poenV6SUVNSGJabDZVUG55Wm5WWENyNTc3b0JLbGs4T0cxQ2xvRXk2YVVzRHNVVFNvVDRrWnFmbWFyU2o1M290WElZYzRyRFgtSDJubnd0NjVoUTNNU25rbkNJb182VzdpTzhFMi1Kb3d3anNDYVQxZVBUbmI0Qms1NVpxZTlkQTh2MDVGVGdLNTd5SmtR?oc=5"
+        },
+        {
+          "company": "Other",
+          "oneLiner": "In the News: Manjeet Rege on AI and Cybersecurity Threats - Newsroom | University of St. Thomas",
+          "source": "google_news_ai",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQcDVtM0tlTmVwejFac09FMlR1dl9rd2ctMlZERE4zMjMxWDMzcjZjUVRaT1VKX2FTSmtqZkMwWmY4Ykp0Rm9KYjRJcnhNeW1xYm8zZDdjcndKUnNiNmJ2ME9TbVVhMmJJRHFzSUkxbkxTQ25ibTFLZ0J5SE41ZG9KSTFwWmphaEVMVXdr?oc=5"
+        },
+        {
+          "company": "Other",
+          "oneLiner": "Interdicasterial Commission on Artificial Intelligence meets for the first time - Vatican News",
+          "source": "google_news_ai",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPYXFhbVdLWHJrWE9PckZ6dWZXbzR4MXdtTi00WVoxYzB0QmZnclY1eUI5VklrNTA2cUF3Q3VGVmk0MjR3Z0JncTJKaUtqNENzNS0zTi1HZFB1MEpfelk3d2dncDA5c0pFZmg5N2pLMEpBZHUyVjU3cUF0emNSangyVTlQbk52alZReW5nQzRWcThXVFRQdjRoMExJd1lFQl9HR1VSemZiclpzZ3RVRmVDTjZnV2tpd1VJYjNZZ3RlQUhiQQ?oc=5"
+        },
+        {
+          "company": "Other",
+          "oneLiner": "In the News: Manjeet Rege on Generative AI Job Scams - Newsroom | University of St. Thomas",
+          "source": "google_news_ai",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNUGxZaHlndl9USU5IendvbktvSGZPVjFCaWs2WHlBeE5adEVrR3VLZjF0UmIzQTB6elNxaTgzYjN1ZnJsX0NyRVZsWmJ5RDlnTTJNWTdxTVJXVVlBVk9FOVJUWGdET01vazF0SUhFdC1DZ1BiSnZjdDlSMldTd3daRURsVjg?oc=5"
+        },
+        {
+          "company": "Other",
+          "oneLiner": "Tips on turning AI into a competitive business advantage and not annoying interference - Daily Herald",
+          "source": "google_news_ai",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPekU1Rlp3Nnp2b1BJS20xSURiYlVucHdwNzRUN1Foa3FlZHE0c01mYWcwUTItQ3BqUmJjTHB5cWw1OVZ0d0J6a3c4dDNXVy1rQkFGY0xxc1Y0dUlPbE1Zc2VPMUJsRUdFdHN5Wm1OYkNqV0tYcUhnaUxfLU9vdWp1RHJCV3ZFazZZMDVZSGlTay1wTlFQRW1VaVVGUVhGUzFSLTRyelBlR0JLWnVHNmFNY0lpS1BjZnNKTERUMjhJWm9ZMDFUSjdmenV5VDZXdw?oc=5"
+        },
+        {
+          "company": "Other",
+          "oneLiner": "Margaret Atwood Talks AI, U.S. Politics & Censorship At Babell Fest - Deadline",
+          "source": "google_news_ai",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNVm9EeXdlZ3JBdjVaWDdpS0FYTE5vLXZNUG5XcUVuejd1UUY4dXZrQkMyZWJwTVJ2dU5BdlJQbWNDcFBPMG1ySDF2QmQ2MUtiRldoR0NyV2IyMURGNFhNZ0ZmZGdhdFdiUm9LNklJZ0d0LUh4Y05UZ3dBYmJYS0tHZ1RnQkE4dTRLblM2NTh6bTNlQmJlcHc?oc=5"
+        },
+        {
+          "company": "Microsoft",
+          "oneLiner": "Microsoft Stock (MSFT) Opinions on AI Capital Expenditure Worries - Quiver Quantitative",
+          "source": "google_news_ai",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQejV6dnFyNjU5eHZLM25NZk1HM2M1blZVNmx6Rl81bVFXUGJvSHF1bDJKZ1hwTGp1WjRZRjUwaXV0S0dVNXZ4YXZwVzcwUzBsME9WVllkZjk3S0YzekNqLXFRWG1wS3Znay1PNllhcmRwaTVqZG1VUWs0UkIzMTFVcU5yb1hKOS1MdXkyd0Jhb1hvY3dQZGdzb0x3Wmp3cml1SE82WQ?oc=5"
+        }
+      ],
+      "noMeaningfulNews": null
+    },
+    "health": {
+      "entries": [
+        {
+          "topic": "cardiac",
+          "oneLiner": "Immersive virtual reality with synchronous neurostimulation for upper-limb recovery after stroke: a randomized feasibility trial",
+          "source": "nature_medicine",
+          "url": "https://www.nature.com/articles/s41591-026-04486-4"
+        },
+        {
+          "topic": "cardiac",
+          "oneLiner": "Cliramitug for depletion of cardiac amyloid transthyretin: long-term follow-up of the NI006-101 trial",
+          "source": "nature_medicine",
+          "url": "https://www.nature.com/articles/s41591-026-04487-3"
+        },
+        {
+          "topic": "cardiac",
+          "oneLiner": "[Comment] Tirofiban and thrombectomy for acute ischaemic stroke",
+          "source": "lancet",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01232-8/fulltext?rss=yes"
+        },
+        {
+          "topic": "cardiac",
+          "oneLiner": "[Comment] Oral ghrelin receptor agonist: a new promise for the improvement of systolic function",
+          "source": "lancet",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01023-8/fulltext?rss=yes"
+        },
+        {
+          "topic": "cardiac",
+          "oneLiner": "[Articles] Efficacy and safety of tirofiban after successful endovascular reperfusion in acute ischaemic stroke (ATTRACTION) in China: a multicentre, double-blind, randomised controlled trial",
+          "source": "lancet",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)00983-9/fulltext?rss=yes"
+        },
+        {
+          "topic": "cardiac",
+          "oneLiner": "[Articles] Safety, pharmacokinetics, and exploratory efficacy of the oral ghrelin receptor agonist AC01 in heart failure with reduced ejection fraction (GOAL-HF1): a randomised, double-blind, placebo-",
+          "source": "lancet",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)00904-9/fulltext?rss=yes"
+        },
+        {
+          "topic": "nutrition",
+          "oneLiner": "[Comment] Pakistan and Afghanistan: a call for health diplomacy and restraint",
+          "source": "lancet",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01189-X/fulltext?rss=yes"
+        }
+      ],
+      "noMeaningfulNews": null
+    },
+    "worthReading": {
+      "articles": [
+        {
+          "title": "Why long-duration stocks sold off this week",
+          "type": "article",
+          "whyWorthIt": "Clean 5-min read on the rate-path repricing that drove the Nasdaq -3.3%.",
+          "url": "https://www.briefing.com/",
+          "durationLabel": "5 min read"
+        },
+        {
+          "title": "Anthropic's Sonnet 4.5 — what changed for agent loops",
+          "type": "article",
+          "whyWorthIt": "Concrete before/after on long-horizon agent tasks. If you use Claude for delegate_task, this is the read.",
+          "url": "https://www.anthropic.com/news",
+          "durationLabel": "8 min read"
+        },
+        {
+          "title": "Strength training and longevity — what the 60+ cohort should actually do",
+          "type": "article",
+          "whyWorthIt": "Synthesizes the recent JAMA / Nature Medicine research on compound lifts for men over 60. Decision-ready, not a fitness blog.",
+          "url": "https://jamanetwork.com/",
+          "durationLabel": "12 min read"
+        }
+      ],
+      "videos": [
+        {
+          "title": "How Treasury yields move the Mag7 multiples",
+          "type": "youtube",
+          "whyWorthIt": "12-min visual on the discount-rate → multiple-compression mechanism. Useful if you want the intuition for the next FOMC cycle.",
+          "url": "https://www.youtube.com/results?search_query=treasury+yield+mag7+multiples",
+          "durationLabel": "12 min"
+        },
+        {
+          "title": "The Daily podcast (Saturday episode)",
+          "type": "youtube",
+          "whyWorthIt": "Today's episode covers SCOTUS term wrap and a long read on AI datacenter power deals. Best 25 min of your morning.",
+          "url": "https://www.nytimes.com/column/the-daily",
+          "durationLabel": "25 min"
+        }
+      ],
+      "podcasts": [
+        {
+          "title": "Acquired — Berkshire Hathaway annual letter analysis",
+          "type": "podcast",
+          "whyWorthIt": "2-hour deep dive on Buffett's most recent letter. Best investor-mental-model episode of the year, especially relevant for retirement-income strategy.",
+          "url": "https://www.acquired.fm/",
+          "durationLabel": "2 hr"
+        }
+      ]
     }
   }
 }
