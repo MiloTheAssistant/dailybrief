@@ -1,21 +1,26 @@
-# Brief: Weekday Morning — Market + Calendar + Mail (combined)
+# Brief: Weekday Morning — Daily Financial Briefing (DFB)
 
 **Workflow:** `recurring_publish`
 **Schedule:** 7:00 AM America/Chicago, Monday through Friday
-**Destination:** Telegram
-**Audience:** John, single-reader morning brief before market open.
+**Destination:** **Vercel only** (https://daily-brief-tau.vercel.app/)
+**Audience:** John, single-reader morning-coffee brief (≤ 15 minutes).
 
 ---
 
 ## Objective
 
-Produce a single, newsletter-style morning brief that replaces two old jobs:
-- `daily-telegram-briefing` (old, 07:00 — calendar + kanban + gmail)
-- `market-brief-845am-weekdays` (old, 08:45 — market RSS)
+A single daily financial brief that replaces two old jobs:
+- `daily-telegram-briefing` (07:00 — calendar + kanban + gmail)
+- `market-brief-845am-weekdays` (08:45 — market RSS)
 
-This brief is one page on a phone: markets + today's calendar + overnight inbox
-highlights + portfolio snapshot. If something critical is happening, surface
-it; otherwise be terse.
+And expands them into the **7-section DFB chain** (Bitcoin, Strategy,
+Institutional, Creator Intel, AI Race, Retirement, Health) so it
+publishes cleanly to the Vercel DFB site.
+
+**Length cap:** reads in **≤ 15 minutes** with morning coffee. Not an
+all-day research dump. Each section compresses to what's *new* and
+*actionable* — full data lives in source links, the brief surfaces
+signals.
 
 ---
 
@@ -23,116 +28,164 @@ it; otherwise be terse.
 
 1. **Market news (RSS, 5 feeds, deduped)**
    `python3 scripts/fetch_market_brief_rss.py`
-   Returns JSON: `{ "stories": [ { "section": "analyst|movers|crypto|ai|mag7", "title", "url", "published", "source", "snippet" } ] }`
-   Sections in dedup order: `crypto → ai → mag7 → movers → macro → analyst`.
+   Returns: `{ "stories": [{section, title, url, published, source,
+   snippet}] }`. Sections in dedup order: crypto → ai → mag7 →
+   movers → macro → analyst.
 
-2. **Today's calendar events (iCal URL)**
-   `python3 scripts/fetch_proton_calendar.py --from-date $(date +%Y-%m-%d) --to-date $(date +%Y-%m-%d) --plain`
-   Returns JSON: `{ "events": [ { "summary", "start", "end", "location", "all_day" } ] }`
-   **All-day events** should be displayed by date, not by the raw start time
-   (iCal stores them as UTC midnight which renders as 7pm the prior day in CT).
+2. **Today's calendar + week ahead (iCal URL, Proton Calendar)**
+   `python3 scripts/fetch_proton_calendar.py --days 7 --from-date $(date +%Y-%m-%d)`
+   Returns events list. For TODAY section: events where `start` is
+   today (CT). For INSTITUTIONAL/REGULATORY radar: surface any
+   earnings/FOMC/CPI events as calendar-anchored context.
 
-3. **Overnight inbox (Proton Mail, last 18 hours, max 10 unread)**
+3. **Overnight inbox (Proton Mail, last 18h, max 10 unread)**
    `python3 scripts/fetch_proton_mail.py --folder INBOX --unseen-only --since-hours 18 --limit 10`
-   Returns JSON: `{ "envelopes": [ { "id", "subject", "sender", "date", "is_seen" } ] }`
-   If zero unread, say "no overnight email" and stop.
+   Returns envelope list. Skip newsletters/promotional; surface
+   personal/actionable items in HEALTH section ("personal items
+   worth a glance" — health appointments, family emails).
 
-4. **Portfolio snapshot (TWS, account summary + open positions)**
+4. **Portfolio snapshot (TWS/IB Gateway)**
    `python3 scripts/fetch_tws_portfolio.py --plain`
-   Returns JSON: `{ "account_summary": { "NetLiquidation", "BuyingPower", "AvailableFunds", "TotalCashValue", "UnrealizedPnL", "RealizedPnL" }, "positions": [ { "symbol", "qty", "avg_cost", "currency" } ] }`
-   If TWS is not running, the script exits 2 with a clear stderr message — the
-   brief should note "(portfolio: TWS offline)" in the Portfolio section and
-   continue without it.
+   Returns account summary + positions. Drives the RETIREMENT
+   section directly.
 
 ---
 
-## Sections (in order)
+## Sections (in order — matches `BriefingSections` in `Milo/website/src/lib/briefings-types.ts`)
 
-1. **MARKETS** — 2–4 analyst/macro headlines from SeekingAlpha + Yahoo Finance.
-   Lead with the 1-Minute Market Report or top overnight story. Each headline
-   gets a one-line "why it matters."
-2. **CRYPTO / AI / MAG7** — one line each, only if a story is notable.
-3. **PORTFOLIO** — Net liquidation + 1-line state (positions, P&L). No deep
-   analysis — the brief is for awareness, not trading.
-4. **TODAY** — calendar events in chronological order. If empty: "No
-   meetings today." If all-day only: list the dates.
-5. **INBOX** — max 3 unread emails worth a glance. Skip promotional/newsletter
-   content; surface personal or actionable items only.
-6. **WEEK AHEAD** — one line: "N meetings this week" + first one is on DAY at
-   TIME. Pulled from `fetch_proton_calendar.py --days 7` (already ran for
-   the TODAY section, just count + sort).
+### 1. Market Headlines (`MarketHeadlineSection`)
+- 3–5 top overnight stories, deduped across RSS feeds.
+- Each: headline + source pill + one-line "Why it matters."
+- Compress: headline + 1 sentence of why. Don't paste full snippets.
+
+### 2. Bitcoin & Strategy (`BitcoinSection` + `StrategySection`)
+- **BitcoinSection** — BTC price, 24h change, dominance, market cap,
+  fear & greed index, ETF flows (top 3 by inflow), funding signal,
+  on-chain (LTH trend, exchange flow, realized vs spot).
+- **StrategySection** — MSTR/STRK/STRF/STRD/STRC instrument quotes,
+  btcHoldings. Each with price + 24h change.
+- Sources: market RSS for the "what's moving" framing; the helper
+  script `build_dfb_json.py` wires any live data source the model
+  has access to (CoinGecko / Coinstats via fetch).
+
+### 3. Institutional (`InstitutionalSection`)
+- ETF league table (top 5 by flow), BlackRock/Fidelity note,
+  regulatory radar (SEC/CFTC actions in RSS), sovereign news
+  (when surfaced), TradFi note (bank earnings or notable moves).
+- If RSS is sparse: 1-line "quiet institutional day."
+
+### 4. Creator Intel (`CreatorIntelSection`)
+- Top 2–3 videos from finance creators covering overnight moves.
+  Source: RSS + (if available) YouTube transcript fetcher.
+- Each video: title, creator, url, 1-sentence summary, 1-line "why
+  it matters."
+- Sentiment reading: 1-line synthesis of where the creator
+  consensus sits.
+
+### 5. AI Race (`AiRaceSection`)
+- 2–4 moves from OpenAI/Anthropic/Google/xAI/Meta/Apple/Microsoft/
+  Amazon/NVIDIA. Each: headline + company + 1-line why it matters.
+- Compress ruthlessly — only the moves that change the picture.
+
+### 6. Retirement (`RetirementSection`)
+- **Portfolio state** — Net liquidation, buying power, day P&L.
+- **Top 3 positions** — symbol, qty, avg cost, current P&L.
+- **Rate watch** — 1-line on 10Y / 2Y / Fed funds if surfaced in RSS.
+- **Supplement** — optional 1–2-line "things worth a glance" (fee
+  changes, IRA contribution reminders, rebalance-quarter flag).
+
+### 7. Health (`HealthSection`)
+- **Sleep / recovery** — if HealthKit/Whoop data is wired, surface
+  last night. If not: skip silently.
+- **Personal items** — from inbox: appointments, family, anything
+  personal. **Never** medical advice, never detailed health data.
+- **Move** — 1-line nudge (stand up hourly, walk the dog, etc.).
+
+---
+
+## Length cap — "morning coffee, 15 minutes"
+
+| Section | Word budget |
+|---|---|
+| Market Headlines | 200–250 |
+| Bitcoin & Strategy | 250–350 |
+| Institutional | 150–200 |
+| Creator Intel | 150–200 |
+| AI Race | 150–200 |
+| Retirement | 100–150 |
+| Health | 50–100 |
+| **Total** | **~1,200–1,500 words** |
+
+If a section exceeds its budget, the helper script trims the lowest-
+signal entries. The Vercel page renders sections collapsed-by-default
+for the longer sections; headlines stay expanded.
 
 ---
 
 ## Rules
 
-- **No fabrication.** If a source returns nothing or errors, say so in one
-  short clause and move on. Never invent a market number, a meeting, or an
-  email.
-- **Compress ruthlessly.** Whole brief ≤ 600 words, fits on one phone screen.
-- **Lead with the most actionable thing.** If portfolio is down significantly
-  overnight, that's the lead. If the inbox has a critical email, that's the
-  lead. Don't bury the lede.
-- **Telegram auto-delivery:** do NOT call `send_message` / `notify` /
-  `messaging` tools. Your final response IS the delivery.
-- **Workdir:** this job runs in `/Volumes/BotCentral/Users/milo/repos/dailybrief`
-  so the relative `scripts/` paths work. Do not `cd` elsewhere.
-- **Self-checks before composing:**
-  - Each fetch script's exit code — if non-zero, the section should say
-    "(source: offline)" and continue.
-  - The system prompt for cron-mode says "deliver final response, do not
-    call send_message" — honor that.
-- **If you cannot produce any of sections 1–6** (e.g. all four fetchers
-  failed simultaneously), respond with exactly `[SILENT]`. Do not post a
-  half-empty brief.
+- **No fabrication.** If a source returns nothing or errors, the
+  helper script logs `null` for that section. The Vercel page
+  renders "(source offline)" instead of inventing numbers.
+- **Compress ruthlessly.** Hit the word budgets. If a section has
+  nothing new, say "no notable moves" in 5 words.
+- **Lead with the most actionable thing.** If portfolio is down
+  significantly overnight, RETIREMENT's portfolio state surfaces
+  that. If a critical inbox item arrived, HEALTH surfaces it.
+- **Destination is Vercel only.** Do NOT call `send_message` /
+  `notify` / `messaging` tools. The cron deliver target is the
+  Vercel publish helper script — its success/failure IS the
+  delivery.
+- **Workdir:** `/Volumes/BotCentral/Users/milo/repos/dailybrief` so
+  relative `scripts/` paths work.
+- **If 5+ of 7 sections are `null` (all fetchers failed), respond
+  with exactly `[SILENT]`.** Do not publish a half-empty brief.
 
 ---
 
-## Output Template
+## Output Schema (JSON, written to `out/dfb/<date>.json`)
 
+Matches `Briefing` in `MiloTheAssistant/Milo/website/src/lib/briefings-types.ts`:
+
+```json
+{
+  "date": "YYYY-MM-DD",
+  "weekday": "Monday",
+  "kind": "dfb",
+  "title": "Daily Financial Briefing",
+  "subtitle": "Mission Control · Market Intelligence · Daily",
+  "generatedAt": "ISO-8601 UTC",
+  "confidence": "high" | "medium" | "low",
+  "zip": "63025",
+  "sections": {
+    "marketHeadlines": [...],
+    "bitcoin": {...},
+    "strategy": {...},
+    "institutional": {...},
+    "creatorIntel": {...},
+    "aiRace": {...},
+    "retirement": {...},
+    "health": {...}
+  }
+}
 ```
-MARKET BRIEF — [WEEKDAY], [MMM DD] 7:00 AM CT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-📈 MARKETS
-• [Top headline] — [why it matters in 1 line]
-• [2nd headline] — [why it matters]
-• [3rd headline] — [why it matters]
-
-💼 PORTFOLIO  (or: "PORTFOLIO: TWS offline")
-NetLiq $X,XXX  |  BP $X,XXX  |  Day P&L $±XXX
-• [Top position]: X shares @ avg $XX.XX
-• [2nd position if material]
-
-📅 TODAY — [Day, MMM DD]
-• [Time] [Event] — [location if any]
-• [Time] [Event]
-[or "No meetings today."]
-
-📨 INBOX
-• [Sender] — [Subject, one line summary]
-• [Sender] — [Subject]
-[or "No overnight email."]
-
-📆 WEEK AHEAD
-N meetings Mon–Fri. First: [Day] [Time] [Event].
-```
+Helper script `scripts/build_dfb_json.py` writes this and ships to
+Vercel via `cd ~/repos/Milo/website && vercel deploy --prod --yes`.
 
 ---
 
-## Edge Cases
+## Edge cases
 
-- **TWS offline:** portfolio section reads "PORTFOLIO: TWS offline" in
-  bold, brief proceeds without it.
-- **Proton Bridge offline:** today/inbox sections say "(mail: Bridge
-  offline)" — the other three sections still deliver.
-- **Calendar iCal URL revoked:** today/week sections say "(calendar:
-  share revoked — regenerate in Proton web)" — the other sections still
-  deliver.
-- **All four offline:** `[SILENT]`. Do not post a 3-line brief with all
-  the error messages — that's worse than silence.
-- **First run after a holiday:** data may be sparse. Lean terse. Don't
-  pad with generic market commentary.
+- **TWS offline:** RETIREMENT.portfolioState = null, page renders
+  "(portfolio: TWS offline)" — brief proceeds.
+- **Proton Bridge offline:** HEALTH.personalItems = null, others
+  continue.
+- **Calendar iCal URL revoked:** INSTITUTIONAL.calendarRadar +
+  Bitcoin's earnings-anchored context use null, others continue.
+- **All four fetchers offline:** `[SILENT]`. Do not publish.
+- **First run after a holiday:** data may be sparse. Lean terse,
+  use "low" confidence in the schema.
 
 ---
 

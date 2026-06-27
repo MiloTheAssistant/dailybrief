@@ -1,64 +1,91 @@
 # Goals Manifest
 
-> Canonical source for the **three Proton-redesign daily briefs** that run as
-> Hermes cron jobs (`brief-weekday-morning`, `brief-saturday`, `brief-sunday`).
+> Canonical source for the **three Vercel-published daily briefs** that run
+> as Hermes cron jobs. Saturday + Sunday are lifestyle (Life, Vacation,
+> Retirement, Weather for Eureka, MO 63025). Weekday morning is the
+> 7-section Daily Financial Briefing (DFB).
 >
-> **Local-only briefs:** `brief_sunday_audit.md` lives on this Mac only — see
-> the [Sunday Audit](#sunday-audit-local-only) section below. It is not
-> published to GitHub on purpose.
+> **Local-only briefs:** `brief_sunday_audit.md` lives on this Mac only —
+> Telegram delivery, not in this repo.
 
-## Active Briefs
+## Active Briefs (all Vercel-published)
 
 | Cron | Schedule | Brief | Deliver | Source spec |
 |---|---|---|---|---|
-| `brief-weekday-morning` | `0 7 * * 1-5` (07:00 CT, Mon–Fri) | Weekday morning: market + calendar + inbox + portfolio | Telegram | [brief_weekday_morning.md](brief_weekday_morning.md) |
-| `brief-saturday` | `0 9 * * 6` (09:00 CT, Sat) | Saturday lifestyle: weather, today's calendar, overnight inbox, one thing to do, weekend pick, read/listen/watch | Telegram | [brief_saturday.md](brief_saturday.md) |
-| `brief-sunday` | `0 9 * * 0` (09:00 CT, Sun) | Sunday next-week preview: Mon–Fri calendar count + busiest day, weekend inbox recap, plan-this-week, weekend read | Telegram | [brief_sunday.md](brief_sunday.md) |
+| `brief-weekday-morning` | `0 7 * * 1-5` (07:00 CT, Mon–Fri) | DFB — 7 sections: market headlines, bitcoin/strategy, institutional, creator intel, AI race, retirement, health | **Vercel only** (`https://daily-brief-tau.vercel.app/`) | [brief_weekday_morning.md](brief_weekday_morning.md) |
+| `brief-saturday` | `0 9 * * 6` (09:00 CT, Sat) | Saturday Lifestyle — 4 pillars: Life, Vacation, Retirement, Weather (Eureka MO 63025) | **Vercel only** (`https://daily-brief-tau.vercel.app/weekend/<date>`) | [brief_saturday.md](brief_saturday.md) |
+| `brief-sunday` | `0 9 * * 0` (09:00 CT, Sun) | Sunday Lifestyle — 4 pillars (reflective tone) | **Vercel only** (`https://daily-brief-tau.vercel.app/weekend/<date>`) | [brief_sunday.md](brief_sunday.md) |
 
-All three were registered on **2026-06-27** as part of the Proton redesign
-(parallel-run with the 4 prior jobs until stable; the old jobs are being
-retired in lockstep).
+All three were re-registered 2026-06-27 as part of the Vercel-only
+redesign (DFB used to be Discord + Vercel; Sat/Sun used to be Telegram).
+The lifestyle briefs went from one job (lifestyle-brief-9am-weekend) to
+two jobs (Sat present-tense + Sun reflective) on the same date.
 
 ## Scripts
 
-All scripts live in `scripts/` and are called by the cron prompt at fire time
-(file-and-run pattern — no inline `python3 -c`, no `execute_code`).
+All scripts live in `scripts/` and are called by the cron prompt at fire
+time (file-and-run pattern — no inline `python3 -c`, no `execute_code`).
 
 | Script | Used by | Notes |
 |---|---|---|
-| `fetch_market_brief_rss.py` | weekday | RSS: SeekingAlpha + Yahoo Finance + Cointelegraph + Google News AI + Google News MAG7. Dedupes, JSON to stdout. |
-| `fetch_proton_calendar.py` | weekday + saturday + sunday | Reads iCal share URL from `~/.config/hermes/proton-calendar-url`, parses with `icalendar`, JSON events to stdout. |
-| `fetch_proton_mail.py` | weekday + saturday + sunday | Wraps `himalaya envelope list` against Proton Mail Bridge (127.0.0.1:1143). JSON envelopes to stdout. |
-| `fetch_tws_portfolio.py` | weekday | IBAPI connection to TWS/IB Gateway. Account summary + positions + executions. |
-| `fetch_lifestyle_sources.py` | saturday (legacy) | NWS Chicago forecast. Predecessor to the Proton redesign's lifestyle data; kept for reference while `brief-saturday` migration settles. |
+| `fetch_market_brief_rss.py` | DFB | RSS: SeekingAlpha + Yahoo Finance + Cointelegraph + Google News AI + Google News MAG7. Dedupes, JSON to stdout. |
+| `fetch_proton_calendar.py` | DFB + Sat + Sun | iCal share URL → JSON events. |
+| `fetch_proton_mail.py` | DFB + Sat + Sun | `himalaya envelope list` via Proton Bridge → JSON envelopes. |
+| `fetch_tws_portfolio.py` | DFB + Sat + Sun | IBAPI to TWS/IB Gateway → account summary + positions. |
+| `fetch_lifestyle_sources.py` | Sat + Sun | NWS forecast. Default Eureka MO 63025; override with `--lat/--lon/--label`. |
+| `fetch_stl_events.py` | Sat + Sun | St. Louis area events via ExploreSTL list page; curated fallback when site is JS-only. |
+| `build_lifestyle_json.py` | Sat + Sun | Assembles `LifestyleEdition` JSON, writes to `out/lifestyle/<date>.json`, commits + pushes + `vercel deploy --prod`. |
+| `build_dfb_json.py` | DFB | Assembles `Briefing` JSON (7 sections), writes to `out/dfb/<date>.json`, commits + pushes + `vercel deploy --prod`. |
+| `_publish_common.py` | helper | Shared assembler + ship pipeline (git + Vercel) used by both `build_*.py` scripts. |
+
+## Reference data
+
+| File | Used by | Notes |
+|---|---|---|
+| `references/top-travel-ideas.md` | Sat + Sun | Curated drive-distance travel ideas from 63025 (St. Louis region + within 3 hrs). Model filters per brief. |
+| `references/top-stl-events-curated.md` | Sat + Sun | Fallback STL events list when `fetch_stl_events.py` can't parse live HTML. |
+
+## Output artifacts (this repo, not the website)
+
+```
+dailybrief/
+└── out/
+    ├── dfb/
+    │   └── <date>.json       # 7-section DFB, one per weekday
+    └── lifestyle/
+        └── <date>.json       # LifestyleEdition, one per Sat + Sun
+```
+
+These are the canonical published JSON files. They live in this repo so
+`git log` shows the publication history. The `Milo/website` repo reads
+them directly at Vercel build time (via a prebuild step that pulls
+`https://raw.githubusercontent.com/MiloTheAssistant/dailybrief/main/out/...`).
+No coupling between repos beyond that.
 
 ## Sunday Audit (local-only)
 
 `brief_sunday_audit.md` (cron `brief-sunday-audit`, schedule `0 21 * * 0`,
-21:00 CT Sunday) is intentionally **not** in this repo. It covers system
-ops (disk, Docker, gateway, backups) plus a quiet Proton week-in-review.
+21:00 CT Sunday) is intentionally **not** in this repo. System ops
+checklist + week Proton recap. **Telegram delivery only.**
 
-It lives on this Mac at `goals/brief_sunday_audit.md` and is **not** intended
-for public review or upstream sync. If it ever needs to move, it gets its
-own repo or stays in `~/memory/` as a private note — never the public
-`dailybrief` repo.
+It lives on this Mac at `goals/brief_sunday_audit.md` and is not
+intended for public review or upstream sync.
 
 ## Retired Specs (local-only, not pushed)
 
-These specs are preserved on this Mac for history but are NOT in this repo.
-The README + manifest + active specs above are the canonical GitHub source.
+These are preserved on this Mac for history but are NOT in this repo.
 
 | Spec | Local path | Why retired |
 |---|---|---|
-| Daily Financial Briefing (full DFB) | `goals/daily_financial_briefing.md` | Superseded by `brief_weekday_morning.md` which folds market + calendar + inbox + portfolio into one 07:00 CT brief. The 7-section DFB chain is preserved locally but has no live cron job. |
-| Daily Market Brief (old) | `goals/daily_market_brief.md` | First superseded by `daily_financial_briefing.md`, reinstated as 8:45 AM quick-look, then re-superseded by `brief_weekday_morning.md`. |
-| Daily Lifestyle Brief (single-job weekend) | `goals/daily_lifestyle_briefing.md` | Replaced by split: `brief_saturday.md` (present-tense) + `brief_sunday.md` (next-week-tense). The old job fired both days with the same content, which was the bug. |
+| Daily Financial Briefing (full 7-section chain spec) | `goals/daily_financial_briefing.md` | Superseded by `brief_weekday_morning.md`. The 7-section chain itself is preserved as the **shape** that `build_dfb_json.py` emits. |
+| Daily Market Brief (old) | `goals/daily_market_brief.md` | Re-superseded by `brief_weekday_morning.md`. |
+| Daily Lifestyle Brief (single-job weekend) | `goals/daily_lifestyle_briefing.md` | Replaced by `brief_saturday.md` + `brief_sunday.md`. |
 
 ## Source of Truth
 
-This repo (`MiloTheAssistant/dailybrief`) is the **canonical source** for the
-three active briefs. Local working copies on any Mac should sync FROM here —
-not the other way around.
+This repo (`MiloTheAssistant/dailybrief`) is the **canonical source** for
+the three active briefs + their helper scripts. Local working copies on
+any Mac should sync FROM here.
 
 To update a spec:
 1. Edit the file in this repo, commit, push.
@@ -66,6 +93,7 @@ To update a spec:
 
 To add a new brief:
 1. Add `goals/brief_<name>.md` here first.
-2. Register the cron job with `hermes cron create` using the spec as the prompt.
-3. Add the script to `scripts/` if it needs a fetcher.
-4. Update this manifest's Active table.
+2. Add the cron prompt that calls the helper script.
+3. Add any new fetcher scripts to `scripts/`.
+4. Update the `Milo/website` site repo to render the new JSON shape.
+5. Update this manifest's Active table.

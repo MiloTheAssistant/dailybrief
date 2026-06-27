@@ -1,21 +1,20 @@
 # dailybrief
 
-Canonical specs for the **three Proton-redesign daily briefs** that run as
-Hermes cron jobs: weekday morning, Saturday, and Sunday.
-
-The Sunday Audit (`brief_sunday_audit`) is **not** in this repo — it's local
-on each Mac. See [`goals/manifest.md`](goals/manifest.md) for the full
-breakdown of what's published here vs. kept locally.
-
-## Active briefs
+Canonical specs + helper scripts for the **three Vercel-published daily
+briefs** that run as Hermes cron jobs:
 
 | Cron | Schedule | Brief |
 |---|---|---|
-| `brief-weekday-morning` | `0 7 * * 1-5` (07:00 CT Mon–Fri) | Market + calendar + inbox + portfolio, Telegram |
-| `brief-saturday` | `0 9 * * 6` (09:00 CT Sat) | Lifestyle: weather, today's calendar, overnight inbox, one thing to do, weekend pick, read/listen/watch, Telegram |
-| `brief-sunday` | `0 9 * * 0` (09:00 CT Sun) | Next-week preview: Mon–Fri calendar count + busiest day, weekend inbox recap, plan-this-week, weekend read, Telegram |
+| `brief-weekday-morning` | `0 7 * * 1-5` (07:00 CT Mon–Fri) | Daily Financial Briefing — 7 sections: market headlines, bitcoin/strategy, institutional, creator intel, AI race, retirement, health |
+| `brief-saturday` | `0 9 * * 6` (09:00 CT Sat) | Saturday Lifestyle — 4 pillars: Life, Vacation, Retirement, Weather (Eureka, MO 63025) |
+| `brief-sunday` | `0 9 * * 0` (09:00 CT Sun) | Sunday Lifestyle — same 4 pillars, reflective tone |
 
-All three were registered 2026-06-27 as part of the Proton redesign.
+The Sunday Audit (`brief_sunday_audit`) is **not** in this repo — it's
+local on each Mac, Telegram-only. See [`goals/manifest.md`](goals/manifest.md).
+
+All three published briefs go to **Vercel only** (`https://daily-brief-tau.vercel.app/`).
+The DFB lands on the home page; the lifestyle briefs land on
+`/weekend/<date>`.
 
 ## Layout
 
@@ -24,37 +23,63 @@ dailybrief/
 ├── README.md
 ├── goals/
 │   ├── manifest.md                       # canonical index, see above
-│   ├── brief_weekday_morning.md          # 07:00 CT Mon–Fri spec
-│   ├── brief_saturday.md                 # 09:00 CT Sat spec
-│   └── brief_sunday.md                   # 09:00 CT Sun spec
-└── scripts/
-    ├── fetch_market_brief_rss.py         # weekday: RSS scan
-    ├── fetch_proton_calendar.py          # all 3: iCal → JSON
-    ├── fetch_proton_mail.py              # all 3: himalaya → JSON
-    ├── fetch_tws_portfolio.py            # weekday: IBAPI positions
-    └── fetch_lifestyle_sources.py        # saturday legacy: NWS Chicago
+│   ├── brief_weekday_morning.md          # 07:00 CT Mon–Fri DFB spec
+│   ├── brief_saturday.md                 # 09:00 CT Sat Lifestyle spec
+│   └── brief_sunday.md                   # 09:00 CT Sun Lifestyle spec
+├── scripts/
+│   ├── fetch_market_brief_rss.py         # DFB: RSS scan
+│   ├── fetch_proton_calendar.py          # all 3: iCal → JSON
+│   ├── fetch_proton_mail.py              # all 3: himalaya → JSON
+│   ├── fetch_tws_portfolio.py            # all 3: IBAPI positions
+│   ├── fetch_lifestyle_sources.py        # Sat + Sun: NWS Eureka MO 63025
+│   ├── fetch_stl_events.py               # Sat + Sun: STL events (curated fallback)
+│   ├── build_lifestyle_json.py           # Sat + Sun: assemble + ship to Vercel
+│   ├── build_dfb_json.py                 # DFB: assemble + ship to Vercel
+│   └── _publish_common.py                # shared git + Vercel deploy pipeline
+├── references/
+│   ├── top-travel-ideas.md               # Sat + Sun: drive-distance travel ideas
+│   └── top-stl-events-curated.md         # Sat + Sun: fallback STL events
+└── out/                                  # (gitignored — runtime artifacts)
+    ├── dfb/<date>.json
+    └── lifestyle/<date>.json
 ```
-
-Each spec lists which scripts it calls and the exact `python3 scripts/...`
-invocations the cron prompt should use.
 
 ## Cron-mode contract
 
 Every brief follows the **file-and-run pattern**:
 
-- Scripts live in `scripts/` and are invoked with `python3 <path>`.
+- Helper scripts live in `scripts/` and are invoked with `python3 <path>`.
 - No inline `python3 -c`, no `execute_code` (locked down in cron mode).
-- If a fetcher can't reach its source, the script returns a JSON envelope with
-  `status: "unreachable"` and the brief surfaces that gap honestly. **No
-  fabrication.** If a brief can't fill 4+ of its sections honestly, the
-  prompt is required to respond with exactly `[SILENT]` rather than post a
-  half-empty brief.
-- Final cron response IS the Telegram delivery. Don't call `send_message`,
-  `notify`, or `messaging` tools inside the brief — the system routes it.
+- The cron prompt runs `python3 scripts/build_<kind>_json.py` (the builder
+  that fetches + assembles + writes JSON + commits + pushes + deploys to
+  Vercel). Final response is the JSON envelope + a one-line "published"
+  confirmation. **No Telegram, no Discord, no `send_message`.**
+- If a fetcher can't reach its source, it returns a JSON envelope with
+  `status: "unreachable"` or `"fallback"`. The helper script ships the
+  brief with that source marked as offline; the Vercel page renders the
+  gap honestly. **No fabrication.**
+- If 5+ of 7 DFB sections are null, OR 3+ of 4 lifestyle pillars are
+  empty, the helper script exits non-zero and the cron prompt should
+  respond with `[SILENT]`.
+
+## How the Vercel site reads this repo
+
+The `Milo/website` repo (Next.js) has a prebuild step that pulls
+`https://raw.githubusercontent.com/MiloTheAssistant/dailybrief/main/out/...`
+for each published date, copying them into
+`public/briefings/<date>.json` and `public/briefings/latest.json` before
+the build runs. So:
+
+1. Cron runs builder → writes `out/dfb/<date>.json` or
+   `out/lifestyle/<date>.json` here → commits + pushes this repo.
+2. Cron runs `cd ~/repos/Milo/website && vercel deploy --prod --yes`.
+3. Vercel builds the site; prebuild step pulls the latest JSON from this
+   repo; site renders.
 
 ## Sync model
 
-This repo is the **canonical source**. Local working copies sync FROM here:
+This repo is the **canonical source**. Local working copies sync FROM
+here:
 
 ```bash
 cd ~/repos/dailybrief

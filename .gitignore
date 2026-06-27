@@ -31,3 +31,8 @@ venv/
 # Local-only brief specs (kept on this Mac per John's instruction 2026-06-27)
 # — if you see a file in goals/ that isn't tracked, that's intentional.
 # Specifically: goals/brief_sunday_audit.md and the three retired DFB specs.
+
+# Runtime JSON artifacts emitted by build_*.py scripts. The build helper
+# re-adds the specific file it just wrote (so the publication IS tracked),
+# but stray test runs shouldn't pollute git history.
+out/

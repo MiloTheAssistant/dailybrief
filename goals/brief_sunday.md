@@ -1,121 +1,128 @@
-# Brief: Sunday — Next-Week Preview (calendar + lifestyle forward-look)
+# Brief: Sunday — Lifestyle (Life, Vacation, Retirement, Weather)
 
 **Workflow:** `recurring_publish`
 **Schedule:** 9:00 AM America/Chicago, Sunday only
-**Destination:** Telegram
-**Audience:** John, single-reader Sunday-morning brief.
+**Destination:** **Vercel only** (https://daily-brief-tau.vercel.app/weekend/<date>)
+**Audience:** John, single-reader Sunday-morning lifestyle brief.
 
 ---
 
 ## Objective
 
-A Sunday-morning brief that is structurally a *forward look*: next week's
-calendar, week-ahead planning, and a quiet weekend-recap of the inbox.
-Distinct from Saturday's present-tense brief.
+A Sunday-morning lifestyle brief that mirrors Saturday's four-pillar
+shape (Life, Vacation, Retirement, Weather) but with a **reflective,
+week-closing tone** — Saturday leans forward into "go do this,"
+Sunday leans into "wrap the weekend, look ahead to next."
 
-If Saturday is "go do this today," Sunday is "here's the shape of the
-week ahead." This is the brief John reads with coffee, not while
-getting dressed.
+Reads in 10–15 minutes — Sunday-morning coffee length. Distinct from
+the weekday DFB (markets-only, M-F) and from Saturday (forward-leaning
+present tense).
 
 ---
 
 ## Inputs (fetch every run)
 
-1. **Next-week calendar (Mon–Fri, 5 days starting tomorrow)**
-   `python3 scripts/fetch_proton_calendar.py --days 5 --from-date $(date -v+1d +%Y-%m-%d)`
-   (If `date -v+1d` doesn't work on this macOS, use
-   `$(date -j -v+1d +%Y-%m-%d)` for BSD date or compute in Python.)
-   This is the *primary* signal — the brief is built around it.
+1. **Weather — Eureka, MO 63025** (lat 38.5017, lon -90.6276)
+   `python3 scripts/fetch_lifestyle_sources.py --lat 38.5017 --lon -90.6276 --label "Eureka, MO"`
+   Surface: today + tonight. (No tomorrow — week's over.)
 
-2. **Today's calendar (Sunday)**
+2. **St. Louis area local events** (today + next 7 days, lookahead)
+   `python3 scripts/fetch_stl_events.py`
+   Pick 1–2 events *for the next weekend* — Sunday's "life" pillar
+   previews what's coming.
+
+3. **Today's calendar (Sunday)** — Proton Calendar
    `python3 scripts/fetch_proton_calendar.py --from-date $(date +%Y-%m-%d) --to-date $(date +%Y-%m-%d)`
+   Empty → "Open Sunday."
 
-3. **Weekend inbox recap (last 48h, max 5 unread)**
+4. **Weekend inbox recap (last 48h, max 5 unread)** — Proton Mail
    `python3 scripts/fetch_proton_mail.py --folder INBOX --unseen-only --since-hours 48 --limit 5`
    On Sunday morning, "overnight" is really "since Saturday morning."
-   Surface anything actionable that arrived over the weekend.
+
+5. **Portfolio snapshot** — TWS/IB Gateway
+   `python3 scripts/fetch_tws_portfolio.py --plain`
+   Same one-line state as Saturday, framed for week-end reflection.
+   If TWS offline: section reads "(portfolio: TWS offline)".
 
 ---
 
-## Sections (in order)
+## Pillars (in order)
 
-1. **THIS WEEK (Mon–Fri)** — the calendar at a glance:
-   - Total meeting count
-   - Busiest day (highest event count) — call it out
-   - Open day(s) — if any weekday has zero events, that's a "use it"
-     flag
-   - First event of the week (day + time)
-   - Last event of the week (day + time)
-2. **ON THE CALENDAR TODAY** — Sunday's events. If empty: "Open
-   Sunday." Don't pad.
-3. **WEEKEND INBOX** — max 2 actionable emails from the weekend
-   recap. Skip newsletters.
-4. **ONE THING TO PLAN THIS WEEK** — a low-friction action that's
-   *forward-looking* (schedule a coffee, block focus time on Wed
-   afternoon, sign up for the thing you keep meaning to). Different
-   from Saturday's present-tense "do this today."
-5. **WEEKEND READ** — one longread / book chapter / podcast
-   episode for the week ahead. Different from Saturday's rec
-   (which was for *now*).
+### 1. Weather (Eureka, MO 63025)
+- Today: high/low, conditions, precip %, wind.
+- Tonight: brief one-liner.
+- **No tomorrow** — it's Sunday, week's over.
+- One line on what to wear/bring for the day.
+
+### 2. Life — Today's calendar + planning the week ahead
+- **Today's calendar** (chronological). Empty → "Open Sunday."
+- **One thing to plan this week** — a forward-looking nudge
+  (schedule a coffee, block focus time Wed afternoon, sign up for
+  the thing you keep meaning to). Different from Saturday's "do
+  this today" — Sunday plans, Saturday does.
+- **Local events coming up** — 1–2 picks for next weekend from
+  `fetch_stl_events.py`, filtered to next-Sat/Sun window.
+- **Weekend read** — one longread / book chapter / podcast episode
+  for the week ahead. Different from Saturday's rec (which was for
+  *now*).
+
+### 3. Vacation — Look-ahead + drive-distance ideas
+- **Upcoming travel in next 2 weeks** — anything from calendar with
+  travel markers, expanded search window vs. Saturday (2 weeks vs.
+  current week).
+- **Drive-distance ideas** — from `references/top-travel-ideas.md`,
+  filtered to "good for next weekend" framing.
+
+### 4. Retirement — Portfolio state + week-end reflection
+- **Portfolio state** — net liquidation + 1-line state (positions,
+  week P&L if available, day P&L). Reflective frame: "where you
+  ended the week" not "where you start Monday."
+- **One quiet reflection** — a non-trade nudge for the week. Reading
+  list update, beneficiary review reminder, rebalance-quarter
+  check-in if applicable. Never financial advice.
 
 ---
 
 ## Rules
 
 - **No fabrication.** Empty sources → say so in one line. Don't
-  invent meetings.
+  invent meetings, events, or travel.
+- **Eureka, MO / St. Louis Metro specific.** Name places. No generic
+  "visit a museum."
 - **Tone:** quieter than Saturday. Reflective. Not chipper.
-- **Length:** 400–600 words. Sunday morning = less screen time.
-- **Telegram auto-delivery:** do NOT call `send_message` / `notify` /
-  `messaging` tools.
+- **Length:** 500–800 words. Sunday morning = less screen time.
+- **Destination is Vercel only.** Do NOT call `send_message` /
+  `notify` / `messaging` tools. Helper script's success/failure IS
+  the delivery.
 - **Workdir:** `/Volumes/BotCentral/Users/milo/repos/dailybrief`.
-- **If you cannot produce sections 1 + 4 honestly, respond with
-  exactly `[SILENT]`.** A Sunday brief without a week preview is
+- **If you cannot fill 3+ of the 4 pillars honestly, respond with
+  exactly `[SILENT]`.** A Sunday brief without weather + life is
   worse than no brief.
 
 ---
 
-## Output Template
+## Output Schema (JSON, written to `out/lifestyle/<date>.json`)
 
-```
-🌅 SUNDAY BRIEF — [MONTH DD, YYYY]
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Delivered by Milo | 9:00 AM CT
-
-📆  THIS WEEK (Mon–Fri)
-• N meetings total across M weekdays
-• Busiest: [Day] ([count] events)
-• Open: [Day(s) with no events — "use it"]
-• First: [Day] [Time] [Event]
-• Last:  [Day] [Time] [Event]
-
-📅  ON THE CALENDAR TODAY
-• [Time] [Event]
-[or "Open Sunday."]
-
-📨  WEEKEND INBOX
-• [Sender] — [Subject, 1 line]
-[or "Inbox quiet all weekend."]
-
-🎯  ONE THING TO PLAN THIS WEEK
-[Forward-looking action — schedule, block, sign up]
-
-📖  WEEKEND READ
-[Title] — [Type] · [1 line on why it's right for this week]
+```json
+{
+  "date": "YYYY-MM-DD",
+  "weekday": "Sunday",
+  "kind": "lifestyle",
+  "generatedAt": "ISO-8601 UTC",
+  "zip": "63025",
+  "location": { "label": "Eureka, MO", "lat": 38.5017, "lon": -90.6276 },
+  "pillars": {
+    "weather": { "today": {...}, "tonight": {...}, "whatToWear": "..." },
+    "life": { "calendarToday": [...], "oneThingToPlan": "...", "localPicksNextWeekend": [...], "rec": {...} },
+    "vacation": { "upcomingTravel14d": [...], "driveDistanceIdeas": [...] },
+    "retirement": { "portfolioState": {...}, "weekEndReflection": "..." }
+  }
+}
 ```
 
----
-
-## Edge Cases
-
-- **Next-week calendar is fully empty:** the entire brief is just
-  "Open week. Use it." That's a feature, not a bug — John has a clean
-  week ahead and should know.
-- **Next-week calendar is fully booked (15+ events):** surface the
-  overload. Suggest a 30-min review block on the busiest day.
-- **Both calendars empty:** section 1 says "Fully open week.
-  Nothing scheduled Mon–Fri." Skip section 2 ("Open Sunday.").
-  Still try to fill section 4 with a planning action.
+Must match `LifestyleEdition` in `MiloTheAssistant/Milo` website's
+`src/lib/briefings-types.ts`. Helper script
+`scripts/build_lifestyle_json.py` writes this and ships to Vercel.
 
 ---
 
@@ -123,11 +130,11 @@ Delivered by Milo | 9:00 AM CT
 
 | | Saturday | Sunday |
 |---|---|---|
-| Frame | "Today + this weekend" | "Next week preview" |
-| Calendar | Just today | Mon–Fri next week |
-| Inbox | Overnight only | Weekend recap (48h) |
-| Pick | "Do this today" | "Plan your week around this" |
-| Rec | "Lazy Saturday morning" | "Sunday reading for the week" |
+| Frame | "Today + this weekend" | "Wrap-up + next weekend preview" |
+| Weather | Today + tonight + tomorrow | Today + tonight (no tomorrow) |
+| Life | Today's calendar + 1 thing to do | Today's calendar + 1 thing to plan |
+| Vacation | Current-week travel + weekend drive ideas | 2-week travel lookahead + next-weekend drive ideas |
+| Retirement | Portfolio state + planning note | Portfolio state + week-end reflection |
+| Tone | Forward-leaning | Reflective |
 
-If Saturday and Sunday briefs start to look the same, re-read this
-table and tighten the framing.
+If Sat + Sun briefs start to look the same, tighten the framing.
