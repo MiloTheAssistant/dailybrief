@@ -39,21 +39,29 @@ https://daily-brief-tau.vercel.app/weekend/<date>.
    # then patch the qualitative fields with `patch` tool
    ```
 
-5. **Ship it**:
+5. **Ship it** — single helper call handles git push AND Vercel deploy:
    ```
-   python3 scripts/build_lifestyle_json.py saturday --skip-deploy
+   python3 scripts/build_lifestyle_json.py saturday --skip-deploy --date <date>
    ```
-   This writes the manifest, commits, and pushes the dailybrief repo.
-   The helper already wrote the JSON in step 1; --skip-deploy avoids
-   the double-write. After this returns 0, run:
+   `--skip-deploy` is critical here: the helper still does the manifest
+   refresh + git commit + git push (the parts that finish in <2s), but
+   skips the Vercel deploy (which can take 30-60s and risk the 3-min
+   hard interrupt on cron sessions).
+
+   After that returns 0, trigger the Vercel deploy in a separate fast
+   background step:
    ```
-   cd /Volumes/BotCentral/Users/milo/repos/Milo/website && vercel deploy --prod --yes
+   nohup bash -c 'cd /Volumes/BotCentral/Users/milo/repos/Milo/website && npm run fetch-briefs && vercel deploy --prod --yes' > /tmp/sat-deploy.log 2>&1 &
    ```
+   `nohup ... &` detaches the deploy from the cron session so the 3-min
+   hard interrupt on this prompt doesn't kill it mid-deploy. The Vercel
+   build will keep running and finish on its own.
 
 6. **Final response** — one-line confirmation:
    ```
    Published Saturday Lifestyle Brief for <date>: https://daily-brief-tau.vercel.app/weekend/<date>
    ```
+   (The site may take ~60s to reflect the deploy; that's expected.)
 
 ## Self-checks (run before publishing)
 

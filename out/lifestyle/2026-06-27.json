@@ -2,7 +2,7 @@
   "date": "2026-06-27",
   "weekday": "Saturday",
   "kind": "lifestyle",
-  "generatedAt": "2026-06-27T16:47:44.670667+00:00",
+  "generatedAt": "2026-06-27T16:51:20.120756+00:00",
   "zip": "63025",
   "location": {
     "label": "Eureka, MO",
@@ -12,7 +12,7 @@
   "fetchers": {
     "weather": {
       "status": "ok",
-      "elapsed_s": 0.28
+      "elapsed_s": 0.31
     },
     "stlEvents": {
       "explorestl": {
@@ -56,12 +56,12 @@
         "detailedForecast": "Sunny, with a high near 93. Heat index values as high as 109. South wind 1 to 7 mph.",
         "precipChance": 12
       },
-      "whatToWear": "Light breathable layers today — 53% storm chance, so a packable rain shell for any afternoon outing. Tomorrow's a different beast: high of 93 with heat index to 109 — sunscreen, hat, and water if you're outside past noon.",
+      "whatToWear": null,
       "source": "ok"
     },
     "life": {
       "calendarToday": [],
-      "oneThing": "Roll through Soulard Farmers Market this morning before the storms roll in this afternoon — it's the one STL Saturday ritual that actually rewards the early alarm.",
+      "oneThing": null,
       "localPicks": [
         {
           "title": "St. Louis Art Museum",
@@ -94,41 +94,51 @@
           "venue": "730 Carroll St"
         }
       ],
-      "rec": {
-        "title": "The Daily (podcast, today)",
-        "type": "podcast",
-        "blurb": "Today's episode covers the SCOTUS term wrap and a long read on AI datacenter power deals — perfect Saturday-morning coffee listen, ~25 min."
-      }
+      "rec": null
     },
     "vacation": {
       "upcomingTravel": [],
       "driveDistanceIdeas": [
         {
-          "name": "Johnson Shut-Ins State Park",
-          "where": "Middlebrook, MO",
-          "distance": "~1.5 hr",
-          "blurb": "Natural waterpark carved by volcanic rock — peak summer move, swim the shut-ins before noon to beat the crowds.",
-          "region": "Missouri"
-        },
-        {
-          "name": "Meramec River float (Steelville)",
-          "where": "Steelville, MO",
-          "distance": "~1.5 hr",
-          "blurb": "Float the Meramec — float-fest outfitters handle the rentals. Best with the afternoon storms we've been having.",
-          "region": "Missouri"
-        },
-        {
-          "name": "Cahokia Mounds at sunset",
-          "where": "Collinsville, IL",
-          "distance": "~45 min",
-          "blurb": "UNESCO site — Monks Mound catches evening light. Quick half-day, fits a Saturday.",
+          "name": "Grafton, IL",
+          "where": "",
+          "distance": "",
+          "blurb": "50 min. River-town confluence of Mississippi +",
           "region": "Illinois"
+        },
+        {
+          "name": "Branson, MO",
+          "where": "",
+          "distance": "",
+          "blurb": "4 hr (borderline 3). Shows + Table Rock Lake.",
+          "region": "Missouri"
+        },
+        {
+          "name": "Springfield, MO",
+          "where": "",
+          "distance": "",
+          "blurb": "3 hr. Bass Pro flagship + Wonders of Wildlife",
+          "region": "Missouri"
+        },
+        {
+          "name": "Eureka Springs, AR",
+          "where": "",
+          "distance": "",
+          "blurb": "4 hr (borderline 3). Victorian town,",
+          "region": "Arkansas"
+        },
+        {
+          "name": "Mammoth Cave National Park",
+          "where": "",
+          "distance": "",
+          "blurb": "4 hr (borderline 3). Largest cave",
+          "region": "Kentucky"
         }
       ]
     },
     "retirement": {
       "portfolioState": {},
-      "planningNote": "Quiet reminder: Q3 estimated-tax payment is due September 15. Nothing to do this weekend — just making sure it's on the radar before mid-summer travel eats the calendar."
+      "planningNote": null
     }
   }
 }
