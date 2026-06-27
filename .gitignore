@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+
+# Per-job scratch / data dumps
+.brief/
+
+# Environment / secrets — these scripts read Proton credentials from
+# ~/.config/himalaya/ and the IB Gateway from local env. Never commit them.
+.env
+.env.*
+!.env.example
+
+# Editor / OS scratch
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Local-only brief specs (kept on this Mac per John's instruction 2026-06-27)
+# — if you see a file in goals/ that isn't tracked, that's intentional.
+# Specifically: goals/brief_sunday_audit.md and the three retired DFB specs.
