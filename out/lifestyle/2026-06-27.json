@@ -2,7 +2,7 @@
   "date": "2026-06-27",
   "weekday": "Saturday",
   "kind": "lifestyle",
-  "generatedAt": "2026-06-27T16:38:09.133765+00:00",
+  "generatedAt": "2026-06-27T16:47:44.670667+00:00",
   "zip": "63025",
   "location": {
     "label": "Eureka, MO",
@@ -12,12 +12,12 @@
   "fetchers": {
     "weather": {
       "status": "ok",
-      "elapsed_s": 0.26
+      "elapsed_s": 0.28
     },
     "stlEvents": {
       "explorestl": {
         "status": "fallback",
-        "elapsed_s": 0.64
+        "elapsed_s": 0.63
       }
     },
     "calendar": {},
@@ -56,12 +56,12 @@
         "detailedForecast": "Sunny, with a high near 93. Heat index values as high as 109. South wind 1 to 7 mph.",
         "precipChance": 12
       },
-      "whatToWear": "Light, breathable layers today — high of 85 with a 50%+ chance of afternoon thunderstorms, so pack a light rain shell. If you're out past 4pm, expect muggy conditions. Tomorrow is a different beast: 93°F with a heat index pushing 109°F. Hydrate aggressively and consider planning outdoor time for morning or after 7pm.",
+      "whatToWear": "Light breathable layers today — 53% storm chance, so a packable rain shell for any afternoon outing. Tomorrow's a different beast: high of 93 with heat index to 109 — sunscreen, hat, and water if you're outside past noon.",
       "source": "ok"
     },
     "life": {
       "calendarToday": [],
-      "oneThing": "Thunderstorm odds peak after 2pm. Take the dog (or yourself) on the River Hills loop at Meramec River — shaded, paved, and you'll be back before the cells fire. Better than the default 'scroll the couch' if the morning's dry.",
+      "oneThing": "Roll through Soulard Farmers Market this morning before the storms roll in this afternoon — it's the one STL Saturday ritual that actually rewards the early alarm.",
       "localPicks": [
         {
           "title": "St. Louis Art Museum",
@@ -95,41 +95,40 @@
         }
       ],
       "rec": {
-        "title": "The Courage to Be Disliked",
-        "type": "book",
-        "blurb": "Re-read on a stormy Saturday morning. Adler's individual psychology lands differently when you're not chasing the next task. Sit with the 'task is to be yourself' chapter and the rest of the weekend unfolds from there.",
-        "url": "https://www.goodreads.com/book/show/43306267-the-courage-to-be-disliked"
+        "title": "The Daily (podcast, today)",
+        "type": "podcast",
+        "blurb": "Today's episode covers the SCOTUS term wrap and a long read on AI datacenter power deals — perfect Saturday-morning coffee listen, ~25 min."
       }
     },
     "vacation": {
       "upcomingTravel": [],
       "driveDistanceIdeas": [
         {
-          "name": "Grafton, IL",
-          "where": "",
-          "distance": "",
-          "blurb": "50 min. River-town confluence of Mississippi +",
+          "name": "Johnson Shut-Ins State Park",
+          "where": "Middlebrook, MO",
+          "distance": "~1.5 hr",
+          "blurb": "Natural waterpark carved by volcanic rock — peak summer move, swim the shut-ins before noon to beat the crowds.",
+          "region": "Missouri"
+        },
+        {
+          "name": "Meramec River float (Steelville)",
+          "where": "Steelville, MO",
+          "distance": "~1.5 hr",
+          "blurb": "Float the Meramec — float-fest outfitters handle the rentals. Best with the afternoon storms we've been having.",
+          "region": "Missouri"
+        },
+        {
+          "name": "Cahokia Mounds at sunset",
+          "where": "Collinsville, IL",
+          "distance": "~45 min",
+          "blurb": "UNESCO site — Monks Mound catches evening light. Quick half-day, fits a Saturday.",
           "region": "Illinois"
-        },
-        {
-          "name": "Branson, MO",
-          "where": "",
-          "distance": "",
-          "blurb": "4 hr (borderline 3). Shows + Table Rock Lake.",
-          "region": "Missouri"
-        },
-        {
-          "name": "Springfield, MO",
-          "where": "",
-          "distance": "",
-          "blurb": "3 hr. Bass Pro flagship + Wonders of Wildlife",
-          "region": "Missouri"
         }
       ]
     },
     "retirement": {
-      "portfolioState": null,
-      "planningNote": "Quarter-end is one month out. When you're back at the desk Monday, block 30 minutes to review IRA contribution YTD vs. the cap — easy to lose track of in summer. If TWS is offline, no action; otherwise this is a good weekend to look at last week's P&L attribution."
+      "portfolioState": {},
+      "planningNote": "Quiet reminder: Q3 estimated-tax payment is due September 15. Nothing to do this weekend — just making sure it's on the radar before mid-summer travel eats the calendar."
     }
   }
 }
