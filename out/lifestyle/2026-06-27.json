@@ -1,0 +1,135 @@
+{
+  "date": "2026-06-27",
+  "weekday": "Saturday",
+  "kind": "lifestyle",
+  "generatedAt": "2026-06-27T16:38:09.133765+00:00",
+  "zip": "63025",
+  "location": {
+    "label": "Eureka, MO",
+    "lat": 38.5017,
+    "lon": -90.6276
+  },
+  "fetchers": {
+    "weather": {
+      "status": "ok",
+      "elapsed_s": 0.26
+    },
+    "stlEvents": {
+      "explorestl": {
+        "status": "fallback",
+        "elapsed_s": 0.64
+      }
+    },
+    "calendar": {},
+    "mail": {},
+    "portfolio": {}
+  },
+  "pillars": {
+    "weather": {
+      "today": {
+        "name": "Today",
+        "temperature": 85,
+        "temperatureUnit": "F",
+        "windSpeed": "3 mph",
+        "windDirection": "SW",
+        "shortForecast": "Chance Showers And Thunderstorms",
+        "detailedForecast": "A chance of showers and thunderstorms. Partly sunny, with a high near 85. Southwest wind around 3 mph. Chance of precipitation is 50%.",
+        "precipChance": 53
+      },
+      "tonight": {
+        "name": "Tonight",
+        "temperature": 71,
+        "temperatureUnit": "F",
+        "windSpeed": "2 mph",
+        "windDirection": "SE",
+        "shortForecast": "Chance Showers And Thunderstorms",
+        "detailedForecast": "A chance of showers and thunderstorms. Partly cloudy, with a low around 71. Southeast wind around 2 mph. Chance of precipitation is 40%.",
+        "precipChance": 35
+      },
+      "tomorrow": {
+        "name": "Sunday",
+        "temperature": 93,
+        "temperatureUnit": "F",
+        "windSpeed": "1 to 7 mph",
+        "windDirection": "S",
+        "shortForecast": "Sunny",
+        "detailedForecast": "Sunny, with a high near 93. Heat index values as high as 109. South wind 1 to 7 mph.",
+        "precipChance": 12
+      },
+      "whatToWear": "Light, breathable layers today — high of 85 with a 50%+ chance of afternoon thunderstorms, so pack a light rain shell. If you're out past 4pm, expect muggy conditions. Tomorrow is a different beast: 93°F with a heat index pushing 109°F. Hydrate aggressively and consider planning outdoor time for morning or after 7pm.",
+      "source": "ok"
+    },
+    "life": {
+      "calendarToday": [],
+      "oneThing": "Thunderstorm odds peak after 2pm. Take the dog (or yourself) on the River Hills loop at Meramec River — shaded, paved, and you'll be back before the cells fire. Better than the default 'scroll the couch' if the morning's dry.",
+      "localPicks": [
+        {
+          "title": "St. Louis Art Museum",
+          "url": "https://www.slam.org/",
+          "dateLabel": "Always open",
+          "venue": "Forest Park"
+        },
+        {
+          "title": "Missouri Botanical Garden",
+          "url": "https://www.missouribotanicalgarden.org/",
+          "dateLabel": "Daily",
+          "venue": "4344 Shaw Blvd"
+        },
+        {
+          "title": "City Museum",
+          "url": "https://www.citymuseum.org/",
+          "dateLabel": "Daily",
+          "venue": "750 N 16th St"
+        },
+        {
+          "title": "Gateway Arch + Museum",
+          "url": "https://www.gatewayarch.com/",
+          "dateLabel": "Daily",
+          "venue": "Downtown STL riverfront"
+        },
+        {
+          "title": "Soulard Farmers Market",
+          "url": "https://www.soulardmarket.com/",
+          "dateLabel": "Saturday mornings",
+          "venue": "730 Carroll St"
+        }
+      ],
+      "rec": {
+        "title": "The Courage to Be Disliked",
+        "type": "book",
+        "blurb": "Re-read on a stormy Saturday morning. Adler's individual psychology lands differently when you're not chasing the next task. Sit with the 'task is to be yourself' chapter and the rest of the weekend unfolds from there.",
+        "url": "https://www.goodreads.com/book/show/43306267-the-courage-to-be-disliked"
+      }
+    },
+    "vacation": {
+      "upcomingTravel": [],
+      "driveDistanceIdeas": [
+        {
+          "name": "Grafton, IL",
+          "where": "",
+          "distance": "",
+          "blurb": "50 min. River-town confluence of Mississippi +",
+          "region": "Illinois"
+        },
+        {
+          "name": "Branson, MO",
+          "where": "",
+          "distance": "",
+          "blurb": "4 hr (borderline 3). Shows + Table Rock Lake.",
+          "region": "Missouri"
+        },
+        {
+          "name": "Springfield, MO",
+          "where": "",
+          "distance": "",
+          "blurb": "3 hr. Bass Pro flagship + Wonders of Wildlife",
+          "region": "Missouri"
+        }
+      ]
+    },
+    "retirement": {
+      "portfolioState": null,
+      "planningNote": "Quarter-end is one month out. When you're back at the desk Monday, block 30 minutes to review IRA contribution YTD vs. the cap — easy to lose track of in summer. If TWS is offline, no action; otherwise this is a good weekend to look at last week's P&L attribution."
+    }
+  }
+}
