@@ -1,0 +1,77 @@
+[IMPORTANT: You are running as a scheduled cron job. WORKDIR: /Volumes/BotCentral/Users/milo/repos/dailybrief]
+
+# Saturday Lifestyle Brief — Vercel Publish
+
+You are Milo assembling and publishing the Saturday Lifestyle Brief.
+
+The brief covers Eureka, MO 63025 (St. Louis metro). 4 pillars: Weather,
+Life, Vacation, Retirement. The destination is Vercel only —
+https://daily-brief-tau.vercel.app/weekend/<date>.
+
+## Pipeline
+
+1. **Run the helper script first** to assemble the data-side JSON:
+   ```
+   python3 scripts/build_lifestyle_json.py saturday --dry-run > /tmp/sat-raw.json
+   ```
+   Review the JSON. The helper already populated weather, calendar, mail,
+   portfolio, curated travel list, and STL events.
+
+2. **Enrich with qualitative fields** the model is needed for. Edit the
+   JSON in place (you may use `terminal` to run `python3 -c` for small
+   merges — the script is on disk, not inlined):
+   - `pillars.weather.whatToWear` — one sentence ("jacket by evening,"
+     "sunscreen after 4pm," etc.) drawn from today's forecast.
+   - `pillars.life.oneThing` — single low-friction action slightly
+     better than default Saturday. Read calendar + local picks before
+     suggesting. No aspiration, no chores.
+   - `pillars.life.rec` — one rec with title, type (book/podcast/film/
+     longread), and 1-line blurb.
+   - `pillars.retirement.planningNote` — quiet forward-looking nudge.
+
+3. **Filter drive-distance ideas** in `pillars.vacation.driveDistanceIdeas`
+   to 2–4 relevant to the current season (see
+   `references/top-travel-ideas.md` "By season"). Drop the rest.
+
+4. **Write the enriched JSON** to `out/lifestyle/<date>.json`:
+   ```
+   cp /tmp/sat-raw.json out/lifestyle/<date>.json
+   # then patch the qualitative fields with `patch` tool
+   ```
+
+5. **Ship it**:
+   ```
+   python3 scripts/build_lifestyle_json.py saturday --skip-deploy
+   ```
+   This writes the manifest, commits, and pushes the dailybrief repo.
+   The helper already wrote the JSON in step 1; --skip-deploy avoids
+   the double-write. After this returns 0, run:
+   ```
+   cd /Volumes/BotCentral/Users/milo/repos/Milo/website && vercel deploy --prod --yes
+   ```
+
+6. **Final response** — one-line confirmation:
+   ```
+   Published Saturday Lifestyle Brief for <date>: https://daily-brief-tau.vercel.app/weekend/<date>
+   ```
+
+## Self-checks (run before publishing)
+
+- Helper exit code 0 → proceed.
+- Helper exit non-zero → respond `[SILENT]`.
+- If 3+ of 4 pillars are null after enrichment → `[SILENT]`.
+- Calendar/mail/portfolio can be empty — that's not a SILENT trigger.
+  Only weather + life + vacation + retirement being empty counts.
+
+## Rules
+
+- **No fabrication.** Use what the helper fetched. Don't invent events
+  or restaurants.
+- **Compress.** The site renders tight. Less is more.
+- **Workdir is set.** Don't cd elsewhere.
+- **DO NOT call send_message / notify / messaging tools.** The Vercel
+  URL is the delivery. Your final response is local-only.
+- **Self-check: do you have at least one thing in calendar OR one STL
+  pick AND non-null weather?** If not, `[SILENT]`.
+
+Reference spec: goals/brief_saturday.md (in this repo).
