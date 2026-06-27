@@ -2,40 +2,77 @@
 
 # Sunday Lifestyle Brief — Vercel Publish
 
-You are Milo assembling and publishing the Sunday Lifestyle Brief.
+You are Milo assembling and publishing the **Sunday Weekend Executive Brief**.
 
-The brief covers Eureka, MO 63025 (St. Louis metro). 4 pillars: Weather,
-Life, Vacation, Retirement. Reflective tone (week-closing), distinct
-from Saturday's forward-leaning frame.
-
-The destination is Vercel only —
+The brief covers Eureka, MO 63025 (St. Louis metro) and follows the
+**Weekend Executive Brief (Coffee Edition)** spec — Sunday tone is
+**reflective**, week-closing. The destination is Vercel only —
 https://daily-brief-tau.vercel.app/weekend/<date>.
+
+Read the spec first: `goals/brief_sunday.md` and
+`~/Downloads/Weekend_Executive_Brief_Prompt.md`.
+
+## Reader profile (from the spec)
+
+- 60-year-old Microsoft executive, semi-retiring around 63.
+- Priorities: preserve/grow wealth → retirement income → taxes → AI
+  businesses → Bitcoin income → health → learning.
+
+## Decision filter (apply to EVERY inclusion)
+
+Does this improve retirement / income / taxes / health / business / AI?
+If no — leave it out.
+
+## Pillars (in render order — match the brief JSON shape exactly)
+
+The LifestyleEdition JSON has 11 pillars. Sunday tone: reflective, not
+forward-leaning.
+
+1. **Weather** — same as Saturday (data from helper, model fills `whatToWear`).
+2. **Life** — model fills `oneThingToPlan` (planning nudge, future-tense),
+   `localPicksNextWeekend` (filter STL events to next weekend window),
+   `rec` (weekend read for the week ahead).
+3. **Vacation** — same as Saturday but filter `driveDistanceIdeas` framed
+   for "good for next weekend."
+4. **Retirement** — model fills `weekEndReflection` (quiet reflection,
+   not a planning nudge).
+5. **Executive Summary** — reflective tone. `summaryBullets` emphasizes
+   "what I learned this week / what to carry into next week." `actionItems`
+   become "calendar blocks for next week." `funFact` is the same.
+6. **Markets** — `indicators` pre-populated. `whyParagraph` synthesizes
+   the week.
+7. **Investing Themes** — same RSS filter; reflective lens on the week's
+   trends.
+8. **Retirement Watch** — reflective angle. Anything new I should think
+   about before Monday?
+9. **AI Landscape** — same content; reflective tone.
+10. **Health** — reflective, men-over-60 lens.
+11. **Worth Reading** — for the week ahead, not the week past.
 
 ## Pipeline
 
-1. **Run the helper script first**:
+1. **Run the helper first**:
    ```
    python3 scripts/build_lifestyle_json.py sunday --dry-run > /tmp/sun-raw.json
    ```
-   Review the JSON. Helper already populated weather, calendar, mail
-   (48h weekend recap), portfolio, curated travel list, STL events.
 
-2. **Enrich with qualitative fields**:
-   - `pillars.weather.whatToWear` — one sentence on what to wear
-     for the day.
-   - `pillars.life.oneThingToPlan` — forward-looking planning nudge
-     (schedule a coffee, block focus time Wed afternoon, sign up for
-     the thing you keep meaning to). Different from Saturday's
-     present-tense "do this today."
-   - `pillars.life.localPicksNextWeekend` — filter STL events to
-     next-Sat/Sun window; keep 1–2.
-   - `pillars.life.rec` — weekend read (longread / book chapter /
-     podcast episode for the week ahead).
-   - `pillars.retirement.weekEndReflection` — quiet week-end
-     reflection (not a planning nudge).
+2. **Read the spec** (`goals/brief_sunday.md` and
+   `~/Downloads/Weekend_Executive_Brief_Prompt.md`).
 
-3. **Filter drive-distance ideas** in `pillars.vacation.driveDistanceIdeas`
-   to 2–4 framed for "good for next weekend."
+3. **Enrich qualitative fields** with reflective tone:
+   - `pillars.weather.whatToWear` — 1 sentence.
+   - `pillars.life.oneThingToPlan` — forward-looking planning nudge.
+   - `pillars.life.localPicksNextWeekend` — filter to next weekend window.
+   - `pillars.life.rec` — weekend read.
+   - `pillars.vacation.driveDistanceIdeas` — filter to 2-4 "good next weekend."
+   - `pillars.retirement.weekEndReflection` — quiet reflection.
+   - `pillars.executiveSummary.*` — reflective tone.
+   - `pillars.markets.whyParagraph` — week-synthesis.
+   - `pillars.investingThemes.themes` — reflective on week's trends.
+   - `pillars.retirementWatch.items` — pre-Monday thinking.
+   - `pillars.aiLandscape.entries` — reflective one-liners.
+   - `pillars.health.entries` — 5 most relevant.
+   - `pillars.worthReading.*` — for the week ahead.
 
 4. **Write the enriched JSON** to `out/lifestyle/<date>.json`.
 
@@ -43,31 +80,25 @@ https://daily-brief-tau.vercel.app/weekend/<date>.
    ```
    python3 scripts/build_lifestyle_json.py sunday --skip-deploy --date <date>
    ```
-   `--skip-deploy` is critical here: the helper still does the manifest
-   refresh + git commit + git push (the parts that finish in <2s), but
-   skips the Vercel deploy (which can take 30-60s and risk the 3-min
-   hard interrupt on cron sessions).
+   `--skip-deploy` is critical: the helper does manifest refresh + git
+   commit + git push (parts that finish in <2s), but skips the Vercel
+   deploy (which can take 30-60s and risk the 3-min hard interrupt).
 
-   After that returns 0, trigger the Vercel deploy in a separate fast
-   background step:
+   After that returns 0, trigger the deploy in detached background:
    ```
    nohup bash -c 'cd /Volumes/BotCentral/Users/milo/repos/Milo/website && npm run fetch-briefs && vercel deploy --prod --yes' > /tmp/sun-deploy.log 2>&1 &
    ```
-   `nohup ... &` detaches the deploy from the cron session so the 3-min
-   hard interrupt on this prompt doesn't kill it mid-deploy. The Vercel
-   build will keep running and finish on its own.
 
 6. **Final response** — one-line confirmation:
    ```
    Published Sunday Lifestyle Brief for <date>: https://daily-brief-tau.vercel.app/weekend/<date>
    ```
-   (The site may take ~60s to reflect the deploy; that's expected.)
 
 ## Self-checks (run before publishing)
 
 - Helper exit code 0 → proceed.
 - Helper exit non-zero → respond `[SILENT]`.
-- If 3+ of 4 pillars are null after enrichment → `[SILENT]`.
+- If 5+ of 11 pillars are null after enrichment → `[SILENT]`.
 
 ## Rules
 
@@ -75,4 +106,5 @@ https://daily-brief-tau.vercel.app/weekend/<date>.
 - **No fabrication.** Use what the helper fetched.
 - **DO NOT call send_message / notify / messaging tools.**
 
-Reference spec: goals/brief_sunday.md (in this repo).
+Reference spec: `goals/brief_sunday.md` and
+`~/Downloads/Weekend_Executive_Brief_Prompt.md`.

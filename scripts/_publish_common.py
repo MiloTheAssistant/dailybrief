@@ -117,6 +117,13 @@ def assemble(day: str, today_iso: str, weekday: str) -> dict:
         )
     portfolio_env = run_fetcher("fetch_tws_portfolio.py", "--plain")
 
+    # Executive Brief data: markets (treasury + index charts), health research,
+    # and 7-day RSS rollup (the model filters by section + relevance to fill
+    # InvestingThemes + AiLandscape pillars).
+    treasury_env = run_fetcher("fetch_treasury.py")
+    health_env = run_fetcher("fetch_health_research.py")
+    rss_env = run_fetcher("fetch_market_brief_rss.py", "--window-hours", "168")
+
     weather = weather_env.get("data", {}).get("weather") or {}
     weather_sources = weather_env.get("sources", {}).get("weather", {})
 
@@ -138,6 +145,20 @@ def assemble(day: str, today_iso: str, weekday: str) -> dict:
 
     travel_ideas = read_curated_travel()
 
+    # Build the markets indicator list from treasury + index chart outputs.
+    markets_indicators = _build_markets_indicators(treasury_env)
+    markets_why = None  # model writes this from the brief's narrative
+
+    # RSS: pass through the 7-day window for the model to filter into
+    # InvestingThemes (mag7 stories) and AiLandscape (ai stories). Cap to
+    # 60 to keep the brief file small but give the model enough signal.
+    rss_stories = (rss_env.get("stories") or [])[:60]
+    rss_sections_present = sorted({s.get("section", "?") for s in rss_stories})
+
+    # Health research: pass through to the model so it can pick the top
+    # 5-7 stories relevant to men-over-60 lens.
+    health_stories = (health_env.get("stories") or [])[:30]
+
     now = datetime.now(timezone.utc)
     edition = {
         "date": today_iso,
@@ -152,6 +173,20 @@ def assemble(day: str, today_iso: str, weekday: str) -> dict:
             "calendar": calendar_env.get("sources", {}),
             "mail": mail_env.get("sources", {}),
             "portfolio": portfolio_env.get("sources", {}),
+            "treasury": treasury_env.get("status"),
+            "health": health_env.get("status"),
+            "rss": {
+                "stories": len(rss_stories),
+                "sections": rss_sections_present,
+            },
+        },
+        # Raw fetcher payloads — model reads these when filling the
+        # qualitative fields. Kept in the JSON so the brief is fully
+        # reproducible from the file alone (no hidden fetcher state).
+        "rawInputs": {
+            "treasury": treasury_env,
+            "health": {"stories": health_stories, "feeds": health_env.get("feeds", {})},
+            "rss": {"stories": rss_stories, "feeds": rss_env.get("feeds", {})},
         },
         "pillars": {
             "weather": {
@@ -163,8 +198,10 @@ def assemble(day: str, today_iso: str, weekday: str) -> dict:
             },
             "life": {
                 "calendarToday": calendar_today,
-                "oneThing": None,  # filled by the model
+                "oneThing": None,  # filled by the model (or oneThingToPlan for Sunday)
+                "oneThingToPlan": None,  # Sunday only
                 "localPicks": events,
+                "localPicksNextWeekend": None,  # Sunday only
                 "rec": None,  # filled by the model
             },
             "vacation": {
@@ -175,9 +212,103 @@ def assemble(day: str, today_iso: str, weekday: str) -> dict:
                 "portfolioState": portfolio,
                 "planningNote": None,  # filled by the model
             },
+            # Executive Brief pillars (Weekend_Executive_Brief_Prompt.md).
+            # The model fills the qualitative fields; some (markets.indicators)
+            # are pre-populated from the fetchers.
+            "executiveSummary": {
+                "opportunities": None,    # model fills
+                "summaryBullets": None,   # model fills
+                "actionItems": None,      # model fills
+                "funFact": None,          # model fills
+            },
+            "markets": {
+                "indicators": markets_indicators,  # pre-populated from treasury + index charts
+                "whyParagraph": None,              # model writes 1-paragraph synthesis
+            },
+            "investingThemes": {
+                "themes": None,            # model picks from rss.stories filtered by section=mag7
+                "noMeaningfulNews": None,  # model sets true if no signal this week
+            },
+            "retirementWatch": {
+                "items": None,             # model fills from web_search + RSS
+                "noMeaningfulNews": None,
+                "planningNote": None,
+                "weekEndReflection": None,
+            },
+            "aiLandscape": {
+                "entries": None,           # model picks from rss.stories filtered by section=ai
+                "noMeaningfulNews": None,
+            },
+            "health": {
+                "entries": None,           # model picks from rawInputs.health.stories
+                "noMeaningfulNews": None,
+            },
+            "worthReading": {
+                "articles": None,
+                "videos": None,
+                "podcasts": None,
+            },
         },
     }
     return edition
+
+
+def _build_markets_indicators(treasury_env: dict) -> list[dict]:
+    """Translate fetch_treasury.py output into the MarketsPillar.indicators
+    shape. Each indicator gets a label, current, week-to-date change, source.
+    """
+    indicators: list[dict] = []
+    quotes = treasury_env.get("indexQuotes") or {}
+    curve = (treasury_env.get("treasury") or {}).get("yieldCurve") or []
+
+    def _quote(label: str, key: str) -> dict | None:
+        q = quotes.get(key)
+        if not q or q.get("error") or q.get("price") is None:
+            return None
+        return {
+            "label": label,
+            "current": q["price"],
+            "changeWtd": f"{q['change5dPct']:+.2f}%" if q.get("change5dPct") is not None else None,
+            "source": q.get("shortName") or q.get("longName") or key,
+        }
+
+    sp = _quote("S&P 500", "sp500")
+    if sp: indicators.append(sp)
+    nq = _quote("Nasdaq Composite", "nasdaq")
+    if nq: indicators.append(nq)
+    btc = _quote("Bitcoin", "btc")
+    if btc: indicators.append(btc)
+    dxy = _quote("U.S. Dollar (DXY)", "dxy")
+    if dxy: indicators.append(dxy)
+
+    # Treasury rates — show 3M, 2Y, 10Y, 30Y from the latest curve row.
+    if curve:
+        latest = curve[0]
+        for label, key in [("3M Treasury", "3m"),
+                           ("2Y Treasury", "2y"),
+                           ("10Y Treasury", "10y"),
+                           ("30Y Treasury", "30y")]:
+            v = latest.get(key)
+            if v is not None:
+                # Calculate WTD change vs the oldest row in the 10-row window.
+                if len(curve) >= 2:
+                    oldest = curve[-1]
+                    old_v = oldest.get(key)
+                    bps_change = None
+                    if old_v is not None:
+                        bps_change = round((v - old_v) * 100, 0)  # pct -> bps
+                        indicators.append({
+                            "label": label,
+                            "current": f"{v:.2f}%",
+                            "changeWtd": f"{bps_change:+.0f} bps",
+                            "source": "home.treasury.gov",
+                        })
+                    else:
+                        indicators.append({"label": label, "current": f"{v:.2f}%", "source": "home.treasury.gov"})
+                else:
+                    indicators.append({"label": label, "current": f"{v:.2f}%", "source": "home.treasury.gov"})
+
+    return indicators
 
 
 def write_and_ship(edition: dict, day: str, today_iso: str, dry_run: bool, skip_deploy: bool) -> int:
