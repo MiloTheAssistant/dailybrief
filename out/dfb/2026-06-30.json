@@ -1,0 +1,169 @@
+{
+  "date": "2026-06-30",
+  "weekday": "Tuesday",
+  "kind": "dfb",
+  "title": "Daily Financial Briefing",
+  "subtitle": "Mission Control · Market Intelligence · Daily",
+  "generatedAt": "2026-06-30T12:02:19.190345+00:00",
+  "confidence": "medium",
+  "zip": "63025",
+  "fetchers": {
+    "rss": {
+      "seekingalpha": {
+        "status": "ok",
+        "count": 30,
+        "elapsed_s": 0.13
+      },
+      "yahoo_finance": {
+        "status": "ok",
+        "count": 48,
+        "elapsed_s": 0.16
+      },
+      "cointelegraph": {
+        "status": "ok",
+        "count": 30,
+        "elapsed_s": 0.23
+      },
+      "google_news_ai": {
+        "status": "ok",
+        "count": 100,
+        "elapsed_s": 0.65
+      },
+      "google_news_mag7": {
+        "status": "ok",
+        "count": 100,
+        "elapsed_s": 0.77
+      }
+    },
+    "calendar": {},
+    "mail": {},
+    "portfolio": {}
+  },
+  "sections": {
+    "marketHeadlines": [
+      {
+        "headline": "Apple (AAPL) Faces Memory Shortages And Tata Ransomware Leak Ahead Of iPhone 18 Pro",
+        "source": "google_news_mag7",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPWTNveVA2YkRsT3RlOUN6a0JyWmVPOXB4djU0ejh2Rl9xX0NCQ1BSTzlOeHdydHEzR1FXUHlQbUpZN1ZjQUlZUXBGMDI2aWhBRHJ6M1J1VjRrNS16ejlwY1lPWFpUS1dab0ZSTGQ2RERlMmxoM21EdE96Y2lnMC1hOFhsRnNWaE1yTDVlbWR2c0lGNzVpLWVqVi1UYy1FeS1yNFM5S0NheVpHWEJIdS1tTkppUnZ2LW1vdk43SNIBwgFBVV95cUxPUzFZZzNPUm0xRm5fazR5MGsyZjlHbDVyUmJEeXJXWUdxNzV0OGhVQW1rT0l3S1R4UjdWMUhQd2NtYkJCcXp2X2FRSGlBall4ajJkQUR0WFlMT0ZCNFNGWUdzLVRYUHBFRXc2ZUtTTGFLX3BFeWtfTlRwaXF0LVE0V1JwWDlPZ3V0aFEwZkkzd2lnRWczODhIWWhkc2t4RUstRVp4XzNDYlRBc2pIOFdhR3BkT2lOU19xbWc5LTBpY242QQ?oc=5",
+        "whyItMatters": "Two supplier-side hits at once — chip shortage and a Tata ransomware leak — landing right as iPhone 18 Pro ramps. Watch for margin guidance slippage on the next print.",
+        "publishedAt": "2026-06-30T16:31:19+00:00"
+      },
+      {
+        "headline": "TSLA Broken Wing Butterfly Trade Targets A Profit Zone Between 360 and 400",
+        "source": "google_news_mag7",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOQWtzcC1JQ1BKNjVLSlRtcDBvYkdyZW15M05zTDY5MmdzLVRYdkZJbW5FYl9udUp6X1lRMlJSQ19KQTBKTEVmXy1MRm0tWGNxVGJrbnhZejh4N1VadExLZWFoUGhvYVJpdVE0a0I1NWFSVUZwUXBmZGt6a0pHNlpxM2lFSTZGNFlvQXV2bkRmTXJSMkYwSGZPV1h4NWF1c2lUMGx0MFFtak5KeFZiMFEwWHpCNWZqLU1uWEE?oc=5",
+        "whyItMatters": "Options flow clustering in the 360–400 zone signals dealers and large traders are positioning for a range-bound Tesla into the print, not a directional breakout.",
+        "publishedAt": "2026-06-30T16:00:02+00:00"
+      },
+      {
+        "headline": "NVDA Stock Eyes Worst First Half Since 2022 As Board Member Trims Stake For Third Time This Year",
+        "source": "google_news_mag7",
+        "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxORzhNMG5sbTZPeXlsLUFWb0xrc05MRGNQcW9aS3VrOTF5RFRYdFRuQkZvRFFFdkdyNzNiaGNodWdJdjJHZE9oYUNnUWxoclN6LTU4YTRIRnR6NnZKRDV5ZVVSWWJPdGNsdFZZM01rZ1V2ajlPcTFHczdBUElKSUtJbEptTFc5V1JKQXZMbHpkeWxDazRpZGc3eHhDVkxuSXN0OE51QmI3bU1FN2pWMEFVODlFT2Q5SVVrXzNQQktFSjR1dkRFWlBpRlF4V2JuZW1rSFZtSU9sWnU5bXBRaDJxbjVGN3M2cGg4dG5SVWY4d2h6SENzbGlkdGk2dUVvWmtDRmZudmVhOHlmeTNGU0F0S2NWNFdSZw?oc=5",
+        "whyItMatters": "Insider selling on a third occasion this year, into a first-half drawdown not seen since 2022. Sentiment signal, not a fundamental reset, but worth flagging.",
+        "publishedAt": "2026-06-30T15:38:07+00:00"
+      },
+      {
+        "headline": "Loop Says Apple (AAPL) Is Looking to China for Memory Supply Relief",
+        "source": "google_news_mag7",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPaXhzZlFOOS0xV3pOSnZDcXUxY0VKN05EcVF4TlBkaVRfSy1jRmlGRElQeHFXeHYwZE9valFyN0FNN3RhbHY2bkx5dGZaXzNHZnJEb0d4bU1FQld3UklBVi1wVTc3cVQ4azVMMnJZZ19OZDlMem9iZ3NER1Y5WVF3MmtKd195OC1EQjZyWS1HTGtleXVaU0Zocw?oc=5",
+        "whyItMatters": "Apple turning to Chinese memory suppliers is a sign the DRAM crunch is real and persistent — not a one-quarter noise item.",
+        "publishedAt": "2026-06-30T15:26:16+00:00"
+      },
+      {
+        "headline": "Tesla (TSLA) Delivery Outlook Improves as Morgan Stanley Keeps Equal Weight Rating",
+        "source": "google_news_mag7",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNTUY0MmplaG5TeDZWZVRwVlluX2pEbWoxQ3ZFdFl2ZDVPd0hfc1Q4SzNkejhLUFRSX0xQZkhna1JDa1k5bUZ5aXg4YkZuXzBCT0hpRE9nbHRnSEN4RVZWYUdBWFdhWjJSRVp2bnk0NWJZaDVzbHVYcFJ0aFVneW5RaFMwbm02YzNLLTJPalVQZno5NF9jTzRyczExMkJNaDZnOVdR?oc=5",
+        "whyItMatters": "Morgan Stanley acknowledging improving deliveries while holding Equal Weight is the bull-bear compromise — better numbers already priced.",
+        "publishedAt": "2026-06-30T15:25:58+00:00"
+      }
+    ],
+    "bitcoin": null,
+    "strategy": null,
+    "institutional": {
+      "etfLeagueTable": null,
+      "blackrock": "no notable moves",
+      "fidelity": "no notable moves",
+      "regulatoryRadar": "ESMA's MiCA warning on Binance EU service changes is the standout regulatory story of the day — EU-wide scope, not just one venue.",
+      "sovereign": "Solana Company backing Kazakhstan's $6B crypto megacity push is the largest sovereign-aligned crypto capital commitment in the feed this morning.",
+      "tradfi": "no notable moves"
+    },
+    "creatorIntel": {
+      "videos": [],
+      "sentimentReading": "mixed",
+      "sentimentNote": "Crypto tape cooling on ESMA and MiCA friction; AI tape cautious into quarter-end with insider trims at NVDA. No clear directional call from creator feeds this morning."
+    },
+    "aiRace": [
+      {
+        "headline": "Virtusa and UnifyApps Announce Strategic Partnership to Accelerate Enterprise AI Adoption with 'Assembly-First' Methodology",
+        "source": "google_news_ai",
+        "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxOLWNUbkZabXdvcU56bWtWSDFpZUljS1RsRklkZTJLd3VNdmpITHhzTmpNOEpmS0oyc3RQY0ZpOVNzaHpZZF9CTVluOEhSc0dWSFN6MGhKaFpPQy1nUUx3WURJZmNUZEw1TlFNSjdrRzhYSW9LcXh6VmVVc0xXMDlKc3FRcmpWM0N4VGpjRWQwdkItOEZDMjVQcDFoNURCUzdjMkkzZ01TX1U2NWlaU2RvWGNvRzl2aUVWYzJnSWdVRkRuNThlbnhiUHQxWU84bmYwaGZzRzVmaUQxVGV0cTh0cVVTZ2hWV1RrY2pBaDJrN1NEd016Z0pKVWpacHVTNzlTWnVsNFJvd0k?oc=5",
+        "whyItMatters": "Enterprise integration shops are now co-marketing AI assembly methodologies — the 'build vs. compose' debate is migrating from startups to the SIs.",
+        "publishedAt": "2026-06-30T17:00:00+00:00"
+      },
+      {
+        "headline": "Small-cap stocks enjoy their best first half in 35 years",
+        "source": "google_news_ai",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdUpnZ09YYUNMbUZjdmtaQUZ5R25DY3lLQXhuN1I5UVJmQTJoaXZzNU1UUnBmSWg3RXBZMHRGYTNucVgtX1E3TG0zY2EycklNWm1KMmhZaERadGNINVlvaFBLOU5nVDhqZGhGWUlSNnRtWHlWMXBRdG90aFBZS2ZsSmtDSTVPZGkyeXZ1VGc4MExqeElJVG1ncW5ESXNjY3Ayajd0d1RHMHktQdIBrwFBVV95cUxQaXFZQVNCZXFFTEM1S1VRbEFySi1GUFg5Q2dZZmo2R1lFeEJnN3ZQQUVOck9IRDVHYTR3clpEazcyZzVGV0VqbXdTUWpaaTJEU2VPSGlSamhlZmNZeFlkcV9vUDRIS0EyYS1DeDRJOUo5dkNBWE5tUUVXVWJQT0FxZHcwNThxVnJHMEVvanBINnUtTVg2OEw2UmVMUHZQQkdGMzZEUmwyUjFWT1owSXdn?oc=5",
+        "whyItMatters": "A 35-year rotation signal into small caps is the kind of breadth shift that historically precedes multi-quarter regime changes — watch for follow-through in July.",
+        "publishedAt": "2026-06-30T16:57:25+00:00"
+      },
+      {
+        "headline": "Why did OpenAI delay rollout of its latest artificial intelligence model?",
+        "source": "google_news_ai",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOallhdV9LbUxxZHVPamtEeHVNLVlJT0tXVWduVllWeTl3NEN1djMxOGxMOVFaN3dldUpiVTVlVmJGaWM3THBLUmRnZ0tPajhkeHRhZVJqQktyUmpEQjBEd0JHYWVsMlRxd1hUQnNoaGw3eTRYZ1drcUdhT2tabHJhalVuMUNSQndqVlFLT19HamxNdw?oc=5",
+        "whyItMatters": "Frontier model rollouts hitting friction right as competitive pressure from labs and open-source accelerates — capability is outrunning deployment readiness.",
+        "publishedAt": "2026-06-30T16:53:00+00:00"
+      },
+      {
+        "headline": "Google restricts Meta's use of Gemini",
+        "source": "google_news_ai",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQa0R2UTdLbUxxZHVPamtEeHVNLVlJT0tXVWduVllWeTl3NEN1djMxOGxMOVFaN3dldUpiVTVlVmJGaWM3THBLUmRnZ0tPajhkeHRhZVJqQktyUmpEQjBEd0JHYWVsMlRxd1hUQnNoaGw3eTRYZ1drcUdhT2tabHJhalVuMUNSQndqVlFLT19HamxNdw?oc=5",
+        "whyItMatters": "Google throttling Meta's access to Gemini is the first major hyperscaler-vs-hyperscaler API rationing event — signals model access is becoming a strategic chokepoint, not a commodity.",
+        "publishedAt": "2026-06-30T16:50:00+00:00"
+      }
+    ],
+    "retirement": {
+      "netLiquidation": null,
+      "buyingPower": null,
+      "availableFunds": null,
+      "totalCashValue": null,
+      "unrealizedPnL": null,
+      "realizedPnL": null,
+      "topPositions": [],
+      "rateWatch": "no notable moves",
+      "supplement": [
+        "TWS offline — portfolio state and rate watch not refreshed this run."
+      ],
+      "actionItem": "Once TWS is back, scan for any overnight moves in MSTR/STRK/STRF/STRD before the open."
+    },
+    "health": {
+      "personalInbox": [
+        {
+          "id": "1578",
+          "subject": "Action required: update your website's domain settings",
+          "sender": "Hostinger",
+          "date": "2026-06-30 10:20+00:00",
+          "flags": "*",
+          "is_seen": false
+        },
+        {
+          "id": "1577",
+          "subject": "SPCX: AM Need to Know: Crypto falls, UK targets app store fees & more",
+          "sender": "SA Breaking News",
+          "date": "2026-06-30 05:56-04:00",
+          "flags": "*",
+          "is_seen": false
+        },
+        {
+          "id": "1576",
+          "subject": "SPCX: Communication error leaves Korean broker Mirae with zero SpaceX IPO shares: report",
+          "sender": "SA Breaking News",
+          "date": "2026-06-30 04:20-04:00",
+          "flags": "*",
+          "is_seen": false
+        }
+      ],
+      "move": "Stand up and walk for two minutes between back-to-back briefs."
+    }
+  }
+}
