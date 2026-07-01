@@ -31,6 +31,12 @@ OUT_DIR = REPO_ROOT / "out" / "dfb"
 
 
 def run_fetcher(name: str, *args: str) -> dict:
+    """Run a fetcher subprocess and return {sources, data, error?}.
+
+    Fetchers emit their payload at the top level (stories, events,
+    envelopes, account_summary, ...). We wrap that payload as `data`
+    so the rest of the pipeline can use a single uniform shape.
+    """
     cmd = ["python3", str(SCRIPTS / name), *args]
     try:
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
@@ -39,29 +45,46 @@ def run_fetcher(name: str, *args: str) -> dict:
     if result.returncode != 0:
         return {"sources": {}, "data": {}, "error": f"{name}: exit {result.returncode}"}
     try:
-        return json.loads(result.stdout)
+        payload = json.loads(result.stdout)
     except json.JSONDecodeError as e:
         return {"sources": {}, "data": {}, "error": f"{name}: bad json: {e}"}
+    # `feeds` and `sources` and metadata stay at the top; payload becomes `data`.
+    sources = payload.get("feeds") or payload.get("sources") or {}
+    return {"sources": sources, "data": payload, "error": None}
 
 
 def group_stories_by_section(stories: list[dict]) -> dict[str, list[dict]]:
-    """Map RSS 'section' values to the DFB's typed section buckets."""
+    """Map RSS 'section' values to the DFB's typed section buckets.
+
+    The helper has to make judgment calls because RSS feeds don't split
+    neatly across our DFB section schema. Default: a story goes to
+    marketHeadlines unless it has a clearly crypto/ai home. Mag7 lives
+    on the tech/market line AND feeds aiRace when AI-relevant.
+    """
     buckets: dict[str, list] = {
         "marketHeadlines": [],
         "aiRace": [],
         "bitcoin": [],
     }
-    section_map = {
-        "analyst": "marketHeadlines",
-        "macro": "marketHeadlines",
-        "movers": "marketHeadlines",
-        "crypto": "bitcoin",
-        "ai": "aiRace",
-        "mag7": "aiRace",  # AI-adjacent — Mag7 = mostly tech
-    }
+    # Mag7 keywords that signal an AI-company move (vs pure market story).
+    ai_keywords = (
+        "ai ", " ai,", " ai.", "gpt", "llm", "openai", "anthropic",
+        "nvidia", "meta ", "google", "alphabet", "microsoft", "amazon",
+        "agent", "model", "chip", "gpu", "data center", "ppa",
+    )
     for s in stories:
-        bucket = section_map.get(s.get("section", ""), "marketHeadlines")
-        buckets[bucket].append({
+        sec = s.get("section", "")
+        title = (s.get("title") or "").lower()
+        if sec == "crypto":
+            target = "bitcoin"
+        elif sec == "ai":
+            target = "aiRace"
+        elif sec == "mag7":
+            target = "aiRace" if any(k in title for k in ai_keywords) else "marketHeadlines"
+        else:
+            # analyst / macro / movers / unknown → marketHeadlines
+            target = "marketHeadlines"
+        buckets[target].append({
             "headline": s.get("title"),
             "source": s.get("source"),
             "url": s.get("url"),
@@ -168,8 +191,39 @@ def write_and_ship(edition: dict, today_iso: str, dry_run: bool, skip_deploy: bo
         print("[build_dfb_json] DRY RUN — skipping commit/push/deploy", file=sys.stderr)
         return 0
 
+    # Skip the commit/push if the on-disk JSON is already tracked and
+    # byte-identical to what we're about to write. Avoids a no-op
+    # commit+push on the --use-enriched path when the enriched file
+    # was just produced by enrich_dfb_edition.py and didn't change.
+    rel_path = str(out_path.relative_to(REPO_ROOT))
     try:
-        subprocess.run(["git", "add", str(out_path.relative_to(REPO_ROOT))],
+        tracked = subprocess.run(
+            ["git", "ls-files", "--error-unmatch", rel_path],
+            cwd=REPO_ROOT, capture_output=True, text=True, timeout=10,
+        )
+    except subprocess.TimeoutExpired:
+        tracked = subprocess.CompletedProcess(args=[], returncode=1, stdout="", stderr="")
+    is_tracked = tracked.returncode == 0
+    if is_tracked:
+        status = subprocess.run(
+            ["git", "status", "--porcelain", rel_path],
+            cwd=REPO_ROOT, capture_output=True, text=True, timeout=10,
+        )
+        if status.stdout.strip() == "":
+            print(f"[build_dfb_json] {rel_path} unchanged — skipping commit/push",
+                  file=sys.stderr)
+            # Fall through to deploy step below if not --skip-deploy.
+            if skip_deploy:
+                return 0
+            website_dir = Path(__file__).resolve().parent.parent.parent / "Milo" / "website"
+            if not website_dir.exists():
+                print(f"[build_dfb_json] website dir missing: {website_dir}",
+                      file=sys.stderr)
+                return 3
+            return _vercel_deploy(website_dir)
+
+    try:
+        subprocess.run(["git", "add", "-f", rel_path],
                        cwd=REPO_ROOT, check=True, timeout=15)
         subprocess.run(["git", "commit", "-m",
                         f"chore(dfb): edition {today_iso}"],
@@ -181,13 +235,24 @@ def write_and_ship(edition: dict, today_iso: str, dry_run: bool, skip_deploy: bo
         return 2
 
     if skip_deploy:
-        print("[build_dfb_json] SKIP DEPLOY — JSON pushed, Vercel pending", file=sys.stderr)
+        print("[build_dfb_json] SKIP DEPLOY — JSON pushed, Vercel pending",
+              file=sys.stderr)
         return 0
 
-    website_dir = Path("/Volumes/BotCentral/Users/milo/repos/Milo/website")
+    # Resolve website_dir relative to this file (so it works in any
+    # workdir) with a fallback to the historical absolute path.
+    website_dir = Path(__file__).resolve().parent.parent.parent / "Milo" / "website"
     if not website_dir.exists():
-        print(f"[build_dfb_json] website dir missing: {website_dir}", file=sys.stderr)
+        website_dir = Path("/Volumes/BotCentral/Users/milo/repos/Milo/website")
+    if not website_dir.exists():
+        print(f"[build_dfb_json] website dir missing: {website_dir}",
+              file=sys.stderr)
         return 3
+    return _vercel_deploy(website_dir)
+
+
+def _vercel_deploy(website_dir: Path) -> int:
+    """Fire the Vercel deploy. Caller is responsible for path validation."""
     try:
         result = subprocess.run(
             ["vercel", "deploy", "--prod", "--yes"],
@@ -197,9 +262,11 @@ def write_and_ship(edition: dict, today_iso: str, dry_run: bool, skip_deploy: bo
         print("[build_dfb_json] vercel deploy timeout", file=sys.stderr)
         return 4
     if result.returncode != 0:
-        print(f"[build_dfb_json] vercel deploy failed: {result.stderr}", file=sys.stderr)
+        print(f"[build_dfb_json] vercel deploy failed: {result.stderr}",
+              file=sys.stderr)
         return 5
-    print(f"[build_dfb_json] vercel deployed: {result.stdout.strip().splitlines()[-1] if result.stdout else 'ok'}", file=sys.stderr)
+    last = result.stdout.strip().splitlines()[-1] if result.stdout else "ok"
+    print(f"[build_dfb_json] vercel deployed: {last}", file=sys.stderr)
     return 0
 
 
@@ -208,6 +275,9 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--date", help="Override date (YYYY-MM-DD); default = today CT")
     p.add_argument("--dry-run", action="store_true", help="Write JSON only; skip git + Vercel")
     p.add_argument("--skip-deploy", action="store_true", help="Push JSON, skip Vercel deploy")
+    p.add_argument("--use-enriched", action="store_true",
+                   help="If out/dfb/<date>.json already exists, use it (skip re-fetch). "
+                        "Lets the LLM-cron write qualitative enrichment first.")
     return p.parse_args()
 
 
@@ -215,6 +285,19 @@ def main() -> int:
     args = parse_args()
     today_iso = args.date or datetime.now(timezone.utc).astimezone().date().isoformat()
     weekday = datetime.fromisoformat(today_iso).strftime("%A")
+
+    # If an enriched edition is already on disk, use it directly. This
+    # lets the LLM-cron hand-write the qualitative fields and skip the
+    # auto-assembly step (which would re-fetch and overwrite).
+    out_path = OUT_DIR / f"{today_iso}.json"
+    if args.use_enriched and out_path.exists():
+        try:
+            edition = json.loads(out_path.read_text(encoding="utf-8"))
+            print(f"[build_dfb_json] using existing enriched file {out_path}", file=sys.stderr)
+            print(json.dumps(edition, ensure_ascii=False, indent=2))
+            return write_and_ship(edition, today_iso, args.dry_run, args.skip_deploy)
+        except json.JSONDecodeError as e:
+            print(f"[build_dfb_json] enriched file unreadable, re-assembling: {e}", file=sys.stderr)
 
     edition = assemble(today_iso, weekday)
     print(json.dumps(edition, ensure_ascii=False, indent=2))
