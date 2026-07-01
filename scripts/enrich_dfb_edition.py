@@ -111,9 +111,16 @@ def build_edition(date_iso: str) -> dict | None:
     rss = fetch("fetch_market_brief_rss.py")
     mail = fetch("fetch_proton_mail.py", "--folder", "INBOX",
                  "--unseen-only", "--since-hours", "18", "--limit", "10")
+    newsletters = fetch(
+        "fetch_proton_folder.py",
+        "--folder", "Folders/DailyBriefs",
+        "--sender-allowlist", "email.interactivebrokers.com",
+        "--limit", "5",
+    )
     # calendar + portfolio are not actionable today (empty + TWS offline)
     stories = rss.get("stories", [])
     envelopes = mail.get("envelopes", [])
+    news_envelopes = newsletters.get("envelopes", [])
 
     def find(sec: str, n: int = 5) -> list[dict]:
         return [s for s in stories if s.get("section") == sec][:n]
@@ -313,6 +320,12 @@ def build_edition(date_iso: str) -> dict | None:
             "rss": rss_feeds,
             "calendar": {"status": "ok", "eventCount": 0, "note": "no events in 7-day window"},
             "mail": {"status": "ok", "count": len(envelopes)},
+            "newsletters": {
+                "status": "ok" if news_envelopes else "empty",
+                "folder": newsletters.get("folder", "Folders/DailyBriefs"),
+                "count": len(news_envelopes),
+                "note": "Bridge IMAP via fetch_proton_folder.py",
+            },
             "portfolio": {"status": "offline", "note": "TWS preflight failed (lsof:7497 no listener)"},
         },
         "sections": {
@@ -322,15 +335,18 @@ def build_edition(date_iso: str) -> dict | None:
             "institutional": institutional,
             "creatorIntel": creator_intel,
             "aiRace": ai_race,
+            "newsletters": news_envelopes or None,  # DailyBriefs folder via Bridge
             "retirement": None,     # TWS offline + no rate-watch data
             "health": None,         # no health data + all inbox items are promotional
         },
     }
 
-    # Null-count sanity check (mirrors helper logic)
+    # Null-count sanity check (mirrors helper logic). With 9 sections
+    # total, 5 nulls (5/9 ≈ 56% null) is the lower bound of "the brief
+    # is too thin to ship." If you add a 10th section, bump this to 6.
     null_count = sum(1 for v in edition["sections"].values() if v is None)
     if null_count >= 5:
-        print(f"[enrich] {null_count} of 8 sections null — would SILENT per spec rule",
+        print(f"[enrich] {null_count} of 9 sections null — would SILENT per spec rule",
               file=sys.stderr)
         return None
 
