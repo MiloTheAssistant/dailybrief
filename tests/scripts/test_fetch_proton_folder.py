@@ -186,6 +186,45 @@ def test_extract_text_skips_css_as_text_preamble():
     assert "TRADERS' INSIGHT" in cleaned or "Carrying On" in cleaned
 
 
+def test_post_clean_truncates_to_real_article():
+    """The IB body has subject lines, blank lines, then the article.
+    _post_clean should drop the boilerplate and keep the article."""
+    body = (
+        "Your Daily Traders' Insight - June 30, 2026\n"
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        "Your Daily Traders' Insight - June 30, 2026\n"
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        "TRADERS' INSIGHT:\n"
+        "\n"
+        "Carrying On with the Japanese Yen\n"
+        "Today marks the end of the second quarter.\n"
+        "Contributed By: Steve Sosnick\n"
+    )
+    cleaned = fetch_proton_folder._post_clean(body)
+    # Should start with the marker, not the subject line.
+    assert not cleaned.startswith("Your Daily")
+    assert "TRADERS' INSIGHT" in cleaned
+    assert "Carrying On" in cleaned
+    # Repeated subject lines should be gone.
+    assert cleaned.count("Your Daily Traders' Insight") <= 1
+
+
+def test_post_clean_collapses_blank_lines():
+    body = "First line\n\n\n\n\n\nSecond line\n\n\n\n\nThird line"
+    cleaned = fetch_proton_folder._post_clean(body)
+    # No more than 2 consecutive newlines anywhere.
+    assert "\n\n\n" not in cleaned
+    assert "First line" in cleaned
+    assert "Third line" in cleaned
+
+
+def test_post_clean_preserves_plain_text():
+    """A normal plain-text body should pass through unchanged."""
+    body = "This is a normal newsletter.\n\nIt has paragraphs.\n\nBest, Editor"
+    cleaned = fetch_proton_folder._post_clean(body)
+    assert cleaned == body
+
+
 def test_snippet_contains_no_raw_html():
     """The fetcher's snippet must be plain text — no <tag> markup."""
     # Use a body that's purely HTML (no pre-CSS preamble) so the

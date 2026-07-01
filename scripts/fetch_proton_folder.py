@@ -266,7 +266,7 @@ def _extract_text_from_mime_concat(body: str) -> str:
             )
             for part in msg.walk():
                 if part.get_content_type() == "text/plain":
-                    return part.get_content().strip()
+                    return _post_clean(part.get_content().strip())
         except Exception:
             pass
 
@@ -309,6 +309,82 @@ def _extract_text_from_mime_concat(body: str) -> str:
         body = re.sub(r"<script\b[^>]*>.*?</script>", " ", body, flags=re.DOTALL | re.IGNORECASE)
         body = re.sub(r"<[^>]+>", " ", body)
         body = re.sub(r"\s+", " ", body).strip()
+
+    return _post_clean(body)
+
+
+def _post_clean(body: str) -> str:
+    """Post-extraction cleanup applied to all snippet bodies.
+
+    Newsletter bodies from the IBKR Daily Traders' Insight (and
+    similar marketing emails) include:
+      - Repeated subject lines ("Your Daily Traders' Insight - June 30, 2026")
+        at the top, after the CSS preamble, and before the article body.
+      - Runs of 10+ blank lines between blocks.
+      - The real prose at the END of the body, after the boilerplate.
+
+    This pass:
+      1. Detects the "real content marker" (TRADERS' INSIGHT:,
+         Contributed By:, or the first paragraph after a marker line).
+      2. Collapses runs of blank lines to a single blank line.
+      3. Prefers text after the LAST occurrence of a marker (the
+         article body comes after the boilerplate).
+    """
+    if not body:
+        return body
+
+    # Known content markers. If we see any of these, the real
+    # article starts at the FIRST marker (not the last — the
+    # "Contributed By:" attribution line is *after* the article
+    # body, so the last-marker logic chops off the actual prose).
+    markers = [
+        "TRADERS' INSIGHT:",         # IBKR
+        "MARKETS COMMENTARY:",
+        "Dear Reader,",
+        "Editor's Note:",
+    ]
+
+    # Find the FIRST occurrence of any marker. The article body
+    # starts at this line and runs until the next "Contributed By:"
+    # or end of body.
+    first_marker_idx = -1
+    for marker in markers:
+        for i, line in enumerate(body.splitlines()):
+            if marker in line:
+                first_marker_idx = i
+                break
+        if first_marker_idx >= 0:
+            break
+
+    if first_marker_idx >= 0:
+        body = "\n".join(body.splitlines()[first_marker_idx:]).strip()
+
+    # Now find the FIRST "Contributed By:" line AFTER the marker
+    # (it's the attribution and the boilerplate that follows is
+    # not part of the article). If found, clip everything from
+    # that line onward.
+    contributed_idx = -1
+    for i, line in enumerate(body.splitlines()):
+        if "Contributed By:" in line:
+            contributed_idx = i
+            break
+    if contributed_idx >= 0:
+        body = "\n".join(body.splitlines()[:contributed_idx]).strip()
+
+    # Collapse runs of 3+ blank lines to a single blank line.
+    body = re.sub(r"\n{3,}", "\n\n", body).strip()
+
+    # If the body still has lots of repeated subject headers (the
+    # marker-based path didn't find anything), drop any line that
+    # matches the subject pattern. This is a fallback.
+    subject_pattern = re.compile(
+        r"^Your Daily.*?(Insight|Brief|Newsletter).*?$",
+        re.IGNORECASE,
+    )
+    lines = [line for line in body.splitlines() if not subject_pattern.match(line.strip())]
+    body = "\n".join(lines).strip()
+    body = re.sub(r"\n{3,}", "\n\n", body).strip()
+
     return body
 
 

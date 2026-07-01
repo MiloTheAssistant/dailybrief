@@ -317,8 +317,56 @@ def check_deps() -> int:
             bool(listening),
             "listening" if listening else "no listener on 7497",
         ))
-    except (FileNotFoundError, subprocess.TimeoutExpired):
-        checks.append(("IB TWS port 7497 (paper)", False, "lsof not available"))
+    except (FileNotFoundError, subprocess.TimeoutExpired) as e:
+        checks.append((
+            "IB TWS port 7497 (paper)", False, f"lsof check failed: {e}",
+        ))
+
+    # 2b. Proton Mail Bridge (IMAP 1143 + SMTP 1025) — the source of
+    # truth for fetch_proton_folder.py. We don't probe the credentials
+    # here (that would leak the password to the cron log); we only
+    # check that the Bridge daemon is listening on the expected ports.
+    # The actual auth smoke test is "fetch_proton_folder.py
+    # --sender-allowlist <x> --limit 1" — run that as a separate
+    # step if you want to verify creds.
+    for port, name in ((1143, "IMAP"), (1025, "SMTP")):
+        try:
+            lsof = subprocess.run(
+                ["lsof", f"-iTCP:{port}", "-sTCP:LISTEN", "-P", "-n"],
+                capture_output=True, text=True, timeout=5,
+            )
+            listening = lsof.returncode == 0 and lsof.stdout.strip()
+            checks.append((
+                f"Proton Bridge {name} ({port})",
+                bool(listening),
+                "listening" if listening else f"no listener on {port}",
+            ))
+        except (FileNotFoundError, subprocess.TimeoutExpired) as e:
+            checks.append((
+                f"Proton Bridge {name} ({port})", False,
+                f"lsof check failed: {e}",
+            ))
+
+    # 2c. Proton Mail Bridge credentials file (presence only, never
+    # read the contents). If the file is missing, the fetcher will
+    # fail at the auth step.
+    cred_path = Path.home() / ".config/codex_skills/protonmail-bridge.env"
+    if cred_path.exists():
+        # Per-permission check: must be owner-only (chmod 600 or 400).
+        # Wider perms are a security smell (password visible to other
+        # users on the box).
+        mode = cred_path.stat().st_mode & 0o777
+        perms_ok = mode in (0o600, 0o400)
+        checks.append((
+            f"Bridge creds ({cred_path})",
+            perms_ok,
+            f"mode={oct(mode)}" + ("" if perms_ok else " (should be 600 or 400)"),
+        ))
+    else:
+        checks.append((
+            f"Bridge creds ({cred_path})", False,
+            "not found (fetcher will prompt interactively)",
+        ))
 
     # 3. vercel CLI on PATH + authenticated.
     vercel = shutil.which("vercel")
