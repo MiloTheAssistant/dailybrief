@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import shutil
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -270,6 +271,101 @@ def _vercel_deploy(website_dir: Path) -> int:
     return 0
 
 
+def check_deps() -> int:
+    """Read-only preflight: verify the cron-time prerequisites are in place.
+
+    Checks (and prints a status table for each):
+      1. Proton Mail config: ~/.config/himalaya/config.toml exists + has credentials
+      2. IB TWS port: 7497 reachable (lsof listener check)
+      3. vercel CLI: on PATH + authenticated
+      4. Website repo: exists + has public/briefings/ directory
+
+    Returns 0 if all checks pass, 1 if any fail. No side effects.
+    """
+    checks: list[tuple[str, bool, str]] = []
+
+    # 1. Proton Mail config (Himalaya CLI).
+    himalaya = Path.home() / ".config" / "himalaya" / "config.toml"
+    if himalaya.exists():
+        text = himalaya.read_text(encoding="utf-8", errors="ignore")
+        # Crude credential check: look for an account stanza with a
+        # password-source or a non-empty password. Not airtight, but
+        # catches the common "fresh install" case where the file
+        # exists but no accounts are configured.
+        has_account = "[accounts." in text or "password" in text
+        if has_account:
+            checks.append(("Proton Mail (Himalaya config)", True, str(himalaya)))
+        else:
+            checks.append((
+                "Proton Mail (Himalaya config)",
+                False, f"{himalaya} exists but no [accounts.*] stanza found",
+            ))
+    else:
+        checks.append((
+            "Proton Mail (Himalaya config)", False, f"{himalaya} not found",
+        ))
+
+    # 2. IB TWS port 7497 (live-paper-trading default).
+    try:
+        lsof = subprocess.run(
+            ["lsof", "-iTCP:7497", "-sTCP:LISTEN", "-P", "-n"],
+            capture_output=True, text=True, timeout=5,
+        )
+        listening = lsof.returncode == 0 and lsof.stdout.strip()
+        checks.append((
+            "IB TWS port 7497 (paper)",
+            bool(listening),
+            "listening" if listening else "no listener on 7497",
+        ))
+    except (FileNotFoundError, subprocess.TimeoutExpired):
+        checks.append(("IB TWS port 7497 (paper)", False, "lsof not available"))
+
+    # 3. vercel CLI on PATH + authenticated.
+    vercel = shutil.which("vercel")
+    if vercel:
+        # `vercel whoami` returns 0 if authenticated, non-zero otherwise.
+        whoami = subprocess.run(
+            [vercel, "whoami"], capture_output=True, text=True, timeout=10,
+        )
+        ok = whoami.returncode == 0
+        detail = whoami.stdout.strip() or whoami.stderr.strip() or "unknown"
+        checks.append(("vercel CLI authenticated", ok, detail[:80]))
+    else:
+        checks.append(("vercel CLI on PATH", False, "vercel not found"))
+
+    # 4. Website repo exists + has public/briefings/.
+    website = (
+        Path(__file__).resolve().parent.parent.parent / "Milo" / "website"
+    )
+    if not website.exists():
+        website = Path("/Volumes/BotCentral/Users/milo/repos/Milo/website")
+    briefings = website / "public" / "briefings"
+    if website.exists() and briefings.is_dir():
+        checks.append((
+            "Website repo + public/briefings/",
+            True, str(website.relative_to(Path.home())),
+        ))
+    else:
+        checks.append((
+            "Website repo + public/briefings/",
+            False, f"missing: {website}",
+        ))
+
+    # Render the table.
+    print("[build_dfb_json] preflight — runtime dependencies", file=sys.stderr)
+    all_ok = True
+    for name, ok, detail in checks:
+        marker = "✓" if ok else "✗"
+        print(f"  {marker} {name}: {detail}", file=sys.stderr)
+        all_ok = all_ok and ok
+    if all_ok:
+        print("[build_dfb_json] all checks passed", file=sys.stderr)
+        return 0
+    print("[build_dfb_json] one or more checks FAILED — fix above before cron run",
+          file=sys.stderr)
+    return 1
+
+
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Assemble + ship the Daily Financial Briefing to Vercel.")
     p.add_argument("--date", help="Override date (YYYY-MM-DD); default = today CT")
@@ -278,11 +374,18 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--use-enriched", action="store_true",
                    help="If out/dfb/<date>.json already exists, use it (skip re-fetch). "
                         "Lets the LLM-cron write qualitative enrichment first.")
+    p.add_argument("--check-deps", action="store_true",
+                   help="Preflight: verify cron-time prerequisites (Proton, TWS, "
+                        "vercel CLI, website repo). Read-only; exits 0 if all OK, "
+                        "1 if any check fails. Run BEFORE the cron job to catch "
+                        "missing config / unreachable services.")
     return p.parse_args()
 
 
 def main() -> int:
     args = parse_args()
+    if args.check_deps:
+        return check_deps()
     today_iso = args.date or datetime.now(timezone.utc).astimezone().date().isoformat()
     weekday = datetime.fromisoformat(today_iso).strftime("%A")
 

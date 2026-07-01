@@ -16,10 +16,64 @@ This is the second half of the DFB pipeline:
      (Avoid `nohup ... &` — blocked by tirith in cron mode; Hermes's
      background-tool form is the working path.)
 
-The script reads fetcher outputs DIRECTLY (not the helper's auto-edition)
+The script reads fetchers DIRECTLY (not the helper's auto-edition)
 so it doesn't depend on a second fetch cycle returning the same RSS
 results, and so the on-disk helper JSON (which is overwritten on every
 auto-run) is never the source of truth.
+
+────────────────────────────────────────────────────────────────────────
+HEURISTIC DESIGN — what this script does and how to extend it
+────────────────────────────────────────────────────────────────────────
+
+Unlike the auto-fetcher (which uses RSS `section` tags to bucket
+stories mechanically), THIS script authors qualitative fields that
+require judgment: `whyItMatters`, `institutional.tradfi`, the
+`aiRace.weeklyMoves` list, the `deepDiveCompany` + summary, etc.
+
+The current implementation does this with **deterministic keyword
+matching** against story titles:
+
+  for s in mag7:
+      if "84.75" in s["title"] or "Largest Equity Capital Raise" in s["title"]:
+          market_headlines.append(...)
+          break
+
+This is brittle (a rewrite like "Alphabet announces $84.7B raise"
+would miss the "$84.75" exact-match) but it works for the current
+RSS feed shapes, and it's **deterministic** — same input → same
+output, no LLM call, no flakiness.
+
+### When to extend the patterns
+
+If you see an LLM-authored DFB whose `whyItMatters` text references
+a story that isn't in the source RSS, the helper missed it. The
+likely cause is a keyword match in this script that didn't fire.
+
+**Adding a new pattern:**
+
+  1. Find the section in `build_edition()` you want to extend.
+  2. Add a `for s in <feed>: if <keyword> in s["title"]:` loop.
+  3. Match the style of the existing patterns (use `break` after the
+     first match to keep the list short).
+  4. Test by running `python3 scripts/enrich_dfb_edition.py 2026-07-01`
+     and checking the resulting `out/dfb/2026-07-01.json`.
+
+### When to graduate from heuristic to LLM-authored
+
+If the heuristic patterns grow past ~20 entries, or if the
+`whyItMatters` text quality becomes a bottleneck (you'd want a real
+narrative, not pattern-matched fragments), the right next step is to
+have the LLM **call this script's structural skeleton** and write the
+qualitative text into it. The shape would be:
+
+  1. This script outputs `out/dfb/<date>.skeleton.json` with the
+     qualitative fields left as empty strings.
+  2. The LLM reads the skeleton, fills the strings, writes back.
+  3. The cron ships the filled version via
+     `build_dfb_json.py --use-enriched --skip-deploy`.
+
+That's a future refactor; the current heuristic is fine for the
+volume of stories the RSS feed produces.
 """
 from __future__ import annotations
 
