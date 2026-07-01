@@ -1,0 +1,144 @@
+{
+  "date": "2026-06-29",
+  "weekday": "Monday",
+  "kind": "dfb",
+  "title": "Daily Financial Briefing",
+  "subtitle": "Mission Control · Market Intelligence · Daily",
+  "generatedAt": "2026-06-29T12:09:52.154616+00:00",
+  "confidence": "medium",
+  "zip": "63025",
+  "sourcesCount": 1,
+  "fetchers": {
+    "rss": {
+      "seekingalpha": {
+        "status": "ok",
+        "count": 30,
+        "elapsed_s": 0.1
+      },
+      "yahoo_finance": {
+        "status": "ok",
+        "count": 50,
+        "elapsed_s": 0.13
+      },
+      "cointelegraph": {
+        "status": "ok",
+        "count": 30,
+        "elapsed_s": 0.11
+      },
+      "google_news_ai": {
+        "status": "ok",
+        "count": 100,
+        "elapsed_s": 0.19
+      },
+      "google_news_mag7": {
+        "status": "ok",
+        "count": 100,
+        "elapsed_s": 0.21
+      }
+    },
+    "calendar": {
+      "status": "ok",
+      "eventCount": 0,
+      "note": "no events in 7-day window"
+    },
+    "mail": {
+      "status": "ok",
+      "count": 6
+    },
+    "portfolio": {
+      "status": "offline",
+      "note": "TWS preflight failed (lsof:7497 no listener)"
+    }
+  },
+  "sections": {
+    "marketHeadlines": [
+      {
+        "headline": "Alphabet (GOOGL) Prices the Largest Equity Capital Raise in US Corporate History at $84.75 Billion - Yahoo Finance Singapore",
+        "source": "google_news_mag7",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQd0ZHQ3BST2Jmd0IzUTlhZEVPVW1IeFJYc08xcHZjX0xhYTFhdVlkXzlqTE43ZkhvYmx0VXFyUWFYdEt6ekhXbkRXc0x1cDN4eW1Jam11MXRMUjJDNzdOd2MxQW9GMExsR1NBa0wtaUhORGtuVFFkRzdDQXJZQlJvTEhlZTNHM21PT0NUWVBB?oc=5",
+        "whyItMatters": "Largest US corporate equity raise in history — read-through for cap-markets liquidity and AI-capex funding asks across the Mag7.",
+        "publishedAt": "2026-06-29T16:57:27+00:00"
+      },
+      {
+        "headline": "Google Reportedly Capped Meta's Use Of Gemini AI For Coding And Chatbots - Engadget",
+        "source": "google_news_mag7",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPaEpSelctNTVTd1lGcHMyaDM4MlJ4X294UWJ3dXJGQ0EtNWpMNERGOWIyZ3JfQkZUblZFaE92ZENRUXlFTS1pM0xrWFpJRW1oUmdmeWwwTFROR1hZdHhqWlhKVml6d3JtY1lNaEFEMTA4Y2E1cXlMRVF2Yk9aa2FpVWNYZ3Y5QUw3UWE2bENFc1F0OHp5WGdRMTBSZUVRZm1VNkE?oc=5",
+        "whyItMatters": "Hyperscalers throttling each other is the clearest signal that 2026 AI compute is sold out.",
+        "publishedAt": "2026-06-29T16:03:14+00:00"
+      },
+      {
+        "headline": "Meta signs 220MW PPA with Sabanci in Texas - Data Center Dynamics",
+        "source": "google_news_mag7",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOcUk4VVFZbERGSDh1SnJuTHVSOTV1UUFaUUZFNS0zdUlhSkhxWVpjdDdxTkNPM2taa1RzdmVzZGFuTmJOMmdNZjBzdFhGTTNFQlg3N2ZUYTE3N09lVUI5VjBpcVd2MDN0RTJ5MUZ6QTV6bXpPT2RwWWZCdjE3R0d3Zm9fT1BtdjRUYlJMd0xLVQ?oc=5",
+        "whyItMatters": "220MW PPA at Sabanci — AI build-out is now driving utility-scale PPAs in Texas.",
+        "publishedAt": "2026-06-29T16:52:23+00:00"
+      },
+      {
+        "headline": "JPMorgan Pushes Back on Broadcom (AVGO) Delay Fears and Says the TPU v9 Program Is Firmly on Schedule",
+        "source": "yahoo_finance",
+        "url": "https://finance.yahoo.com/technology/ai/articles/jpmorgan-pushes-back-broadcom-avgo-115846269.html",
+        "whyItMatters": "JPMorgan pushback keeps TPU v9 on schedule — read-through for custom-AI-silicon demand vs. Nvidia into 2H 2026.",
+        "publishedAt": "2026-06-29T11:58:46+00:00"
+      },
+      {
+        "headline": "BTC price RSI prints key 2026 signal: Five things to know in Bitcoin this week",
+        "source": "cointelegraph",
+        "url": "https://cointelegraph.com/markets/btc-price-rsi-prints-key-2026-signal-five-things-to-know-in-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "whyItMatters": "BTC RSI divergence into the June close has analysts drawing parallels to the 2022 bottom — historically a long-term buy signal.",
+        "publishedAt": "2026-06-29T09:55:20+00:00"
+      }
+    ],
+    "bitcoin": null,
+    "strategy": null,
+    "institutional": {
+      "etfLeagueTable": null,
+      "blackrock": "Quiet day for BlackRock in the RSS window; no direct IBIT/spot-ETF flow headlines surfaced.",
+      "fidelity": "Quiet day for Fidelity in the RSS window; no direct FBTC/spot-ETF flow headlines surfaced.",
+      "regulatoryRadar": "BIS warned the AI investment surge is a flashpoint for systemic risk — debt-fueled capex could end in a 'bust'. Separately BIS flagged stablecoins risk fragmenting the global financial system. EU's EBA laid out a penalty framework for non-compliant MiCA issuers.",
+      "sovereign": "Galaxy cut its 2026 CLARITY Act odds to 50% as US Senate floor time narrows before the August recess; markets structure bill increasingly unlikely to clear this year.",
+      "tradfi": "JPMorgan: Broadcom TPU v9 program on schedule, delay fears overdone. Stabilizes AVGO narrative; supports the multi-year TPU build-out vs. Nvidia framing."
+    },
+    "creatorIntel": {
+      "sentimentReading": "Mixed / cautious",
+      "sentimentNote": "RSS video sources are not yet wired into the DFB pipeline. Proton inbox shows 6 newsletters overnight (SA Breaking, Ross Givens, Traders Daily Direction) — all promotional. No actionable creator intel surfaced.",
+      "videos": []
+    },
+    "aiRace": {
+      "weeklyMoves": [
+        {
+          "headline": "Google throttled Meta's access to Gemini AI amid compute shortage.",
+          "company": "Google",
+          "whyItMatters": "Compute, not models, is now the binding constraint."
+        },
+        {
+          "headline": "Meta locked in a 220MW PPA with Sabanci for Texas data-center power.",
+          "company": "Meta",
+          "whyItMatters": "AI capex is pulling utility-scale PPAs into Texas."
+        },
+        {
+          "headline": "JPMorgan: Broadcom TPU v9 program on schedule, delay fears overdone.",
+          "company": "NVIDIA",
+          "whyItMatters": "Custom-silicon share grows if AVGO delivers — Nvidia margin pressure intensifies."
+        },
+        {
+          "headline": "CoreWeave launched ARIA, an agent to automate AI research inside Weights & Biases.",
+          "company": "Other",
+          "whyItMatters": "Agentic AI is reaching infra tooling, not just consumer surfaces."
+        }
+      ],
+      "deepDiveCompany": "Google",
+      "deepDiveSummary": "Google rationing Meta's access to Gemini — echoed across multiple outlets overnight — is the most concrete read yet that frontier AI compute is a seller's market. Pair that with the twin $84.75B equity raise and the picture is consistent: 2026 capex is binding, not optional.",
+      "snapshot": {
+        "openai": "Quiet day — no major OpenAI move in RSS.",
+        "anthropic": "Quiet day — no major Anthropic move in RSS.",
+        "google": "Rationing Meta's Gemini; pricing $84.75B raise.",
+        "xai": "Grok 4.5 mentioned in overnight SA newsletter.",
+        "meta": "Locked 220MW Texas PPA; throttled by Google.",
+        "nvidia": "BioNeMo wins; custom-silicon narrative alive (AVGO TPU v9).",
+        "microsoft": "Down 23% YTD per one strategist — 'significantly overselling'."
+      }
+    },
+    "retirement": null,
+    "health": null
+  }
+}
