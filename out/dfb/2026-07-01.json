@@ -4,162 +4,100 @@
   "kind": "dfb",
   "title": "Daily Financial Briefing",
   "subtitle": "Mission Control · Market Intelligence · Daily",
-  "generatedAt": "2026-07-01T13:30:33.375051+00:00",
-  "confidence": "high",
+  "generatedAt": "2026-07-01T17:57:39.213506+00:00",
+  "confidence": "medium",
   "zip": "63025",
+  "sourcesCount": 5,
   "fetchers": {
     "rss": {
       "seekingalpha": {
         "status": "ok",
         "count": 30,
-        "elapsed_s": 0.19
+        "elapsed_s": 0.15
       },
       "yahoo_finance": {
         "status": "ok",
-        "count": 46,
-        "elapsed_s": 0.2
+        "count": 45,
+        "elapsed_s": 0.18
       },
       "cointelegraph": {
         "status": "ok",
         "count": 30,
-        "elapsed_s": 0.14
+        "elapsed_s": 0.22
       },
       "google_news_ai": {
         "status": "ok",
         "count": 100,
-        "elapsed_s": 0.7
+        "elapsed_s": 0.71
       },
       "google_news_mag7": {
         "status": "ok",
         "count": 100,
-        "elapsed_s": 0.65
+        "elapsed_s": 0.61
       }
     },
-    "calendar": {},
-    "mail": {},
+    "calendar": {
+      "status": "ok",
+      "eventCount": 0,
+      "note": "no events in 7-day window"
+    },
+    "mail": {
+      "status": "ok",
+      "count": 0
+    },
+    "newsletters": {
+      "status": "ok",
+      "folder": "Folders/DailyBriefs",
+      "count": 1,
+      "note": "Bridge IMAP via fetch_proton_folder.py"
+    },
     "portfolio": {
-      "status": "error",
-      "reason": "TWS/IB Gateway offline (lsof 7497 LISTEN failed)"
+      "status": "offline",
+      "note": "TWS preflight failed (lsof:7497 no listener)"
     }
   },
   "sections": {
-    "marketHeadlines": [
-      {
-        "headline": "Meta Stock Rises on Reports the Company Is Building a Cloud Business to Sell Excess AI Compute",
-        "source": "google_news_mag7",
-        "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQSW0zRlItTi0wTXliRlkyWnhDMTAyUko0RnQ2TkV0Y3ZQVnd4a3RYVms1cklXdVJ4clE2ak1lQnB3VHFGYVh3NkF1VHQ3Y1M0OVpCcEVuckVFQ3BNQUREQmhKVmJsazVHbWNDSlJKMFNJLXNkSXhBT3dQVVNkZEg5Z2tYMU12a3JMNVNEVXJlVDdfcWRRc0VFUWVIa29YNkNnWEo2UllzcERGN3dRbDYzd012MUNiMktJVWkzM2xka0JqMk9iRG5jeGZlZzVTdVdkaDRwbXlkY2JPWTY4dDYxWVJidUZuRXF5Z3Rz?oc=5",
-        "whyItMatters": "Meta up ~8% on plans to monetize its AI capex as a third-party cloud — the first hyperscaler openly selling excess GPU. Direct read-through to AWS/Azure pricing power.",
-        "publishedAt": "2026-07-01T18:22:40+00:00"
-      },
-      {
-        "headline": "Bitcoin ETFs lose record $4.5B in June, eclipsing Strategy's $1.25B raise",
-        "source": "cointelegraph",
-        "url": "https://cointelegraph.com/news/bitcoin-etf-4-5-billion-outflow-june-worst-on-record",
-        "whyItMatters": "Spot BTC ETFs just printed their worst month on record — outflows ran ~3.6x Strategy's accumulation. Spot demand is thinnest since launch.",
-        "publishedAt": "2026-07-01T09:22:09+00:00"
-      },
-      {
-        "headline": "Déjà short: Michael Burry takes aim at Tesla again (TSLA:NASDAQ)",
-        "source": "google_news_mag7",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNdHlTUGdDZ3VWS1dqb29fS0RHVGlEekN2ZHdhN2lfS0FyNW1GbUVodUt4WHhQVTNlcUUxRzgxV0FReVI0eWV3SUZoejFZalRJdFJEQXBCZ2xidVhNajBoeGk1clRtaUpSZlZIdDlmcnAxYTNsdXV3ZnN6MUlXTUxuNDF5VjVtSVNKZFhsNGZqZUk?oc=5",
-        "whyItMatters": "Burry re-registering a Tesla short after the Q1 13F — alpha signal that the valuation gap hasn't closed in his view. Watch the next 13F.",
-        "publishedAt": "2026-07-01T18:00:17+00:00"
-      },
-      {
-        "headline": "CoreWeave and Nebius shares fall on Meta cloud report",
-        "source": "google_news_mag7",
-        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPS0lpYnpfckJfTGZ4UFdoaFNRUkl0VlhFUDBFdFpMc3hISXBxOXdiUXVHTFFheEtUUGVDdlNNLThWYThMUTRkRUZCYkR2ZEZLSC1jWkVSU3pqVVE5Tnh1U0N1ZGZsS1VvZW95SWxwSnYwMDM3b2d4VWp2RjNKVUFVU0lhT0lrd042ay1aSWtDWjFLTngzaDBySjlPRXM4OVh5RlBrVA?oc=5",
-        "whyItMatters": "Neoclouds (CRWV, NBIS) sold off 5–8% as Meta re-prices as a potential supply competitor. The neocloud trade now has a hyperscaler counter-party.",
-        "publishedAt": "2026-07-01T17:52:09+00:00"
-      }
-    ],
+    "marketHeadlines": [],
     "bitcoin": null,
     "strategy": null,
     "institutional": {
       "etfLeagueTable": null,
-      "blackrock": "IBIT was the largest single contributor to the record $4.5B June BTC-ETF outflow — flow story is being set by BlackRock's positioning, not the long tail.",
-      "fidelity": "no notable moves",
-      "regulatoryRadar": "SEC opened a public comment window on next-gen ETF structures; EU's MiCA transition period just closed with a final wave of CASP licenses; Taiwan's legislature passed the country's first crypto/stablecoin law; Massachusetts AG filed an amended Kalshi complaint over under-21 sports-betting targeting.",
-      "sovereign": "Taiwan's crypto framework passage is the clearest sovereign adoption story of the week — Asia's regulatory perimeter is now fully stitched (Taiwan + Hong Kong + Singapore + Japan + Korea).",
-      "tradfi": "Meta entering the cloud market is the de facto TradFi signal of the morning — threatens AWS/Azure pricing power and pressures the CRWV/NBIS neocloud cohort that funded Meta's GPU build-out."
+      "blackrock": "Quiet day for BlackRock in the RSS window; no direct IBIT/spot-ETF flow headlines surfaced.",
+      "fidelity": "Quiet day for Fidelity in the RSS window; no direct FBTC/spot-ETF flow headlines surfaced.",
+      "regulatoryRadar": "BIS warned the AI investment surge is a flashpoint for systemic risk — debt-fueled capex could end in a 'bust'. Separately BIS flagged stablecoins risk fragmenting the global financial system. EU's EBA laid out a penalty framework for non-compliant MiCA issuers.",
+      "sovereign": "Galaxy cut its 2026 CLARITY Act odds to 50% as US Senate floor time narrows before the August recess; markets structure bill increasingly unlikely to clear this year.",
+      "tradfi": "No notable TradFi moves in today's RSS window."
     },
     "creatorIntel": {
-      "videos": [],
-      "sentimentReading": "cautious",
-      "sentimentNote": "BTC tape is the dominant creator narrative this morning — record ETF outflows, sub-$60K risk, and a DXY squeeze have put most crypto creators in defense mode. AI/equity tape sentiment is mixed-to-positive on Meta's cloud pivot."
+      "sentimentReading": "Mixed / cautious",
+      "sentimentNote": "RSS video sources are not yet wired into the DFB pipeline. Proton inbox shows 6 newsletters overnight (SA Breaking, Ross Givens, Traders Daily Direction) — all promotional. No actionable creator intel surfaced.",
+      "videos": []
     },
-    "aiRace": [
+    "aiRace": {
+      "weeklyMoves": [],
+      "deepDiveCompany": "Google",
+      "deepDiveSummary": "Google rationing Meta's access to Gemini — echoed across multiple outlets overnight — is the most concrete read yet that frontier AI compute is a seller's market. Pair that with the twin $84.75B equity raise and the picture is consistent: 2026 capex is binding, not optional.",
+      "snapshot": {
+        "openai": "Quiet day — no major OpenAI move in RSS.",
+        "anthropic": "Quiet day — no major Anthropic move in RSS.",
+        "google": "Rationing Meta's Gemini; pricing $84.75B raise.",
+        "xai": "Grok 4.5 mentioned in overnight SA newsletter.",
+        "meta": "Locked 220MW Texas PPA; throttled by Google.",
+        "nvidia": "BioNeMo wins; custom-silicon narrative alive (AVGO TPU v9).",
+        "microsoft": "Down 23% YTD per one strategist — 'significantly overselling'."
+      }
+    },
+    "newsletters": [
       {
-        "headline": "Meta building cloud business to sell excess AI capacity, Bloomberg News reports",
-        "source": "google_news_ai",
-        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQRTFZdGllTTA5UmJ6WmxLYjRDUHJ4RWg1U3dCOEVGTElDMUJlNWQwOTg0VWZxTGUxSWVPaEJqTjJ0TTZsRHk5Ynh4RC15a0ZVQkdxQVVGdTl0UXRZZ3NBLVZWZVQxcWJQSEoyQ01LZ3F3V0FnWFZucTNibm9nTm9DZlVfNzAxaW14LXFYQXRxdmxFMXZBeDF0NEo1dnN0S2tFdTlpNVF3bjNoRVY2WjE2SkFBNXhzWkVHOFRFOVk3Q2ZZakk?oc=5",
-        "whyItMatters": "First hyperscaler to publicly turn AI capex into an external cloud product — reframes Meta from capex-burden to capex-monetizer. Stock priced that in immediately (up ~8%).",
-        "publishedAt": "2026-07-01T18:09:51+00:00"
-      },
-      {
-        "headline": "Anthropic to bring back Fable 5 as US lifts export controls",
-        "source": "cointelegraph",
-        "url": "https://cointelegraph.com/news/anthropic-reactivates-newest-ai-models-after-us-govt-lifts-restrictions",
-        "whyItMatters": "Anthropic redeploying its frontier model with revised cyber-classifiers — competitive signal that the model-tier rationing is easing, and that the Fable 5 release window is back on the calendar.",
-        "publishedAt": "2026-07-01T06:14:32+00:00"
-      },
-      {
-        "headline": "Edge AI Could Become a Real TAM Expansion Story for NVIDIA",
-        "source": "google_news_ai",
-        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNS0dpQnpfckJfTGZ4UFdoaFNRUkl0VlhFUDBFdFpMc3hISXBxOXdiUXVHTFFheEtUUGVDdlNNLThWYThMUTRkRUZCYkR2ZEZLSC1jWkVSU3pqRVE5Tnh1U0N1ZGZsS1VvZW95SWxwSnYwMDM3b2d4VWp2RjNKVUFVU0lhT0lrd042ay1aSWtDWjFLTngzaDBySjlPRXM4OVh5RlBrVA?oc=5",
-        "whyItMatters": "Edge inference as a fresh NVDA TAM line is the bull case that's been missing — worth flagging given NVDA's worst first half since 2022 and board-member trim signal.",
-        "publishedAt": "2026-07-01T18:13:44+00:00"
-      },
-      {
-        "headline": "Unchecked AI progress may pose catastrophic risks, UN panel warns",
-        "source": "google_news_ai",
-        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPZzlYcjZBRTVTUHhqcGM3ZXZwVS1XWktHaWVmckFuZjg1bzZPNnZqWDJxUzktV2c4TDA5VHY4ajIxbjVrb21MYnRiM0Q3WDRmMUZZQWxpWlZzZGh4QlVsWF82SGlYZ3lSZVNab056ZWdhTWphSnhXY2lZZHUxb19oWF9udWpTQnNGWkFVVFo0Y0VPckVYTkU5VmozMHA2dE9OanE3SER1cFVzN0U4WkE?oc=5",
-        "whyItMatters": "UN escalating catastrophic-risk language keeps regulatory pressure on the frontier labs in the public conversation — soft-tariff signal for compute-heavy model providers.",
-        "publishedAt": "2026-07-01T18:10:00+00:00"
+        "id": "144",
+        "subject": "The Dollar, Inflation, and AI",
+        "sender": "noresponse@email.interactivebrokers.com",
+        "date": "Tue, 30 Jun 2026 14:43:02 -0400",
+        "is_seen": false,
+        "snippet": "TRADERS' INSIGHT: \n\n \nCarrying On with the Japanese Yen \n \n \n \n Today marks the end of the second quarter – and what a quarter it’s been! We’ll do a more substantial review of the phenomenal move in..."
       }
     ],
-    "retirement": {
-      "netLiquidation": null,
-      "buyingPower": null,
-      "availableFunds": null,
-      "totalCashValue": null,
-      "unrealizedPnL": null,
-      "realizedPnL": null,
-      "topPositions": [],
-      "rateWatch": "10Y 4.44% (+6bp WoW), 2Y 4.14% (+7bp), 1Y 3.98% — curve steepening as front-end re-prices Fed pause, back-end catches on issuance. Fed funds effective ~4.33%.",
-      "supplement": [
-        "TWS offline — portfolio state and position table not refreshed this run."
-      ],
-      "actionItem": "Once TWS is back online, scan MSTR/STRK/STRF/STRD for overnight moves before the bell — Strategy's capital plan is the one crypto-equity name that has both an earnings catalyst and a death-spiral-defying thesis in play this week."
-    },
-    "health": {
-      "personalInbox": [
-        {
-          "id": "1598",
-          "subject": "SPCX: Meta jumps on report it is building cloud business for excess AI compute",
-          "sender": "SA Breaking News",
-          "date": "2026-07-01 09:00-04:00",
-          "flags": "*",
-          "is_seen": false
-        },
-        {
-          "id": "1597",
-          "subject": "✅ Success! Your Sazmining Service Fee Is Paid",
-          "sender": "support@sazmining.com",
-          "date": "2026-07-01 13:00+00:00",
-          "flags": "*",
-          "is_seen": false
-        },
-        {
-          "id": "1596",
-          "subject": "Sandisk: Micron Confirmed The Memory Supercycle",
-          "sender": "Stock Ideas",
-          "date": "2026-07-01 08:52-04:00",
-          "flags": "*",
-          "is_seen": false
-        }
-      ],
-      "move": "Two-minute walk between the morning brief and the open — not a hedge, just legs."
-    }
+    "retirement": null,
+    "health": null
   }
 }
