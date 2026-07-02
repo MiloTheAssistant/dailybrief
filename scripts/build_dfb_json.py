@@ -30,6 +30,11 @@ REPO_ROOT = Path("/Volumes/BotCentral/Users/milo/repos/dailybrief")
 SCRIPTS = REPO_ROOT / "scripts"
 OUT_DIR = REPO_ROOT / "out" / "dfb"
 
+# Shared manifest writer — lives in _publish_common so both DFB and
+# lifestyle pipelines refresh out/manifest.json on every publish.
+sys.path.insert(0, str(SCRIPTS))
+from _publish_common import _write_manifest  # noqa: E402
+
 
 def run_fetcher(name: str, *args: str) -> dict:
     """Run a fetcher subprocess and return {sources, data, error?}.
@@ -192,6 +197,11 @@ def write_and_ship(edition: dict, today_iso: str, dry_run: bool, skip_deploy: bo
         print("[build_dfb_json] DRY RUN — skipping commit/push/deploy", file=sys.stderr)
         return 0
 
+    # Always refresh the manifest so the website prebuild sees every
+    # published date (including dates added by the lifestyle pipeline
+    # since the last DFB run).  The write is cheap and unconditional.
+    _write_manifest()
+
     # Skip the commit/push if the on-disk JSON is already tracked and
     # byte-identical to what we're about to write. Avoids a no-op
     # commit+push on the --use-enriched path when the enriched file
@@ -224,7 +234,7 @@ def write_and_ship(edition: dict, today_iso: str, dry_run: bool, skip_deploy: bo
             return _vercel_deploy(website_dir)
 
     try:
-        subprocess.run(["git", "add", "-f", rel_path],
+        subprocess.run(["git", "add", "-f", rel_path, "out/manifest.json"],
                        cwd=REPO_ROOT, check=True, timeout=15)
         subprocess.run(["git", "commit", "-m",
                         f"chore(dfb): edition {today_iso}"],

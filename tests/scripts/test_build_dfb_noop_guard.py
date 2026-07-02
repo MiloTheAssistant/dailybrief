@@ -40,6 +40,9 @@ def fake_repo(tmp_path, monkeypatch):
     fake.mkdir()
     out = fake / "out" / "dfb"
     out.mkdir(parents=True)
+    # _write_manifest() also scans out/lifestyle/ — create it so
+    # Path.glob() doesn't raise on a missing directory.
+    (fake / "out" / "lifestyle").mkdir(parents=True, exist_ok=True)
 
     # Initialize a real git repo so git ls-files / git status work.
     subprocess.run(["git", "init", "-q"], cwd=fake, check=True)
@@ -65,6 +68,10 @@ def fake_repo(tmp_path, monkeypatch):
     # Point build_dfb_json at the fake repo.
     monkeypatch.setattr(build_dfb_json, "REPO_ROOT", fake)
     monkeypatch.setattr(build_dfb_json, "OUT_DIR", out)
+    # _write_manifest() lives in _publish_common and uses its own
+    # REPO_ROOT — point it at the fake repo too.
+    import _publish_common  # noqa: E402
+    monkeypatch.setattr(_publish_common, "REPO_ROOT", fake)
     return {"root": fake, "out": out, "date": date_iso, "edition": edition}
 
 
