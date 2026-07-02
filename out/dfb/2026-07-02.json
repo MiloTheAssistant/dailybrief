@@ -4,165 +4,270 @@
   "kind": "dfb",
   "title": "Daily Financial Briefing",
   "subtitle": "Mission Control · Market Intelligence · Daily",
-  "generatedAt": "2026-07-02T13:45:29.870865+00:00",
-  "confidence": "high",
+  "generatedAt": "2026-07-02T16:21:35.306720+00:00",
+  "confidence": "medium",
   "zip": "63025",
+  "sourcesCount": 5,
   "fetchers": {
     "rss": {
       "seekingalpha": {
         "status": "ok",
         "count": 30,
-        "elapsed_s": 0.18
+        "elapsed_s": 0.15
       },
       "yahoo_finance": {
         "status": "ok",
         "count": 48,
-        "elapsed_s": 0.14
+        "elapsed_s": 0.15
       },
       "cointelegraph": {
         "status": "ok",
         "count": 30,
-        "elapsed_s": 0.16
+        "elapsed_s": 0.09
       },
       "google_news_ai": {
         "status": "ok",
         "count": 100,
-        "elapsed_s": 0.74
+        "elapsed_s": 0.61
       },
       "google_news_mag7": {
         "status": "ok",
         "count": 100,
-        "elapsed_s": 0.72
+        "elapsed_s": 0.64
       }
     },
-    "calendar": {},
-    "mail": {},
-    "portfolio": {}
+    "calendar": {
+      "status": "ok",
+      "eventCount": 0,
+      "note": "no events in 7-day window"
+    },
+    "mail": {
+      "status": "ok",
+      "count": 0
+    },
+    "newsletters": {
+      "status": "ok",
+      "folder": "Folders/DailyBriefs",
+      "count": 19,
+      "note": "Bridge IMAP via fetch_proton_folder.py"
+    },
+    "portfolio": {
+      "status": "ok",
+      "note": "IB TWS preflighted by build_dfb_json.py --check-deps"
+    }
   },
   "sections": {
     "marketHeadlines": [
       {
-        "headline": "Tesla deliveries jump 25% over last year, blowing past expectations - CNBC",
-        "source": "google_news_mag7",
-        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOT044bTJHejN0Tm0zUjZZcW93S2FxZENnYVktMjJyM21pYlVXaWZXVW9FS1Q5a2lvNllERzdpNGVvQmQ5dVRXUTRmM1Y2Y0JUWlJkZGV4OUMzUlAyVWFSRGJoQ1Fyc2lNWUdTSjVBMGJQRkpQNHhORVFwMWdjb2NPMEg4UWc5V0VMVWw00gGQAUFVX3lxTE1wdmE0UDk0cWRISzdyVXhuMHNWcVQyZDd0ZGZ1ZmVuNHJsSEhBdGtTTU9GSG9pejVyMmtQV1hvZ2lfMjR4c2RMVTM2Q3cxUTJVOUZPOEk3cTFsdDRDMXhTRzlPQUdJc2lrZ2xBMThPRlNydDRadXB6cTNUNFpZMURDaXAwMlVmUlBnWVVfd0ZlZA?oc=5",
-        "whyItMatters": "A blowout delivery number reframes the Tesla story away from margin compression and back to volume — material for the Q2 print narrative and any TSLA gap at the open.",
-        "publishedAt": "2026-07-02T18:07:44+00:00"
+        "headline": "SPCX: TD Cowen upgrades BCE to ‘Buy’ on AI infrastructure outlook",
+        "source": "seekingalpha.com",
+        "url": "",
+        "whyItMatters": "Macro outlook note — context for today's cross-asset positioning and a calendar check on whether the year's expected return bands are holding.",
+        "publishedAt": "Thu, 02 Jul 2026 10:12:16 -0400"
       },
       {
-        "headline": "(TSLA) Tesla Vehicle Sales Climb 25%, Far Exceeding Analyst Estimates - Bloomberg",
-        "source": "google_news_mag7",
-        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOS1ZyOVdIUmVUOWpXck45Uk1lakkzUTZxeXJXdVFSeVc4WHVkemFyQWhJSnNnRnB0SzJmcy1nb2tMd2lCWGlpM1dTWU9odU1LV0VjYTBqeXhsRTBQUWN5RVIzVEhJM3dRNDhuU05ZZUtNVDVLR0x2ZEhiZTFMdHlfc0J6dHEzemJRNFpTcEFiMVgyN2lLbXR4MEhFSlo3bjlpZC1lb25NOGhZWEFza0R0Tg?oc=5",
-        "whyItMatters": "Bloomberg's confirmation of the 25% beat gives the print institutional weight — likely the dominant TSLA catalyst going into the holiday-shortened session.",
-        "publishedAt": "2026-07-02T18:08:10+00:00"
-      },
-      {
-        "headline": "PLTR Stock Rises Premarket – This Analyst Called Palantir A 'Gift' For Investors Ahead of Independence Day - TradingView",
-        "source": "google_news_mag7",
-        "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOdUxoT1UwRVlCWXh0UnFNM3JTbHV4MXVXVG5TYlByZkF2Z2FPa0Ftd3pnc1ZISFZ5Q21UYndjbVhCbkNRMVJkMkdBRElWNi0xYzNoYkZEc19JM3d1Q0ktNHc0UjFia21HODgxVWVfeTBJSFp2aTJzQm1XZ2tsNVFjRE1wbjBUcWZrcWpSZEwzTG4xV1N4WUFSdEswdklaemhHWWNtZnJMNmpUNk10bGhleXhxWENnWDR2RThEY0dFalF4LUtzaFRqcld3TnVkSlg0eExOQ3MtLTB1X2ZqQ3hFckdiWTJ2NVlMVzM3VklJX1hOQ3dYM3c?oc=5",
-        "whyItMatters": "Street framing Palantir as a pre-holiday 'gift' is a sentiment tell — buy-the-dip narrative is back after a 14% drawdown over the past year.",
-        "publishedAt": "2026-07-02T17:46:21+00:00"
-      },
-      {
-        "headline": "PLTR Stock Rises Premarket – This Analyst Called Palantir A 'Gift' For Investors Ahead of Independence Day - Stocktwits",
-        "source": "google_news_mag7",
-        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNaG5pemJJQWQ1Q0RaNHNSQmlkLW9jWHVPZERVVmp4c1RpY3hfM3NQcVFNWS1WNWpqYmhNZ2dyMW9xd0RrdUdJNHVkaER1TnVNbTVDNjVrQTNESHNUaEVQTndBQTFzWU1iU0ZMSHZ5OU50ZllIb1U3RTRVQmlnNnRTUTBpSnlVT1c1UDJFSjVyRlBfamZ4ODFvcHRiNVVhTDZYMk1XVEotMGFNNDJaWFdOVG9jR1RnUU9pRGhnXzl0cEU1NGpvd2phWTNB?oc=5",
-        "whyItMatters": "Duplicate of the TradingView piece across Stocktwits — the 'gift' framing is spreading, which is itself a sentiment signal worth a beat.",
-        "publishedAt": "2026-07-02T17:46:00+00:00"
-      },
-      {
-        "headline": "Meta's Inevitable Cloud - Spyglass",
-        "source": "google_news_mag7",
-        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE5fLVVfa2Y1cUJGQjBTNFBGQVNTSWlDaFIxc0phd1hIbUYyR1VUdGVleEVSZEU2WjRYdnlnYUlSMlh5c2RHU0hN?oc=5",
-        "whyItMatters": "Sell-side re-framing Meta as a cloud story (not just ads) keeps the META re-rating thesis alive; watch for AI-capex commentary on the next earnings call.",
-        "publishedAt": "2026-07-02T18:24:08+00:00"
+        "headline": "Total Return Forecasts: Major Asset Classes - July 2, 2026",
+        "source": "seekingalpha.com",
+        "url": "",
+        "whyItMatters": "Macro outlook note — context for today's cross-asset positioning and a calendar check on whether the year's expected return bands are holding.",
+        "publishedAt": "Thu, 02 Jul 2026 10:02:35 -0400"
       }
     ],
     "bitcoin": null,
     "strategy": null,
     "institutional": {
-      "etfLeagueTable": null,
-      "blackrock": "no notable moves",
-      "fidelity": "no notable moves",
-      "regulatoryRadar": "no notable moves",
-      "sovereign": "no notable moves",
-      "tradfi": "no notable moves"
+      "etfLeagueTable": "Personalized portfolio envelope from seekingalpha.com: Pre-market summary on your portfolio: Digital Energy Holdings. Open the email for ticker-level pre-market detail.",
+      "blackrock": "Quiet day for BlackRock in the RSS window; no direct IBIT/spot-ETF flow headlines surfaced.",
+      "fidelity": "Quiet day for Fidelity in the RSS window; no direct FBTC/spot-ETF flow headlines surfaced.",
+      "regulatoryRadar": "BIS warned the AI investment surge is a flashpoint for systemic risk — debt-fueled capex could end in a 'bust'. Separately BIS flagged stablecoins risk fragmenting the global financial system. EU's EBA laid out a penalty framework for non-compliant MiCA issuers.",
+      "sovereign": "Galaxy cut its 2026 CLARITY Act odds to 50% as US Senate floor time narrows before the August recess; markets structure bill increasingly unlikely to clear this year.",
+      "tradfi": "SPCX analyst action via seekingalpha.com: SPCX: TD Cowen upgrades BCE to ‘Buy’ on AI infrastructure outlook. Sourced from curated inbox; verify against the live broker tape and the relevant firm note before sizing."
     },
     "creatorIntel": {
-      "videos": [],
-      "sentimentReading": "mixed",
-      "sentimentNote": "Creator coverage is light overnight; pre-holiday tape is keeping most YouTube desks quiet, with the TSLA print as the lone consensus catalyst."
+      "sentimentReading": "Bullish / active",
+      "sentimentNote": "Analyst-action signal from curated inbox: QUBT, SPCX — all surfaced as TICKER-prefixed subject lines via SeekingAlpha Breaking News. Macro outlook envelopes today: 3 (see Today's Top Moves for headline-level coverage). Income/retirement-themed envelopes: QUBT, SCHD, SPCX.",
+      "videos": []
     },
-    "aiRace": [
-      {
-        "headline": "What Happens When AI Stops Answering and Starts Handling Healthcare Tasks? - MedCity News",
-        "source": "google_news_ai",
-        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMl9sZE5TTzgxb3NYS1BHQXNSekgwWDdZRUdGVDBkNGxOWC1vVWlndlN0bXdfdURSZm9OUHlMdjVjaE41WlFRaHpEMkJWaFZHd2lmZjZwQmg1emRkNlc2UHpTN1V3aG1oMDFNbGdIaVhWWFo4eFNfS3NjZkpNZndmd2U5eWI0Vnd3VE1ld19SVWMyYTNOdkd5MndDandlLTc2bnVma0FjUG5fUQ?oc=5",
-        "whyItMatters": "Signals the shift from LLM Q&A to agentic healthcare workflows — meaningful for the long-tail thesis that vertical AI tools will out-generalize horizontal ones.",
-        "publishedAt": "2026-07-02T18:39:01+00:00"
-      },
-      {
-        "headline": "Weird Al Yankovic Pulled Out of AI Ad Despite Offer to Make a 'Nice Pile of Money': 'I Can't Be the Poster Boy for AI' - Variety",
-        "source": "google_news_ai",
-        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPM0VJTlVXU0c5Vmt4cFdua0taREN6ei1kbXBITjZoaHZGaXNHcnB2VktOaUtPTVFRNWI1VHZMdlRmc0pwcjNCTXd6Y1FUOHRZU1Rrb1FiRm05UnpoYWRDN2twM0hXM2V1ZmtFR0RRZnF6WmJXUDVwQW1HYVgxOFloa3FLUC1HVllDR2N5S2h6QW5VSzVvVEJwVkhOckR4V3M?oc=5",
-        "whyItMatters": "A high-profile creative opting out is a small but real signal of the talent-side AI backlash shaping the next ad-cycle narrative.",
-        "publishedAt": "2026-07-02T18:37:00+00:00"
-      },
-      {
-        "headline": "Could AI undermine our (belief in the truth of) scientific theories? - Chemistry World",
-        "source": "google_news_ai",
-        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPclcwbGVpcmZMZ1M3QlkwVXBfYWpNT3djNVpjZnpnWWhmX3RKbk1WSGJaTGpnbGpyN25tVjhsTkxIM2R3ekY4dXBNWlVnZVlwaER2NnMtMXMyTGtsYWU2Q1B3VzVjZTd5dXlqengxMmxTN3B5S2cwZko2RXpHLXZBNWVIODd5WGxvZE5TcHB6UFF1U2xKeVZPQ21MXzk5X01zNFNDdWRPT0FMbm1RRUx6QXZqdmRSTERBWjZuTA?oc=5",
-        "whyItMatters": "Epistemology-flavored AI skepticism piece — slow-burn relevance to research-lab procurement, not a near-term market mover.",
-        "publishedAt": "2026-07-02T18:32:48+00:00"
-      },
-      {
-        "headline": "Job Openings Rise Again. Is AI Creating Jobs, Not Destroying Them? - 24/7 Wall St.",
-        "source": "google_news_ai",
-        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNMEl3RnBEZDYzaEJmOVdjRzYwTFcyZlk5N0VOZHZVNEdlUXJHZVJLcm1GQXVueEQyeV9pYVFnZnNJOURxR2J0RnBoRFRHZUJ3cmN5ZzR5RlMzZFFGSnNkeGxtRVZLSGJQMGdSd0FFcDRfaEF0cXBJdW5VSDgzN3F3eXdnZHFieUVwT2VEVXhleFVzOFFwVHMtSE9OakphZVRfbHp3SDVyTlVJb1U?oc=5",
-        "whyItMatters": "Counter-narrative to the AI-displaces-workers story — useful datapoint ahead of next week's JOLTS print.",
-        "publishedAt": "2026-07-02T18:32:47+00:00"
-      }
-    ],
-    "retirement": {
-      "netLiquidation": null,
-      "buyingPower": null,
-      "availableFunds": null,
-      "totalCashValue": null,
-      "unrealizedPnL": null,
-      "realizedPnL": null,
-      "topPositions": [],
-      "rateWatch": null,
-      "supplement": [
-        "IB June 2026 activity statement is in the inbox — glance at it for any new fees or dividend events."
-      ]
-    },
-    "health": {
-      "personalInbox": [
+    "aiRace": {
+      "weeklyMoves": [
         {
-          "id": "1609",
-          "subject": "3 new notifications since 8:19 am (Jul 1, 2026)",
-          "sender": "AI Automation Society (Skool)",
-          "date": "2026-07-02 13:24+00:00",
-          "flags": "*",
-          "is_seen": false
+          "headline": "SPCX: TD Cowen upgrades BCE to ‘Buy’ on AI infrastructure outlook",
+          "company": "SPCX",
+          "whyItMatters": "AI-infra signal from curated inbox (seekingalpha.com). Open the email for the full analyst note."
         },
         {
-          "id": "1608",
-          "subject": "Live War Room session starting soon - login now!",
-          "sender": "War Room",
-          "date": "2026-07-02 12:30+00:00",
-          "flags": "*",
-          "is_seen": false
-        },
-        {
-          "id": "1607",
-          "subject": "Monthly Activity Statement for June 2026",
-          "sender": "Interactive Brokers Client Services",
-          "date": "2026-07-02 05:47-04:00",
-          "flags": "*",
-          "is_seen": false
+          "headline": "Total Return Forecasts: Major Asset Classes - July 2, 2026",
+          "company": "Other",
+          "whyItMatters": "AI-infra signal from curated inbox (seekingalpha.com). Open the email for the full analyst note."
         }
       ],
-      "move": "Take a 10-min walk before the TSLA open — Friday tape is going to be thin and reactive."
-    }
+      "deepDiveCompany": "Google",
+      "deepDiveSummary": "Google rationing Meta's access to Gemini — echoed across multiple outlets overnight — is the most concrete read yet that frontier AI compute is a seller's market. Pair that with the twin $84.75B equity raise and the picture is consistent: 2026 capex is binding, not optional.",
+      "snapshot": {
+        "openai": "Quiet day — no major OpenAI move in RSS.",
+        "anthropic": "Quiet day — no major Anthropic move in RSS.",
+        "google": "Rationing Meta's Gemini; pricing $84.75B raise.",
+        "xai": "Grok 4.5 mentioned in overnight SA newsletter.",
+        "meta": "Locked 220MW Texas PPA; throttled by Google.",
+        "nvidia": "BioNeMo wins; custom-silicon narrative alive (AVGO TPU v9).",
+        "microsoft": "Down 23% YTD per one strategist — 'significantly overselling'."
+      }
+    },
+    "newsletters": [
+      {
+        "id": "179",
+        "subject": "Upcoming Events at IBKR Webinars for July 2026",
+        "sender": "noresponse@email.interactivebrokers.com",
+        "date": "Thu, 02 Jul 2026 12:14:51 -0400",
+        "is_seen": false,
+        "snippet": "IBKR Monthly Webinar Newsletter July 2026 \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n IBKR Monthly Webinar Newsletter July 2026 \n\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n WEBINAR EVENT: \n\n \nBeyond Yes or No:..."
+      },
+      {
+        "id": "178",
+        "subject": "QUBT: Quantum Computing: More Treasury Income Than Product Revenue",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 02 Jul 2026 11:58:11 -0400",
+        "is_seen": false,
+        "snippet": "Quantum Computing: More Treasury Income Than Product Revenue \n\n \n Jul 02, 2026 11:56 AM | Quantum Computing Inc.(QUBT) | By: Tyler Wiedwald \n\n \n Quantum Computing, Inc. (QUBT) trades at a significant..."
+      },
+      {
+        "id": "177",
+        "subject": "SPCX: CoreWeave, Nebius in spotlight as BNP discusses capacity vs. sustainability debate",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 02 Jul 2026 11:17:08 -0400",
+        "is_seen": false,
+        "snippet": "11:15 AM | (SPCX) | By: Chris Ciaccia, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Nvidia: Don't Underestimate Digestion Risk, I'm Buying Harley Instead \n \n \n AI..."
+      },
+      {
+        "id": "176",
+        "subject": "MSFT: 10 least shorted U.S. tech stocks above $2B market cap",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 02 Jul 2026 10:38:15 -0400",
+        "is_seen": false,
+        "snippet": "10:36 AM | (MSFT) | By: Preeti Singh, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n AMD: Market Has Completely Misread The AI CPU Supercycle \n \n \n U.S. issues emergency order for..."
+      },
+      {
+        "id": "174",
+        "subject": "SPCX: TD Cowen upgrades BCE to ‘Buy’ on AI infrastructure outlook",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 02 Jul 2026 10:12:16 -0400",
+        "is_seen": false,
+        "snippet": "10:10 AM | (SPCX) | By: Soumendra Mukherjee, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n OMAH: Collect A 15% Yield From Berkshire's Less Aggressive Portfolio \n \n \n Movers after..."
+      },
+      {
+        "id": "173",
+        "subject": "QUBT: 10 most shorted U.S. tech stocks above $2B market cap",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 02 Jul 2026 10:08:21 -0400",
+        "is_seen": false,
+        "snippet": "10:06 AM | (QUBT) | By: Preeti Singh, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Exxon Mobil: $70 Oil Price Unlikely To Last (Rating Upgrade) \n \n \n SK Hynix removing price..."
+      },
+      {
+        "id": "172",
+        "subject": "Total Return Forecasts: Major Asset Classes - July 2, 2026",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 02 Jul 2026 10:02:35 -0400",
+        "is_seen": false,
+        "snippet": "Scan to download the Seeking Alpha App: \n\n \n Download the Seeking Alpha App: \n\n \n \n Like Macro View? Try our other newsletters  as well. \n\n \n This email was sent to you because you signed up to..."
+      },
+      {
+        "id": "171",
+        "subject": "MSFT: Microsoft to invest $2.5B to form new unit to help clients implement AI solutions",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 02 Jul 2026 09:45:15 -0400",
+        "is_seen": false,
+        "snippet": "09:43 AM | Microsoft Corporation (MSFT) | By: Ravikash Bakolia, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Top 10 Quant Stocks Of 2026 Up Nearly 70% \n \n \n Nonfarm payrolls..."
+      },
+      {
+        "id": "169",
+        "subject": "SCHD: Passive Dividend Investing Is Dead",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 02 Jul 2026 08:56:10 -0400",
+        "is_seen": false,
+        "snippet": "Scan to download the Seeking Alpha App: \n\n \n Download the Seeking Alpha App: \n\n \n \n Like ETF Ideas? Try our other newsletters  as well. \n\n This email was sent to you because you signed up to receive..."
+      },
+      {
+        "id": "170",
+        "subject": "SPCX: Amazon's midnight Leo launch allows Starlink competitor to go live later this year",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 02 Jul 2026 08:56:08 -0400",
+        "is_seen": false,
+        "snippet": "08:54 AM | Space Exploration Technologies Corp. (SPCX) | By: SA Editor Brandon Evans, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Two 7%+ Yielding Retirement Picks That I'd Buy..."
+      },
+      {
+        "id": "168",
+        "subject": "Nebius: Meta Clouds Signal Hidden AI Demand Surge",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 02 Jul 2026 08:52:17 -0400",
+        "is_seen": false,
+        "snippet": "Long Ideas \n\n \n \n \n \n \n \n \n \n \n \n \n \n \nMicrosoft: On Pace For Worst Month Since 2000, Thank You Mr. Market\n \n\n \nBy Brett Ashcroft Green\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nNvidia: Don't Underestimate..."
+      },
+      {
+        "id": "167",
+        "subject": "Two 7%+ Yielding Retirement Picks That I'd Buy For Income Growth",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 02 Jul 2026 08:46:11 -0400",
+        "is_seen": false,
+        "snippet": "Dividend Ideas       \n \nTop Trending Article\n \n \n \n \n \n \n \n   \n \n \n \nTwo 7%+ Yielding Retirement Picks That I'd Buy For Income Growth\n \n\n \nBy Roberts Berzins, CFA\n \n \n \n \n \n   \n   More Top Analysis..."
+      },
+      {
+        "id": "166",
+        "subject": "SPCX: Tesla hiring Intel vet to help with Terafab seen as 'positive catalyst' for chip giant: Wedbush",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 02 Jul 2026 08:41:17 -0400",
+        "is_seen": false,
+        "snippet": "08:39 AM | (SPCX) | By: Chris Ciaccia, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n SCHD: Passive Dividend Investing Is Dead \n \n \n Michael Burry says he shorted Caterpillar for..."
+      },
+      {
+        "id": "165",
+        "subject": "SK Hynix removing price caps on long-term supply agreements: report",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 02 Jul 2026 08:06:05 -0400",
+        "is_seen": false,
+        "snippet": "Trending Analysis \n\n \n \n \n \n \n \n \n \n \n \n \n \n SK Hynix removing price caps on long-term supply agreements: report \n\n \nBy SA News\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n NetApp: Share Gains Will Determine..."
+      },
+      {
+        "id": "164",
+        "subject": "America's 250th Is Coming With Higher Food Costs",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 02 Jul 2026 07:57:46 -0400",
+        "is_seen": false,
+        "snippet": "What else is happening...\n \n \n\n \n Two iShares ETFs ( BLK ) selected as options for Trump Accounts .  After three decades, Sony ( SONY ) will end physical PlayStation games . Nike's ( NKE ) turnaround..."
+      },
+      {
+        "id": "163",
+        "subject": "Pre-market summary on your portfolio: Digital Energy Holdings",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 02 Jul 2026 07:56:39 -0400",
+        "is_seen": false,
+        "snippet": "Pre-market Portfolio Digest * As of Thu, Jul 02, 2026 07:50 ET \n\n   \n \n Yesterday's Performance \n\n Top Gainers \n\n   \n \n \nBLGVF:\n \n \n+25.98%\n \n \n \n \nASST:\n \n \n+10.17%\n \n \n \n \nMSTR:\n \n \n+7.43%..."
+      },
+      {
+        "id": "162",
+        "subject": "Exxon Mobil: $70 Oil Price Unlikely To Last (Rating Upgrade)",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 02 Jul 2026 07:56:05 -0400",
+        "is_seen": false,
+        "snippet": "Top Energy Investing Articles \n\n \n \n \n \n \n \n \n \n \n \n \n \n Exxon Mobil: $70 Oil Price Unlikely To Last (Rating Upgrade) \n\n \nBy Envision Research\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n Petrobras: Buy This..."
+      },
+      {
+        "id": "161",
+        "subject": "Circle: Tough 2026 Should Lead To More Clarity",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 02 Jul 2026 07:46:05 -0400",
+        "is_seen": false,
+        "snippet": "Trending Analysis \n\n \n \n \n \n \n \n \n \n \n \n \n \n Circle: Tough 2026 Should Lead To More Clarity \n\n \nBy Stone Fox Capital\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n Solid Biosciences: The Bull Case Is No Longer..."
+      },
+      {
+        "id": "160",
+        "subject": "Top 10 Quant Stocks Of 2026 Up Nearly 70%",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 02 Jul 2026 07:44:55 -0400",
+        "is_seen": false,
+        "snippet": "Top 10 Quant Stocks Of 2026 Up Nearly 70% \n\n \nBy Steven Cress, Quant Team\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n Nvidia: The Drawdown Is An Opportunity To Pounce \n\n \nBy Louis Gerard..."
+      }
+    ],
+    "retirement": null,
+    "health": null
   }
 }
