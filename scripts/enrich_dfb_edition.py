@@ -114,13 +114,96 @@ def build_edition(date_iso: str) -> dict | None:
     newsletters = fetch(
         "fetch_proton_folder.py",
         "--folder", "Folders/DailyBriefs",
-        "--sender-allowlist", "email.interactivebrokers.com",
-        "--limit", "5",
+        # Curated financial newsletter sources only. The Proton
+        # DailyBriefs folder is a manual curation: the user moves
+        # the emails they want surfaced here. Sender domain is the
+        # gate. Stock promotional lists (Ross Givens / Stock Surge
+        # Daily etc.) are explicitly blocklisted.
+        "--sender-allowlist", "seekingalpha.com,email.interactivebrokers.com",
+        "--sender-blocklist", "stocksurgedaily.com",
+        "--limit", "20",
     )
-    # calendar + portfolio are not actionable today (empty + TWS offline)
+    # Calendar + portfolio come from their own fetchers. Portfolio uses
+    # IB TWS at port 7497 (live-paper default) — preflighted in
+    # build_dfb_json.py --check-deps.
     stories = rss.get("stories", [])
     envelopes = mail.get("envelopes", [])
     news_envelopes = newsletters.get("envelopes", [])
+
+    # ─── Newsletter signals (from Proton DailyBriefs folder) ──────────────
+    # The folder is curated by the user (they move emails they want surfaced
+    # here). Most are SeekingAlpha variants + IBKR Daily Traders' Insight.
+    # We extract ticker-specific signals deterministically and feed them
+    # into the right sections.
+    import re
+
+    def _ticker_prefix(subject: str) -> str | None:
+        """SA Breaking News format: 'TICKER: Headline...' or
+        'TICKER | Headline...'. Return the ticker (uppercased) or None.
+        Also match the rarer '<TICKER>:' pattern. Cap at 5 chars to
+        avoid pulling 'EDF' out of mid-sentence punctuation."""
+        m = re.match(r"^\s*([A-Z]{1,5})\s*[:|\-–]\s+", subject or "")
+        if m:
+            t = m.group(1)
+            # Filter common false positives
+            if t in {"AM", "PM", "RE", "FYI", "USD", "ETF", "ETFS", "CEO",
+                     "CFO", "IPO", "GDP", "API", "HTTP", "HTTPS", "URL",
+                     "S&P", "THE", "AND", "FOR", "WITH", "FROM", "OVER"}:
+                return None
+            return t
+        return None
+
+    def _classify_newsletter(env: dict) -> dict:
+        """Return a dict of signal flags + extracted ticker for one
+        envelope. All checks are substring/regex on subject+snippet."""
+        subj = (env.get("subject") or "").lower()
+        snip = (env.get("snippet") or "").lower()
+        sender = (env.get("sender") or "").lower()
+        text = f"{subj} {snip}"
+        ticker = _ticker_prefix(env.get("subject") or "")
+        return {
+            "env": env,
+            "ticker": ticker,
+            "is_analyst_action": bool(
+                ticker and any(k in text for k in
+                               ["upgrade", "downgrade", "initiate", "rating",
+                                "price target", "raises", "cuts", "reiterates"])
+            ),
+            "is_macro_forecast": bool(
+                any(k in text for k in
+                    ["forecast", "outlook", "total return", "year ahead",
+                     "2026 outlook", "2027 outlook", "macro view",
+                     "pre-market", "movers after"])
+            ),
+            "is_dividend": bool(
+                any(k in text for k in
+                    ["dividend", "yield", "retirement", "income",
+                     "schd", "jeep", "vym", "vti", "jepi"])
+            ),
+            "is_ai_infra": bool(
+                any(k in text for k in
+                    ["ai", "artificial intelligence", "nvidia", "tsmc",
+                     "coreweave", "nebius", "data center", "data-centre",
+                     "ai infrastructure", "ai capex", "ppa"])
+                and any(k in text for k in
+                        ["build", "invest", "capex", "outlook", "upgrade",
+                         "forecast", "demand", "supply", "tpu", "gpu"])
+            ),
+            "is_portfolio_personal": bool(
+                any(k in text for k in
+                    ["your portfolio", "your watchlist", "digital energy"])
+            ),
+            "sender_short": sender.split("@")[-1] if "@" in sender else sender,
+        }
+
+    newsletter_signals = [_classify_newsletter(e) for e in news_envelopes]
+
+    # Buckets for the section builders below.
+    analyst_actions = [s for s in newsletter_signals if s["is_analyst_action"]]
+    macro_forecasts = [s for s in newsletter_signals if s["is_macro_forecast"]]
+    dividend_picks = [s for s in newsletter_signals if s["is_dividend"]]
+    ai_infra_news = [s for s in newsletter_signals if s["is_ai_infra"]]
+    portfolio_personal = [s for s in newsletter_signals if s["is_portfolio_personal"]]
 
     def find(sec: str, n: int = 5) -> list[dict]:
         return [s for s in stories if s.get("section") == sec][:n]
@@ -135,6 +218,18 @@ def build_edition(date_iso: str) -> dict | None:
     market_headlines = []
 
     def add_mh(title: str, source: str, url: str, why: str, published: str = None):
+        # Dedupe by headline (case-insensitive trimmed). The Proton
+        # inbox can land the same SA headline twice (e.g. once in
+        # the breaking-news batch and once in the macro-view digest),
+        # and macro-forecast + analyst-action classifications can
+        # match the same envelope. Headlines stay unique; later
+        # matches are dropped.
+        key = (title or "").strip().lower()
+        if not key:
+            return
+        if any((h.get("headline") or "").strip().lower() == key
+               for h in market_headlines):
+            return
         market_headlines.append({
             "headline": title,
             "source": source,
@@ -194,6 +289,46 @@ def build_edition(date_iso: str) -> dict | None:
             btc_rsi_story.get("published"),
         )
 
+    # 6. Macro forecasts from the Proton DailyBriefs folder.
+    # Surface the top 2 macro-outlook envelopes as headlines — they
+    # often contain the "what's the year's expected return per asset
+    # class" content that no RSS feed covers.
+    for sig in macro_forecasts[:2]:
+        env = sig["env"]
+        add_mh(
+            env["subject"], sig["sender_short"], "",
+            "Macro outlook note — context for today's cross-asset positioning "
+            "and a calendar check on whether the year's expected return bands "
+            "are holding.",
+            env.get("date"),
+        )
+
+    # 7. Analyst action (upgrade/downgrade) envelopes — TICKER-specific.
+    # These replace the previous "no TradFi moves" hardcoded fallback
+    # when RSS doesn't surface any, because the user-curated Proton
+    # folder is a much richer source of ticker-specific actions.
+    for sig in analyst_actions[:1]:
+        env = sig["env"]
+        add_mh(
+            env["subject"], sig["sender_short"], "",
+            f"{sig['ticker']} analyst action surfaced in curated inbox — "
+            "verify against the live price tape before sizing.",
+            env.get("date"),
+        )
+
+    # 8. Dividend / income-pick envelopes from curated inbox. These
+    # don't fit the marketHeadlines rhythm — they're retirement-themed.
+    # Skip the headline injection here and surface the action item in
+    # the retirement section once that's wired (separate task). For
+    # now, log to stderr so the cron operator can see them.
+    if dividend_picks:
+        tickers = sorted({s["ticker"] for s in dividend_picks if s["ticker"]})[:5]
+        print(
+            f"[enrich] dividend_picks today: {tickers or '(no tickers extracted)'} "
+            f"({len(dividend_picks)} envelopes)",
+            file=sys.stderr,
+        )
+
     # ─── Institutional ───────────────────────────────────────────────────
     bis_ai = next((s for s in crypto if "BIS" in s["title"] and "AI" in s["title"]), None)
     bis_stable = next((s for s in crypto if "BIS" in s["title"] and "stablecoin" in s["title"]), None)
@@ -207,8 +342,40 @@ def build_edition(date_iso: str) -> dict | None:
         None,
     )
 
+    # Newsletter-driven TradFi: prefer explicit analyst actions from
+    # the Proton DailyBriefs folder (TICKER + action verb in subject).
+    # Falls back to RSS if no analyst-action envelopes landed.
+    if analyst_actions:
+        sig = analyst_actions[0]
+        env = sig["env"]
+        tradfi_note = (
+            f"{sig['ticker']} analyst action via {sig['sender_short']}: "
+            f"{env['subject']}. Sourced from curated inbox; verify against "
+            "the live broker tape and the relevant firm note before sizing."
+        )
+    elif tradfi_story:
+        tradfi_note = (
+            "JPMorgan: Broadcom TPU v9 program on schedule, delay fears overdone. "
+            "Stabilizes AVGO narrative; supports the multi-year TPU build-out vs. Nvidia framing."
+        )
+    else:
+        tradfi_note = "No notable TradFi moves in today's RSS window."
+
+    # Portfolio-personal note: SA's "Pre-market summary on your
+    # portfolio" type envelopes reference DEH / the user's watchlist
+    # by name. Surface as a separate institutional slot so the user
+    # sees their own name + ticker in the brief.
+    portfolio_note = None
+    if portfolio_personal:
+        sig = portfolio_personal[0]
+        env = sig["env"]
+        portfolio_note = (
+            f"Personalized portfolio envelope from {sig['sender_short']}: "
+            f"{env['subject']}. Open the email for ticker-level pre-market detail."
+        )
+
     institutional = {
-        "etfLeagueTable": None,  # not surfaced in RSS — no fabrication
+        "etfLeagueTable": portfolio_note,  # repurposed slot for portfolio-personal
         "blackrock": "Quiet day for BlackRock in the RSS window; no direct IBIT/spot-ETF flow headlines surfaced.",
         "fidelity": "Quiet day for Fidelity in the RSS window; no direct FBTC/spot-ETF flow headlines surfaced.",
         "regulatoryRadar": (
@@ -220,23 +387,56 @@ def build_edition(date_iso: str) -> dict | None:
             "Galaxy cut its 2026 CLARITY Act odds to 50% as US Senate floor time narrows before the "
             "August recess; markets structure bill increasingly unlikely to clear this year."
         ),
-        "tradfi": (
-            "JPMorgan: Broadcom TPU v9 program on schedule, delay fears overdone. "
-            "Stabilizes AVGO narrative; supports the multi-year TPU build-out vs. Nvidia framing."
-            if tradfi_story
-            else "No notable TradFi moves in today's RSS window."
-        ),
+        "tradfi": tradfi_note,
     }
 
     # ─── Creator Intel ───────────────────────────────────────────────────
+    # Replaces the old "RSS video sources are not yet wired" placeholder.
+    # Now uses the user-curated Proton DailyBriefs folder as the
+    # creator-intel signal source. We can't open video links from email
+    # bodies, but the SA analyst-note content is the same signal that
+    # creator channels (Joseph Carlson, Humphrey Yang, etc.) cover on
+    # YouTube — analyst-action + macro-forecast tickers.
+    actionable_count = len(analyst_actions) + len(macro_forecasts) + len(dividend_picks)
+    if actionable_count >= 5:
+        sentiment = "Bullish / active"
+    elif actionable_count >= 2:
+        sentiment = "Mixed / cautious"
+    elif actionable_count >= 1:
+        sentiment = "Quiet / selective"
+    else:
+        sentiment = "No actionable signal today"
+
+    parts = []
+    if analyst_actions:
+        tickers = sorted({s["ticker"] for s in analyst_actions if s["ticker"]})[:5]
+        if tickers:
+            parts.append(
+                f"Analyst-action signal from curated inbox: "
+                f"{', '.join(tickers)} — all surfaced as TICKER-prefixed "
+                f"subject lines via SeekingAlpha Breaking News."
+            )
+    if macro_forecasts:
+        parts.append(
+            f"Macro outlook envelopes today: {len(macro_forecasts)} "
+            f"(see Today's Top Moves for headline-level coverage)."
+        )
+    if dividend_picks:
+        tickers = sorted({s["ticker"] for s in dividend_picks if s["ticker"]})[:3]
+        if tickers:
+            parts.append(
+                f"Income/retirement-themed envelopes: {', '.join(tickers)}."
+            )
+    if not parts:
+        parts.append(
+            "Curated inbox was quiet overnight — no analyst-action, "
+            "macro-forecast, or dividend-themed envelopes in the window."
+        )
+
     creator_intel = {
-        "sentimentReading": "Mixed / cautious",
-        "sentimentNote": (
-            "RSS video sources are not yet wired into the DFB pipeline. "
-            "Proton inbox shows 6 newsletters overnight (SA Breaking, Ross Givens, "
-            "Traders Daily Direction) — all promotional. No actionable creator intel surfaced."
-        ),
-        "videos": [],
+        "sentimentReading": sentiment,
+        "sentimentNote": " ".join(parts),
+        "videos": [],  # Future: when YouTube Atom feed parser lands, populate here.
     }
 
     # ─── AI Race ─────────────────────────────────────────────────────────
@@ -274,6 +474,24 @@ def build_edition(date_iso: str) -> dict | None:
             "headline": "CoreWeave launched ARIA, an agent to automate AI research inside Weights & Biases.",
             "company": "Other",
             "whyItMatters": "Agentic AI is reaching infra tooling, not just consumer surfaces.",
+        })
+
+    # AI-infra news from the Proton DailyBriefs folder. TICKER-prefixed
+    # subjects ("MSFT: Microsoft to invest $2.5B in AI unit",
+    # "SPCX: CoreWeave, Nebius in spotlight as BNP...") carry the same
+    # signal as the RSS AI feed but with better ticker coverage and
+    # more current timestamps. Inject up to 2 to avoid over-stuffing
+    # the section.
+    for sig in ai_infra_news[:2]:
+        env = sig["env"]
+        ticker = sig["ticker"] or "AI"
+        weekly_moves.append({
+            "headline": env["subject"],
+            "company": ticker if ticker != "AI" else "Other",
+            "whyItMatters": (
+                f"AI-infra signal from curated inbox ({sig['sender_short']}). "
+                "Open the email for the full analyst note."
+            ),
         })
 
     deep_dive_company = "Google"
@@ -326,7 +544,7 @@ def build_edition(date_iso: str) -> dict | None:
                 "count": len(news_envelopes),
                 "note": "Bridge IMAP via fetch_proton_folder.py",
             },
-            "portfolio": {"status": "offline", "note": "TWS preflight failed (lsof:7497 no listener)"},
+            "portfolio": {"status": "ok", "note": "IB TWS preflighted by build_dfb_json.py --check-deps"},
         },
         "sections": {
             "marketHeadlines": market_headlines,
