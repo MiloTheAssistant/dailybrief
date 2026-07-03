@@ -1,0 +1,134 @@
+{
+  "date": "2026-07-03",
+  "weekday": "Friday",
+  "kind": "dfb",
+  "title": "Daily Financial Briefing",
+  "subtitle": "Mission Control · Market Intelligence · Daily",
+  "generatedAt": "2026-07-03T13:46:05.468159+00:00",
+  "confidence": "high",
+  "zip": "63025",
+  "sections": {
+    "marketHeadlines": [
+      {
+        "headline": "Why Meta’s Betting-App Dream Could Be a ‘Poison Golden Egg’ for Its Cash Machine - 24/7 Wall St.",
+        "source": "google_news_mag7",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPYk9fLVBKNjRSOEFfYzBKbDZyNkNIREN6OHBCdld2TFBMZHNHbEJpOXZqR055WjgyeXBBVDY2elVvZklxOUtZLVpJYWhadnRsWDFEa04tdjE2RUU3dmtXWjZYV0d5a19SaU5sT2hLRDIxNVZCclpuODA2X0VTSjVvemg1SElfallQejIyQVdQNjFFVXo3MWhmZzc1NnhMS2RqdlRNWGJaV0FDRUk1QUhSeW9YSkhabkw4c0c2LW1B?oc=5",
+        "whyItMatters": "Meta's real-money gaming push could unlock a new revenue stream but also invites regulatory and reputational risk for its ad business.",
+        "publishedAt": "2026-07-03T18:25:57+00:00"
+      },
+      {
+        "headline": "Wall Street Is Split on Meta’s Secret Cloud Move, and One Side Is Very Wrong - 24/7 Wall St.",
+        "source": "google_news_mag7",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNTzIxVXZBR3NBY0JFNW5HWUFseGlUS2JKM3RpRXV1b2lMNjlVU2VTWENlcXhDbnQxU01tVGo1RGhKbllFTXp5Vnd6R1h2MHBsUm5TcVNrQk5ZWmZlbGFha0NRNTB6ZEtIbWo3alEzamxMWFd0V09OMjMyUGdwZm8teG9odmFnYU8ydWY0dmRYdHhnWW1PdXhid0FCbTdsU0Npa2h3bHU5b1RnazhuR1hOM2hkbmUxY1ZBc2c?oc=5",
+        "whyItMatters": "A reported Meta cloud infrastructure shift would change capex mix and supplier exposure if it materializes.",
+        "publishedAt": "2026-07-03T17:51:56+00:00"
+      },
+      {
+        "headline": "Palantir Stock: A Different Engine, Not A Quieter One - Trefis",
+        "source": "google_news_mag7",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOOGRDOEttSk01QWFLWVlaQWF3aHNmdVNNWnZpdXlZM0FsdzU3aFJFMzJxd2lSanVlSmg4LVZ1eml3Z2YyZnMxdHE1YVZiY1JhdmpRdEhwTDN2YkFseHhQS1FVV3hlVXdGX1dGUnMxY1FjazFYLTJNY1RsSnhjSGRpbmdKazMzblF6eWxtU3RTbklOaGJ1SDJiSm1pbVhvZUt4X0FMTXRudXBDNVNDUkRGZVZR?oc=5",
+        "whyItMatters": "Palantir's commercial AI platform momentum is being tested against its high valuation as it diversifies beyond government work.",
+        "publishedAt": "2026-07-03T17:32:54+00:00"
+      },
+      {
+        "headline": "NVDA's avg cost line is sitting right above the tape on moomoo's Market Position Overview - Moomoo",
+        "source": "google_news_mag7",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQNG9mYm9fOHVVOG5ERTJ5aTNoS3MxWjl6QVYxVEs4Nlg3bGlsWkx4VDM5RlhwZkxqLUpkLTh2bzQxREtmaXZjZmVvZUdEZnNVX3pkQ0tFQ0gzaVBwVjhYZVMydHZrNjliREo3aU42NjFjdVloUk9yekhCSnh6cjhGaGo0bkRDc1VvS2hfZW9pbHJZUnp4LTJkb1ZWTjB2clhuTWk4?oc=5",
+        "whyItMatters": "NVDA trading near its average cost basis signals a pause: traders are watching whether momentum resumes or profit-taking takes over.",
+        "publishedAt": "2026-07-03T14:23:35+00:00"
+      },
+      {
+        "headline": "Jim Cramer Says Meta’s Spending “Hasn’t Been Explained Well” - Yahoo! Finance Canada",
+        "source": "google_news_mag7",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNMExIZzk5eXZJVGNJTi1ma2gtLXBiRkJLNVo3eVFWLXpSTC1MUE9RUFBYTm9Uend1LVJFTE5uUVZ5UkpsRW5peHhQN25SSXloX1VwMFFRd0lZeVVJT1VUMGZWbEtCT1BQUkRIMk1SQThJS0MxZGp3NlhISXBHbjM0ellkeXM?oc=5",
+        "whyItMatters": "High-profile criticism of Meta's spending narrative adds pressure to justify AI and infrastructure capex before earnings.",
+        "publishedAt": "2026-07-03T13:18:29+00:00"
+      }
+    ],
+    "bitcoin": null,
+    "strategy": null,
+    "institutional": {
+      "etfLeagueTable": null,
+      "blackrock": null,
+      "fidelity": null,
+      "regulatoryRadar": null,
+      "sovereign": null,
+      "tradfi": null
+    },
+    "creatorIntel": {
+      "videos": [],
+      "sentimentReading": "mixed",
+      "sentimentNote": "Thin pre-holiday RSS flow; no creator videos surfaced today."
+    },
+    "aiRace": [
+      {
+        "headline": "The Apprenticeship Returns to Fill the AI Talent Gap - ACG Insights",
+        "source": "google_news_ai",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNb3JoRFl5TXFnaWk1RzJYblRVcEd6QzRKYWx5dVpWSHZfczZvODhFbTVkNzlJZGNvb0E1Tk9iYjZOdzZRZ0xGWDJpSEM4QW0wcFR6d2taZGRtNVBGMi13S0tWT0gyNFJiU2RqLWlRblUyR0JFRmtqeTdKUlFmQkR4MXV0UXFVX1NDZmVKS3hB?oc=5",
+        "whyItMatters": "AI talent shortages are pushing the industry back toward apprenticeship-style training, a structural labor-market signal.",
+        "publishedAt": "2026-07-03T18:30:18+00:00"
+      },
+      {
+        "headline": "Mobile Artificial Intelligence Market Size to Surpass USD 322.21 Billion by 2035 | SNS Insider - Yahoo Finance",
+        "source": "google_news_ai",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNZ2ttbjQ2RURKd3o2NUc4cjhRdFJ3dFNJUThVNEFPOW9RX0d2czZmLUhScWM0azhlaHpDaUZFWGtjaU92S2lHMVpxVFhFSm1aTGN1Y3NrR3FNcjZwZW14cWQzUzRyVFRCV1FXV0w0UnlOZ0tNSHF2TFpkY3NPelMwcGlNbFB2M0hISUVpc1l6STdlQ3dSNFYwektfbmlYUmx5YmdCNHJtTDYydw?oc=5",
+        "whyItMatters": "A $300B+ mobile-AI forecast highlights the on-device inference opportunity, though forecasts are not market prices.",
+        "publishedAt": "2026-07-03T18:30:00+00:00"
+      },
+      {
+        "headline": "This generator builder catering to AI went public a month ago. Why analysts see big gains - CNBC",
+        "source": "google_news_ai",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPOU1wYmMwemI0VjB3SUFKV1Q2VXRoMklmb1cyeV9uVTVrSGVYSXEzTTZPajdzNkdKSm9LQWdoVWpEd1lrWlJWR0NwSUFqMG1OdUk0VDUtSTd0VUw0eDFfazlqUlJoaDJDUG5DYzNNejlJa3gtMEpzdFRzNmk1ZzZPUmlYVFVRZmRlS2J5dG1aTkpweFJjV095U2lQeUhZeGNkbmpz?oc=5",
+        "whyItMatters": "A newly public AI-infrastructure supplier drawing analyst upgrades shows capital still chasing picks-and-shovels AI plays.",
+        "publishedAt": "2026-07-03T18:28:07+00:00"
+      },
+      {
+        "headline": "Thoughts on AI, From a Prizewinning Writer Accused of Using AI - The Atlantic",
+        "source": "google_news_ai",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQYXJibU9rTFE5M2lWT2VHN2VqSHFuNlNCV2NLbTI1c3NiYTJLTS1ISE1QNnhZakMxbTNJU2llNWtjVGpuaEtabUttOVFTdTA4TmVBdlZBeUlsdFU2dFU5OFhvR3B4Z0Fnd3pxM00tQmVEMlNEWWdnVDZhSjVqdW1lcUtoQmQ1MTRsMnc3WFplSFFENnRxU3JLTzlLNFU?oc=5",
+        "whyItMatters": "AI-detection disputes in publishing underscore the cultural and legal friction building around generative AI content.",
+        "publishedAt": "2026-07-03T18:19:00+00:00"
+      }
+    ],
+    "retirement": {
+      "netLiquidation": null,
+      "buyingPower": null,
+      "availableFunds": null,
+      "totalCashValue": null,
+      "unrealizedPnL": null,
+      "realizedPnL": null,
+      "topPositions": [],
+      "rateWatch": null,
+      "supplement": []
+    },
+    "health": {
+      "personalInbox": [
+        {
+          "id": "1620",
+          "subject": "MakerWorld Crowdfunding",
+          "sender": "July Picks",
+          "date": "Bambu Lab",
+          "flags": "*",
+          "is_seen": false
+        },
+        {
+          "id": "1619",
+          "subject": "MakerWorld Crowdfunding",
+          "sender": "July Picks",
+          "date": "Bambu Lab",
+          "flags": "*",
+          "is_seen": false
+        },
+        {
+          "id": "1618",
+          "subject": "1 new notification since 4:01 am (Jul 2, 2026)",
+          "sender": "Online Business Friends (Skool)",
+          "date": "2026-07-03 09:03+00:00",
+          "flags": "*",
+          "is_seen": false
+        }
+      ],
+      "move": "Pre-holiday Friday — stand up, walk the dog, and hydrate before the long weekend."
+    }
+  }
+}
