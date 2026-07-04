@@ -115,17 +115,19 @@ def build_job_plan(
             ]
         )
     else:
+        lifestyle_args = [
+            "scripts/build_lifestyle_json.py",
+            job,
+            "--skip-deploy",
+        ]
+        enriched = REPO_ROOT / "out" / "lifestyle" / f"{date_iso}.json"
+        if enriched.exists():
+            lifestyle_args.append("--use-enriched")
+        lifestyle_args.extend(["--date", date_iso])
         steps.append(
             Step(
                 "publish lifestyle json",
-                _py(
-                    "scripts/build_lifestyle_json.py",
-                    job,
-                    "--skip-deploy",
-                    "--use-enriched",
-                    "--date",
-                    date_iso,
-                ),
+                _py(*lifestyle_args),
                 REPO_ROOT,
                 180,
             )
@@ -178,10 +180,6 @@ def _validate_plan(job: str, date_iso: str, steps: list[Step]) -> list[str]:
         issues.append(f"dailybrief repo missing: {REPO_ROOT}")
     if any(step.cwd == WEBSITE_DIR for step in steps) and not WEBSITE_DIR.is_dir():
         issues.append(f"website repo missing: {WEBSITE_DIR}")
-    if job in {"saturday", "sunday"}:
-        enriched = REPO_ROOT / "out" / "lifestyle" / f"{date_iso}.json"
-        if not enriched.exists():
-            issues.append(f"enriched lifestyle file missing: {enriched}")
     return issues
 
 
