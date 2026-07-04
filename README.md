@@ -35,6 +35,7 @@ dailybrief/
 │   ├── fetch_stl_events.py               # Sat + Sun: STL events (curated fallback)
 │   ├── build_lifestyle_json.py           # Sat + Sun: assemble + ship to Vercel
 │   ├── build_dfb_json.py                 # DFB: assemble + ship to Vercel
+│   ├── hermes_jobs/                      # Hermes cron entrypoints
 │   └── _publish_common.py                # shared git + Vercel deploy pipeline
 ├── references/
 │   ├── top-travel-ideas.md               # Sat + Sun: drive-distance travel ideas
@@ -87,3 +88,5 @@ git pull   # on every Mac that runs the cron jobs
 ```
 
 To update a spec: edit here, commit, push, then `git pull` on the cron Mac.
+
+Hermes handoff details live in [`docs/HERMES_HANDOFF.md`](docs/HERMES_HANDOFF.md).

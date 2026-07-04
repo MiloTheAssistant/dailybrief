@@ -102,23 +102,14 @@ sides; the model fills the qualitative fields.
    # then patch the qualitative fields with `patch` tool
    ```
 
-5. **Ship it** — single helper call handles git push AND Vercel deploy:
+5. **Ship it** — use the packaged Hermes publish entrypoint:
    ```
-   python3 scripts/build_lifestyle_json.py saturday --skip-deploy --date <date>
+   python3 scripts/hermes_jobs/saturday_lifestyle.py --date <date>
    ```
-   `--skip-deploy` is critical here: the helper still does the manifest
-   refresh + git commit + git push (the parts that finish in <2s), but
-   skips the Vercel deploy (which can take 30-60s and risk the 3-min
-   hard interrupt on cron sessions).
-
-   After that returns 0, trigger the Vercel deploy in a separate fast
-   background step:
-   ```
-   nohup bash -c 'cd /Volumes/BotCentral/Users/milo/repos/Milo/website && npm run fetch-briefs && vercel deploy --prod --yes' > /tmp/sat-deploy.log 2>&1 &
-   ```
-   `nohup ... &` detaches the deploy from the cron session so the 3-min
-   hard interrupt on this prompt doesn't kill it mid-deploy. The Vercel
-   build will keep running and finish on its own.
+   The entrypoint publishes the already-enriched
+   `out/lifestyle/<date>.json` with `--use-enriched`, refreshes the
+   website brief files, deploys Vercel production non-interactively,
+   and prints a final JSON status envelope.
 
 6. **Final response** — one-line confirmation:
    ```
@@ -128,8 +119,8 @@ sides; the model fills the qualitative fields.
 
 ## Self-checks (run before publishing)
 
-- Helper exit code 0 → proceed.
-- Helper exit non-zero → respond `[SILENT]`.
+- Job envelope `status: "published"` → proceed.
+- Job envelope `status: "failed"` → report the failed step from JSON.
 - If 5+ of 11 pillars are null after enrichment → `[SILENT]`.
 - Weather + Markets are *pre-populated* by the helper (data side), so null
   there means the fetcher failed. Not a SILENT trigger on its own.
