@@ -327,7 +327,7 @@ def write_and_ship(edition: dict, day: str, today_iso: str, dry_run: bool, skip_
 
     # Git commit + push.
     try:
-        subprocess.run(["git", "add",
+        subprocess.run(["git", "add", "-f",
                         str(out_path.relative_to(REPO_ROOT)),
                         "out/manifest.json"],
                        cwd=REPO_ROOT, check=True, timeout=15)
