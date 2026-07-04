@@ -218,10 +218,12 @@ def fetch_feed(feed: dict) -> tuple[list[dict], str]:
     return out, "ok"
 
 
-def filter_window(stories: list[dict], now: datetime) -> list[dict]:
-    """Keep stories published within WINDOW_HOURS. Items without a parseable
+def filter_window(
+    stories: list[dict], now: datetime, window_hours: int = WINDOW_HOURS
+) -> list[dict]:
+    """Keep stories published within window_hours. Items without a parseable
     pubDate are kept (caller can judge recency from snippet)."""
-    cutoff = now - timedelta(hours=WINDOW_HOURS)
+    cutoff = now - timedelta(hours=window_hours)
     out = []
     for s in stories:
         if s["published"] is None:
@@ -298,7 +300,7 @@ def main() -> int:
         print(f"[fetch_market_brief] all feeds failed: {feed_status}", file=sys.stderr)
         return 1
 
-    all_stories = filter_window(all_stories, now)
+    all_stories = filter_window(all_stories, now, args.window_hours)
     all_stories = dedupe(all_stories)
     if args.max and len(all_stories) > args.max:
         all_stories = all_stories[: args.max]

@@ -217,7 +217,14 @@ def build_edition(date_iso: str) -> dict | None:
     # Pick the most actionable stories, not the first 5 alphabetical.
     market_headlines = []
 
-    def add_mh(title: str, source: str, url: str, why: str, published: str = None):
+    def add_mh(
+        title: str,
+        source: str,
+        url: str,
+        why: str,
+        published: str = None,
+        snippet: str | None = None,
+    ):
         # Dedupe by headline (case-insensitive trimmed). The Proton
         # inbox can land the same SA headline twice (e.g. once in
         # the breaking-news batch and once in the macro-view digest),
@@ -230,13 +237,16 @@ def build_edition(date_iso: str) -> dict | None:
         if any((h.get("headline") or "").strip().lower() == key
                for h in market_headlines):
             return
-        market_headlines.append({
+        item = {
             "headline": title,
             "source": source,
             "url": url,
             "whyItMatters": why,
             "publishedAt": published,
-        })
+        }
+        if snippet:
+            item["snippet"] = snippet
+        market_headlines.append(item)
 
     # 1. Alphabet $84.75B equity raise — the day's biggest capital-markets story
     for s in mag7:
@@ -246,6 +256,7 @@ def build_edition(date_iso: str) -> dict | None:
                 "Largest US corporate equity raise in history — read-through for cap-markets "
                 "liquidity and AI-capex funding asks across the Mag7.",
                 s.get("published"),
+                s.get("snippet"),
             )
             break
 
@@ -256,6 +267,7 @@ def build_edition(date_iso: str) -> dict | None:
                 s["title"], s["source"], s["url"],
                 "Hyperscalers throttling each other is the clearest signal that 2026 AI compute is sold out.",
                 s.get("published"),
+                s.get("snippet"),
             )
             break
 
@@ -266,6 +278,7 @@ def build_edition(date_iso: str) -> dict | None:
                 s["title"], s["source"], s["url"],
                 "220MW PPA at Sabanci — AI build-out is now driving utility-scale PPAs in Texas.",
                 s.get("published"),
+                s.get("snippet"),
             )
             break
 
@@ -276,6 +289,7 @@ def build_edition(date_iso: str) -> dict | None:
             "JPMorgan pushback keeps TPU v9 on schedule — read-through for custom-AI-silicon "
             "demand vs. Nvidia into 2H 2026.",
             s.get("published"),
+            s.get("snippet"),
         )
         break
 
@@ -287,6 +301,7 @@ def build_edition(date_iso: str) -> dict | None:
             "BTC RSI divergence into the June close has analysts drawing parallels to the 2022 bottom — "
             "historically a long-term buy signal.",
             btc_rsi_story.get("published"),
+            btc_rsi_story.get("snippet"),
         )
 
     # 6. Macro forecasts from the Proton DailyBriefs folder.
@@ -296,11 +311,12 @@ def build_edition(date_iso: str) -> dict | None:
     for sig in macro_forecasts[:2]:
         env = sig["env"]
         add_mh(
-            env["subject"], sig["sender_short"], "",
+            env["subject"], sig["sender_short"], env.get("url") or "",
             "Macro outlook note — context for today's cross-asset positioning "
             "and a calendar check on whether the year's expected return bands "
             "are holding.",
             env.get("date"),
+            env.get("snippet"),
         )
 
     # 7. Analyst action (upgrade/downgrade) envelopes — TICKER-specific.
@@ -310,10 +326,11 @@ def build_edition(date_iso: str) -> dict | None:
     for sig in analyst_actions[:1]:
         env = sig["env"]
         add_mh(
-            env["subject"], sig["sender_short"], "",
+            env["subject"], sig["sender_short"], env.get("url") or "",
             f"{sig['ticker']} analyst action surfaced in curated inbox — "
             "verify against the live price tape before sizing.",
             env.get("date"),
+            env.get("snippet"),
         )
 
     # 8. Dividend / income-pick envelopes from curated inbox. These
@@ -449,6 +466,9 @@ def build_edition(date_iso: str) -> dict | None:
                 "headline": "Google throttled Meta's access to Gemini AI amid compute shortage.",
                 "company": "Google",
                 "whyItMatters": "Compute, not models, is now the binding constraint.",
+                "source": s.get("source"),
+                "url": s.get("url"),
+                "publishedAt": s.get("published"),
             })
             break
     for s in mag7:
@@ -457,6 +477,9 @@ def build_edition(date_iso: str) -> dict | None:
                 "headline": "Meta locked in a 220MW PPA with Sabanci for Texas data-center power.",
                 "company": "Meta",
                 "whyItMatters": "AI capex is pulling utility-scale PPAs into Texas.",
+                "source": s.get("source"),
+                "url": s.get("url"),
+                "publishedAt": s.get("published"),
             })
             break
     for s in movers:
@@ -465,6 +488,9 @@ def build_edition(date_iso: str) -> dict | None:
                 "headline": "JPMorgan: Broadcom TPU v9 program on schedule, delay fears overdone.",
                 "company": "NVIDIA",
                 "whyItMatters": "Custom-silicon share grows if AVGO delivers — Nvidia margin pressure intensifies.",
+                "source": s.get("source"),
+                "url": s.get("url"),
+                "publishedAt": s.get("published"),
             })
             break
     # CoreWeave ARIA from the AI feed
@@ -474,6 +500,9 @@ def build_edition(date_iso: str) -> dict | None:
             "headline": "CoreWeave launched ARIA, an agent to automate AI research inside Weights & Biases.",
             "company": "Other",
             "whyItMatters": "Agentic AI is reaching infra tooling, not just consumer surfaces.",
+            "source": coreweave.get("source"),
+            "url": coreweave.get("url"),
+            "publishedAt": coreweave.get("published"),
         })
 
     # AI-infra news from the Proton DailyBriefs folder. TICKER-prefixed
@@ -492,6 +521,9 @@ def build_edition(date_iso: str) -> dict | None:
                 f"AI-infra signal from curated inbox ({sig['sender_short']}). "
                 "Open the email for the full analyst note."
             ),
+            "source": sig["sender_short"],
+            "url": env.get("url"),
+            "publishedAt": env.get("date"),
         })
 
     deep_dive_company = "Google"

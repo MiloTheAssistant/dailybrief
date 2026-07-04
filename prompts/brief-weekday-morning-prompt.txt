@@ -11,58 +11,31 @@ health. Reads in ~15 minutes with morning coffee.
 
 ## Pipeline
 
-1. **Run the helper script**:
-   ```
-   python3 scripts/build_dfb_json.py --dry-run > /tmp/dfb-raw.json
-   ```
-   Review the JSON. Helper populated RSS headlines (mapped to
-   marketHeadlines / bitcoin / aiRace buckets), calendar, inbox,
-   portfolio.
+Run the packaged Hermes entrypoint:
 
-2. **Enrich with qualitative fields** the helper can't fetch:
-   - `sections.marketHeadlines[*].whyItMatters` — 1-line "why" per
-     headline. Don't paste snippets; synthesize.
-   - `sections.bitcoin` — fill from fetched market context if
-     available; otherwise leave null and bump confidence accordingly.
-   - `sections.strategy` — same.
-   - `sections.institutional.blackrock / fidelity / regulatoryRadar /
-     sovereign / tradfi` — 1-line each, drawn from the day's RSS.
-   - `sections.creatorIntel.sentimentReading + sentimentNote` — 1
-     line on creator consensus (cautious / bullish / mixed). No fake
-     video URLs.
-   - `sections.aiRace.weeklyMoves[*].whyItMatters` — 1-line each.
-   - `sections.aiRace.deepDiveCompany + deepDiveSummary` — pick one
-     notable move, 2-3 sentence context.
-   - `sections.retirement.rateWatch` — 10Y / 2Y / Fed funds if surfaced
-     in RSS; else null.
-   - `sections.retirement.actionItem` — single-line nudge (NOT advice).
+```
+python3 scripts/hermes_jobs/weekday_morning.py
+```
 
-3. **Cap total word count** at ~1,500 words across all sections.
-   Hit the budgets in `goals/brief_weekday_morning.md` "Length cap"
-   table. The Vercel page renders sections collapsed-by-default for
-   the longer ones; headlines stay expanded.
+The entrypoint owns the deterministic repo work:
 
-4. **Write the enriched JSON** to `out/dfb/<date>.json`.
+1. `git pull --ff-only`
+2. runtime preflight (`build_dfb_json.py --check-deps`) — degraded
+   preflight is reported but does not fabricate data
+3. deterministic DFB enrichment (`scripts/enrich_dfb_edition.py`)
+4. publish existing enriched JSON with
+   `build_dfb_json.py --skip-deploy --use-enriched`
+5. refresh website brief files and deploy Vercel production
+   non-interactively
+6. print a final JSON status envelope for Hermes
 
-5. **Ship it** — single helper call handles git push AND Vercel deploy:
-   ```
-   python3 scripts/build_dfb_json.py --skip-deploy --date <date>
-   ```
-   `--skip-deploy` is critical here: the helper still does the manifest
-   refresh + git commit + git push (the parts that finish in <2s), but
-   skips the Vercel deploy (which can take 30-60s and risk the 3-min
-   hard interrupt on cron sessions).
+If you need to rerun a specific date:
 
-   After that returns 0, trigger the Vercel deploy in a separate fast
-   background step:
-   ```
-   nohup bash -c 'cd /Volumes/BotCentral/Users/milo/repos/Milo/website && npm run fetch-briefs && vercel deploy --prod --yes' > /tmp/dfb-deploy.log 2>&1 &
-   ```
-   `nohup ... &` detaches the deploy from the cron session so the 3-min
-   hard interrupt on this prompt doesn't kill it mid-deploy. The Vercel
-   build will keep running and finish on its own.
+```
+python3 scripts/hermes_jobs/weekday_morning.py --date <date>
+```
 
-6. **Final response** — one-line confirmation:
+**Final response** — one-line confirmation:
    ```
    Published Daily Financial Briefing for <date>: https://daily-brief-tau.vercel.app/
    ```
@@ -70,8 +43,9 @@ health. Reads in ~15 minutes with morning coffee.
 
 ## Self-checks (run before publishing)
 
-- Helper exit code 0 → proceed.
-- Helper exit non-zero → respond `[SILENT]`.
+- Job envelope `status: "published"` → proceed.
+- Job returns `[SILENT]` → respond `[SILENT]`.
+- Job envelope `status: "failed"` → report the failed step from JSON.
 - If 5+ of 7 sections are null after enrichment → `[SILENT]`.
 - `confidence` field is computed from null count: ≤2 nulls = high,
   ≤4 = medium, >4 = low. The site renders this directly.

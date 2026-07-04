@@ -76,18 +76,14 @@ forward-leaning.
 
 4. **Write the enriched JSON** to `out/lifestyle/<date>.json`.
 
-5. **Ship it** — single helper call handles git push AND Vercel deploy:
+5. **Ship it** — use the packaged Hermes publish entrypoint:
    ```
-   python3 scripts/build_lifestyle_json.py sunday --skip-deploy --date <date>
+   python3 scripts/hermes_jobs/sunday_lifestyle.py --date <date>
    ```
-   `--skip-deploy` is critical: the helper does manifest refresh + git
-   commit + git push (parts that finish in <2s), but skips the Vercel
-   deploy (which can take 30-60s and risk the 3-min hard interrupt).
-
-   After that returns 0, trigger the deploy in detached background:
-   ```
-   nohup bash -c 'cd /Volumes/BotCentral/Users/milo/repos/Milo/website && npm run fetch-briefs && vercel deploy --prod --yes' > /tmp/sun-deploy.log 2>&1 &
-   ```
+   The entrypoint publishes the already-enriched
+   `out/lifestyle/<date>.json` with `--use-enriched`, refreshes the
+   website brief files, deploys Vercel production non-interactively,
+   and prints a final JSON status envelope.
 
 6. **Final response** — one-line confirmation:
    ```
@@ -96,8 +92,8 @@ forward-leaning.
 
 ## Self-checks (run before publishing)
 
-- Helper exit code 0 → proceed.
-- Helper exit non-zero → respond `[SILENT]`.
+- Job envelope `status: "published"` → proceed.
+- Job envelope `status: "failed"` → report the failed step from JSON.
 - If 5+ of 11 pillars are null after enrichment → `[SILENT]`.
 
 ## Rules
