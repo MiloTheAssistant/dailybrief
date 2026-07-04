@@ -71,6 +71,8 @@ Steve Sosnick. The full article continues for several paragraphs with
 detailed market analysis and trading recommendations for the coming
 week. This is a long body that should be truncated at 200 chars in the
 snippet, so the test will only see the first 200 chars of cleaned text.
+Read the full article: https://www.interactivebrokers.com/campus/traders-insight/securities/macro/test-source
+Manage preferences: https://www.interactivebrokers.com/preferences/email
 """
 
 
@@ -175,6 +177,17 @@ def test_make_snippet_truncates_at_word_boundary():
     assert snippet.endswith("...")
 
 
+def test_extract_urls_filters_footer_links():
+    body = (
+        "Read more: https://source.example.com/article?id=123.\n"
+        "Unsubscribe: https://source.example.com/email/preferences\n"
+        "Again: https://source.example.com/article?id=123"
+    )
+    assert fetch_proton_folder._extract_urls(body) == [
+        "https://source.example.com/article?id=123"
+    ]
+
+
 def test_extract_text_skips_css_as_text_preamble():
     """The IB emails render CSS as bare text. Verify we strip it."""
     body = SAMPLE_BODY_IB
@@ -247,7 +260,7 @@ def test_snippet_contains_no_raw_html():
 def test_end_to_end_json_shape(mock_bridge, capsys):
     """Smoke test: full invocation against a mocked Bridge."""
     mock_bridge["responses"]["search"] = SAMPLE_SEARCH_OUTPUT
-    mock_bridge["responses"]["read"] = SAMPLE_BODY_IB
+    mock_bridge["responses"]["read"] = f"Headers\n--- Body ---\n{SAMPLE_BODY_IB}"
 
     with mock.patch.object(sys, "argv",
                            ["fetch_proton_folder.py",
@@ -266,6 +279,13 @@ def test_end_to_end_json_shape(mock_bridge, capsys):
         assert "sender" in env
         assert "date" in env
         assert "snippet" in env
+        assert "url" in env
+        assert "urls" in env
+        assert env["url"] == (
+            "https://www.interactivebrokers.com/campus/traders-insight/"
+            "securities/macro/test-source"
+        )
+        assert env["urls"] == [env["url"]]
         # Snippet should not contain raw HTML.
         assert "<" not in env["snippet"]
         # Snippet should be at most 200 chars + the "..." marker.

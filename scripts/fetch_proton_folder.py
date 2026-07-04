@@ -25,7 +25,9 @@ Output JSON to stdout for downstream consumption:
                 "sender": "noresponse@email.interactivebrokers.com",
                 "date": "2026-06-30 ...",
                 "is_seen": false,
-                "snippet": "First 200 chars of plain-text body..."
+                "snippet": "First 200 chars of plain-text body...",
+                "url": "https://source.example/article",
+                "urls": ["https://source.example/article"]
             },
             ...
         ]
@@ -85,6 +87,8 @@ class FolderEnvelope:
     date: str
     is_seen: bool
     snippet: str = ""
+    url: str | None = None
+    urls: list[str] = field(default_factory=list)
 
 
 def call_protonmail_tool(folder: str) -> tuple[list[dict], str]:
@@ -209,8 +213,8 @@ def _filter_by_recency(envelopes: list[dict], since_hours: int) -> list[dict]:
     return out
 
 
-def _read_body_plaintext(folder: str, uid: str) -> str:
-    """Fetch the plain-text body of a single message. Returns "" on error.
+def _read_body_plaintext_and_urls(folder: str, uid: str) -> tuple[str, list[str]]:
+    """Fetch the body text and source URLs of a single message.
 
     The protonmail_tool.py `read` subcommand returns headers + body
     separated by a `--- Body ---` line. The body may be a
@@ -228,12 +232,55 @@ def _read_body_plaintext(folder: str, uid: str) -> str:
             cmd, capture_output=True, text=True, check=True, timeout=15,
         )
     except (subprocess.CalledProcessError, subprocess.TimeoutExpired):
-        return ""
+        return "", []
     stdout = result.stdout
     if "--- Body ---" not in stdout:
-        return ""
+        return "", []
     body = stdout.split("--- Body ---", 1)[1].strip()
-    return _extract_text_from_mime_concat(body)
+    return _extract_text_from_mime_concat(body), _extract_urls(body)
+
+
+def _read_body_plaintext(folder: str, uid: str) -> str:
+    """Fetch the plain-text body of a single message. Returns "" on error."""
+    text, _ = _read_body_plaintext_and_urls(folder, uid)
+    return text
+
+
+def _extract_urls(body: str) -> list[str]:
+    """Return likely article/source URLs from a raw mail body.
+
+    Newsletter bodies often include footer links, preference links, and
+    tracking URLs. Keep this conservative and ordered: the first usable
+    source URL becomes the card's primary `url`.
+    """
+    if not body:
+        return []
+    candidates = re.findall(r"https?://[^\s<>'\"\)\]]+", body)
+    seen: set[str] = set()
+    out: list[str] = []
+    deny = (
+        "unsubscribe",
+        "manage-preferences",
+        "preferences",
+        "privacy",
+        "terms",
+        "email-prefs",
+        "emailpreferences",
+        "view-in-browser",
+        "viewonline",
+    )
+    for raw in candidates:
+        url = raw.rstrip(".,;:!?)]}>")
+        low = url.lower()
+        if any(token in low for token in deny):
+            continue
+        if url in seen:
+            continue
+        seen.add(url)
+        out.append(url)
+        if len(out) >= 5:
+            break
+    return out
 
 
 def _extract_text_from_mime_concat(body: str) -> str:
@@ -455,8 +502,9 @@ def main() -> int:
     results: list[FolderEnvelope] = []
     for env in filtered:
         body = ""
+        urls: list[str] = []
         if args.snippet_chars > 0:
-            body = _read_body_plaintext(args.folder, env.get("uid", ""))
+            body, urls = _read_body_plaintext_and_urls(args.folder, env.get("uid", ""))
         snippet = _make_snippet(body, args.snippet_chars)
         sender = _extract_sender_email(env.get("from", ""))
         results.append(FolderEnvelope(
@@ -466,6 +514,8 @@ def main() -> int:
             date=env.get("date", ""),
             is_seen=False,  # search doesn't surface flag info; LLM can ignore
             snippet=snippet,
+            url=urls[0] if urls else None,
+            urls=urls,
         ))
 
     # 5. Emit JSON (or plain) envelope.

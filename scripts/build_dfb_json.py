@@ -94,6 +94,7 @@ def group_stories_by_section(stories: list[dict]) -> dict[str, list[dict]]:
             "headline": s.get("title"),
             "source": s.get("source"),
             "url": s.get("url"),
+            "snippet": s.get("snippet"),
             "whyItMatters": None,  # filled by the LLM
             "publishedAt": s.get("published"),
         })
