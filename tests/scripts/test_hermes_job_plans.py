@@ -40,15 +40,20 @@ def test_weekday_plan_enriches_then_ships_existing_dfb_file():
     assert ["vercel", "deploy", "--prod", "--non-interactive"] in argvs
 
 
-def test_lifestyle_plan_publishes_existing_enriched_file_without_deploy():
+def test_lifestyle_plan_publishes_existing_enriched_file_without_deploy(tmp_path, monkeypatch):
     date_iso = "2026-07-04"
+    enriched = tmp_path / "out" / "lifestyle" / f"{date_iso}.json"
+    enriched.parent.mkdir(parents=True)
+    enriched.write_text("{}", encoding="utf-8")
+
+    monkeypatch.setattr(job_common, "REPO_ROOT", tmp_path)
 
     steps = job_common.build_job_plan("saturday", date_iso, skip_deploy=True)
     argvs = _argvs(steps)
 
     assert [
         sys.executable,
-        str(REPO_ROOT / "scripts" / "build_lifestyle_json.py"),
+        str(tmp_path / "scripts" / "build_lifestyle_json.py"),
         "saturday",
         "--skip-deploy",
         "--use-enriched",
@@ -56,6 +61,55 @@ def test_lifestyle_plan_publishes_existing_enriched_file_without_deploy():
         date_iso,
     ] in argvs
     assert ["vercel", "deploy", "--prod", "--non-interactive"] not in argvs
+
+
+def test_lifestyle_plan_builds_baseline_when_enriched_file_is_missing(tmp_path, monkeypatch):
+    date_iso = "2026-07-05"
+    monkeypatch.setattr(job_common, "REPO_ROOT", tmp_path)
+
+    steps = job_common.build_job_plan("sunday", date_iso, skip_deploy=True)
+    argvs = _argvs(steps)
+
+    assert [
+        sys.executable,
+        str(tmp_path / "scripts" / "build_lifestyle_json.py"),
+        "sunday",
+        "--skip-deploy",
+        "--date",
+        date_iso,
+    ] in argvs
+    assert not any("--use-enriched" in argv for argv in argvs)
+    assert ["vercel", "deploy", "--prod", "--non-interactive"] not in argvs
+
+
+def test_sunday_dry_run_is_valid_without_preexisting_enriched_file(tmp_path, monkeypatch, capsys):
+    date_iso = "2026-07-05"
+    monkeypatch.setattr(job_common, "REPO_ROOT", tmp_path)
+
+    rc = job_common.run_job(
+        "sunday",
+        date_iso=date_iso,
+        skip_deploy=True,
+        no_pull=True,
+        dry_run=True,
+    )
+
+    assert rc == 0
+
+    import json
+
+    payload = json.loads(capsys.readouterr().out)
+    assert payload["status"] == "dry_run"
+    assert payload["valid"] is True
+    assert payload["issues"] == []
+    assert payload["plannedSteps"][0]["argv"] == [
+        sys.executable,
+        str(tmp_path / "scripts" / "build_lifestyle_json.py"),
+        "sunday",
+        "--skip-deploy",
+        "--date",
+        date_iso,
+    ]
 
 
 def test_dry_run_prints_plan_without_executing_commands(capsys):
