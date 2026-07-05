@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "timezone": "America/Chicago",
+  "repo": "/Volumes/BotCentral/Users/milo/repos/dailybrief",
+  "website": "/Volumes/BotCentral/Users/milo/repos/Milo/website",
+  "publicBaseUrl": "https://daily-brief-tau.vercel.app",
+  "runLog": "/Volumes/BotCentral/Users/milo/repos/dailybrief/logs/hermes_runs.jsonl",
+  "hermesScriptsDir": "~/.hermes/scripts",
+  "jobs": [
+    {
+      "name": "brief-weekday-morning",
+      "schedule": "0 7 * * 1-5",
+      "mode": "no-agent",
+      "deliver": "local",
+      "workdir": "/Volumes/BotCentral/Users/milo/repos/dailybrief",
+      "repoEntrypoint": "scripts/hermes_jobs/weekday_morning.py",
+      "hermesScript": "dailybrief-weekday-morning.sh",
+      "publicUrl": "https://daily-brief-tau.vercel.app/"
+    },
+    {
+      "name": "brief-saturday",
+      "schedule": "0 9 * * 6",
+      "mode": "no-agent",
+      "deliver": "local",
+      "workdir": "/Volumes/BotCentral/Users/milo/repos/dailybrief",
+      "repoEntrypoint": "scripts/hermes_jobs/saturday_lifestyle.py",
+      "hermesScript": "dailybrief-saturday.sh",
+      "publicUrl": "https://daily-brief-tau.vercel.app/weekend/{date}"
+    },
+    {
+      "name": "brief-sunday",
+      "schedule": "0 9 * * 0",
+      "mode": "no-agent",
+      "deliver": "local",
+      "workdir": "/Volumes/BotCentral/Users/milo/repos/dailybrief",
+      "repoEntrypoint": "scripts/hermes_jobs/sunday_lifestyle.py",
+      "hermesScript": "dailybrief-sunday.sh",
+      "publicUrl": "https://daily-brief-tau.vercel.app/weekend/{date}"
+    }
+  ]
+}

@@ -15,6 +15,9 @@ venv/
 # Per-job scratch / data dumps
 .brief/
 
+# Local execution logs written by Hermes wrapper jobs
+logs/
+
 # Environment / secrets — these scripts read Proton credentials from
 # ~/.config/himalaya/ and the IB Gateway from local env. Never commit them.
 .env
