@@ -64,11 +64,11 @@ Hermes no-agent jobs suppress delivery only for empty stdout or a final
 `{"wakeAgent": false}` gate, so the generated wrapper scripts translate the
 repo entrypoints' `[SILENT]` marker into that gate.
 
-The weekday job is deterministic today because `scripts/enrich_dfb_edition.py`
-authors the qualitative fields. Weekend entrypoints publish an existing
-enriched file when `out/lifestyle/<date>.json` already exists; otherwise they
-publish the baseline sourced JSON. The next quality upgrade is a deterministic
-weekend enrichment step that matches the weekday DFB path.
+The weekday job is deterministic because `scripts/enrich_dfb_edition.py`
+authors the qualitative fields. Weekend jobs are deterministic because
+`scripts/enrich_lifestyle_edition.py` assembles the lifestyle source JSON,
+fills the qualitative fields from those source-backed inputs, writes
+`out/lifestyle/<date>.json`, and then ships that file with `--use-enriched`.
 
 ## Manual Runs
 
@@ -87,6 +87,13 @@ Live run:
 python3 scripts/hermes_jobs/weekday_morning.py --date 2026-07-06
 python3 scripts/hermes_jobs/saturday_lifestyle.py --date 2026-07-04
 python3 scripts/hermes_jobs/sunday_lifestyle.py --date 2026-07-05
+```
+
+Run deterministic weekend enrichment only. This fetches source data and writes
+`out/lifestyle/<date>.json`, but does not commit, push, or deploy:
+
+```bash
+python3 scripts/enrich_lifestyle_edition.py sunday 2026-07-05
 ```
 
 Use `--skip-deploy` to commit/push JSON and manifest only:

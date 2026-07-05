@@ -116,14 +116,20 @@ def build_job_plan(
             ]
         )
     else:
+        steps.append(
+            Step(
+                "enrich lifestyle",
+                _py("scripts/enrich_lifestyle_edition.py", job, date_iso),
+                REPO_ROOT,
+                240,
+            )
+        )
         lifestyle_args = [
             "scripts/build_lifestyle_json.py",
             job,
             "--skip-deploy",
+            "--use-enriched",
         ]
-        enriched = REPO_ROOT / "out" / "lifestyle" / f"{date_iso}.json"
-        if enriched.exists():
-            lifestyle_args.append("--use-enriched")
         lifestyle_args.extend(["--date", date_iso])
         steps.append(
             Step(
