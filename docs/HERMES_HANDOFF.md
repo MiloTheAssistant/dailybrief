@@ -27,6 +27,7 @@ The entrypoints:
 4. refresh `/Volumes/BotCentral/Users/milo/repos/Milo/website/public/briefings`
 5. deploy Vercel production with `vercel deploy --prod --non-interactive`
 6. print a machine-readable final status envelope
+7. append the same final status to `logs/hermes_runs.jsonl`
 
 Example success envelope:
 
@@ -44,29 +45,30 @@ Example success envelope:
 
 ## Cron Registration
 
-Create or update the jobs from the cron Mac:
+Create or update the jobs from the cron Mac with the repo-owned installer:
 
 ```bash
 cd /Volumes/BotCentral/Users/milo/repos/dailybrief
 
-hermes cron create "0 7 * * 1-5" \
-  "Run scripts/hermes_jobs/weekday_morning.py. Report the final JSON envelope or [SILENT]." \
-  --script /Volumes/BotCentral/Users/milo/repos/dailybrief/scripts/hermes_jobs/weekday_morning.py \
-  --name "brief-weekday-morning"
-
-hermes cron create "0 9 * * 6" \
-  "Generate/enrich the Saturday lifestyle JSON, then run scripts/hermes_jobs/saturday_lifestyle.py. Report the final JSON envelope or [SILENT]." \
-  --name "brief-saturday"
-
-hermes cron create "0 9 * * 0" \
-  "Generate/enrich the Sunday lifestyle JSON, then run scripts/hermes_jobs/sunday_lifestyle.py. Report the final JSON envelope or [SILENT]." \
-  --name "brief-sunday"
+python3 scripts/install_hermes_schedule.py --dry-run
+python3 scripts/install_hermes_schedule.py
 ```
 
+The installer reads `ops/hermes_dailybrief_schedule.json`, writes small wrapper
+scripts into `~/.hermes/scripts/`, and creates or updates these Hermes jobs in
+`--no-agent` mode. Hermes still owns the schedule, run supervision, output
+capture, and local delivery status; `dailybrief` owns the actual publishing
+commands.
+
+Hermes no-agent jobs suppress delivery only for empty stdout or a final
+`{"wakeAgent": false}` gate, so the generated wrapper scripts translate the
+repo entrypoints' `[SILENT]` marker into that gate.
+
 The weekday job is deterministic today because `scripts/enrich_dfb_edition.py`
-authors the qualitative fields. Weekend jobs still require the Hermes prompt to
-fill the qualitative fields in `out/lifestyle/<date>.json` before calling the
-publish entrypoint.
+authors the qualitative fields. Weekend entrypoints publish an existing
+enriched file when `out/lifestyle/<date>.json` already exists; otherwise they
+publish the baseline sourced JSON. The next quality upgrade is a deterministic
+weekend enrichment step that matches the weekday DFB path.
 
 ## Manual Runs
 
@@ -124,6 +126,7 @@ Check scheduler state:
 hermes cron list
 hermes cron status
 hermes cron run brief-weekday-morning
+tail -20 logs/hermes_runs.jsonl
 ```
 
 Check repo publication state:

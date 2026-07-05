@@ -14,6 +14,7 @@ from zoneinfo import ZoneInfo
 REPO_ROOT = Path(__file__).resolve().parents[2]
 WEBSITE_DIR = REPO_ROOT.parent / "Milo" / "website"
 PUBLIC_BASE = "https://daily-brief-tau.vercel.app"
+RUN_LOG_PATH = REPO_ROOT / "logs" / "hermes_runs.jsonl"
 
 
 @dataclass(frozen=True)
@@ -164,6 +165,19 @@ def _deployment_url(results: list[StepResult]) -> str | None:
     return None
 
 
+def _append_run_log(envelope: dict) -> str | None:
+    """Append a machine-readable run record without blocking publication."""
+    record = dict(envelope)
+    record["loggedAt"] = datetime.now(ZoneInfo("America/Chicago")).isoformat()
+    try:
+        RUN_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+        with RUN_LOG_PATH.open("a", encoding="utf-8") as f:
+            f.write(json.dumps(record, ensure_ascii=False, sort_keys=True) + "\n")
+    except OSError as exc:
+        return str(exc)
+    return None
+
+
 def _planned_step(step: Step) -> dict:
     return {
         "name": step.name,
@@ -252,6 +266,23 @@ def run_job(
     status, results = run_steps(steps)
 
     if status == "silent":
+        envelope = {
+            "status": status,
+            "job": job,
+            "kind": "dfb" if job == "weekday" else "lifestyle",
+            "date": date_iso,
+            "url": _target_url(job, date_iso),
+            "deploymentUrl": None,
+            "deployed": False,
+            "preflight": "degraded"
+            if any(r.name == "runtime preflight" and not r.ok for r in results)
+            else "ok",
+            "runLogPath": str(RUN_LOG_PATH),
+            "steps": [r.as_dict() for r in results],
+        }
+        log_error = _append_run_log(envelope)
+        if log_error:
+            print(f"[hermes_job] run log write failed: {log_error}", file=sys.stderr)
         print("[SILENT]")
         return 0
 
@@ -266,8 +297,12 @@ def run_job(
         "preflight": "degraded"
         if any(r.name == "runtime preflight" and not r.ok for r in results)
         else "ok",
+        "runLogPath": str(RUN_LOG_PATH),
         "steps": [r.as_dict() for r in results],
     }
+    log_error = _append_run_log(envelope)
+    if log_error:
+        envelope["runLogError"] = log_error
     print(json.dumps(envelope, ensure_ascii=False, indent=2))
     return 0 if status == "published" else 1
 

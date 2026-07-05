@@ -138,3 +138,76 @@ def test_dry_run_prints_plan_without_executing_commands(capsys):
         and step["argv"] == ["vercel", "deploy", "--prod", "--non-interactive"]
         for step in payload["plannedSteps"]
     )
+
+
+def test_successful_run_appends_jsonl_run_log(tmp_path, monkeypatch, capsys):
+    log_path = tmp_path / "hermes_runs.jsonl"
+    monkeypatch.setattr(job_common, "RUN_LOG_PATH", log_path)
+
+    def fake_run_steps(steps):
+        result = job_common.StepResult(
+            name="publish lifestyle json",
+            argv=["python3", "build_lifestyle_json.py"],
+            cwd=str(tmp_path),
+            returncode=0,
+            stdout_tail="ok",
+            stderr_tail="",
+        )
+        return "published", [result]
+
+    monkeypatch.setattr(job_common, "run_steps", fake_run_steps)
+
+    rc = job_common.run_job(
+        "saturday",
+        date_iso="2026-07-04",
+        skip_deploy=True,
+        no_pull=True,
+    )
+
+    assert rc == 0
+
+    import json
+
+    payload = json.loads(capsys.readouterr().out)
+    assert payload["status"] == "published"
+    assert payload["runLogPath"] == str(log_path)
+
+    records = [json.loads(line) for line in log_path.read_text().splitlines()]
+    assert len(records) == 1
+    assert records[0]["job"] == "saturday"
+    assert records[0]["status"] == "published"
+
+
+def test_silent_run_appends_log_but_prints_silent(tmp_path, monkeypatch, capsys):
+    log_path = tmp_path / "hermes_runs.jsonl"
+    monkeypatch.setattr(job_common, "RUN_LOG_PATH", log_path)
+
+    def fake_run_steps(steps):
+        result = job_common.StepResult(
+            name="enrich dfb",
+            argv=["python3", "enrich_dfb_edition.py"],
+            cwd=str(tmp_path),
+            returncode=2,
+            stdout_tail="",
+            stderr_tail="not enough data",
+        )
+        return "silent", [result]
+
+    monkeypatch.setattr(job_common, "run_steps", fake_run_steps)
+
+    rc = job_common.run_job(
+        "weekday",
+        date_iso="2026-07-06",
+        skip_deploy=True,
+        no_pull=True,
+    )
+
+    assert rc == 0
+    assert capsys.readouterr().out.strip() == "[SILENT]"
+
+    import json
+
+    records = [json.loads(line) for line in log_path.read_text().splitlines()]
+    assert len(records) == 1
+    assert records[0]["job"] == "weekday"
+    assert records[0]["status"] == "silent"
