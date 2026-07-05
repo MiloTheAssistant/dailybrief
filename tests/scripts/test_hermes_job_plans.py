@@ -40,17 +40,19 @@ def test_weekday_plan_enriches_then_ships_existing_dfb_file():
     assert ["vercel", "deploy", "--prod", "--non-interactive"] in argvs
 
 
-def test_lifestyle_plan_publishes_existing_enriched_file_without_deploy(tmp_path, monkeypatch):
+def test_lifestyle_plan_enriches_then_publishes_existing_file_without_deploy(tmp_path, monkeypatch):
     date_iso = "2026-07-04"
-    enriched = tmp_path / "out" / "lifestyle" / f"{date_iso}.json"
-    enriched.parent.mkdir(parents=True)
-    enriched.write_text("{}", encoding="utf-8")
-
     monkeypatch.setattr(job_common, "REPO_ROOT", tmp_path)
 
     steps = job_common.build_job_plan("saturday", date_iso, skip_deploy=True)
     argvs = _argvs(steps)
 
+    assert [
+        sys.executable,
+        str(tmp_path / "scripts" / "enrich_lifestyle_edition.py"),
+        "saturday",
+        date_iso,
+    ] in argvs
     assert [
         sys.executable,
         str(tmp_path / "scripts" / "build_lifestyle_json.py"),
@@ -63,7 +65,7 @@ def test_lifestyle_plan_publishes_existing_enriched_file_without_deploy(tmp_path
     assert ["vercel", "deploy", "--prod", "--non-interactive"] not in argvs
 
 
-def test_lifestyle_plan_builds_baseline_when_enriched_file_is_missing(tmp_path, monkeypatch):
+def test_lifestyle_plan_always_publishes_enriched_file(tmp_path, monkeypatch):
     date_iso = "2026-07-05"
     monkeypatch.setattr(job_common, "REPO_ROOT", tmp_path)
 
@@ -75,10 +77,10 @@ def test_lifestyle_plan_builds_baseline_when_enriched_file_is_missing(tmp_path, 
         str(tmp_path / "scripts" / "build_lifestyle_json.py"),
         "sunday",
         "--skip-deploy",
+        "--use-enriched",
         "--date",
         date_iso,
     ] in argvs
-    assert not any("--use-enriched" in argv for argv in argvs)
     assert ["vercel", "deploy", "--prod", "--non-interactive"] not in argvs
 
 
@@ -104,10 +106,8 @@ def test_sunday_dry_run_is_valid_without_preexisting_enriched_file(tmp_path, mon
     assert payload["issues"] == []
     assert payload["plannedSteps"][0]["argv"] == [
         sys.executable,
-        str(tmp_path / "scripts" / "build_lifestyle_json.py"),
+        str(tmp_path / "scripts" / "enrich_lifestyle_edition.py"),
         "sunday",
-        "--skip-deploy",
-        "--date",
         date_iso,
     ]
 
