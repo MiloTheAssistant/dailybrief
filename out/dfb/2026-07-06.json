@@ -1,0 +1,326 @@
+{
+  "date": "2026-07-06",
+  "weekday": "Monday",
+  "kind": "dfb",
+  "title": "Daily Financial Briefing",
+  "subtitle": "Mission Control · Market Intelligence · Daily",
+  "generatedAt": "2026-07-06T12:02:09.420824+00:00",
+  "confidence": "medium",
+  "zip": "63025",
+  "sourcesCount": 5,
+  "fetchers": {
+    "rss": {
+      "seekingalpha": {
+        "status": "ok",
+        "count": 30,
+        "elapsed_s": 0.13
+      },
+      "yahoo_finance": {
+        "status": "ok",
+        "count": 49,
+        "elapsed_s": 0.12
+      },
+      "cointelegraph": {
+        "status": "ok",
+        "count": 30,
+        "elapsed_s": 0.14
+      },
+      "google_news_ai": {
+        "status": "ok",
+        "count": 100,
+        "elapsed_s": 0.66
+      },
+      "google_news_mag7": {
+        "status": "ok",
+        "count": 100,
+        "elapsed_s": 0.7
+      }
+    },
+    "calendar": {
+      "status": "ok",
+      "eventCount": 0,
+      "note": "no events in 7-day window"
+    },
+    "mail": {
+      "status": "ok",
+      "count": 3
+    },
+    "newsletters": {
+      "status": "ok",
+      "folder": "Folders/DailyBriefs",
+      "count": 19,
+      "note": "Bridge IMAP via fetch_proton_folder.py"
+    },
+    "portfolio": {
+      "status": "ok",
+      "note": "IB TWS preflighted by build_dfb_json.py --check-deps"
+    }
+  },
+  "sections": {
+    "marketHeadlines": [
+      {
+        "headline": "Dow Jones Futures: Nasdaq Set To Reclaim Key Level; Apple, SpaceX, Sandisk, Robinhood In Focus",
+        "source": "yahoo_finance",
+        "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-apple-spacex-sandisk-robinhood/?src=A00220&yptr=yahoo",
+        "whyItMatters": "JPMorgan pushback keeps TPU v9 on schedule — read-through for custom-AI-silicon demand vs. Nvidia into 2H 2026.",
+        "publishedAt": "2026-07-06T11:49:03+00:00"
+      },
+      {
+        "headline": "A $350 Billion Liquidity Drain Is Set To Hit Markets This Summer",
+        "source": "seekingalpha.com",
+        "url": "",
+        "whyItMatters": "Macro outlook note — context for today's cross-asset positioning and a calendar check on whether the year's expected return bands are holding.",
+        "publishedAt": "Sun, 05 Jul 2026 10:01:17 -0400",
+        "snippet": "Download the Seeking Alpha App: \n\n \n \n Like Macro View? Try our other newsletters  as well. \n\n \n This email was sent to you because you signed up to receive Macro View Daily. If you do not want to..."
+      },
+      {
+        "headline": "Pre-market summary on your portfolio: Digital Energy Holdings",
+        "source": "seekingalpha.com",
+        "url": "",
+        "whyItMatters": "Macro outlook note — context for today's cross-asset positioning and a calendar check on whether the year's expected return bands are holding.",
+        "publishedAt": "Mon, 06 Jul 2026 08:00:44 -0400",
+        "snippet": "Pre-market Portfolio Digest * As of Mon, Jul 06, 2026 07:50 ET \n\n   \n \n Yesterday's Performance \n\n Top Gainers \n\n   \n \n \nTSWCF:\n \n \n+9.13%\n \n \n \n \nASST:\n \n \n+9.07%\n \n \n \n \nMSTR:\n \n \n+7.9%\n \n \n \n Top..."
+      }
+    ],
+    "bitcoin": null,
+    "strategy": null,
+    "institutional": {
+      "etfLeagueTable": "Personalized portfolio envelope from seekingalpha.com: Weekend summary on your portfolio: Digital Energy Holdings. Open the email for ticker-level pre-market detail.",
+      "blackrock": "Quiet day for BlackRock in the RSS window; no direct IBIT/spot-ETF flow headlines surfaced.",
+      "fidelity": "Quiet day for Fidelity in the RSS window; no direct FBTC/spot-ETF flow headlines surfaced.",
+      "regulatoryRadar": "BIS warned the AI investment surge is a flashpoint for systemic risk — debt-fueled capex could end in a 'bust'. Separately BIS flagged stablecoins risk fragmenting the global financial system. EU's EBA laid out a penalty framework for non-compliant MiCA issuers.",
+      "sovereign": "Galaxy cut its 2026 CLARITY Act odds to 50% as US Senate floor time narrows before the August recess; markets structure bill increasingly unlikely to clear this year.",
+      "tradfi": "No notable TradFi moves in today's RSS window."
+    },
+    "creatorIntel": {
+      "sentimentReading": "Bullish / active",
+      "sentimentNote": "Macro outlook envelopes today: 2 (see Today's Top Moves for headline-level coverage). Income/retirement-themed envelopes: MSTR.",
+      "videos": []
+    },
+    "aiRace": {
+      "weeklyMoves": [
+        {
+          "headline": "Lumentum: The Pullback Before The Breakout",
+          "company": "Other",
+          "whyItMatters": "AI-infra signal from curated inbox (seekingalpha.com). Open the email for the full analyst note.",
+          "source": "seekingalpha.com",
+          "url": null,
+          "publishedAt": "Sun, 05 Jul 2026 08:52:24 -0400"
+        },
+        {
+          "headline": "Micron: The AI Infrastructure Winner Trapped By Its Own Success",
+          "company": "Other",
+          "whyItMatters": "AI-infra signal from curated inbox (seekingalpha.com). Open the email for the full analyst note.",
+          "source": "seekingalpha.com",
+          "url": null,
+          "publishedAt": "Sun, 05 Jul 2026 08:06:05 -0400"
+        }
+      ],
+      "deepDiveCompany": "Google",
+      "deepDiveSummary": "Google rationing Meta's access to Gemini — echoed across multiple outlets overnight — is the most concrete read yet that frontier AI compute is a seller's market. Pair that with the twin $84.75B equity raise and the picture is consistent: 2026 capex is binding, not optional.",
+      "snapshot": {
+        "openai": "Quiet day — no major OpenAI move in RSS.",
+        "anthropic": "Quiet day — no major Anthropic move in RSS.",
+        "google": "Rationing Meta's Gemini; pricing $84.75B raise.",
+        "xai": "Grok 4.5 mentioned in overnight SA newsletter.",
+        "meta": "Locked 220MW Texas PPA; throttled by Google.",
+        "nvidia": "BioNeMo wins; custom-silicon narrative alive (AVGO TPU v9).",
+        "microsoft": "Down 23% YTD per one strategist — 'significantly overselling'."
+      }
+    },
+    "newsletters": [
+      {
+        "id": "233",
+        "subject": "My 5 Greatest REIT Winners Of All Time",
+        "sender": "account@seekingalpha.com",
+        "date": "Sun, 05 Jul 2026 15:59:34 -0400",
+        "is_seen": false,
+        "snippet": "My 5 Greatest REIT Winners Of All Time  \n\n Iron Mountain, Tanger, Four Corners, Essential Properties, and Chatham Lodging delivered outsized REIT returns by exploiting price-value gaps during m......",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "232",
+        "subject": "MSFT: Citi's picks and pans for H2 '26: REITs, tech, consumer, health",
+        "sender": "account@seekingalpha.com",
+        "date": "Sun, 05 Jul 2026 14:39:11 -0400",
+        "is_seen": false,
+        "snippet": "02:37 PM | (MSFT) | By: SA Editor Kim Khan, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Micron At $1,750 Is Now My Base Case \n \n \n Is the stock market closed on Friday? Trading...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "231",
+        "subject": "SPCX: Wall Street Brunch: Options Spy SpaceX Pop",
+        "sender": "account@seekingalpha.com",
+        "date": "Sun, 05 Jul 2026 12:27:31 -0400",
+        "is_seen": false,
+        "snippet": "Wall Street Brunch: Options Spy SpaceX Pop \n\n \n Jul 05, 2026 12:25 PM | Space Exploration Technologies Corp.(SPCX) | By: Wall Street Breakfast \n\n \n SpaceX (SPCX) faces two major catalysts this week:...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "229",
+        "subject": "MSFT: SA Asks: Who will be most impacted by Meta's new cloud business?",
+        "sender": "account@seekingalpha.com",
+        "date": "Sun, 05 Jul 2026 10:02:15 -0400",
+        "is_seen": false,
+        "snippet": "10:00 AM | (MSFT) | By: Val Brickates Kennedy, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Adobe: Looks Like A Value Trap \n \n \n AI memory, chip stocks slump as sell-off...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "228",
+        "subject": "A $350 Billion Liquidity Drain Is Set To Hit Markets This Summer",
+        "sender": "account@seekingalpha.com",
+        "date": "Sun, 05 Jul 2026 10:01:17 -0400",
+        "is_seen": false,
+        "snippet": "Download the Seeking Alpha App: \n\n \n \n Like Macro View? Try our other newsletters  as well. \n\n \n This email was sent to you because you signed up to receive Macro View Daily. If you do not want to...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "227",
+        "subject": "SPCX: SpaceX bandwagon gets two new engines this week",
+        "sender": "account@seekingalpha.com",
+        "date": "Sun, 05 Jul 2026 09:08:28 -0400",
+        "is_seen": false,
+        "snippet": "09:06 AM | Space Exploration Technologies Corp. (SPCX) | By: SA Editor Kim Khan, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Broadcom: This Is Just The Start Of A New Leg Up...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "226",
+        "subject": "SOXL: Levered Semiconductor Funds Are Living On Borrowed Time",
+        "sender": "account@seekingalpha.com",
+        "date": "Sun, 05 Jul 2026 08:56:09 -0400",
+        "is_seen": false,
+        "snippet": "Download the Seeking Alpha App: \n\n \n \n Like ETF Ideas? Try our other newsletters  as well. \n\n This email was sent to you because you signed up to receive ETF Ideas. If you do not want to receive ETF...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "225",
+        "subject": "Lumentum: The Pullback Before The Breakout",
+        "sender": "account@seekingalpha.com",
+        "date": "Sun, 05 Jul 2026 08:52:24 -0400",
+        "is_seen": false,
+        "snippet": "Long Ideas \n\n \n \n \n \n \n \n \n \n \n \n \n \n \nNetflix: Forget Subscriber Growth, AI Is The New Investment Narrative\n \n\n \nBy Ryan Canady\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nSomnigroup: How It Plans To Dominate...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "224",
+        "subject": "The Blueprint Of Financial Freedom: Celebrating Independence Day With The Income Method",
+        "sender": "account@seekingalpha.com",
+        "date": "Sun, 05 Jul 2026 08:46:10 -0400",
+        "is_seen": false,
+        "snippet": "Dividend Ideas       \n \nTop Trending Article\n \n \n \n \n \n \n \n   \n \n \n \nThe Blueprint Of Financial Freedom: Celebrating Independence Day With The Income Method\n \n\n \nBy Rida Morwa\n \n \n \n \n \n   \n   More...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "223",
+        "subject": "Micron: The AI Infrastructure Winner Trapped By Its Own Success",
+        "sender": "account@seekingalpha.com",
+        "date": "Sun, 05 Jul 2026 08:06:05 -0400",
+        "is_seen": false,
+        "snippet": "Trending Analysis \n\n \n \n \n \n \n \n \n \n \n \n \n \n Micron: The AI Infrastructure Winner Trapped By Its Own Success \n\n \nBy Future Stack Investment\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n Navitas: Too Cheap To...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "222",
+        "subject": "Weekend summary on your portfolio: Digital Energy Holdings",
+        "sender": "account@seekingalpha.com",
+        "date": "Sun, 05 Jul 2026 07:59:33 -0400",
+        "is_seen": false,
+        "snippet": "Weekend Portfolio Digest * As of Sun, Jul 05, 2026 07:50 ET \n\n   \n \n Yesterday's Performance \n\n Top Gainers \n\n   \n \n \nTSWCF:\n \n \n+9.13%\n \n \n \n \nASST:\n \n \n+9.07%\n \n \n \n \nMSTR:\n \n \n+7.9%\n \n \n \n Top...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "241",
+        "subject": "Pre-market summary on your portfolio: Digital Energy Holdings",
+        "sender": "account@seekingalpha.com",
+        "date": "Mon, 06 Jul 2026 08:00:44 -0400",
+        "is_seen": false,
+        "snippet": "Pre-market Portfolio Digest * As of Mon, Jul 06, 2026 07:50 ET \n\n   \n \n Yesterday's Performance \n\n Top Gainers \n\n   \n \n \nTSWCF:\n \n \n+9.13%\n \n \n \n \nASST:\n \n \n+9.07%\n \n \n \n \nMSTR:\n \n \n+7.9%\n \n \n \n Top...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "240",
+        "subject": "Summit Midstream: The Lower It Sits, The More Bought Back",
+        "sender": "account@seekingalpha.com",
+        "date": "Mon, 06 Jul 2026 07:56:03 -0400",
+        "is_seen": false,
+        "snippet": "Top Energy Investing Articles \n\n \n \n \n \n \n \n \n \n \n \n \n \n Summit Midstream: The Lower It Sits, The More Bought Back \n\n \nBy The Value Portfolio\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n Vaalco Energy:...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "239",
+        "subject": "The S&P 500 Second Half Playbook",
+        "sender": "account@seekingalpha.com",
+        "date": "Mon, 06 Jul 2026 07:55:30 -0400",
+        "is_seen": false,
+        "snippet": "What else is happening...\n \n \n\n \n First time in decades: U.S. outpacing China in fossil fuel spending . Burry says 'the end is nigh' for AI trade, channels The Joker . 'Minions & Monsters' ( CMCSA )...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "238",
+        "subject": "First Internet Bancorp: The 8% Yielding Baby Bonds Are Attractive On A 3-Year Basis",
+        "sender": "account@seekingalpha.com",
+        "date": "Mon, 06 Jul 2026 07:46:02 -0400",
+        "is_seen": false,
+        "snippet": "Trending Analysis \n\n \n \n \n \n \n \n \n \n \n \n \n \n First Internet Bancorp: The 8% Yielding Baby Bonds Are Attractive On A 3-Year Basis \n\n \nBy The Investment Doctor...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "237",
+        "subject": "Micron: The AI Infrastructure Winner Trapped By Its Own Success",
+        "sender": "account@seekingalpha.com",
+        "date": "Mon, 06 Jul 2026 07:45:46 -0400",
+        "is_seen": false,
+        "snippet": "Micron: The AI Infrastructure Winner Trapped By Its Own Success \n\n \nBy Future Stack Investment\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n Intel Vs. Navitas: Why I Prefer The Turnaround Over The Growth...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "236",
+        "subject": "SPCX: AM Markets Need to Know: Burry on AI trade, investors against Arctic drilling, and more",
+        "sender": "account@seekingalpha.com",
+        "date": "Mon, 06 Jul 2026 06:03:33 -0400",
+        "is_seen": false,
+        "snippet": "06:01 AM | (SPCX) | By: Sinchita Mitra, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n The Millionaire Boom Is Real - But So Is The Market Trap \n \n \n Samsung, Visa, Google shocked...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "235",
+        "subject": "SPCX: SpaceX’s Shotwell to gift SpaceX stock to Trump Account program",
+        "sender": "account@seekingalpha.com",
+        "date": "Mon, 06 Jul 2026 05:57:34 -0400",
+        "is_seen": false,
+        "snippet": "05:55 AM | Space Exploration Technologies Corp. (SPCX) | By: Preeti Singh, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n A $350 Billion Liquidity Drain Is Set To Hit Markets This...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "234",
+        "subject": "MSTR: Biggest stock movers Monday: Crypto stocks, TSLA, and more",
+        "sender": "account@seekingalpha.com",
+        "date": "Mon, 06 Jul 2026 04:49:16 -0400",
+        "is_seen": false,
+        "snippet": "04:47 AM | Strategy Inc (MSTR) | By: Niloofer Shaikh, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n I Am Buying Real Estate Hand Over Fist, For Income And Asset Preservation...",
+        "url": null,
+        "urls": []
+      }
+    ],
+    "retirement": null,
+    "health": null
+  }
+}
