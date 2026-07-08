@@ -1,0 +1,331 @@
+{
+  "date": "2026-07-08",
+  "weekday": "Wednesday",
+  "kind": "dfb",
+  "title": "Daily Financial Briefing",
+  "subtitle": "Mission Control · Market Intelligence · Daily",
+  "generatedAt": "2026-07-08T13:30:34.773969+00:00",
+  "confidence": "medium",
+  "zip": "63025",
+  "sourcesCount": 5,
+  "fetchers": {
+    "rss": {
+      "seekingalpha": {
+        "status": "ok",
+        "count": 30,
+        "elapsed_s": 0.14
+      },
+      "yahoo_finance": {
+        "status": "ok",
+        "count": 46,
+        "elapsed_s": 0.12
+      },
+      "cointelegraph": {
+        "status": "ok",
+        "count": 30,
+        "elapsed_s": 0.13
+      },
+      "google_news_ai": {
+        "status": "ok",
+        "count": 100,
+        "elapsed_s": 0.66
+      },
+      "google_news_mag7": {
+        "status": "ok",
+        "count": 100,
+        "elapsed_s": 0.68
+      }
+    },
+    "calendar": {
+      "status": "ok",
+      "eventCount": 0,
+      "note": "no events in 7-day window"
+    },
+    "mail": {
+      "status": "ok",
+      "count": 6
+    },
+    "newsletters": {
+      "status": "ok",
+      "folder": "Folders/DailyBriefs",
+      "count": 20,
+      "note": "Bridge IMAP via fetch_proton_folder.py"
+    },
+    "portfolio": {
+      "status": "ok",
+      "note": "IB TWS preflighted by build_dfb_json.py --check-deps"
+    }
+  },
+  "sections": {
+    "marketHeadlines": [
+      {
+        "headline": "Pre-market summary on your portfolio: Digital Energy Holdings",
+        "source": "seekingalpha.com",
+        "url": "",
+        "whyItMatters": "Macro outlook note — context for today's cross-asset positioning and a calendar check on whether the year's expected return bands are holding.",
+        "publishedAt": "Wed, 08 Jul 2026 07:56:35 -0400",
+        "snippet": "Pre-market Portfolio Digest * As of Wed, Jul 08, 2026 07:50 ET \n\n   \n \n Yesterday's Performance \n\n Top Gainers \n\n   \n \n \nTSWCF:\n \n \n+4.06%\n \n \n \n \nNOW:\n \n \n+2.59%\n \n \n \n \nMSFT:\n \n \n+0.54%\n \n \n \n Top..."
+      },
+      {
+        "headline": "MSTR: Bitcoin slips as Trump says Iran ceasefire 'over'",
+        "source": "seekingalpha.com",
+        "url": "",
+        "whyItMatters": "Macro outlook note — context for today's cross-asset positioning and a calendar check on whether the year's expected return bands are holding.",
+        "publishedAt": "Wed, 08 Jul 2026 06:28:11 -0400",
+        "snippet": "06:26 AM | (MSTR) | By: Preeti Singh, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Russell 2000 Soars 21% YTD: 4 Top Small-Cap Stocks \n \n \n SA Asks: What's the outlook for..."
+      },
+      {
+        "headline": "MSFT: ClearBridge shifts AI strategy: Drops Intuit, trims Microsoft to initiate Micron stake",
+        "source": "seekingalpha.com",
+        "url": "",
+        "whyItMatters": "MSFT analyst action surfaced in curated inbox — verify against the live price tape before sizing.",
+        "publishedAt": "Wed, 08 Jul 2026 07:40:14 -0400",
+        "snippet": "07:38 AM | Microsoft Corporation (MSFT) | By: Arundhati Sarkar, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Micron: Why I Believe This Memory Cycle Isn't Fully Priced In Yet..."
+      }
+    ],
+    "bitcoin": null,
+    "strategy": null,
+    "institutional": {
+      "etfLeagueTable": "Personalized portfolio envelope from seekingalpha.com: Pre-market summary on your portfolio: Digital Energy Holdings. Open the email for ticker-level pre-market detail.",
+      "blackrock": "Quiet day for BlackRock in the RSS window; no direct IBIT/spot-ETF flow headlines surfaced.",
+      "fidelity": "Quiet day for Fidelity in the RSS window; no direct FBTC/spot-ETF flow headlines surfaced.",
+      "regulatoryRadar": "BIS warned the AI investment surge is a flashpoint for systemic risk — debt-fueled capex could end in a 'bust'. Separately BIS flagged stablecoins risk fragmenting the global financial system. EU's EBA laid out a penalty framework for non-compliant MiCA issuers.",
+      "sovereign": "Galaxy cut its 2026 CLARITY Act odds to 50% as US Senate floor time narrows before the August recess; markets structure bill increasingly unlikely to clear this year.",
+      "tradfi": "MSFT analyst action via seekingalpha.com: MSFT: ClearBridge shifts AI strategy: Drops Intuit, trims Microsoft to initiate Micron stake. Sourced from curated inbox; verify against the live broker tape and the relevant firm note before sizing."
+    },
+    "creatorIntel": {
+      "sentimentReading": "Bullish / active",
+      "sentimentNote": "Analyst-action signal from curated inbox: MSFT — all surfaced as TICKER-prefixed subject lines via SeekingAlpha Breaking News. Macro outlook envelopes today: 2 (see Today's Top Moves for headline-level coverage). Income/retirement-themed envelopes: SPCX.",
+      "videos": []
+    },
+    "aiRace": {
+      "weeklyMoves": [
+        {
+          "headline": "Shift4 Payments Is No Longer Only A Payment Company: A Dominant, Structurally Protected Niche",
+          "company": "Other",
+          "whyItMatters": "AI-infra signal from curated inbox (seekingalpha.com). Open the email for the full analyst note.",
+          "source": "seekingalpha.com",
+          "url": null,
+          "publishedAt": "Wed, 08 Jul 2026 08:52:27 -0400"
+        }
+      ],
+      "deepDiveCompany": "Google",
+      "deepDiveSummary": "Google rationing Meta's access to Gemini — echoed across multiple outlets overnight — is the most concrete read yet that frontier AI compute is a seller's market. Pair that with the twin $84.75B equity raise and the picture is consistent: 2026 capex is binding, not optional.",
+      "snapshot": {
+        "openai": "Quiet day — no major OpenAI move in RSS.",
+        "anthropic": "Quiet day — no major Anthropic move in RSS.",
+        "google": "Rationing Meta's Gemini; pricing $84.75B raise.",
+        "xai": "Grok 4.5 mentioned in overnight SA newsletter.",
+        "meta": "Locked 220MW Texas PPA; throttled by Google.",
+        "nvidia": "BioNeMo wins; custom-silicon narrative alive (AVGO TPU v9).",
+        "microsoft": "Down 23% YTD per one strategist — 'significantly overselling'."
+      }
+    },
+    "newsletters": [
+      {
+        "id": "312",
+        "subject": "MSFT: Tech insiders are buying like never before",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 08 Jul 2026 09:19:18 -0400",
+        "is_seen": false,
+        "snippet": "09:17 AM | (MSFT) | By: Max Gottlich, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Nebius Is Quietly Dominating CoreWeave And IREN: Here's Why \n \n \n NATO set to face ultimate...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "311",
+        "subject": "Best Retirement Income ETFs: My 2 Favorites Right Now",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 08 Jul 2026 08:56:08 -0400",
+        "is_seen": false,
+        "snippet": "Download the Seeking Alpha App: \n\n \n \n Like ETF Ideas? Try our other newsletters  as well. \n\n This email was sent to you because you signed up to receive ETF Ideas. If you do not want to receive ETF...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "310",
+        "subject": "Shift4 Payments Is No Longer Only A Payment Company: A Dominant, Structurally Protected Niche",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 08 Jul 2026 08:52:27 -0400",
+        "is_seen": false,
+        "snippet": "Long Ideas \n\n \n \n \n \n \n \n \n \n \n \n \n \n \nAres Capital: The Market Is Wrong Here (Rating Upgrade)\n \n\n \nBy PropNotes\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nPalantir And Nvidia Deal Could Be Huge\n \n\n \nBy James...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "309",
+        "subject": "The #1 Metric Separating Real Retirement Income From Time Bombs (3 Stocks That Prove It)",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 08 Jul 2026 08:46:10 -0400",
+        "is_seen": false,
+        "snippet": "Dividend Ideas       \n \nTop Trending Article\n \n \n \n \n \n \n \n   \n \n \n \nThe #1 Metric Separating Real Retirement Income From Time Bombs (3 Stocks That Prove It)\n \n\n \nBy Samuel Smith...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "308",
+        "subject": "SPCX: Blue Origin set for $10B fundraising round at $130B valuation - NYT",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 08 Jul 2026 08:40:11 -0400",
+        "is_seen": false,
+        "snippet": "08:38 AM | (SPCX) | By: SA Editor Carl Surran, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Palantir And Nvidia Deal Could Be Huge \n \n \n SK Hynix plans to spend 11.9T won to...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "307",
+        "subject": "A letter from Steven Cress, VP of Quant Strategy",
+        "sender": "subscriptions@seekingalpha.com",
+        "date": "Wed, 08 Jul 2026 08:21:30 -0400",
+        "is_seen": false,
+        "snippet": "Steven Cress here, VP of Quantitative Strategy at Seeking Alpha. I’d like to personally invite you to an exclusive subscriber event:  Top Stocks for H2 2026 on Tuesday, July 14, 2026, from 12:00 to...",
+        "url": "https://email-st.seekingalpha.com/oc/6a35795e733b67577001b49cro9rf.39jf/84ea7714",
+        "urls": [
+          "https://email-st.seekingalpha.com/oc/6a35795e733b67577001b49cro9rf.39jf/84ea7714"
+        ]
+      },
+      {
+        "id": "306",
+        "subject": "Crane NXT: Priced For Perfection While Antares Masks A Decaying Core",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 08 Jul 2026 08:06:15 -0400",
+        "is_seen": false,
+        "snippet": "Trending Analysis \n\n \n \n \n \n \n \n \n \n \n \n \n \n Crane NXT: Priced For Perfection While Antares Masks A Decaying Core \n\n \nBy Maya Gupta\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n AI's Attack Surface, Palo Alto...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "305",
+        "subject": "Pre-market summary on your portfolio: Digital Energy Holdings",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 08 Jul 2026 07:56:35 -0400",
+        "is_seen": false,
+        "snippet": "Pre-market Portfolio Digest * As of Wed, Jul 08, 2026 07:50 ET \n\n   \n \n Yesterday's Performance \n\n Top Gainers \n\n   \n \n \nTSWCF:\n \n \n+4.06%\n \n \n \n \nNOW:\n \n \n+2.59%\n \n \n \n \nMSFT:\n \n \n+0.54%\n \n \n \n Top...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "304",
+        "subject": "Enterprise Products Partners: A Transition Year, But Halving Distribution Growth Hurts Momentum",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 08 Jul 2026 07:56:03 -0400",
+        "is_seen": false,
+        "snippet": "Top Energy Investing Articles \n\n \n \n \n \n \n \n \n \n \n \n \n \n Enterprise Products Partners: A Transition Year, But Halving Distribution Growth Hurts Momentum \n\n \nBy Melissa Tucker...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "303",
+        "subject": "Shift4 Payments Is No Longer Only A Payment Company: A Dominant, Structurally Protected Niche",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 08 Jul 2026 07:46:04 -0400",
+        "is_seen": false,
+        "snippet": "Trending Analysis \n\n \n \n \n \n \n \n \n \n \n \n \n \n Shift4 Payments Is No Longer Only A Payment Company: A Dominant, Structurally Protected Niche \n\n \nBy Bharat Gupta...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "302",
+        "subject": "Elite 5-8% Yielding Early Retirement Money Machines",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 08 Jul 2026 07:45:14 -0400",
+        "is_seen": false,
+        "snippet": "Elite 5-8% Yielding Early Retirement Money Machines \n\n \nBy Samuel Smith\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n Sandisk: I'm Catching The Falling Knife; Here's How \n\n \nBy James Foord...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "301",
+        "subject": "MSFT: ClearBridge shifts AI strategy: Drops Intuit, trims Microsoft to initiate Micron stake",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 08 Jul 2026 07:40:14 -0400",
+        "is_seen": false,
+        "snippet": "07:38 AM | Microsoft Corporation (MSFT) | By: Arundhati Sarkar, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Micron: Why I Believe This Memory Cycle Isn't Fully Priced In Yet...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "300",
+        "subject": "ServiceNow: The AI Bear Case Is Falling Apart",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 08 Jul 2026 07:35:14 -0400",
+        "is_seen": false,
+        "snippet": "ServiceNow: The AI Bear Case Is Falling Apart \n\n \n Jul 08, 2026 07:33 AM | ServiceNow, Inc.(NOW) | By: Passage Research \n\n \n ServiceNow is rated a buy, with fears over AI disruption seen as overblown...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "299",
+        "subject": "MSFT: Most S&P 500 tech stocks are 20% below their highs, while Micron and AMD lead XLK ratings",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 08 Jul 2026 07:17:11 -0400",
+        "is_seen": false,
+        "snippet": "07:15 AM | (MSFT) | By: Nilanjana Basu, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n The AI Memory Boom Is Finally Cracking \n \n \n SpaceX bandwagon gets two new engines this week...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "298",
+        "subject": "Oil Rises As U.S.-Iran Truce Collapses",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 08 Jul 2026 07:04:19 -0400",
+        "is_seen": false,
+        "snippet": "}\n }\n \n \n \n \n\n \n \n Good morning! Here's the latest in trending: Debt boom: Amazon (AMZN) seeks to raise at least $25B from a U.S. dollar bond sale. AI selloff: This ETF ...\n  ͏  ͏  ͏  ͏  ͏  ͏  ͏  ͏...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "297",
+        "subject": "SPCX: Spire Global deploys ten satellites on SpaceX’s Transporter-17 rideshare",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 08 Jul 2026 06:59:06 -0400",
+        "is_seen": false,
+        "snippet": "06:57 AM | Space Exploration Technologies Corp. (SPCX) | By: Arundhati Sarkar, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Best Retirement Income ETFs: My 2 Favorites Right Now...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "296",
+        "subject": "MSTR: Bitcoin slips as Trump says Iran ceasefire 'over'",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 08 Jul 2026 06:28:11 -0400",
+        "is_seen": false,
+        "snippet": "06:26 AM | (MSTR) | By: Preeti Singh, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Russell 2000 Soars 21% YTD: 4 Top Small-Cap Stocks \n \n \n SA Asks: What's the outlook for...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "295",
+        "subject": "SPCX: AM Markets Need to Know: Oil jumps as Mideast tensions flare, SpaceX expands Grok",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 08 Jul 2026 06:27:11 -0400",
+        "is_seen": false,
+        "snippet": "06:25 AM | (SPCX) | By: Sinchita Mitra, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Oracle: Frankly, A Once In A Lifetime Opportunity \n \n \n Micron, Qualcomm in focus as Citi...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "294",
+        "subject": "SPCX: Elon Musk: SpaceXAI to expand Grok 4.5 access after strong beta feedback",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 08 Jul 2026 02:48:19 -0400",
+        "is_seen": false,
+        "snippet": "02:46 AM | Space Exploration Technologies Corp. (SPCX) | By: Arundhati Sarkar, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Rotation Is Over, Now Brace For Impact...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "293",
+        "subject": "SPCX: Prediction markets see Nasdaq-100 rally cooling after AI surge",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 08 Jul 2026 02:15:31 -0400",
+        "is_seen": false,
+        "snippet": "02:13 AM | (SPCX) | By: Manshi Mamtora, CFA, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n We're In (The Early Stages Of) A Bubble \n \n \n 3 things to look out for on Wednesday...",
+        "url": null,
+        "urls": []
+      }
+    ],
+    "retirement": null,
+    "health": null
+  }
+}
