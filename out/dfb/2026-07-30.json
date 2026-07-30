@@ -1,0 +1,337 @@
+{
+  "date": "2026-07-30",
+  "weekday": "Thursday",
+  "kind": "dfb",
+  "title": "Daily Financial Briefing",
+  "subtitle": "Mission Control · Market Intelligence · Daily",
+  "generatedAt": "2026-07-30T12:01:38.994783+00:00",
+  "confidence": "medium",
+  "zip": "63025",
+  "sourcesCount": 5,
+  "fetchers": {
+    "rss": {
+      "seekingalpha": {
+        "status": "ok",
+        "count": 30,
+        "elapsed_s": 0.12
+      },
+      "yahoo_finance": {
+        "status": "ok",
+        "count": 45,
+        "elapsed_s": 0.5
+      },
+      "cointelegraph": {
+        "status": "ok",
+        "count": 30,
+        "elapsed_s": 0.08
+      },
+      "google_news_ai": {
+        "status": "ok",
+        "count": 100,
+        "elapsed_s": 0.56
+      },
+      "google_news_mag7": {
+        "status": "ok",
+        "count": 100,
+        "elapsed_s": 0.61
+      }
+    },
+    "calendar": {
+      "status": "ok",
+      "eventCount": 0,
+      "note": "no events in 7-day window"
+    },
+    "mail": {
+      "status": "ok",
+      "count": 7
+    },
+    "newsletters": {
+      "status": "ok",
+      "folder": "Folders/DailyBriefs",
+      "count": 20,
+      "note": "Bridge IMAP via fetch_proton_folder.py"
+    },
+    "portfolio": {
+      "status": "ok",
+      "note": "IB TWS preflighted by build_dfb_json.py --check-deps"
+    }
+  },
+  "sections": {
+    "marketHeadlines": [
+      {
+        "headline": "Pre-market summary on your portfolio: Digital Energy Holdings",
+        "source": "seekingalpha.com",
+        "url": "",
+        "whyItMatters": "Macro outlook note — context for today's cross-asset positioning and a calendar check on whether the year's expected return bands are holding.",
+        "publishedAt": "Thu, 30 Jul 2026 07:58:08 -0400",
+        "snippet": "Pre-market Portfolio Digest * As of Thu, Jul 30, 2026 07:50 ET \n\n   \n \n Yesterday's Performance \n\n Top Gainers \n\n   \n \n \nNOW:\n \n \n+4.65%\n \n \n \n \nSTRD:\n \n \n+1.29%\n \n \n \n \nSTRK:\n \n \n+0.7%\n \n \n \n Top..."
+      },
+      {
+        "headline": "MSFT: AM Need to Know: Microsoft tops estimates, Starbucks raises outlook & more",
+        "source": "seekingalpha.com",
+        "url": "",
+        "whyItMatters": "Macro outlook note — context for today's cross-asset positioning and a calendar check on whether the year's expected return bands are holding.",
+        "publishedAt": "Thu, 30 Jul 2026 07:10:56 -0400",
+        "snippet": "07:09 AM | (MSFT) | By: Nilanjana Basu, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n AMD: Best-Case Expectations Priced Into A Cyclical Growth Stock \n \n \n Meta GAAP EPS of $6.18..."
+      },
+      {
+        "headline": "MSFT: Microsoft: The Copilot Proof I Was Waiting For - Upgrading To Buy, With One Caveat",
+        "source": "seekingalpha.com",
+        "url": "",
+        "whyItMatters": "MSFT analyst action surfaced in curated inbox — verify against the live price tape before sizing.",
+        "publishedAt": "Thu, 30 Jul 2026 07:49:47 -0400",
+        "snippet": "Microsoft: The Copilot Proof I Was Waiting For - Upgrading To Buy, With One Caveat \n\n \n Jul 30, 2026 07:48 AM | Microsoft Corporation(MSFT) | By: Shailja Sharma \n\n \n Microsoft is upgraded to Buy..."
+      }
+    ],
+    "bitcoin": null,
+    "strategy": null,
+    "institutional": {
+      "etfLeagueTable": "Personalized portfolio envelope from seekingalpha.com: Pre-market summary on your portfolio: Digital Energy Holdings. Open the email for ticker-level pre-market detail.",
+      "blackrock": "Quiet day for BlackRock in the RSS window; no direct IBIT/spot-ETF flow headlines surfaced.",
+      "fidelity": "Quiet day for Fidelity in the RSS window; no direct FBTC/spot-ETF flow headlines surfaced.",
+      "regulatoryRadar": "BIS warned the AI investment surge is a flashpoint for systemic risk — debt-fueled capex could end in a 'bust'. Separately BIS flagged stablecoins risk fragmenting the global financial system. EU's EBA laid out a penalty framework for non-compliant MiCA issuers.",
+      "sovereign": "Galaxy cut its 2026 CLARITY Act odds to 50% as US Senate floor time narrows before the August recess; markets structure bill increasingly unlikely to clear this year.",
+      "tradfi": "MSFT analyst action via seekingalpha.com: MSFT: Microsoft: The Copilot Proof I Was Waiting For - Upgrading To Buy, With One Caveat. Sourced from curated inbox; verify against the live broker tape and the relevant firm note before sizing."
+    },
+    "creatorIntel": {
+      "sentimentReading": "Bullish / active",
+      "sentimentNote": "Analyst-action signal from curated inbox: MSFT — all surfaced as TICKER-prefixed subject lines via SeekingAlpha Breaking News. Macro outlook envelopes today: 2 (see Today's Top Moves for headline-level coverage). Income/retirement-themed envelopes: CGDG.",
+      "videos": []
+    },
+    "aiRace": {
+      "weeklyMoves": [
+        {
+          "headline": "MSFT: Microsoft: The Copilot Proof I Was Waiting For - Upgrading To Buy, With One Caveat",
+          "company": "MSFT",
+          "whyItMatters": "AI-infra signal from curated inbox (seekingalpha.com). Open the email for the full analyst note.",
+          "source": "seekingalpha.com",
+          "url": null,
+          "publishedAt": "Thu, 30 Jul 2026 07:49:47 -0400"
+        },
+        {
+          "headline": "MSFT: AM Need to Know: Microsoft tops estimates, Starbucks raises outlook & more",
+          "company": "MSFT",
+          "whyItMatters": "AI-infra signal from curated inbox (seekingalpha.com). Open the email for the full analyst note.",
+          "source": "seekingalpha.com",
+          "url": null,
+          "publishedAt": "Thu, 30 Jul 2026 07:10:56 -0400"
+        }
+      ],
+      "deepDiveCompany": "Google",
+      "deepDiveSummary": "Google rationing Meta's access to Gemini — echoed across multiple outlets overnight — is the most concrete read yet that frontier AI compute is a seller's market. Pair that with the twin $84.75B equity raise and the picture is consistent: 2026 capex is binding, not optional.",
+      "snapshot": {
+        "openai": "Quiet day — no major OpenAI move in RSS.",
+        "anthropic": "Quiet day — no major Anthropic move in RSS.",
+        "google": "Rationing Meta's Gemini; pricing $84.75B raise.",
+        "xai": "Grok 4.5 mentioned in overnight SA newsletter.",
+        "meta": "Locked 220MW Texas PPA; throttled by Google.",
+        "nvidia": "BioNeMo wins; custom-silicon narrative alive (AVGO TPU v9).",
+        "microsoft": "Down 23% YTD per one strategist — 'significantly overselling'."
+      }
+    },
+    "newsletters": [
+      {
+        "id": "888",
+        "subject": "MSFT: Microsoft surges after 'strong' Q4 as analysts praise Azure, Copilot",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 07:59:46 -0400",
+        "is_seen": false,
+        "snippet": "07:58 AM | Microsoft Corporation (MSFT) | By: Ravikash Bakolia, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Alphabet Stock: Selloff Misses Bigger Story \n \n \n Meta Platforms...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "887",
+        "subject": "Pre-market summary on your portfolio: Digital Energy Holdings",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 07:58:08 -0400",
+        "is_seen": false,
+        "snippet": "Pre-market Portfolio Digest * As of Thu, Jul 30, 2026 07:50 ET \n\n   \n \n Yesterday's Performance \n\n Top Gainers \n\n   \n \n \nNOW:\n \n \n+4.65%\n \n \n \n \nSTRD:\n \n \n+1.29%\n \n \n \n \nSTRK:\n \n \n+0.7%\n \n \n \n Top...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "886",
+        "subject": "MSFT: Intel foundry completing RAMP-C program is a 'modest positive' for chip giant: Wedbush",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 07:55:36 -0400",
+        "is_seen": false,
+        "snippet": "07:54 AM | (MSFT) | By: Chris Ciaccia, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Meta Platforms Q2: The Market Sells, I Buy The Dip \n \n \n Here are the major earnings before...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "885",
+        "subject": "CGDG: A Diversified ETF That Can Anchor Your Income-Focused Portfolio",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 07:55:28 -0400",
+        "is_seen": false,
+        "snippet": "Download the Seeking Alpha App: \n\n \n \n Like ETF Ideas? Try our other newsletters  as well. \n\n This email was sent to you because you signed up to receive ETF Ideas. If you do not want to receive ETF...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "884",
+        "subject": "Cenovus: Cash Flood Begins",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 07:55:13 -0400",
+        "is_seen": false,
+        "snippet": "Energy Investing     \n \nTop Trending Article\n \n \n \n \n \n \n \n   \n \n \n \nCenovus: Cash Flood Begins\n \n\n \nBy Jonathan Weber\n \n \n \n \n \n   \n \n More Top Analysis \n\n \n \n \n \n \n \n \n \n \n \n \n \n Cenovus Energy:...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "883",
+        "subject": "XPLR Infrastructure: A Rare 60-70% Free-Cash-Flow Yield Opportunity",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 07:51:34 -0400",
+        "is_seen": false,
+        "snippet": "Top Trending Article\n \n \n \n \n \n \n \n   \n \n \n \nXPLR Infrastructure: A Rare 60-70% Free-Cash-Flow Yield Opportunity\n \n\n \nBy Samuel Smith\n \n \n \n \n \n   More Top Stock Ideas...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "882",
+        "subject": "MSFT: Microsoft: The Copilot Proof I Was Waiting For - Upgrading To Buy, With One Caveat",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 07:49:47 -0400",
+        "is_seen": false,
+        "snippet": "Microsoft: The Copilot Proof I Was Waiting For - Upgrading To Buy, With One Caveat \n\n \n Jul 30, 2026 07:48 AM | Microsoft Corporation(MSFT) | By: Shailja Sharma \n\n \n Microsoft is upgraded to Buy...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "881",
+        "subject": "Rates, AI & War: The Three Drivers Moving Markets Right Now",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 07:48:50 -0400",
+        "is_seen": false,
+        "snippet": "}\n \n \n \n \nGood morning! Here's the latest in trending:Patriots! Lockheed Martin (LMT) lands a $58.6B contract to refill the U.S. interceptor arsenal.Getting hungry: Jersey Mike's (JMKE) prices its...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "880",
+        "subject": "Top Oil Stocks In A Volatile Market With Over 45% Forward EPS Growth",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 07:45:30 -0400",
+        "is_seen": false,
+        "snippet": "Dividend Ideas       \n \nTop Trending Article\n \n \n \n \n \n \n \n   \n \n \n \nTop Oil Stocks In A Volatile Market With Over 45% Forward EPS Growth\n \n\n \nBy Steven Cress, Quant Team\n \n \n \n \n \n   \n   More Top...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "879",
+        "subject": "XPLR Infrastructure: A Rare 60-70% Free-Cash-Flow Yield Opportunity",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 07:45:16 -0400",
+        "is_seen": false,
+        "snippet": "Stocks & Sectors \n   \n   \n \nTop Trending Article\n \n \n \n \n \n \n \n   \n \n \n \nXPLR Infrastructure: A Rare 60-70% Free-Cash-Flow Yield Opportunity\n \n\n \nBy Samuel Smith\n \n \n \n \n \n   Trending Analysis...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "878",
+        "subject": "Buy The Dip: 3 Top European AI Stocks",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 07:43:36 -0400",
+        "is_seen": false,
+        "snippet": "Today's Featured Analysis\n \n \n \n \n \n \n \n   \n \n \n \nBuy The Dip: 3 Top European AI Stocks\n \n\n \nBy Steven Cress, Quant Team\n \n \n \n \n \n   More Trending Articles \n\n \n \n \n \n \n \n \n \n \n \n \n \n The Market Lost...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "877",
+        "subject": "MSFT: At a glance: stocks gapping up premarket",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 07:13:12 -0400",
+        "is_seen": false,
+        "snippet": "07:12 AM | (MSFT) | By: Nilanjana Basu, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n SK hynix: Damn The Torpedoes, Full Steam Ahead \n \n \n Monday was the third-weakest NVDA...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "876",
+        "subject": "MSFT: Here are the three drivers moving markets right now",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 07:12:15 -0400",
+        "is_seen": false,
+        "snippet": "07:10 AM | (MSFT) | By: SA Editor Yoel Minkoff, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Credo Stock Sell-Off Looks Overblown \n \n \n Ballistic missiles emerge as the next...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "875",
+        "subject": "MSFT: AM Need to Know: Microsoft tops estimates, Starbucks raises outlook & more",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 07:10:56 -0400",
+        "is_seen": false,
+        "snippet": "07:09 AM | (MSFT) | By: Nilanjana Basu, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n AMD: Best-Case Expectations Priced Into A Cyclical Growth Stock \n \n \n Meta GAAP EPS of $6.18...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "874",
+        "subject": "MSFT: Microsoft: Datacenters Now Last 25 Years; The Chips Inside Do Not",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 07:03:37 -0400",
+        "is_seen": false,
+        "snippet": "Microsoft: Datacenters Now Last 25 Years; The Chips Inside Do Not \n\n \n Jul 30, 2026 07:00 AM | Microsoft Corporation(MSFT) | By: Geneva Investor \n\n \n Microsoft now allocates two-thirds of its $175B...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "873",
+        "subject": "Microsoft's 9% rally puts MSFT-heavy ETFs in the spotlight",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 06:20:25 -0400",
+        "is_seen": false,
+        "snippet": "06:19 AM | Microsoft Corporation (MSFT) | By: Preeti Singh, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n SK hynix: Explosive 500%+ Growth \n \n \n Robotaxis to humanoids: Who...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "872",
+        "subject": "ServiceNow: User Retention Is Accelerating - I'm More Bullish",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 06:12:46 -0400",
+        "is_seen": false,
+        "snippet": "ServiceNow: User Retention Is Accelerating - I'm More Bullish \n\n \n Jul 30, 2026 06:11 AM | ServiceNow, Inc.(NOW) | By: Krzysztof Bogdanski \n\n \n ServiceNow is rated Buy with a raised fair value...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "871",
+        "subject": "Biggest stock movers Thursday: META, MSFT, and more",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 05:02:50 -0400",
+        "is_seen": false,
+        "snippet": "05:01 AM | (MSFT) | By: Niloofer Shaikh, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n SK hynix: The Easiest Call Ever (Rating Upgrade) \n \n \n HVAC stocks sink as earnings, margin...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "870",
+        "subject": "MSFT: Meta's free cash flow decline underscores soaring cost of AI race",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 04:17:06 -0400",
+        "is_seen": false,
+        "snippet": "04:15 AM | (MSFT) | By: Preeti Singh, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Nebius: PaaS Power Over Agentic Bleed \n \n \n Earnings Snapshot: META misses on earnings, sees...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "869",
+        "subject": "MSFT: Microsoft secures $130B+ in data center leases to power AI growth",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 03:39:08 -0400",
+        "is_seen": false,
+        "snippet": "03:37 AM | Microsoft Corporation (MSFT) | By: Arundhati Sarkar, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Microsoft: Time To Be Greedy \n \n \n Iran will be hit hard in response...",
+        "url": null,
+        "urls": []
+      }
+    ],
+    "retirement": null,
+    "health": null
+  }
+}
