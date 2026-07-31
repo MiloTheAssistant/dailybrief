@@ -1,0 +1,331 @@
+{
+  "date": "2026-07-31",
+  "weekday": "Friday",
+  "kind": "dfb",
+  "title": "Daily Financial Briefing",
+  "subtitle": "Mission Control · Market Intelligence · Daily",
+  "generatedAt": "2026-07-31T12:02:21.548670+00:00",
+  "confidence": "medium",
+  "zip": "63025",
+  "sourcesCount": 5,
+  "fetchers": {
+    "rss": {
+      "seekingalpha": {
+        "status": "ok",
+        "count": 30,
+        "elapsed_s": 0.1
+      },
+      "yahoo_finance": {
+        "status": "ok",
+        "count": 42,
+        "elapsed_s": 0.1
+      },
+      "cointelegraph": {
+        "status": "ok",
+        "count": 30,
+        "elapsed_s": 0.09
+      },
+      "google_news_ai": {
+        "status": "ok",
+        "count": 100,
+        "elapsed_s": 0.84
+      },
+      "google_news_mag7": {
+        "status": "ok",
+        "count": 100,
+        "elapsed_s": 0.81
+      }
+    },
+    "calendar": {
+      "status": "ok",
+      "eventCount": 0,
+      "note": "no events in 7-day window"
+    },
+    "mail": {
+      "status": "ok",
+      "count": 2
+    },
+    "newsletters": {
+      "status": "ok",
+      "folder": "Folders/DailyBriefs",
+      "count": 20,
+      "note": "Bridge IMAP via fetch_proton_folder.py"
+    },
+    "portfolio": {
+      "status": "ok",
+      "note": "IB TWS preflighted by build_dfb_json.py --check-deps"
+    }
+  },
+  "sections": {
+    "marketHeadlines": [
+      {
+        "headline": "Pre-market summary on your portfolio: Digital Energy Holdings",
+        "source": "seekingalpha.com",
+        "url": "",
+        "whyItMatters": "Macro outlook note — context for today's cross-asset positioning and a calendar check on whether the year's expected return bands are holding.",
+        "publishedAt": "Fri, 31 Jul 2026 08:00:53 -0400",
+        "snippet": "Pre-market Portfolio Digest * As of Fri, Jul 31, 2026 07:50 ET \n\n   \n \n Yesterday's Performance \n\n Top Gainers \n\n   \n \n \nBLGVF:\n \n \n+85.05%\n \n \n \n \nMSFT:\n \n \n+15.51%\n \n \n \n \nABTC:\n \n \n+13.68%..."
+      },
+      {
+        "headline": "MSTR: Strategy's Q2 earnings hit by unrealized losses on crypto, plans to return STRC to health",
+        "source": "seekingalpha.com",
+        "url": "",
+        "whyItMatters": "MSTR analyst action surfaced in curated inbox — verify against the live price tape before sizing.",
+        "publishedAt": "Thu, 30 Jul 2026 16:32:04 -0400",
+        "snippet": "04:30 PM | Strategy Inc (MSTR) | By: Mary Christine Joy, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Oracle: Bears May Pay A Big Price (Rating Upgrade) \n \n \n Amazon GAAP EPS of..."
+      }
+    ],
+    "bitcoin": null,
+    "strategy": null,
+    "institutional": {
+      "etfLeagueTable": "Personalized portfolio envelope from seekingalpha.com: Pre-market summary on your portfolio: Digital Energy Holdings. Open the email for ticker-level pre-market detail.",
+      "blackrock": "Quiet day for BlackRock in the RSS window; no direct IBIT/spot-ETF flow headlines surfaced.",
+      "fidelity": "Quiet day for Fidelity in the RSS window; no direct FBTC/spot-ETF flow headlines surfaced.",
+      "regulatoryRadar": "BIS warned the AI investment surge is a flashpoint for systemic risk — debt-fueled capex could end in a 'bust'. Separately BIS flagged stablecoins risk fragmenting the global financial system. EU's EBA laid out a penalty framework for non-compliant MiCA issuers.",
+      "sovereign": "Galaxy cut its 2026 CLARITY Act odds to 50% as US Senate floor time narrows before the August recess; markets structure bill increasingly unlikely to clear this year.",
+      "tradfi": "MSTR analyst action via seekingalpha.com: MSTR: Strategy's Q2 earnings hit by unrealized losses on crypto, plans to return STRC to health. Sourced from curated inbox; verify against the live broker tape and the relevant firm note before sizing."
+    },
+    "creatorIntel": {
+      "sentimentReading": "Bullish / active",
+      "sentimentNote": "Analyst-action signal from curated inbox: MSFT, MSTR, SPCX — all surfaced as TICKER-prefixed subject lines via SeekingAlpha Breaking News. Macro outlook envelopes today: 1 (see Today's Top Moves for headline-level coverage). Income/retirement-themed envelopes: PFFA.",
+      "videos": []
+    },
+    "aiRace": {
+      "weeklyMoves": [
+        {
+          "headline": "The Boom And Backlash Facing Prediction Markets",
+          "company": "Other",
+          "whyItMatters": "AI-infra signal from curated inbox (seekingalpha.com). Open the email for the full analyst note.",
+          "source": "seekingalpha.com",
+          "url": null,
+          "publishedAt": "Fri, 31 Jul 2026 07:51:48 -0400"
+        },
+        {
+          "headline": "MSFT: SK Hynix and Samsung surge as US tech earnings reignite AI optimism",
+          "company": "MSFT",
+          "whyItMatters": "AI-infra signal from curated inbox (seekingalpha.com). Open the email for the full analyst note.",
+          "source": "seekingalpha.com",
+          "url": null,
+          "publishedAt": "Fri, 31 Jul 2026 00:54:18 -0400"
+        }
+      ],
+      "deepDiveCompany": "Google",
+      "deepDiveSummary": "Google rationing Meta's access to Gemini — echoed across multiple outlets overnight — is the most concrete read yet that frontier AI compute is a seller's market. Pair that with the twin $84.75B equity raise and the picture is consistent: 2026 capex is binding, not optional.",
+      "snapshot": {
+        "openai": "Quiet day — no major OpenAI move in RSS.",
+        "anthropic": "Quiet day — no major Anthropic move in RSS.",
+        "google": "Rationing Meta's Gemini; pricing $84.75B raise.",
+        "xai": "Grok 4.5 mentioned in overnight SA newsletter.",
+        "meta": "Locked 220MW Texas PPA; throttled by Google.",
+        "nvidia": "BioNeMo wins; custom-silicon narrative alive (AVGO TPU v9).",
+        "microsoft": "Down 23% YTD per one strategist — 'significantly overselling'."
+      }
+    },
+    "newsletters": [
+      {
+        "id": "908",
+        "subject": "SPCX: Tesla weighs sale of China business to pave way for potential SpaceX merger, WSJ reports",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 23:19:59 -0400",
+        "is_seen": false,
+        "snippet": "11:18 PM | Space Exploration Technologies Corp. (SPCX) | By: Gaurav Batavia, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Alphabet: The Bear Case Has Never Been Stronger...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "907",
+        "subject": "MSTR: Strategy Inc 2026 Q2 - Results - Earnings Call Presentation",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 23:03:41 -0400",
+        "is_seen": false,
+        "snippet": "Strategy Inc 2026 Q2 - Results - Earnings Call Presentation \n\n \n Jul 30, 2026 11:02 PM | Strategy Inc(MSTR) | By: SA Transcripts \n\n \n \n Read now » \n\n \n   \n You may also like: \n\n Leopold...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "906",
+        "subject": "MSTR: Strategy EPS of -$24.45, revenue of $122.4M misses by $2.08M",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 16:42:22 -0400",
+        "is_seen": false,
+        "snippet": "04:41 PM | Strategy Inc (MSTR) | By: Gaurav Batavia, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n The Fed's Stunning Policy Shift Could Send Rates Soaring \n \n \n 3 things to look...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "905",
+        "subject": "MSTR: Strategy's Q2 earnings hit by unrealized losses on crypto, plans to return STRC to health",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 30 Jul 2026 16:32:04 -0400",
+        "is_seen": false,
+        "snippet": "04:30 PM | Strategy Inc (MSTR) | By: Mary Christine Joy, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Oracle: Bears May Pay A Big Price (Rating Upgrade) \n \n \n Amazon GAAP EPS of...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "924",
+        "subject": "Pre-market summary on your portfolio: Digital Energy Holdings",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 31 Jul 2026 08:00:53 -0400",
+        "is_seen": false,
+        "snippet": "Pre-market Portfolio Digest * As of Fri, Jul 31, 2026 07:50 ET \n\n   \n \n Yesterday's Performance \n\n Top Gainers \n\n   \n \n \nBLGVF:\n \n \n+85.05%\n \n \n \n \nMSFT:\n \n \n+15.51%\n \n \n \n \nABTC:\n \n \n+13.68%...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "923",
+        "subject": "PFFA: The Yield Is Attractive But The Risk-Reward Is Not",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 31 Jul 2026 07:55:25 -0400",
+        "is_seen": false,
+        "snippet": "Download the Seeking Alpha App: \n\n \n \n Like ETF Ideas? Try our other newsletters  as well. \n\n This email was sent to you because you signed up to receive ETF Ideas. If you do not want to receive ETF...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "922",
+        "subject": "Enterprise Products Partners' Record Quarter: Prepare For Much Higher Dividends",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 31 Jul 2026 07:55:13 -0400",
+        "is_seen": false,
+        "snippet": "Energy Investing     \n \nTop Trending Article\n \n \n \n \n \n \n \n   \n \n \n \nEnterprise Products Partners' Record Quarter: Prepare For Much Higher Dividends\n \n\n \nBy Jonathan Weber\n \n \n \n \n \n   \n \n More Top...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "921",
+        "subject": "The Boom And Backlash Facing Prediction Markets",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 31 Jul 2026 07:51:48 -0400",
+        "is_seen": false,
+        "snippet": "}\n \n \n \n \nUp for a challenge? Test your knowledge on the biggest events in the investing world over the past week. Take the latest Seeking Alpha News Quiz and see how you stack up against the...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "920",
+        "subject": "Sandisk's Biggest Opportunity Yet",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 31 Jul 2026 07:51:40 -0400",
+        "is_seen": false,
+        "snippet": "Top Trending Article\n \n \n \n \n \n \n \n   \n \n \n \nSandisk's Biggest Opportunity Yet\n \n\n \nBy Quantryon Capital\n \n \n \n \n \n   More Top Stock Ideas \n\n \n \n \n \n \n \n \n \n \n \n \n \n Micron: Buy Low, Sell High...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "919",
+        "subject": "Ares Capital: 20 Big-Yield BDCs Ranked For A Maturing Market",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 31 Jul 2026 07:45:29 -0400",
+        "is_seen": false,
+        "snippet": "Dividend Ideas       \n \nTop Trending Article\n \n \n \n \n \n \n \n   \n \n \n \nAres Capital: 20 Big-Yield BDCs Ranked For A Maturing Market\n \n\n \nBy Blue Harbinger\n \n \n \n \n \n   \n   More Top Analysis...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "918",
+        "subject": "Procore Technologies: Operating Leverage And M&A At Work",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 31 Jul 2026 07:45:16 -0400",
+        "is_seen": false,
+        "snippet": "Stocks & Sectors \n   \n   \n \nTop Trending Article\n \n \n \n \n \n \n \n   \n \n \n \nProcore Technologies: Operating Leverage And M&A At Work\n \n\n \nBy The Value Investor\n \n \n \n \n \n   Trending Analysis...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "917",
+        "subject": "The AI Bubble Is Bursting - Don't Get Mauled",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 31 Jul 2026 07:44:08 -0400",
+        "is_seen": false,
+        "snippet": "Today's Featured Analysis\n \n \n \n \n \n \n \n   \n \n \n \nThe AI Bubble Is Bursting - Don't Get Mauled\n \n\n \nBy Victor Dergunov\n \n \n \n \n \n   More Trending Articles \n\n \n \n \n \n \n \n \n \n \n \n \n \n U.S. Economy: A...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "916",
+        "subject": "See what’s moving the markets this week",
+        "sender": "subscriptions@seekingalpha.com",
+        "date": "Fri, 31 Jul 2026 06:42:20 -0400",
+        "is_seen": false,
+        "snippet": "From breaking news to expert analysis, we break down the week’s biggest headlines that are driving uncertainty across the market. \n\n  \n\n The Market Lost Its Mind, But You Shouldn't \n\n Read now »...",
+        "url": "https://email-st.seekingalpha.com/oc/6a35795e733b67577001b49crvhhw.1d2y/a146e744",
+        "urls": [
+          "https://email-st.seekingalpha.com/oc/6a35795e733b67577001b49crvhhw.1d2y/a146e744"
+        ]
+      },
+      {
+        "id": "915",
+        "subject": "SPCX: SpaceX short interest trends higher ahead of earnings",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 31 Jul 2026 05:40:28 -0400",
+        "is_seen": false,
+        "snippet": "05:39 AM | Space Exploration Technologies Corp. (SPCX) | By: Preeti Singh, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Blue Owl Capital: It's Worse Than I Thought (Rating...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "914",
+        "subject": "MSTR: Earnings Snapshot: Strategy swings to $8.22B Q2 loss from year-ago profit, aims to return STRC to health",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 31 Jul 2026 04:58:55 -0400",
+        "is_seen": false,
+        "snippet": "04:57 AM | Strategy Inc (MSTR) | By: Arundhati Sarkar, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Amazon: Growth Acceleration Sends A Huge Message \n \n \n The Maradona Effect:...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "913",
+        "subject": "MSFT: Microsoft's earnings-fueled rally lifts shares above 200-day moving average",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 31 Jul 2026 04:39:23 -0400",
+        "is_seen": false,
+        "snippet": "04:38 AM | Microsoft Corporation (MSFT) | By: Preeti Singh, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Costco: A New Experiment With Gasoline Sales Could Fundamentally...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "912",
+        "subject": "SPCX: Musk calls report on Tesla China business sale 'absurdly fake news'",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 31 Jul 2026 03:19:12 -0400",
+        "is_seen": false,
+        "snippet": "03:17 AM | Space Exploration Technologies Corp. (SPCX) | By: Jessica Kuruthukulangara, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Meta: The Third Misread In Four Quarters Is A...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "911",
+        "subject": "MSFT: Microsoft adds record $450B in market cap, posting largest one-day gain for a U.S. company",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 31 Jul 2026 02:39:24 -0400",
+        "is_seen": false,
+        "snippet": "02:38 AM | Microsoft Corporation (MSFT) | By: Arundhati Sarkar, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Why Microsoft Is Winning The AI War And Alphabet Is Falling Behind...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "910",
+        "subject": "MSFT: Microsoft’s new Xbox head aims to outpace competitors on profitability by mid-2030",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 31 Jul 2026 01:24:35 -0400",
+        "is_seen": false,
+        "snippet": "01:23 AM | Microsoft Corporation (MSFT) | By: Arundhati Sarkar, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Enterprise Products Partners' Record Quarter: Prepare For Much...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "909",
+        "subject": "MSFT: SK Hynix and Samsung surge as US tech earnings reignite AI optimism",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 31 Jul 2026 00:54:18 -0400",
+        "is_seen": false,
+        "snippet": "12:53 AM | (MSFT) | By: Arundhati Sarkar, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Micron: Buy Low, Sell High (Rating Upgrade) \n \n \n Stocks making big moves after hours:...",
+        "url": null,
+        "urls": []
+      }
+    ],
+    "retirement": null,
+    "health": null
+  }
+}
