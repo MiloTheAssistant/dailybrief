@@ -1,0 +1,1308 @@
+{
+  "date": "2026-08-02",
+  "weekday": "Sunday",
+  "kind": "lifestyle",
+  "generatedAt": "2026-08-02T14:01:04.109206+00:00",
+  "zip": "63025",
+  "location": {
+    "label": "Eureka, MO",
+    "lat": 38.5017,
+    "lon": -90.6276
+  },
+  "fetchers": {
+    "weather": {
+      "status": "ok",
+      "elapsed_s": 3.2
+    },
+    "stlEvents": {
+      "explorestl": {
+        "status": "fallback",
+        "elapsed_s": 6.05
+      }
+    },
+    "calendar": {},
+    "mail": {},
+    "portfolio": {},
+    "treasury": "ok",
+    "health": "ok",
+    "rss": {
+      "stories": 60,
+      "sections": [
+        "ai",
+        "crypto",
+        "mag7"
+      ]
+    }
+  },
+  "rawInputs": {
+    "treasury": {
+      "generatedAt": "2026-08-02T14:01:00.742139+00:00",
+      "status": "ok",
+      "treasury": {
+        "status": "ok",
+        "latestDate": "07/31/2026",
+        "yieldCurve": [
+          {
+            "date": "07/31/2026",
+            "1m": 3.78,
+            "3m": 3.83,
+            "6m": 3.98,
+            "1y": 4.08,
+            "2y": 4.28,
+            "5y": 4.45,
+            "10y": 4.75,
+            "30y": 5.27
+          },
+          {
+            "date": "07/30/2026",
+            "1m": 3.79,
+            "3m": 3.82,
+            "6m": 3.98,
+            "1y": 4.04,
+            "2y": 4.23,
+            "5y": 4.38,
+            "10y": 4.68,
+            "30y": 5.21
+          },
+          {
+            "date": "07/29/2026",
+            "1m": 3.73,
+            "3m": 3.83,
+            "6m": 3.97,
+            "1y": 4.04,
+            "2y": 4.22,
+            "5y": 4.37,
+            "10y": 4.67,
+            "30y": 5.2
+          },
+          {
+            "date": "07/28/2026",
+            "1m": 3.76,
+            "3m": 3.9,
+            "6m": 4.07,
+            "1y": 4.09,
+            "2y": 4.26,
+            "5y": 4.35,
+            "10y": 4.61,
+            "30y": 5.09
+          },
+          {
+            "date": "07/27/2026",
+            "1m": 3.8,
+            "3m": 3.96,
+            "6m": 4.1,
+            "1y": 4.14,
+            "2y": 4.31,
+            "5y": 4.4,
+            "10y": 4.65,
+            "30y": 5.12
+          },
+          {
+            "date": "07/24/2026",
+            "1m": 3.8,
+            "3m": 3.96,
+            "6m": 4.08,
+            "1y": 4.14,
+            "2y": 4.33,
+            "5y": 4.43,
+            "10y": 4.69,
+            "30y": 5.16
+          },
+          {
+            "date": "07/23/2026",
+            "1m": 3.82,
+            "3m": 3.95,
+            "6m": 4.09,
+            "1y": 4.15,
+            "2y": 4.37,
+            "5y": 4.46,
+            "10y": 4.71,
+            "30y": 5.17
+          },
+          {
+            "date": "07/22/2026",
+            "1m": 3.76,
+            "3m": 3.89,
+            "6m": 4.05,
+            "1y": 4.11,
+            "2y": 4.31,
+            "5y": 4.41,
+            "10y": 4.67,
+            "30y": 5.15
+          },
+          {
+            "date": "07/21/2026",
+            "1m": 3.75,
+            "3m": 3.87,
+            "6m": 4.02,
+            "1y": 4.08,
+            "2y": 4.26,
+            "5y": 4.37,
+            "10y": 4.63,
+            "30y": 5.13
+          },
+          {
+            "date": "07/20/2026",
+            "1m": 3.72,
+            "3m": 3.86,
+            "6m": 4.0,
+            "1y": 4.03,
+            "2y": 4.21,
+            "5y": 4.33,
+            "10y": 4.6,
+            "30y": 5.11
+          }
+        ],
+        "source": "home.treasury.gov"
+      },
+      "indexQuotes": {
+        "sp500": {
+          "symbol": "^GSPC",
+          "price": 7489.72,
+          "shortName": "S&P 500",
+          "longName": "S&P 500",
+          "change5dPct": 1.03
+        },
+        "nasdaq": {
+          "symbol": "^IXIC",
+          "price": 25373.854,
+          "shortName": "NASDAQ Composite",
+          "longName": "NASDAQ Composite",
+          "change5dPct": 1.77
+        },
+        "dxy": {
+          "symbol": "DX-Y.NYB",
+          "price": 99.803,
+          "shortName": "ICE US Dollar Index - Index - C",
+          "longName": "US Dollar Index",
+          "change5dPct": -1.56
+        },
+        "btc": {
+          "symbol": "BTC-USD",
+          "price": 63047.14,
+          "shortName": "Bitcoin USD",
+          "longName": "Bitcoin USD",
+          "change5dPct": -1.35
+        }
+      }
+    },
+    "health": {
+      "stories": [
+        {
+          "topic": "cardiac",
+          "title": "[Articles] Multivessel coronary artery bypass grafting via small thoracotomy versus sternotomy (MIST): an investigator-initiated, international, open-label, randomised controlled trial",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01288-2/fulltext?rss=yes",
+          "published": "2026-07-31T22:30:01Z",
+          "source": "lancet",
+          "summary": "For selected patients with multivessel coronary artery disease, MICS CABG performed by experienced teams improved patient-reported physical recovery at 1 month compared with sternotomy CABG, with no apparent safety penalty through to 12 months. These findings support consideration of MICS CABG in ap"
+        },
+        {
+          "topic": "longevity",
+          "title": "Learning from routine health system data builds better neuroimaging AI models",
+          "url": "https://www.nature.com/articles/s41591-026-04567-4",
+          "published": "2026-07-31",
+          "source": "nature_medicine",
+          "summary": "Nature Medicine, Published online: 31 July 2026; doi:10.1038/s41591-026-04567-4We trained a three-dimensional visual foundation model directly on 5.24 million routine clinical computed tomography (CT) and magnetic resonance imaging (MRI) image series so that it learned a shared representation of neu"
+        },
+        {
+          "topic": "glp-1",
+          "title": "[Comment] A novel unimolecular GLP1 and amylin receptor agonist for glucose and weight control",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01487-X/fulltext?rss=yes",
+          "published": "2026-07-30T22:30:01Z",
+          "source": "lancet",
+          "summary": "The therapeutic landscape of type 2 diabetes and obesity has evolved from single-hormone incretin modulation towards multireceptor metabolic engineering. Amylin is cosecreted with insulin from pancreatic β cells in response to food intake and acts on amylin receptors distributed across the brain, pa"
+        },
+        {
+          "topic": "glp-1",
+          "title": "[Articles] Efficacy and safety of once-weekly subcutaneous zenagamtide, a novel unimolecular GLP-1 and amylin receptor agonist, in type 2 diabetes: a multicentre, randomised, parallel, double-blind, placebo-controlled, dose-finding, phase 2 trial",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01248-1/fulltext?rss=yes",
+          "published": "2026-07-30T22:30:01Z",
+          "source": "lancet",
+          "summary": "In people with type 2 diabetes, once-weekly subcutaneous zenagamtide 0·4–40 mg demonstrated clinically meaningful and significant improvements in change in HbA1c from baseline to week 36 compared with placebo, with a safety and tolerability profile consistent with that of other GLP-1-based and amyli"
+        },
+        {
+          "topic": "glp-1",
+          "title": "[Articles] Efficacy and safety of once-daily oral zenagamtide, a novel unimolecular GLP-1 and amylin receptor agonist, in adults with type 2 diabetes: a multicentre, randomised, parallel, double-blind, placebo-controlled, dose-finding, phase 2 trial",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01247-X/fulltext?rss=yes",
+          "published": "2026-07-30T22:30:01Z",
+          "source": "lancet",
+          "summary": "In people with type 2 diabetes, once-daily oral zenagamtide showed clinically meaningful and significant improvements in HbA1c from baseline to week 36 compared with placebo at all three dose levels (6, 25, and 50 mg). The safety and tolerability of oral zenagamtide was consistent with other GLP-1 a"
+        },
+        {
+          "topic": "cardiac",
+          "title": "[Articles] Deramiocel heart-derived cellular therapy in advanced Duchenne muscular dystrophy (HOPE-3): a phase 3, randomised, double-blind, placebo-controlled trial",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01385-1/fulltext?rss=yes",
+          "published": "2026-07-29T14:00:26Z",
+          "source": "lancet",
+          "summary": "Deramiocel safely slows disease progression in advanced DMD, preserving skeletal muscle function. Administered quarterly in a simple outpatient regimen, deramiocel is a promising treatment for DMD, agnostic to the precise underlying genetic lesion."
+        },
+        {
+          "topic": "cardiac",
+          "title": "[Articles] Ralinepag for the treatment of pulmonary arterial hypertension (ADVANCE OUTCOMES): a randomised, double-blind, placebo-controlled phase 3 study",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01011-1/fulltext?rss=yes",
+          "published": "2026-07-28T22:30:02Z",
+          "source": "lancet",
+          "summary": "In patients with PAH receiving contemporary background therapy, ralinepag significantly reduced the risk of first clinical worsening compared with placebo, but was associated with more adverse-event-related treatment discontinuations. These results support the use of ralinepag as an oral, once-daily"
+        },
+        {
+          "topic": "longevity",
+          "title": "Integrated care pathway in individuals with Long COVID: STIMULATE-ICP, a cluster-randomized, phase 3 trial",
+          "url": "https://www.nature.com/articles/s41591-026-04552-x",
+          "published": "2026-07-28",
+          "source": "nature_medicine",
+          "summary": "Nature Medicine, Published online: 28 July 2026; doi:10.1038/s41591-026-04552-xThis cluster-randomized phase 3 trial examining the effectiveness of integrated care pathways comparing usual care with the addition of MRI imaging (Coverscan), or a digitally enabled rehabilitation platform app, or both "
+        },
+        {
+          "topic": "nutrition",
+          "title": "[Clinical Rounds] Massive bilateral perirenal infiltration in Erdheim-Chester disease",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)00864-0/fulltext?rss=yes",
+          "published": "2026-07-14T22:30:01Z",
+          "source": "lancet",
+          "summary": "A 63-year-old man with a reported history of sarcoidosis, without histological confirmation, was referred for evaluation of persistent fever of unknown origin. Laboratory investigations showed microcytic anaemia (haemoglobin 9·1 g/dL, mean corpuscular volume 70 fL), elevated C-reactive protein (173 "
+        },
+        {
+          "topic": "nutrition",
+          "title": "[Comment] Pakistan and Afghanistan: a call for health diplomacy and restraint",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01189-X/fulltext?rss=yes",
+          "published": "2026-06-19T22:30:01Z",
+          "source": "lancet",
+          "summary": "The cross-border conflict affecting the border regions of Afghanistan and Pakistan has received scant global attention amid conflict in the Gulf region and the Middle East. Some 50 million civilians live across the long porous border between the countries,1 and face enormous health and nutrition cha"
+        },
+        {
+          "topic": "cardiac",
+          "title": "[Perspectives] Visualising relationships between the arts and health",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)01918-X/fulltext?rss=yes",
+          "published": "2025-09-23T22:30:02Z",
+          "source": "lancet",
+          "summary": "The American photographer Irving Penn (1917–2009) described a good photograph as one “that communicates a fact, touches the heart and leaves the viewer a changed person for having seen it”. This photography feature bears eloquent testimony to the health initiatives around the world that are supporte"
+        },
+        {
+          "topic": "longevity",
+          "title": "[Comment] Reflecting on progress, envisioning the future for research in Down syndrome",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)00510-0/fulltext?rss=yes",
+          "published": "2025-03-20T23:30:01Z",
+          "source": "lancet",
+          "summary": "Individuals with Down syndrome are at risk for several neurodevelopmental and neurodegenerative conditions that cause cognitive, behavioural, and functional decline across the lifespan.1 Two conditions contributing to these challenges are Down syndrome regression disorder and Down syndrome-related A"
+        },
+        {
+          "topic": "longevity",
+          "title": "[Review] Current approach of the axilla in patients with early-stage breast cancer",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(17)31451-4/fulltext?rss=yes",
+          "published": "2017-08-14T22:30:03Z",
+          "source": "lancet",
+          "summary": "The surgical approach of the axilla in patients with early-stage breast cancer has witnessed considerable evolution during the past 25 years. The previously undisputed gold standard of axillary-lymph-node dissection for staging has now been replaced by sentinel-lymph-node biopsy for patients with cl"
+        }
+      ],
+      "feeds": {
+        "lancet": {
+          "status": "ok",
+          "fetched": 54,
+          "matched": 11
+        },
+        "nature_medicine": {
+          "status": "ok",
+          "fetched": 8,
+          "matched": 2
+        },
+        "jama": {
+          "status": "unreachable",
+          "error": "HTTP Error 404: Not Found"
+        }
+      }
+    },
+    "rss": {
+      "stories": [
+        {
+          "section": "crypto",
+          "title": "Here’s what happened in crypto today",
+          "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-08-02T11:56:35+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/what-happened-in-crypto-today",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/article-covers-110589-what-happened-in-crypto-today.jpg\" alt=\"Here’s what happened in crypto today\" class=\"type:primaryImage\"></p><p>Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and c…"
+        },
+        {
+          "section": "crypto",
+          "title": "BNB Chain pursues legal action after ex-employee’s memecoin launch",
+          "url": "https://cointelegraph.com/news/bnb-chain-legal-action-ex-employee-memecoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-08-02T11:20:06+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/bnb-chain-legal-action-ex-employee-memecoin",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-what-is-a-social-engineering-attack-bnb-chain.jpg\" alt=\"BNB Chain pursues legal action after ex-employee’s memecoin launch\" class=\"type:primaryImage\"></p><p>BNB Chain said a former employee allegedly used a company tutorial wallet to create a memecoin that the company says it d…"
+        },
+        {
+          "section": "crypto",
+          "title": "Trump Media sells another 2,628 BTC, holdings fall to 4,261 BTC",
+          "url": "https://cointelegraph.com/news/trump-media-2628-btc-crypto-com-4261-btc-holdings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-08-02T09:29:15+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/trump-media-2628-btc-crypto-com-4261-btc-holdings",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-trump-on-bitcoin.jpg\" alt=\"Trump Media sells another 2,628 BTC, holdings fall to 4,261 BTC\" class=\"type:primaryImage\"></p><p>Trump Media transferred another 2,628 Bitcoin to Crypto.com, bringing its reported sales over seven months to 7,281 BTC and leaving the company with 4,26…"
+        },
+        {
+          "section": "crypto",
+          "title": "Coldcard hack sparks biggest sub-1 BTC move since FTX: CryptoQuant",
+          "url": "https://cointelegraph.com/news/coldcard-biggest-sub-1-btc-transfer-ftx-cryptoquant?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-08-02T08:04:56+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/coldcard-biggest-sub-1-btc-transfer-ftx-cryptoquant",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-what-is-segwit-explained2-1.jpg\" alt=\"Coldcard hack sparks biggest sub-1 BTC move since FTX: CryptoQuant\" class=\"type:primaryImage\"></p><p>Bitcoin users moved 39,600 BTC in small transactions as the Coldcard hack continued, with researchers warning that the attack remained acti…"
+        },
+        {
+          "section": "crypto",
+          "title": "Onchain, in court: What happened in crypto legal news this week",
+          "url": "https://cointelegraph.com/news/on-chain-in-court-crypto-legal-news4?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-08-01T21:14:39+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/on-chain-in-court-crypto-legal-news4",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-5-key-highlights-of-the-secs-lawsuit-against-binance.jpg\" alt=\"Onchain, in court: What happened in crypto legal news this week\" class=\"type:primaryImage\"></p><p>A case tied to defunct crypto exchange FTX moves forward, a soldier seeks to dismiss over a Polymarket bet and a form…"
+        },
+        {
+          "section": "crypto",
+          "title": "Minnesota crypto ATM ban goes into effect after reported $1M losses",
+          "url": "https://cointelegraph.com/news/minnesota-crypto-atm-ban-losses-scams?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-08-01T18:07:17+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/minnesota-crypto-atm-ban-losses-scams",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-crypto-atm-ban.png\" alt=\"Minnesota crypto ATM ban goes into effect after reported $1M losses\" class=\"type:primaryImage\"></p><p>State officials reported that Minnesota residents, and largely senior citizens, had lost about $1 million from scams tied to crypto kiosks from 2023 to…"
+        },
+        {
+          "section": "crypto",
+          "title": "Crypto PAC pours another $1M into Michigan House race",
+          "url": "https://cointelegraph.com/news/crypto-pac-michigan-thanedar-mckinney?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-08-01T15:44:02+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/crypto-pac-michigan-thanedar-mckinney",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-crypto-industry-votes-us.png\" alt=\"Crypto PAC pours another $1M into Michigan House race\" class=\"type:primaryImage\"></p><p>Michigan incumbent Shri Thanedar’s re-election bid against other Democratic candidates is getting more about crypto with an infusion of ads funded by an in…"
+        },
+        {
+          "section": "crypto",
+          "title": "Russia expands crypto mining ban to Moscow through 2032",
+          "url": "https://cointelegraph.com/news/russia-expands-crypto-mining-ban-moscow-2032?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-08-01T10:23:41+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/russia-expands-crypto-mining-ban-moscow-2032",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-china-mining-ban.jpg\" alt=\"Russia expands crypto mining ban to Moscow through 2032\" class=\"type:primaryImage\"></p><p>Russia has added Moscow, the Moscow Region and parts of Kursk Region to its cryptocurrency mining ban list, citing power supply concerns behind the restrictions.…"
+        },
+        {
+          "section": "crypto",
+          "title": "Coldcard Bitcoin loss estimate rises to $70M after Galaxy analysis",
+          "url": "https://cointelegraph.com/news/coldcard-bitcoin-loss-estimate-70-million-galaxy-analysis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-08-01T09:23:56+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/coldcard-bitcoin-loss-estimate-70-million-galaxy-analysis",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hand-coin-laptop-hack-bitcoin.jpg\" alt=\"Coldcard Bitcoin loss estimate rises to $70M after Galaxy analysis\" class=\"type:primaryImage\"></p><p>Galaxy Research identified 1,196 addresses that lost 1,082.65 Bitcoin in a 41-minute window, expanding the estimated scope of the Coldcard w…"
+        },
+        {
+          "section": "crypto",
+          "title": "Bitcoin ETFs end July in the green despite late-month selling",
+          "url": "https://cointelegraph.com/markets/bitcoin-etfs-july-green-despite-late-month-selling?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-08-01T07:23:07+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/markets/bitcoin-etfs-july-green-despite-late-month-selling",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-cmc-verified-info-deadline-1.png\" alt=\"Bitcoin ETFs end July in the green despite late-month selling\" class=\"type:primaryImage\"></p><p>Spot Bitcoin ETFs attracted $172.4 million in July inflows but remained $5.3 billion negative year to date after heavy withdrawals in May and J…"
+        },
+        {
+          "section": "crypto",
+          "title": "Bank of Italy finds no consistent cost advantage for stablecoin remittances",
+          "url": "https://cointelegraph.com/news/bank-of-italy-study-no-stablecoin-remittance-cost-advantages?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-07-31T20:10:21+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/bank-of-italy-study-no-stablecoin-remittance-cost-advantages",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-bank-of-italy-and-crypto-recap.png\" alt=\"Bank of Italy finds no consistent cost advantage for stablecoin remittances\" class=\"type:primaryImage\"></p><p>Researchers found that fiat conversion costs and payment infrastructure, rather than blockchain fees, accounted for most of the…"
+        },
+        {
+          "section": "crypto",
+          "title": "Pump.fun laid off workers before they received millions in PUMP tokens: Report",
+          "url": "https://cointelegraph.com/news/pump-fun-employees-fired-tokens-vest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-07-31T19:16:19+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/pump-fun-employees-fired-tokens-vest",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-pumpfun-firing.png\" alt=\"Pump.fun laid off workers before they received millions in PUMP tokens: Report\" class=\"type:primaryImage\"></p><p>Pump.fun co-founder Noah Tweedale reportedly attributed the layoffs to the company growing too quickly.\n</p>"
+        },
+        {
+          "section": "crypto",
+          "title": "Ex-FTX users report funds being released in $900M distribution round",
+          "url": "https://cointelegraph.com/news/ftx-users-funds-released-fifth-distribution-round?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-07-31T16:56:31+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/ftx-users-funds-released-fifth-distribution-round",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-funds-using-cryptocurrencies-ftx.png\" alt=\"Ex-FTX users report funds being released in $900M distribution round\" class=\"type:primaryImage\"></p><p>Several users of the long-defunct crypto exchange reported that distribution agents had begun releasing funds to reimburse creditors…"
+        },
+        {
+          "section": "crypto",
+          "title": "Tether earns $1.5B in Q2 as US Treasury holdings fuel profits",
+          "url": "https://cointelegraph.com/news/tether-q2-profit-us-treasury-holdings-usdt-supply?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-07-31T16:25:47+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/tether-q2-profit-us-treasury-holdings-usdt-supply",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/papertether-dollar.jpg\" alt=\"Tether earns $1.5B in Q2 as US Treasury holdings fuel profits\" class=\"type:primaryImage\"></p><p>Tether’s reserve surplus grew to $4.11 billion in the second quarter as USDT supply rose despite a weaker stablecoin market and continued pressure across th…"
+        },
+        {
+          "section": "crypto",
+          "title": "Bybit adds tokenized Nvidia, Apple, Tesla stocks as loan collateral",
+          "url": "https://cointelegraph.com/news/bybit-tokenized-stocks-collateral-margin-loans?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-07-31T16:23:21+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/bybit-tokenized-stocks-collateral-margin-loans",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-how-binance-plans-to-bring-tokenized-us-stocks.png\" alt=\"Bybit adds tokenized Nvidia, Apple, Tesla stocks as loan collateral\" class=\"type:primaryImage\"></p><p>Eligible retail and institutional users can use tokenized shares of Nvidia, Apple, Tesla and three other US companies a…"
+        },
+        {
+          "section": "crypto",
+          "title": "US Treasury yields rise as TIPS challenge the inflation narrative",
+          "url": "https://cointelegraph.com/markets/us-treasury-yields-rise-as-tips-challenge-the-inflation-narrative?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-07-31T16:14:19+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/markets/us-treasury-yields-rise-as-tips-challenge-the-inflation-narrative",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/article-covers-33327-cameron-winklevoss-buy-btc-to-escape-negative-yield-bonds.jpg\" alt=\"US Treasury yields rise as TIPS challenge the inflation narrative\" class=\"type:primaryImage\"></p><p>TIPS data points to rising real yields, not inflation, a dynamic that weighs on non-yielding…"
+        },
+        {
+          "section": "crypto",
+          "title": "Bitcoin price sinks to 2-week lows as US stocks fail to copy Asia rebound",
+          "url": "https://cointelegraph.com/markets/bitcoin-two-week-lows-us-stocks-fail-copy-asia-rebound?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-07-31T15:57:03+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/markets/bitcoin-two-week-lows-us-stocks-fail-copy-asia-rebound",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/bitcoin-price-fall.jpg\" alt=\"Bitcoin price sinks to 2-week lows as US stocks fail to copy Asia rebound\" class=\"type:primaryImage\"></p><p>Bitcoin saw fresh downside pressure as US stocks tracked sideways into the end of the month, diverging from the relief bounce seen in Asia.</p>"
+        },
+        {
+          "section": "crypto",
+          "title": "ECB says digital euro app will exceed EU accessibility standards",
+          "url": "https://cointelegraph.com/news/ecb-digital-euros-accessibility-payment-providers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-07-31T14:05:25+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/ecb-digital-euros-accessibility-payment-providers",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-the-digital-token-how-it-will-impact-the-current-financial-system-ecb.jpg\" alt=\"ECB says digital euro app will exceed EU accessibility standards\" class=\"type:primaryImage\"></p><p>The European Central Bank proposed accessibility standards for its planned digital euro app, saying…"
+        },
+        {
+          "section": "crypto",
+          "title": "AMLBot launches AI Tracer for self-service blockchain investigations",
+          "url": "https://cointelegraph.com/news/crypto-forensics-firm-launches-ai-tracing-service-track-your-stolen-coins?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-07-31T13:59:56+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/crypto-forensics-firm-launches-ai-tracing-service-track-your-stolen-coins",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-how-blockchain-forensics-and-asset-tracking-work.jpg\" alt=\"AMLBot launches AI Tracer for self-service blockchain investigations\" class=\"type:primaryImage\"></p><p>Crypto forensics company AMLBot launched an AI-enabled tool allowing users with no specialist knowledge to trace the…"
+        },
+        {
+          "section": "crypto",
+          "title": "Circle receives New York trust charter for subsidiary",
+          "url": "https://cointelegraph.com/news/circle-receives-new-york-trust-charter-for-subsidiary?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "published": "2026-07-31T13:27:10+00:00",
+          "source": "cointelegraph",
+          "canonical": "https://cointelegraph.com/news/circle-receives-new-york-trust-charter-for-subsidiary",
+          "priority": 2,
+          "snippet": "<p style=\"float:right; margin:0 0 10px 15px; width:240px;\"><img src=\"https://s3-images.ctmedia.io/media/article-covers/hi-how-to-buy-usd-coin-usdc-in-united-states.jpg\" alt=\"Circle receives New York trust charter for subsidiary\" class=\"type:primaryImage\"></p><p>The New York trust charter allows Circle’s subsidiary to provide fiduciary and custody services under state banking law.</p>"
+        },
+        {
+          "section": "ai",
+          "title": "Opinion | The Math on AI Works Out Well for You - WSJ",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE52NE1MNW9ZQUJSYi1HQU0yYWI3RDVnWFdFbnRoUGltYmUyUzFWVUlkaW1MXzY1d3FiVHcwZ1V4ZXNnalhjU3k4UFBIN3NsUDYwRGR4ZFJoX05xbUxtLXFNWGQyZjNCM2NnMDFyb2FjbFF5QzBNU05KM0JsVHVsRzQ?oc=5",
+          "published": "2026-08-02T18:56:00+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMif0FVX3lxTE52NE1MNW9ZQUJSYi1HQU0yYWI3RDVnWFdFbnRoUGltYmUyUzFWVUlkaW1MXzY1d3FiVHcwZ1V4ZXNnalhjU3k4UFBIN3NsUDYwRGR4ZFJoX05xbUxtLXFNWGQyZjNCM2NnMDFyb2FjbFF5QzBNU05KM0JsVHVsRzQ?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE52NE1MNW9ZQUJSYi1HQU0yYWI3RDVnWFdFbnRoUGltYmUyUzFWVUlkaW1MXzY1d3FiVHcwZ1V4ZXNnalhjU3k4UFBIN3NsUDYwRGR4ZFJoX05xbUxtLXFNWGQyZjNCM2NnMDFyb2FjbFF5QzBNU05KM0JsVHVsRzQ?oc=5\" target=\"_blank\">Opinion | The Math on AI Works Out Well for You</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WSJ</font>"
+        },
+        {
+          "section": "ai",
+          "title": "BigBear.ai vs. D-Wave Quantum: Which Technology Stock Is a Better Buy in 2026? - fool.com",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPM2huZ0stSUhNQVdrWWFheVF0Ui0wMXNHQ3Z0VEM0azBQd0FMQ3BuMEJoQVV4TElnMkU4R21HcURYYUhoSV9pcjI4R2hjSjVyOUNVWF9jSm9Zck1XaXgzc0lzUTB2Z1FXUklwOWxSLWRqbDhiME5meVNFRkRBMWd0SHBzd0ZLNmNQNGRBMWdnU0FjVC1DX3ZnV0dQU0x3amtqQUotd0k4b3dKNnc5Z3hVWm1odGhhejlsRXcxbkNqTG4zZjJwNlE?oc=5",
+          "published": "2026-08-02T18:32:53+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPM2huZ0stSUhNQVdrWWFheVF0Ui0wMXNHQ3Z0VEM0azBQd0FMQ3BuMEJoQVV4TElnMkU4R21HcURYYUhoSV9pcjI4R2hjSjVyOUNVWF9jSm9Zck1XaXgzc0lzUTB2Z1FXUklwOWxSLWRqbDhiME5meVNFRkRBMWd0SHBzd0ZLNmNQNGRBMWdnU0FjVC1DX3ZnV0dQU0x3amtqQUotd0k4b3dKNnc5Z3hVWm1odGhhejlsRXcxbkNqTG4zZjJwNlE?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxPM2huZ0stSUhNQVdrWWFheVF0Ui0wMXNHQ3Z0VEM0azBQd0FMQ3BuMEJoQVV4TElnMkU4R21HcURYYUhoSV9pcjI4R2hjSjVyOUNVWF9jSm9Zck1XaXgzc0lzUTB2Z1FXUklwOWxSLWRqbDhiME5meVNFRkRBMWd0SHBzd0ZLNmNQNGRBMWdnU0FjVC1DX3ZnV0dQU0x3amtqQUotd0k4b3dKNnc5Z3hVWm1odGhhejlsRXcxbkNqTG4zZjJwNlE?oc=5\" target=\"_blank\">BigBear.ai vs. D-Wave Quantum: Which Technology Stock Is a B…"
+        },
+        {
+          "section": "ai",
+          "title": "UK Watchdog Investigates Microsoft Over AI-Linked Subscription Pricing - PYMNTS.com",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWkxDRHMxMTNuY19FS2FoX1pHS0tCWVlJa2N0UllEczQzQmxNVE5pazd3dmR6Zml1RTJDRXo1aVA4dXVPc1J1NlRzc0Q0VUxPaU04WHBaSllKcUZHeTRyMS1iUW5oLW9sLXdTcHViQ1gwazdmRHpPM1dJRWZrYVI1UEFQN1Qyc3ljY1F0OVd5TGJaSWhOOUpkT3NtdEpBSlVseDh6OWd3QQ?oc=5",
+          "published": "2026-08-02T18:32:23+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWkxDRHMxMTNuY19FS2FoX1pHS0tCWVlJa2N0UllEczQzQmxNVE5pazd3dmR6Zml1RTJDRXo1aVA4dXVPc1J1NlRzc0Q0VUxPaU04WHBaSllKcUZHeTRyMS1iUW5oLW9sLXdTcHViQ1gwazdmRHpPM1dJRWZrYVI1UEFQN1Qyc3ljY1F0OVd5TGJaSWhOOUpkT3NtdEpBSlVseDh6OWd3QQ?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxQWkxDRHMxMTNuY19FS2FoX1pHS0tCWVlJa2N0UllEczQzQmxNVE5pazd3dmR6Zml1RTJDRXo1aVA4dXVPc1J1NlRzc0Q0VUxPaU04WHBaSllKcUZHeTRyMS1iUW5oLW9sLXdTcHViQ1gwazdmRHpPM1dJRWZrYVI1UEFQN1Qyc3ljY1F0OVd5TGJaSWhOOUpkT3NtdEpBSlVseDh6OWd3QQ?oc=5\" target=\"_blank\">UK Watchdog Investigates Microsoft Over AI-Linked Subscription Pricing</a>&nbsp;&nbsp;<font color=\"#6…"
+        },
+        {
+          "section": "ai",
+          "title": "After starting the tokenmaxxing panic, Uber's CTO is back with a very different AI story - Business Insider",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNUjBlSnUxRFJjLTJyS1dxbjZxWnY3QlVyMGFnbnprSm9PQ2pBRDZLZEFHNzRMeDNRT2xyVzJfZDQ2UVYxTXlYYkpraU9FTGpBX1lqaFF1U1R5ZXNndGZqbHNkeU1pRnk4SGlxQ1FtZjVDZk5HQ2ltRzFXVlZUbFR6MUlIQkVNYTJnazhDM1VaQzU?oc=5",
+          "published": "2026-08-02T18:30:15+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNUjBlSnUxRFJjLTJyS1dxbjZxWnY3QlVyMGFnbnprSm9PQ2pBRDZLZEFHNzRMeDNRT2xyVzJfZDQ2UVYxTXlYYkpraU9FTGpBX1lqaFF1U1R5ZXNndGZqbHNkeU1pRnk4SGlxQ1FtZjVDZk5HQ2ltRzFXVlZUbFR6MUlIQkVNYTJnazhDM1VaQzU?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNUjBlSnUxRFJjLTJyS1dxbjZxWnY3QlVyMGFnbnprSm9PQ2pBRDZLZEFHNzRMeDNRT2xyVzJfZDQ2UVYxTXlYYkpraU9FTGpBX1lqaFF1U1R5ZXNndGZqbHNkeU1pRnk4SGlxQ1FtZjVDZk5HQ2ltRzFXVlZUbFR6MUlIQkVNYTJnazhDM1VaQzU?oc=5\" target=\"_blank\">After starting the tokenmaxxing panic, Uber's CTO is back with a very different AI story</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Busine…"
+        },
+        {
+          "section": "ai",
+          "title": "How artificial intelligence can make the grade from elementary school to college - nwitimes.com",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNeVZPVzBXMW84NE0yZUhSTTJBdXBhNUdHQTVwLXJtWE95MFExVy1jZ2kzNWVTLWNhczh5WUdpSUhuZjR2M0RtLTBJZ2MzQWxZMlZKVjJZaHlqLU9oSGNNczBqNVFvYXBLdzBMSXJHaFJaMEN2U3lNUU1ZNFh5ZjBrZ0g1UXFuWUpfLU1NRHZ5alV1RFE?oc=5",
+          "published": "2026-08-02T18:30:00+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNeVZPVzBXMW84NE0yZUhSTTJBdXBhNUdHQTVwLXJtWE95MFExVy1jZ2kzNWVTLWNhczh5WUdpSUhuZjR2M0RtLTBJZ2MzQWxZMlZKVjJZaHlqLU9oSGNNczBqNVFvYXBLdzBMSXJHaFJaMEN2U3lNUU1ZNFh5ZjBrZ0g1UXFuWUpfLU1NRHZ5alV1RFE?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxNeVZPVzBXMW84NE0yZUhSTTJBdXBhNUdHQTVwLXJtWE95MFExVy1jZ2kzNWVTLWNhczh5WUdpSUhuZjR2M0RtLTBJZ2MzQWxZMlZKVjJZaHlqLU9oSGNNczBqNVFvYXBLdzBMSXJHaFJaMEN2U3lNUU1ZNFh5ZjBrZ0g1UXFuWUpfLU1NRHZ5alV1RFE?oc=5\" target=\"_blank\">How artificial intelligence can make the grade from elementary school to college</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">nwitimes.c…"
+        },
+        {
+          "section": "ai",
+          "title": "Microsoft vs. Apple: Comparing Revenue Trends and the Impact of Artificial Intelligence - fool.com",
+          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNWmdnbWtocEloMnd5RDh0QkR0S0dVaTNGaVlORlN1SXA0Z3U1cUs0eEdiWEpxQ2V1TmVoZzA2eW5oNXNCOGM4NnZKZWhtaXRLSDgyMFNFOUZRd25nX3F4TXpfeWNucHBwUFNrSE1BUU9jSTV1aW50VGlBUk1Uck41dGxHYU9VbHEtcWZlOUF5LWtTUEQxckhJZlVIbVJueWg3SThlVzVkdGlmWFpRN2FHRjREWmtpMk9aTWpRTGtVZm12LVRUQ0VzVlFaNkpaVDA?oc=5",
+          "published": "2026-08-02T18:29:42+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNWmdnbWtocEloMnd5RDh0QkR0S0dVaTNGaVlORlN1SXA0Z3U1cUs0eEdiWEpxQ2V1TmVoZzA2eW5oNXNCOGM4NnZKZWhtaXRLSDgyMFNFOUZRd25nX3F4TXpfeWNucHBwUFNrSE1BUU9jSTV1aW50VGlBUk1Uck41dGxHYU9VbHEtcWZlOUF5LWtTUEQxckhJZlVIbVJueWg3SThlVzVkdGlmWFpRN2FHRjREWmtpMk9aTWpRTGtVZm12LVRUQ0VzVlFaNkpaVDA?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxNWmdnbWtocEloMnd5RDh0QkR0S0dVaTNGaVlORlN1SXA0Z3U1cUs0eEdiWEpxQ2V1TmVoZzA2eW5oNXNCOGM4NnZKZWhtaXRLSDgyMFNFOUZRd25nX3F4TXpfeWNucHBwUFNrSE1BUU9jSTV1aW50VGlBUk1Uck41dGxHYU9VbHEtcWZlOUF5LWtTUEQxckhJZlVIbVJueWg3SThlVzVkdGlmWFpRN2FHRjREWmtpMk9aTWpRTGtVZm12LVRUQ0VzVlFaNkpaVDA?oc=5\" target=\"_blank\">Microsoft vs. Apple: Comparing Revenue Trends an…"
+        },
+        {
+          "section": "ai",
+          "title": "AI Can Write Research Papers. But Can Researchers Trust the Citations? Wispaper Says That's the Next Challenge for Academic AI - PR Newswire",
+          "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxPWHRmSFV3Z1BmRVhDUDVrX3g3dnNfQUM2dkZGVmlocmcxWktPWDM1RnYyWW52SGNrWElLLU1Kc3dNMVE3WmpyU1hoZ3pzUzdnZW4taFI0WVY4M3EzcXY3cHd4a3ZXX3BuV0NnSGxGcldFSVdnOFVvdTV0cS1IY0NlLVFUV0JtTXdndmxtSDNmQVU4VHNqWkVYNkc5eDduYzROQnllMFc5V0xXRXR2SVZkUzVqdm5jbEw0SWRpcGZIZTQ4QUp0ek4wVF9zaVJoX2x0X0djYk5GbmM1eEFpYmxwNDBPYlhSMFdvXzM1a0poR19HdkNsc01QdE5JandQMWF1ckpOT3F5ZHRrTjg?oc=5",
+          "published": "2026-08-02T18:28:00+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxPWHRmSFV3Z1BmRVhDUDVrX3g3dnNfQUM2dkZGVmlocmcxWktPWDM1RnYyWW52SGNrWElLLU1Kc3dNMVE3WmpyU1hoZ3pzUzdnZW4taFI0WVY4M3EzcXY3cHd4a3ZXX3BuV0NnSGxGcldFSVdnOFVvdTV0cS1IY0NlLVFUV0JtTXdndmxtSDNmQVU4VHNqWkVYNkc5eDduYzROQnllMFc5V0xXRXR2SVZkUzVqdm5jbEw0SWRpcGZIZTQ4QUp0ek4wVF9zaVJoX2x0X0djYk5GbmM1eEFpYmxwNDBPYlhSMFdvXzM1a0poR19HdkNsc01QdE5JandQMWF1ckpOT3F5ZHRrTjg?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMiiwJBVV95cUxPWHRmSFV3Z1BmRVhDUDVrX3g3dnNfQUM2dkZGVmlocmcxWktPWDM1RnYyWW52SGNrWElLLU1Kc3dNMVE3WmpyU1hoZ3pzUzdnZW4taFI0WVY4M3EzcXY3cHd4a3ZXX3BuV0NnSGxGcldFSVdnOFVvdTV0cS1IY0NlLVFUV0JtTXdndmxtSDNmQVU4VHNqWkVYNkc5eDduYzROQnllMFc5V0xXRXR2SVZkUzVqdm5jbEw0SWRpcGZIZTQ4QUp0ek4wVF9zaVJoX2x0X0djYk5GbmM1eEFpYmxwNDBPYlhSMFdvXzM1a0poR19HdkNsc01QdE5JandQMWF1ckpOT3…"
+        },
+        {
+          "section": "ai",
+          "title": "From labs to factories: Physical AI’s growth expected to explode - Smart Industry",
+          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQbVZCTVpVV0pwOFF1VWZxa25fTTBrQWlzdFhJVXYxbXFXb0tESGRwY0d3RndabElRM05GVWpjVzF3NlpXT1hSaUt5UWN3NlhtM1FmdVU3cGFZQ1AyX2xlUUwzRzc3LVFydnp0MW9EYzh1VS0xNFBvSnNYdWJka0JYUW5wdnp3bW5lemlfa3lfaWZYaFd2Qmd4U19uRC1UcVBITHNGdWZNM2FEWW85WHVIdUg4QTlLRkhsSXY2R2FXV3lCNTdrcVN6OXRkTTlyNWc?oc=5",
+          "published": "2026-08-02T18:17:32+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQbVZCTVpVV0pwOFF1VWZxa25fTTBrQWlzdFhJVXYxbXFXb0tESGRwY0d3RndabElRM05GVWpjVzF3NlpXT1hSaUt5UWN3NlhtM1FmdVU3cGFZQ1AyX2xlUUwzRzc3LVFydnp0MW9EYzh1VS0xNFBvSnNYdWJka0JYUW5wdnp3bW5lemlfa3lfaWZYaFd2Qmd4U19uRC1UcVBITHNGdWZNM2FEWW85WHVIdUg4QTlLRkhsSXY2R2FXV3lCNTdrcVN6OXRkTTlyNWc?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxQbVZCTVpVV0pwOFF1VWZxa25fTTBrQWlzdFhJVXYxbXFXb0tESGRwY0d3RndabElRM05GVWpjVzF3NlpXT1hSaUt5UWN3NlhtM1FmdVU3cGFZQ1AyX2xlUUwzRzc3LVFydnp0MW9EYzh1VS0xNFBvSnNYdWJka0JYUW5wdnp3bW5lemlfa3lfaWZYaFd2Qmd4U19uRC1UcVBITHNGdWZNM2FEWW85WHVIdUg4QTlLRkhsSXY2R2FXV3lCNTdrcVN6OXRkTTlyNWc?oc=5\" target=\"_blank\">From labs to factories: Physical AI’s growth exp…"
+        },
+        {
+          "section": "ai",
+          "title": "Samsung has a new AI-powered health assistant, joining a packed market - The Seattle Times",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNaGFHSjh5YjBEaWI1QmZlSEYzVjZSWm1Ic3RqUHY1blkybVhsWlpkQklRZ1hrWm5qN0YtWS1mTUtyMHJ1OFlNbHk1SmQ2Qkp2YWtaOFB0QUtseF81VkFZblp2M2JDN2hMbzdzUjFobkpoUjJ6dDNGVGlPSUROQTNiMzBJVU9tNXhBVWxueUFjZ0YyajBaampXcmVaUGNPQ3BFQnNuYkxTRnV3dk4w?oc=5",
+          "published": "2026-08-02T18:00:04+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNaGFHSjh5YjBEaWI1QmZlSEYzVjZSWm1Ic3RqUHY1blkybVhsWlpkQklRZ1hrWm5qN0YtWS1mTUtyMHJ1OFlNbHk1SmQ2Qkp2YWtaOFB0QUtseF81VkFZblp2M2JDN2hMbzdzUjFobkpoUjJ6dDNGVGlPSUROQTNiMzBJVU9tNXhBVWxueUFjZ0YyajBaampXcmVaUGNPQ3BFQnNuYkxTRnV3dk4w?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxNaGFHSjh5YjBEaWI1QmZlSEYzVjZSWm1Ic3RqUHY1blkybVhsWlpkQklRZ1hrWm5qN0YtWS1mTUtyMHJ1OFlNbHk1SmQ2Qkp2YWtaOFB0QUtseF81VkFZblp2M2JDN2hMbzdzUjFobkpoUjJ6dDNGVGlPSUROQTNiMzBJVU9tNXhBVWxueUFjZ0YyajBaampXcmVaUGNPQ3BFQnNuYkxTRnV3dk4w?oc=5\" target=\"_blank\">Samsung has a new AI-powered health assistant, joining a packed market</a>&nbsp;&nbsp;<font col…"
+        },
+        {
+          "section": "ai",
+          "title": "AI Images Are Everywhere. Here’s What They Do to Our Brains, and What We Can Do. - WSJ",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE4tQmdLaE9EYUNjNFdXdElFRS1Lckt2Q3U3RzBCTV9aNGkxNzdMNHdackdGUjVuVG5OUkxXNGRnNWxLdUFwWW5wR0VuNEF2aFl5VFlxVWEwMGJCLWlmcUF4Rmw1RERfQkVpM2xfc0xjeVRfOW5nblN5RQ?oc=5",
+          "published": "2026-08-02T18:00:00+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMieEFVX3lxTE4tQmdLaE9EYUNjNFdXdElFRS1Lckt2Q3U3RzBCTV9aNGkxNzdMNHdackdGUjVuVG5OUkxXNGRnNWxLdUFwWW5wR0VuNEF2aFl5VFlxVWEwMGJCLWlmcUF4Rmw1RERfQkVpM2xfc0xjeVRfOW5nblN5RQ?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTE4tQmdLaE9EYUNjNFdXdElFRS1Lckt2Q3U3RzBCTV9aNGkxNzdMNHdackdGUjVuVG5OUkxXNGRnNWxLdUFwWW5wR0VuNEF2aFl5VFlxVWEwMGJCLWlmcUF4Rmw1RERfQkVpM2xfc0xjeVRfOW5nblN5RQ?oc=5\" target=\"_blank\">AI Images Are Everywhere. Here’s What They Do to Our Brains, and What We Can Do.</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WSJ</font>"
+        },
+        {
+          "section": "ai",
+          "title": "SF’s ‘most hated tech founder’ is back with a new AI device— and now it can talk - The San Francisco Standard",
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFA1Zzd3b2p1RW5qUDBXd0ZMbk9BbEJQRlRTVm4wbmQ3NUFRLWExSEZWZ1pYUzVNSEtJcEtXR0JzV1Y1V2h5SU9FbldzUWdZUGE5Sm95eHFYMk1CdVV6cmlJTnRVTG1pMjVacEIxTmhPTUhGNXptMWQ4LVJPRlY?oc=5",
+          "published": "2026-08-02T18:00:00+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMifEFVX3lxTFA1Zzd3b2p1RW5qUDBXd0ZMbk9BbEJQRlRTVm4wbmQ3NUFRLWExSEZWZ1pYUzVNSEtJcEtXR0JzV1Y1V2h5SU9FbldzUWdZUGE5Sm95eHFYMk1CdVV6cmlJTnRVTG1pMjVacEIxTmhPTUhGNXptMWQ4LVJPRlY?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTFA1Zzd3b2p1RW5qUDBXd0ZMbk9BbEJQRlRTVm4wbmQ3NUFRLWExSEZWZ1pYUzVNSEtJcEtXR0JzV1Y1V2h5SU9FbldzUWdZUGE5Sm95eHFYMk1CdVV6cmlJTnRVTG1pMjVacEIxTmhPTUhGNXptMWQ4LVJPRlY?oc=5\" target=\"_blank\">SF’s ‘most hated tech founder’ is back with a new AI device— and now it can talk</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The San Francisco Standard</font>"
+        },
+        {
+          "section": "ai",
+          "title": "State AGs Escalate AI Enforcement Using Existing Laws—What CUs Need To Know - CU Today",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNVHRRRHFZRHVRRHp2VXpsLUtxSDZYSEJ1a1lqMTZTSWNMNm50SXZtUTMwdXUwZVlNSXZhQ3I1SFlIMzQtVDExcUo3V0RTVEsyeWxrQURPaHVsOFRTVXRPVjJuNTJMSVV5SERhalZCVnhublRPYThBY0tQbWE5QTl0dGtUdE9rR05CRlp3dFdvZ2xITXVSeWZwSi1DaGdtdmRpdk5UbExURVphYks3NFBNSF9n?oc=5",
+          "published": "2026-08-02T17:32:22+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNVHRRRHFZRHVRRHp2VXpsLUtxSDZYSEJ1a1lqMTZTSWNMNm50SXZtUTMwdXUwZVlNSXZhQ3I1SFlIMzQtVDExcUo3V0RTVEsyeWxrQURPaHVsOFRTVXRPVjJuNTJMSVV5SERhalZCVnhublRPYThBY0tQbWE5QTl0dGtUdE9rR05CRlp3dFdvZ2xITXVSeWZwSi1DaGdtdmRpdk5UbExURVphYks3NFBNSF9n?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxNVHRRRHFZRHVRRHp2VXpsLUtxSDZYSEJ1a1lqMTZTSWNMNm50SXZtUTMwdXUwZVlNSXZhQ3I1SFlIMzQtVDExcUo3V0RTVEsyeWxrQURPaHVsOFRTVXRPVjJuNTJMSVV5SERhalZCVnhublRPYThBY0tQbWE5QTl0dGtUdE9rR05CRlp3dFdvZ2xITXVSeWZwSi1DaGdtdmRpdk5UbExURVphYks3NFBNSF9n?oc=5\" target=\"_blank\">State AGs Escalate AI Enforcement Using Existing Laws—What CUs Need To Know</a>&nbsp;&n…"
+        },
+        {
+          "section": "ai",
+          "title": "Opinion | Why global AI exuberance is about to hit ‘nasty’ reality - South China Morning Post",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPT0NWYjFzbUlaZ1FKdGRieDd3ZklER3dfQmtqRlRnNEd3OWJESjctLWJiOGt6LVNCeGJvZWZPN0hHV0Ztek1ncmM0UUVLRmVHVTAzekloTzQxT05YR25SdjhzNlZNR1dUNWJRdjV4YmY2dVphcGF1MVJjclZwbnExUk5nRU05R1VfM1VvOEg1N2RkV0NhWHpPVW1kdHlpSy1XckhrOVByOHpZaGlSVlRuWTRn0gGyAUFVX3lxTE9BYnNJUG9rTWhadndoZ2lYSEQ1ZThRODNXNzI1T0paaG5ranZhY3h4UmVTbXRNMnNvQ2tGbHgwU2d4RU13WXlVa2dXT2RlVTM2aEc2QU9IX1ZPUmZ1MHdIYVNFbFZEYV8yNU9lQUd2ZzZjSTlKYnFEV1FQbF9qWlA5WTdSaGQ5a0toS0lvQ1daMFlINGtxUnEzYWRJMHhIQk92ZG9ycmJ3Nkg5N2lFd01iNHc?oc=5",
+          "published": "2026-08-02T17:30:13+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPT0NWYjFzbUlaZ1FKdGRieDd3ZklER3dfQmtqRlRnNEd3OWJESjctLWJiOGt6LVNCeGJvZWZPN0hHV0Ztek1ncmM0UUVLRmVHVTAzekloTzQxT05YR25SdjhzNlZNR1dUNWJRdjV4YmY2dVphcGF1MVJjclZwbnExUk5nRU05R1VfM1VvOEg1N2RkV0NhWHpPVW1kdHlpSy1XckhrOVByOHpZaGlSVlRuWTRn0gGyAUFVX3lxTE9BYnNJUG9rTWhadndoZ2lYSEQ1ZThRODNXNzI1T0paaG5ranZhY3h4UmVTbXRNMnNvQ2tGbHgwU2d4RU13WXlVa2dXT2RlVTM2aEc2QU9IX1ZPUmZ1MHdIYVNFbFZEYV8yNU9lQUd2ZzZjSTlKYnFEV1FQbF9qWlA5WTdSaGQ5a0toS0lvQ1daMFlINGtxUnEzYWRJMHhIQk92ZG9ycmJ3Nkg5N2lFd01iNHc?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPT0NWYjFzbUlaZ1FKdGRieDd3ZklER3dfQmtqRlRnNEd3OWJESjctLWJiOGt6LVNCeGJvZWZPN0hHV0Ztek1ncmM0UUVLRmVHVTAzekloTzQxT05YR25SdjhzNlZNR1dUNWJRdjV4YmY2dVphcGF1MVJjclZwbnExUk5nRU05R1VfM1VvOEg1N2RkV0NhWHpPVW1kdHlpSy1XckhrOVByOHpZaGlSVlRuWTRn0gGyAUFVX3lxTE9BYnNJUG9rTWhadndoZ2lYSEQ1ZThRODNXNzI1T0paaG5ranZhY3h4UmVTbXRNMnNvQ2tGbHgwU2d4RU13WXlVa2dXT2RlVT…"
+        },
+        {
+          "section": "ai",
+          "title": "Op-ed: The U.S. lead over China in AI is all but gone - CNBC",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5EVTd0dkY4M2ZFa0NkaHhDdzFibUc1OUhwc1lTaTQ2bG5BeGZHbUxXRnZOT3RPNTZNVzlEMVBveHA2V1pwTnVLOG5MNXpXdjVtX1BPMXZlbk53TjFRZWgwWFVCRWRqVE8wZ0NtSWdsXzZhcDZf0gF6QVVfeXFMUGdycGp6MllJMGVuZWJLeHBweV82Ym1meERmMkhkbk54S3RZbGNpMkVidzdTVk5tRGYwZnAzY21YUmc1ZG9oR0Jwb1FRSW1qWURYb0k2Z1VjMlF1ZmpDYk1wN1NGM2hCbjJ1SXYwN1NHUFJkaGV6UUpELXc?oc=5",
+          "published": "2026-08-02T17:30:01+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5EVTd0dkY4M2ZFa0NkaHhDdzFibUc1OUhwc1lTaTQ2bG5BeGZHbUxXRnZOT3RPNTZNVzlEMVBveHA2V1pwTnVLOG5MNXpXdjVtX1BPMXZlbk53TjFRZWgwWFVCRWRqVE8wZ0NtSWdsXzZhcDZf0gF6QVVfeXFMUGdycGp6MllJMGVuZWJLeHBweV82Ym1meERmMkhkbk54S3RZbGNpMkVidzdTVk5tRGYwZnAzY21YUmc1ZG9oR0Jwb1FRSW1qWURYb0k2Z1VjMlF1ZmpDYk1wN1NGM2hCbjJ1SXYwN1NHUFJkaGV6UUpELXc?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMidEFVX3lxTE5EVTd0dkY4M2ZFa0NkaHhDdzFibUc1OUhwc1lTaTQ2bG5BeGZHbUxXRnZOT3RPNTZNVzlEMVBveHA2V1pwTnVLOG5MNXpXdjVtX1BPMXZlbk53TjFRZWgwWFVCRWRqVE8wZ0NtSWdsXzZhcDZf0gF6QVVfeXFMUGdycGp6MllJMGVuZWJLeHBweV82Ym1meERmMkhkbk54S3RZbGNpMkVidzdTVk5tRGYwZnAzY21YUmc1ZG9oR0Jwb1FRSW1qWURYb0k2Z1VjMlF1ZmpDYk1wN1NGM2hCbjJ1SXYwN1NHUFJkaGV6UUpELXc?oc=5\" target=\"_blank\">Op-e…"
+        },
+        {
+          "section": "ai",
+          "title": "New private school opening with AI being the teachers - kark.com",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWi1HYmZzbk1BLWtYQkJoelBCaUtxdHFPNlZFc25lUFBXbkNmVVdMZnR5TXBYNm03Zml2YUQzTWxDQlA5UEV1NFQ3MHQtZ3ZCSXlYTEs5Wktadk53NEtRUk1od3lCeWF5X1lhUmx4RFZ2dXVtNEItU1dSdEdnS05XWEdCZGVzTXo5aVl4dVRTeHNzZl9GVGQyeW5R?oc=5",
+          "published": "2026-08-02T17:27:40+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWi1HYmZzbk1BLWtYQkJoelBCaUtxdHFPNlZFc25lUFBXbkNmVVdMZnR5TXBYNm03Zml2YUQzTWxDQlA5UEV1NFQ3MHQtZ3ZCSXlYTEs5Wktadk53NEtRUk1od3lCeWF5X1lhUmx4RFZ2dXVtNEItU1dSdEdnS05XWEdCZGVzTXo5aVl4dVRTeHNzZl9GVGQyeW5R?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxQWi1HYmZzbk1BLWtYQkJoelBCaUtxdHFPNlZFc25lUFBXbkNmVVdMZnR5TXBYNm03Zml2YUQzTWxDQlA5UEV1NFQ3MHQtZ3ZCSXlYTEs5Wktadk53NEtRUk1od3lCeWF5X1lhUmx4RFZ2dXVtNEItU1dSdEdnS05XWEdCZGVzTXo5aVl4dVRTeHNzZl9GVGQyeW5R?oc=5\" target=\"_blank\">New private school opening with AI being the teachers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">kark.com</font>"
+        },
+        {
+          "section": "ai",
+          "title": "What's your experience designing with AI? - Bluffton Icon",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQRnI1VHducmlydmkxSmYtT0VEZnZxZkM5OWY2Nm5VRzdMVGsxVWdMR00wTTB4clQ1NVVPQkZfaUpyZS1HdUVaMFBmR0h6czg2ZC0wMi1nWldOemRjOV8wQXdPY2hPb2FwMGlvNUVJMGZ0VEp2dzRYWlByQ2VIOGJpQ2pkVk5BZFE?oc=5",
+          "published": "2026-08-02T17:25:58+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQRnI1VHducmlydmkxSmYtT0VEZnZxZkM5OWY2Nm5VRzdMVGsxVWdMR00wTTB4clQ1NVVPQkZfaUpyZS1HdUVaMFBmR0h6czg2ZC0wMi1nWldOemRjOV8wQXdPY2hPb2FwMGlvNUVJMGZ0VEp2dzRYWlByQ2VIOGJpQ2pkVk5BZFE?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxQRnI1VHducmlydmkxSmYtT0VEZnZxZkM5OWY2Nm5VRzdMVGsxVWdMR00wTTB4clQ1NVVPQkZfaUpyZS1HdUVaMFBmR0h6czg2ZC0wMi1nWldOemRjOV8wQXdPY2hPb2FwMGlvNUVJMGZ0VEp2dzRYWlByQ2VIOGJpQ2pkVk5BZFE?oc=5\" target=\"_blank\">What's your experience designing with AI?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bluffton Icon</font>"
+        },
+        {
+          "section": "ai",
+          "title": "AI's manifesto war - Axios",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA4RkVfRVh3bVdObERxcjlQZjBFaGozalNoV0g2YjNzUGQ2RTJDUjlZcHJHWWtacjFxRGZheEloUGFoRjhIOGVuR2VGRXNQV1E1eW1zSDZMT2tqZlZEb3pGQTJhZm9KeHRCREt2VTJJNmNTQQ?oc=5",
+          "published": "2026-08-02T17:24:25+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMickFVX3lxTFA4RkVfRVh3bVdObERxcjlQZjBFaGozalNoV0g2YjNzUGQ2RTJDUjlZcHJHWWtacjFxRGZheEloUGFoRjhIOGVuR2VGRXNQV1E1eW1zSDZMT2tqZlZEb3pGQTJhZm9KeHRCREt2VTJJNmNTQQ?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTFA4RkVfRVh3bVdObERxcjlQZjBFaGozalNoV0g2YjNzUGQ2RTJDUjlZcHJHWWtacjFxRGZheEloUGFoRjhIOGVuR2VGRXNQV1E1eW1zSDZMT2tqZlZEb3pGQTJhZm9KeHRCREt2VTJJNmNTQQ?oc=5\" target=\"_blank\">AI's manifesto war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Axios</font>"
+        },
+        {
+          "section": "ai",
+          "title": "Senate Panel Will Examine AI Surveillance Pricing Threat - legis1.com",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1IMXF5RDRXU21YTzR1UW5oTHBQOXNJaE4yaFhrNm1veWkwdnNzNnI4SGs3eW83X1ozaWZjYXVBR2dGaDR4cDVick82SW42dG1aVnN4bjFZRkJIRXh6VjhPNG5BTXlWUGRPV3RMLWRTQkthcS1yYWhLWUYtTnVsQQ?oc=5",
+          "published": "2026-08-02T17:23:52+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1IMXF5RDRXU21YTzR1UW5oTHBQOXNJaE4yaFhrNm1veWkwdnNzNnI4SGs3eW83X1ozaWZjYXVBR2dGaDR4cDVick82SW42dG1aVnN4bjFZRkJIRXh6VjhPNG5BTXlWUGRPV3RMLWRTQkthcS1yYWhLWUYtTnVsQQ?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE1IMXF5RDRXU21YTzR1UW5oTHBQOXNJaE4yaFhrNm1veWkwdnNzNnI4SGs3eW83X1ozaWZjYXVBR2dGaDR4cDVick82SW42dG1aVnN4bjFZRkJIRXh6VjhPNG5BTXlWUGRPV3RMLWRTQkthcS1yYWhLWUYtTnVsQQ?oc=5\" target=\"_blank\">Senate Panel Will Examine AI Surveillance Pricing Threat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">legis1.com</font>"
+        },
+        {
+          "section": "ai",
+          "title": "Leadership Conference Lobbies on AI, Privacy, and Surveillance - legis1.com",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9rY29oTHdfYXBqQTJ5cHphQXJHXzNnbmIzeER3TzhGLW5UQU1WSk1HcGdvWjZUTDBlTnpHamlVcDkwRGdxQjhWSFRmR1FJZVBtZmtyM1FuQkVoX1pnNm5jMWIwZUgxMi1VQkhxUUtsM2t3VzY3eEFPa0ZYWjk3UQ?oc=5",
+          "published": "2026-08-02T17:14:46+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9rY29oTHdfYXBqQTJ5cHphQXJHXzNnbmIzeER3TzhGLW5UQU1WSk1HcGdvWjZUTDBlTnpHamlVcDkwRGdxQjhWSFRmR1FJZVBtZmtyM1FuQkVoX1pnNm5jMWIwZUgxMi1VQkhxUUtsM2t3VzY3eEFPa0ZYWjk3UQ?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE9rY29oTHdfYXBqQTJ5cHphQXJHXzNnbmIzeER3TzhGLW5UQU1WSk1HcGdvWjZUTDBlTnpHamlVcDkwRGdxQjhWSFRmR1FJZVBtZmtyM1FuQkVoX1pnNm5jMWIwZUgxMi1VQkhxUUtsM2t3VzY3eEFPa0ZYWjk3UQ?oc=5\" target=\"_blank\">Leadership Conference Lobbies on AI, Privacy, and Surveillance</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">legis1.com</font>"
+        },
+        {
+          "section": "ai",
+          "title": "Why companies are hiring workers back after AI-driven layoffs - Spiceworks",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOMks1M0lodGs5dGRGa1FpcmsyMTVuQlBzb215Wm5oMEwzMVVZQTNNQUVqUFZUZ09TaGJoRklKRWtIa0U2d0ttNVlMeU1NbENvRWdLbWhyMlBnSXNBZmFSYmJMQzZmVEliWjdUcVp1c0lxaXAzZTU0QWRuVjRvUktUajJ5VmM5Tk5aSEtzVzhFbm1wYWlzUEdOcw?oc=5",
+          "published": "2026-08-02T17:00:15+00:00",
+          "source": "google_news_ai",
+          "canonical": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOMks1M0lodGs5dGRGa1FpcmsyMTVuQlBzb215Wm5oMEwzMVVZQTNNQUVqUFZUZ09TaGJoRklKRWtIa0U2d0ttNVlMeU1NbENvRWdLbWhyMlBnSXNBZmFSYmJMQzZmVEliWjdUcVp1c0lxaXAzZTU0QWRuVjRvUktUajJ5VmM5Tk5aSEtzVzhFbm1wYWlzUEdOcw?oc=5",
+          "priority": 3,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxOMks1M0lodGs5dGRGa1FpcmsyMTVuQlBzb215Wm5oMEwzMVVZQTNNQUVqUFZUZ09TaGJoRklKRWtIa0U2d0ttNVlMeU1NbENvRWdLbWhyMlBnSXNBZmFSYmJMQzZmVEliWjdUcVp1c0lxaXAzZTU0QWRuVjRvUktUajJ5VmM5Tk5aSEtzVzhFbm1wYWlzUEdOcw?oc=5\" target=\"_blank\">Why companies are hiring workers back after AI-driven layoffs</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Spiceworks</font>"
+        },
+        {
+          "section": "mag7",
+          "title": "Microsoft vs. Meta Platforms: Which Is the Better Magnificent Seven Stock to Buy Right Now? - fool.com",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQdHg3c3lqUVpqNndNM2VGVkExRWVNNkVPaml3QUUzOVZsWHB3MnpDb1NqWmdBellpdXpfU2NBbzJkcU5MT2NDdFAyQklFdDQ5X2wzR2pSZEkxYkhJMUtUU2F4ZGVGN2p0b2JnVzlrclpVbkRMbEU1QVBvcWg0cUxRVUM1Z3p6TFB1UUI0bkFvWVZONXJvSVJDLQ?oc=5",
+          "published": "2026-08-02T18:52:04+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQdHg3c3lqUVpqNndNM2VGVkExRWVNNkVPaml3QUUzOVZsWHB3MnpDb1NqWmdBellpdXpfU2NBbzJkcU5MT2NDdFAyQklFdDQ5X2wzR2pSZEkxYkhJMUtUU2F4ZGVGN2p0b2JnVzlrclpVbkRMbEU1QVBvcWg0cUxRVUM1Z3p6TFB1UUI0bkFvWVZONXJvSVJDLQ?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxQdHg3c3lqUVpqNndNM2VGVkExRWVNNkVPaml3QUUzOVZsWHB3MnpDb1NqWmdBellpdXpfU2NBbzJkcU5MT2NDdFAyQklFdDQ5X2wzR2pSZEkxYkhJMUtUU2F4ZGVGN2p0b2JnVzlrclpVbkRMbEU1QVBvcWg0cUxRVUM1Z3p6TFB1UUI0bkFvWVZONXJvSVJDLQ?oc=5\" target=\"_blank\">Microsoft vs. Meta Platforms: Which Is the Better Magnificent Seven Stock to Buy Right Now?</a>&nbsp;&nbsp;<font color=\"#…"
+        },
+        {
+          "section": "mag7",
+          "title": "Earnings Troubles May Signal Larger Issues for Tesla (NASDAQ:TSLA) Shareholders - simplywall.st",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNYlExYzJ2RUZpc3ZXbktyT1J4RmlySEhHRktDSFRRV090RmJiMHBzRjFIYkt1Z1BjRm12UnlZeUxwRWR3YXQxYjgtWm41a2tKd3ZObHdWNzJaVFBBc093U0ZjTTNNRzZxVXYyVElsVnNRbHAzeGtJbWc3NWx2czBMQnVySElVc09yMjlOQ2FLQmZfVHZwZE1wUl9ibHpoUDF1RV9aUTJGODlGcTNGcEpjbkVrb2xUNERDdFBCOHVOR3BqdDZDRkHSAcsBQVVfeXFMTzZlVzJfWExnN2NRWEpnLWlvYXF3UlhSNTVQRHhIZFo5MlpuRWtTaDYwUVFnNFB3Q1h4b1pvbVBRcXpxSUxSR21ubkx2VVU5blltTGVGeWxOOFZtcUg3LXpHYUFDSTBHNnRoNEw0YkxSWV9yQ3pDRlp5UGdWcjlHZk5GNUFya1REWFo4QWROVVoxMkdDYV8wMXltMWpZdVpSYW5jM0NKVHFYVWVRYUlybjBGd3R6TFo5NUR2UlgzV2RHLUs1RG1ScUJHTGs?oc=5",
+          "published": "2026-08-02T18:37:13+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNYlExYzJ2RUZpc3ZXbktyT1J4RmlySEhHRktDSFRRV090RmJiMHBzRjFIYkt1Z1BjRm12UnlZeUxwRWR3YXQxYjgtWm41a2tKd3ZObHdWNzJaVFBBc093U0ZjTTNNRzZxVXYyVElsVnNRbHAzeGtJbWc3NWx2czBMQnVySElVc09yMjlOQ2FLQmZfVHZwZE1wUl9ibHpoUDF1RV9aUTJGODlGcTNGcEpjbkVrb2xUNERDdFBCOHVOR3BqdDZDRkHSAcsBQVVfeXFMTzZlVzJfWExnN2NRWEpnLWlvYXF3UlhSNTVQRHhIZFo5MlpuRWtTaDYwUVFnNFB3Q1h4b1pvbVBRcXpxSUxSR21ubkx2VVU5blltTGVGeWxOOFZtcUg3LXpHYUFDSTBHNnRoNEw0YkxSWV9yQ3pDRlp5UGdWcjlHZk5GNUFya1REWFo4QWROVVoxMkdDYV8wMXltMWpZdVpSYW5jM0NKVHFYVWVRYUlybjBGd3R6TFo5NUR2UlgzV2RHLUs1RG1ScUJHTGs?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxNYlExYzJ2RUZpc3ZXbktyT1J4RmlySEhHRktDSFRRV090RmJiMHBzRjFIYkt1Z1BjRm12UnlZeUxwRWR3YXQxYjgtWm41a2tKd3ZObHdWNzJaVFBBc093U0ZjTTNNRzZxVXYyVElsVnNRbHAzeGtJbWc3NWx2czBMQnVySElVc09yMjlOQ2FLQmZfVHZwZE1wUl9ibHpoUDF1RV9aUTJGODlGcTNGcEpjbkVrb2xUNERDdFBCOHVOR3BqdDZDRkHSAcsBQVVfeXFMTzZlVzJfWExnN2NRWEpnLWlvYXF3UlhSNTVQRHhIZFo5MlpuRWtTaDYwUVFnNFB3Q1h4b1…"
+        },
+        {
+          "section": "mag7",
+          "title": "Microsoft: The Turnaround Is Finally Accelerating (NASDAQ:MSFT) - Seeking Alpha",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNWE0zN2dZbmowN1RNdG5yVUNMUTlPWjZOOFBfYWljVVZPY095TE9tdDVCRlZqMWQwcG1TaXp2ci1rUm9vVElRVDVCdk5zd1FaOUFmMGxDbHlNRXk1UHZsUmVJaVpUZnQ4UEtUVXVRS2ExRFBCMlE2QU5FdTBmN0NyS1g4bTZZMndKU1djaGtBaElnVEE?oc=5",
+          "published": "2026-08-02T18:25:00+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNWE0zN2dZbmowN1RNdG5yVUNMUTlPWjZOOFBfYWljVVZPY095TE9tdDVCRlZqMWQwcG1TaXp2ci1rUm9vVElRVDVCdk5zd1FaOUFmMGxDbHlNRXk1UHZsUmVJaVpUZnQ4UEtUVXVRS2ExRFBCMlE2QU5FdTBmN0NyS1g4bTZZMndKU1djaGtBaElnVEE?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxNWE0zN2dZbmowN1RNdG5yVUNMUTlPWjZOOFBfYWljVVZPY095TE9tdDVCRlZqMWQwcG1TaXp2ci1rUm9vVElRVDVCdk5zd1FaOUFmMGxDbHlNRXk1UHZsUmVJaVpUZnQ4UEtUVXVRS2ExRFBCMlE2QU5FdTBmN0NyS1g4bTZZMndKU1djaGtBaElnVEE?oc=5\" target=\"_blank\">Microsoft: The Turnaround Is Finally Accelerating (NASDAQ:MSFT)</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seeking Alpha</font>"
+        },
+        {
+          "section": "mag7",
+          "title": "Apple tightens bug reporting as AI floods security teams (AAPL:NASDAQ) - Seeking Alpha",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPdGxtV1NQTGlYazNRVk9vX3ppRUtGc0dEa2puLVVPNnpBUlZNNFFsdHYza3lOeFhQOGc0S19sbnpKUm5SV0s1ZDFMZ2FiS1U0cFJMWmlZeG55X0s3bkhqZHFNNFVuNlFGWWJWZ0FFS0lDejduSmU2a3pnOWVIeDZ4RUJRRWVLREdjOHJaSkhXd1h2dFVHSDZtd0FB?oc=5",
+          "published": "2026-08-02T17:59:57+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPdGxtV1NQTGlYazNRVk9vX3ppRUtGc0dEa2puLVVPNnpBUlZNNFFsdHYza3lOeFhQOGc0S19sbnpKUm5SV0s1ZDFMZ2FiS1U0cFJMWmlZeG55X0s3bkhqZHFNNFVuNlFGWWJWZ0FFS0lDejduSmU2a3pnOWVIeDZ4RUJRRWVLREdjOHJaSkhXd1h2dFVHSDZtd0FB?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxPdGxtV1NQTGlYazNRVk9vX3ppRUtGc0dEa2puLVVPNnpBUlZNNFFsdHYza3lOeFhQOGc0S19sbnpKUm5SV0s1ZDFMZ2FiS1U0cFJMWmlZeG55X0s3bkhqZHFNNFVuNlFGWWJWZ0FFS0lDejduSmU2a3pnOWVIeDZ4RUJRRWVLREdjOHJaSkhXd1h2dFVHSDZtd0FB?oc=5\" target=\"_blank\">Apple tightens bug reporting as AI floods security teams (AAPL:NASDAQ)</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seeking Alp…"
+        },
+        {
+          "section": "mag7",
+          "title": "Meta AI uses a second AI agent as a memory coach to keep long tasks on track - the-decoder.com",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPanp1NWdVLUd3U0RWQWx4cVdubFJwM09YRkdUTjZadGZXRlJ2U0l6OFpoenVwU1JsQVU1Qkk3dzd1aFhGNDFfVWtTOWFNZV9fNTJyclpZaXRvSkRZRUVHdkgtdmZNUklvYm1LWVA5dXdtemJBTDMzSEJhMzdzOEJ3dUJwdUlFem0xY1U5UFhCcWpXTWVQeEM2NU5zbHdDSlh5Z1M0?oc=5",
+          "published": "2026-08-02T17:59:26+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPanp1NWdVLUd3U0RWQWx4cVdubFJwM09YRkdUTjZadGZXRlJ2U0l6OFpoenVwU1JsQVU1Qkk3dzd1aFhGNDFfVWtTOWFNZV9fNTJyclpZaXRvSkRZRUVHdkgtdmZNUklvYm1LWVA5dXdtemJBTDMzSEJhMzdzOEJ3dUJwdUlFem0xY1U5UFhCcWpXTWVQeEM2NU5zbHdDSlh5Z1M0?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxPanp1NWdVLUd3U0RWQWx4cVdubFJwM09YRkdUTjZadGZXRlJ2U0l6OFpoenVwU1JsQVU1Qkk3dzd1aFhGNDFfVWtTOWFNZV9fNTJyclpZaXRvSkRZRUVHdkgtdmZNUklvYm1LWVA5dXdtemJBTDMzSEJhMzdzOEJ3dUJwdUlFem0xY1U5UFhCcWpXTWVQeEM2NU5zbHdDSlh5Z1M0?oc=5\" target=\"_blank\">Meta AI uses a second AI agent as a memory coach to keep long tasks on track</a>&nbsp;&nbsp;<font color=\"#6…"
+        },
+        {
+          "section": "mag7",
+          "title": "Analysts Have Conflicting Sentiments on These Consumer Cyclical Companies: Amazon (AMZN) and Domino’s Pizza Enterprises Limited (OtherDPZUF) - The Globe and Mail",
+          "url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxPUjljd3Y1VVE0RFhJa3JjZENveHd6UTRDeExlR0kwYmZFODhYT0pXYllNMHFtUGhiMzIyR21UNDY0dWFxUS1CaXpxcE4yLTZjRGZlS1VOMmk3YkgydldoVmk3LUY0SFFxakhPbmhIb0c4NjFfdkxpS21fS2lsUkhNdDFONzJqUUJOdmRISzV4cDVYX19fRFQ3b1lTUHRKbEE5aGdiWjRQeENpOEQwbWZYZGttbVd3TkV0eWJtTGVfN1AxZXBxN3ZQbUxyY3A5b011NXRHSWgyTV9UMjBCNUJwVlpYd0NlNW5INEJ1MTB1OXRSVDVSbjFqc193TTNfcW5uTlJGMnFnMS1Zcm9zNTdqa3BKanFGMFVaZXpRSHV3U1VDbnR4WHNNMU4yS0FuR1RRbXZKdnAyWTVBTkdmeWNmSQ?oc=5",
+          "published": "2026-08-02T17:28:55+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxPUjljd3Y1VVE0RFhJa3JjZENveHd6UTRDeExlR0kwYmZFODhYT0pXYllNMHFtUGhiMzIyR21UNDY0dWFxUS1CaXpxcE4yLTZjRGZlS1VOMmk3YkgydldoVmk3LUY0SFFxakhPbmhIb0c4NjFfdkxpS21fS2lsUkhNdDFONzJqUUJOdmRISzV4cDVYX19fRFQ3b1lTUHRKbEE5aGdiWjRQeENpOEQwbWZYZGttbVd3TkV0eWJtTGVfN1AxZXBxN3ZQbUxyY3A5b011NXRHSWgyTV9UMjBCNUJwVlpYd0NlNW5INEJ1MTB1OXRSVDVSbjFqc193TTNfcW5uTlJGMnFnMS1Zcm9zNTdqa3BKanFGMFVaZXpRSHV3U1VDbnR4WHNNMU4yS0FuR1RRbXZKdnAyWTVBTkdmeWNmSQ?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMiwAJBVV95cUxPUjljd3Y1VVE0RFhJa3JjZENveHd6UTRDeExlR0kwYmZFODhYT0pXYllNMHFtUGhiMzIyR21UNDY0dWFxUS1CaXpxcE4yLTZjRGZlS1VOMmk3YkgydldoVmk3LUY0SFFxakhPbmhIb0c4NjFfdkxpS21fS2lsUkhNdDFONzJqUUJOdmRISzV4cDVYX19fRFQ3b1lTUHRKbEE5aGdiWjRQeENpOEQwbWZYZGttbVd3TkV0eWJtTGVfN1AxZXBxN3ZQbUxyY3A5b011NXRHSWgyTV9UMjBCNUJwVlpYd0NlNW5INEJ1MTB1OXRSVDVSbjFqc193TTNfcW5uTlJGMn…"
+        },
+        {
+          "section": "mag7",
+          "title": "Apple's Selloff Looks More Like An Opportunity Than A Warning (NASDAQ:AAPL) - Seeking Alpha",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNN0FmSWZwTDM4S3NBb2NqMmJXVUlKM3lqRTF3d2VGMXRGemd3RHNrNnJ2aURVUnluZlNfUDBnaU5nRl9CbEJ6OFVJUkhyMmZaOHFmM2Z0NzlxMVhEZkhEaGRlZk12Vm9tVlZKNV85a1ZsRk9KcmhmRGxMRTNFZWI5dkpqa3pna2daQ1ZBY3Nsdlgwai15V1pfTTQ4WThsS2JIdGZN?oc=5",
+          "published": "2026-08-02T17:17:44+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNN0FmSWZwTDM4S3NBb2NqMmJXVUlKM3lqRTF3d2VGMXRGemd3RHNrNnJ2aURVUnluZlNfUDBnaU5nRl9CbEJ6OFVJUkhyMmZaOHFmM2Z0NzlxMVhEZkhEaGRlZk12Vm9tVlZKNV85a1ZsRk9KcmhmRGxMRTNFZWI5dkpqa3pna2daQ1ZBY3Nsdlgwai15V1pfTTQ4WThsS2JIdGZN?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxNN0FmSWZwTDM4S3NBb2NqMmJXVUlKM3lqRTF3d2VGMXRGemd3RHNrNnJ2aURVUnluZlNfUDBnaU5nRl9CbEJ6OFVJUkhyMmZaOHFmM2Z0NzlxMVhEZkhEaGRlZk12Vm9tVlZKNV85a1ZsRk9KcmhmRGxMRTNFZWI5dkpqa3pna2daQ1ZBY3Nsdlgwai15V1pfTTQ4WThsS2JIdGZN?oc=5\" target=\"_blank\">Apple's Selloff Looks More Like An Opportunity Than A Warning (NASDAQ:AAPL)</a>&nbsp;&nbsp;<font color=\"#6f…"
+        },
+        {
+          "section": "mag7",
+          "title": "Earnings Week Ahead: PLTR, AMD, PFE, DIS, SHOP, VTRS, CGC, MCD, ROKU, ABNB, and more - Seeking Alpha",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOTWFoSjV0YzdTeklDd1IzdVEzX19meF90TjNXWkhCX0lndTBEX0N2ZU1TX0F4UlgtQWY2ZFQ1ZXJmVFV0eC03YU42cDBBSzJrWjVLUDhzOTg1a0MtRkhmUUV5VGFVcWF1c1F0c1BlU2UxUnlSMUdsZlJnSDJrUEVnUHg5VS16WkRlak1IQU9tanY5cnduVFUyM1Y1aDl2S05TRVRPZ1hRYzB4WmNhNVJTRA?oc=5",
+          "published": "2026-08-02T17:07:55+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOTWFoSjV0YzdTeklDd1IzdVEzX19meF90TjNXWkhCX0lndTBEX0N2ZU1TX0F4UlgtQWY2ZFQ1ZXJmVFV0eC03YU42cDBBSzJrWjVLUDhzOTg1a0MtRkhmUUV5VGFVcWF1c1F0c1BlU2UxUnlSMUdsZlJnSDJrUEVnUHg5VS16WkRlak1IQU9tanY5cnduVFUyM1Y1aDl2S05TRVRPZ1hRYzB4WmNhNVJTRA?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxOTWFoSjV0YzdTeklDd1IzdVEzX19meF90TjNXWkhCX0lndTBEX0N2ZU1TX0F4UlgtQWY2ZFQ1ZXJmVFV0eC03YU42cDBBSzJrWjVLUDhzOTg1a0MtRkhmUUV5VGFVcWF1c1F0c1BlU2UxUnlSMUdsZlJnSDJrUEVnUHg5VS16WkRlak1IQU9tanY5cnduVFUyM1Y1aDl2S05TRVRPZ1hRYzB4WmNhNVJTRA?oc=5\" target=\"_blank\">Earnings Week Ahead: PLTR, AMD, PFE, DIS, SHOP, VTRS, CGC, MCD, ROKU, ABNB, and more</a>&…"
+        },
+        {
+          "section": "mag7",
+          "title": "Apple: Unjustified AI Premium (NASDAQ:AAPL) - Seeking Alpha",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE81TWdMN2R6NXlxb1l1dTNQc2pSRjVwN1BzMHQzWWI1OS1kZWZqX2JycjNkdkJuaVRrQy16dlN6LUpoYkw2SmVsbHVxS05KTFBTNnlLX2VEU1pIN0FKUFRJQmVwN2p1WTdLcWhTcm1XYWFoQmJWeFNvSQ?oc=5",
+          "published": "2026-08-02T16:24:54+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMieEFVX3lxTE81TWdMN2R6NXlxb1l1dTNQc2pSRjVwN1BzMHQzWWI1OS1kZWZqX2JycjNkdkJuaVRrQy16dlN6LUpoYkw2SmVsbHVxS05KTFBTNnlLX2VEU1pIN0FKUFRJQmVwN2p1WTdLcWhTcm1XYWFoQmJWeFNvSQ?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTE81TWdMN2R6NXlxb1l1dTNQc2pSRjVwN1BzMHQzWWI1OS1kZWZqX2JycjNkdkJuaVRrQy16dlN6LUpoYkw2SmVsbHVxS05KTFBTNnlLX2VEU1pIN0FKUFRJQmVwN2p1WTdLcWhTcm1XYWFoQmJWeFNvSQ?oc=5\" target=\"_blank\">Apple: Unjustified AI Premium (NASDAQ:AAPL)</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seeking Alpha</font>"
+        },
+        {
+          "section": "mag7",
+          "title": "JPMorgan resets Amazon stock target after AI payoff - thestreet.com",
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFB5eFhMclUzSkFaLWRtVllfS0RvajlGaTFuaFQ0cmtfY3pDX3JvV0tLYnVrMVZaUUcyVGtVOTRVT3YtNXhWX1pOYTQzdW8xT25lMnRpNHE5d0x2WnJfZGJFYlVDUVh3NWFFUVIySmRJWHhtRm40TzRZOEhB?oc=5",
+          "published": "2026-08-02T16:07:00+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMiekFVX3lxTFB5eFhMclUzSkFaLWRtVllfS0RvajlGaTFuaFQ0cmtfY3pDX3JvV0tLYnVrMVZaUUcyVGtVOTRVT3YtNXhWX1pOYTQzdW8xT25lMnRpNHE5d0x2WnJfZGJFYlVDUVh3NWFFUVIySmRJWHhtRm40TzRZOEhB?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTFB5eFhMclUzSkFaLWRtVllfS0RvajlGaTFuaFQ0cmtfY3pDX3JvV0tLYnVrMVZaUUcyVGtVOTRVT3YtNXhWX1pOYTQzdW8xT25lMnRpNHE5d0x2WnJfZGJFYlVDUVh3NWFFUVIySmRJWHhtRm40TzRZOEhB?oc=5\" target=\"_blank\">JPMorgan resets Amazon stock target after AI payoff</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">thestreet.com</font>"
+        },
+        {
+          "section": "mag7",
+          "title": "Gene Munster Sees AAPL Stock Slump as Temporary, Steve Jobs' Critique of Microsoft and More: This Week in - Benzinga",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQMms4N2FkQkJmNXRYUHV4UFdfV2NGY0RNc2k5d2M2YXVFdjJWVGtTeVlnY2NOc0hGbml3NExLNWQ4LW83a0hDN19ORUxrWlRJaFQ5ODFNUkRkc3lBb1I2NFgybU1jelFoS1l5N2hVLWhVZGZTbTNkNk9fUHlTZTRPYVM3WEZsMERHV3dhNE5WLW1CbmFDUEVXekJMRnVsZjg?oc=5",
+          "published": "2026-08-02T16:00:36+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQMms4N2FkQkJmNXRYUHV4UFdfV2NGY0RNc2k5d2M2YXVFdjJWVGtTeVlnY2NOc0hGbml3NExLNWQ4LW83a0hDN19ORUxrWlRJaFQ5ODFNUkRkc3lBb1I2NFgybU1jelFoS1l5N2hVLWhVZGZTbTNkNk9fUHlTZTRPYVM3WEZsMERHV3dhNE5WLW1CbmFDUEVXekJMRnVsZjg?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxQMms4N2FkQkJmNXRYUHV4UFdfV2NGY0RNc2k5d2M2YXVFdjJWVGtTeVlnY2NOc0hGbml3NExLNWQ4LW83a0hDN19ORUxrWlRJaFQ5ODFNUkRkc3lBb1I2NFgybU1jelFoS1l5N2hVLWhVZGZTbTNkNk9fUHlTZTRPYVM3WEZsMERHV3dhNE5WLW1CbmFDUEVXekJMRnVsZjg?oc=5\" target=\"_blank\">Gene Munster Sees AAPL Stock Slump as Temporary, Steve Jobs' Critique of Microsoft and More: This Week in</a>&nb…"
+        },
+        {
+          "section": "mag7",
+          "title": "Mark Zuckerberg Says He's Betting Big on AI Compute Even as Meta's Free Cash Flow Craters. Here's What Investors Should Watch. - fool.com",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOS0hyZUVyaUdrcTJBb3J0SElLemZwU0VoZkJOd2hCTTczT0lKeldRY2lPWkI2WllfdGZvUENZZFNIOTlVSHNYa0lkaXlTQV9WV2FNbHNfR2Nvc01NVVlDSGtVWmxSTzRUR2s3czg2ZGp5Vm40TjFsbG5BbmZPdjhtQkJpbUo3dm5pUXVfLW1WbTFjYUEwcU0tcw?oc=5",
+          "published": "2026-08-02T15:54:36+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOS0hyZUVyaUdrcTJBb3J0SElLemZwU0VoZkJOd2hCTTczT0lKeldRY2lPWkI2WllfdGZvUENZZFNIOTlVSHNYa0lkaXlTQV9WV2FNbHNfR2Nvc01NVVlDSGtVWmxSTzRUR2s3czg2ZGp5Vm40TjFsbG5BbmZPdjhtQkJpbUo3dm5pUXVfLW1WbTFjYUEwcU0tcw?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxOS0hyZUVyaUdrcTJBb3J0SElLemZwU0VoZkJOd2hCTTczT0lKeldRY2lPWkI2WllfdGZvUENZZFNIOTlVSHNYa0lkaXlTQV9WV2FNbHNfR2Nvc01NVVlDSGtVWmxSTzRUR2s3czg2ZGp5Vm40TjFsbG5BbmZPdjhtQkJpbUo3dm5pUXVfLW1WbTFjYUEwcU0tcw?oc=5\" target=\"_blank\">Mark Zuckerberg Says He's Betting Big on AI Compute Even as Meta's Free Cash Flow Craters. Here's What Investors Should W…"
+        },
+        {
+          "section": "mag7",
+          "title": "Morgan Stanley spots four overlooked Meta profit engines - thestreet.com",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNQVZsQ2F1VUViRHo2cFZNaktOYkVUU1BCbmZFQVo2ZjhJQmk3QnNMOHF6OU15RWJRWGRHOGprN2M4ekpuOER5aDA3MmE0VUhnbkNDOW9sWDZpWDZacnk3cjJfelRqYVQ3YTRTZ1NjNWFSUEZPX1FhN1haa3R0NGIzMHExR2hBWFFwWXVTUg?oc=5",
+          "published": "2026-08-02T15:33:00+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNQVZsQ2F1VUViRHo2cFZNaktOYkVUU1BCbmZFQVo2ZjhJQmk3QnNMOHF6OU15RWJRWGRHOGprN2M4ekpuOER5aDA3MmE0VUhnbkNDOW9sWDZpWDZacnk3cjJfelRqYVQ3YTRTZ1NjNWFSUEZPX1FhN1haa3R0NGIzMHExR2hBWFFwWXVTUg?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxNQVZsQ2F1VUViRHo2cFZNaktOYkVUU1BCbmZFQVo2ZjhJQmk3QnNMOHF6OU15RWJRWGRHOGprN2M4ekpuOER5aDA3MmE0VUhnbkNDOW9sWDZpWDZacnk3cjJfelRqYVQ3YTRTZ1NjNWFSUEZPX1FhN1haa3R0NGIzMHExR2hBWFFwWXVTUg?oc=5\" target=\"_blank\">Morgan Stanley spots four overlooked Meta profit engines</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">thestreet.com</font>"
+        },
+        {
+          "section": "mag7",
+          "title": "Meta Trades at a Forward P/E of 17, Below Its 5-Year Average, Making the Stock a Potential Bargain as Zuckerberg's Net Worth Rebounds - fool.com",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPQUxlQ0NISllwSk1uaTZmNXB5cW5YdVZLb2hWRkNlSUpZNHduSDRXWEsxU25scXFVUWNEQ0llNW1OenlVUDd0dGg3V0MxLVhySmNJRHZ6b1dOb1dOMkFaa1Y2bzdjV2JsaW9YelBTWGJaRDFKb25WdnU2OFcwanFPYnE1a3VhNFZCWUlPeFBFeG1ESEtTaVFueQ?oc=5",
+          "published": "2026-08-02T12:35:20+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPQUxlQ0NISllwSk1uaTZmNXB5cW5YdVZLb2hWRkNlSUpZNHduSDRXWEsxU25scXFVUWNEQ0llNW1OenlVUDd0dGg3V0MxLVhySmNJRHZ6b1dOb1dOMkFaa1Y2bzdjV2JsaW9YelBTWGJaRDFKb25WdnU2OFcwanFPYnE1a3VhNFZCWUlPeFBFeG1ESEtTaVFueQ?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxPQUxlQ0NISllwSk1uaTZmNXB5cW5YdVZLb2hWRkNlSUpZNHduSDRXWEsxU25scXFVUWNEQ0llNW1OenlVUDd0dGg3V0MxLVhySmNJRHZ6b1dOb1dOMkFaa1Y2bzdjV2JsaW9YelBTWGJaRDFKb25WdnU2OFcwanFPYnE1a3VhNFZCWUlPeFBFeG1ESEtTaVFueQ?oc=5\" target=\"_blank\">Meta Trades at a Forward P/E of 17, Below Its 5-Year Average, Making the Stock a Potential Bargain as Zuckerberg's Net Wo…"
+        },
+        {
+          "section": "mag7",
+          "title": "Meta Trades at a Forward P/E of 17, Below Its 5-Year Average, Making the Stock a Potential Bargain as Zuckerberg's Net Worth Rebounds - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNNHA3Q2I2aldLdW1TZVVrRVZKX2QwRFVHUzhoRDhkOHBfQ09TSGZrVDdFV0U2TzEwVmFiVFZrb2ZrUGY1VTlqcVU1TzNBZUFla2RqVTZTclVxOHBqZV8zcEI5TnZQMk1keHlsS1l1WUxyXzR0a05naFRFZXo0dWctX25vNFpId2dTNUd5d1pZN2FvZw?oc=5",
+          "published": "2026-08-02T12:20:00+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNNHA3Q2I2aldLdW1TZVVrRVZKX2QwRFVHUzhoRDhkOHBfQ09TSGZrVDdFV0U2TzEwVmFiVFZrb2ZrUGY1VTlqcVU1TzNBZUFla2RqVTZTclVxOHBqZV8zcEI5TnZQMk1keHlsS1l1WUxyXzR0a05naFRFZXo0dWctX25vNFpId2dTNUd5d1pZN2FvZw?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxNNHA3Q2I2aldLdW1TZVVrRVZKX2QwRFVHUzhoRDhkOHBfQ09TSGZrVDdFV0U2TzEwVmFiVFZrb2ZrUGY1VTlqcVU1TzNBZUFla2RqVTZTclVxOHBqZV8zcEI5TnZQMk1keHlsS1l1WUxyXzR0a05naFRFZXo0dWctX25vNFpId2dTNUd5d1pZN2FvZw?oc=5\" target=\"_blank\">Meta Trades at a Forward P/E of 17, Below Its 5-Year Average, Making the Stock a Potential Bargain as Zuckerberg's Net Worth Rebo…"
+        },
+        {
+          "section": "mag7",
+          "title": "Palantir Technologies (PLTR) Q2 Earnings: What To Expect - Yahoo Finance UK",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQZXRaZzhSS1NRYy1VZWlfSE8tRndtZzBKN0Myc09URG43TnFFR2V2cnp1emREWWpfbVQ5YW1tOVNhenBLb2RNdURrQVdOTE9VTlhuZ1dDeHZiMHdFcFJhQlNtMW02STJta2JiOUEySDFYSU80WmFWWkk5SjQzdlhDQUh5V0R1djRGSXVMdWY3cGw?oc=5",
+          "published": "2026-08-02T12:16:57+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQZXRaZzhSS1NRYy1VZWlfSE8tRndtZzBKN0Myc09URG43TnFFR2V2cnp1emREWWpfbVQ5YW1tOVNhenBLb2RNdURrQVdOTE9VTlhuZ1dDeHZiMHdFcFJhQlNtMW02STJta2JiOUEySDFYSU80WmFWWkk5SjQzdlhDQUh5V0R1djRGSXVMdWY3cGw?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxQZXRaZzhSS1NRYy1VZWlfSE8tRndtZzBKN0Myc09URG43TnFFR2V2cnp1emREWWpfbVQ5YW1tOVNhenBLb2RNdURrQVdOTE9VTlhuZ1dDeHZiMHdFcFJhQlNtMW02STJta2JiOUEySDFYSU80WmFWWkk5SjQzdlhDQUh5V0R1djRGSXVMdWY3cGw?oc=5\" target=\"_blank\">Palantir Technologies (PLTR) Q2 Earnings: What To Expect</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo Finance UK</font>"
+        },
+        {
+          "section": "mag7",
+          "title": "An Analyst Just Named Mark Zuckerberg's Meta a Top Large-Cap Long Idea, Citing AI-Driven Ad Momentum and an Attractive Valuation - fool.com",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPTE9GTWs2dXljdWg0SWxMZnR1dU04VmZjZG5OUHhkeFhJUDNYblZOZ2JLOHB1QVpIRHFhQkdpVGVxQ1FlUzZLUHh1MEZTUk9OTjVJaHFsaFNoRVdnTzIzTTVKTktxeUhrY3FnTVMxdW1BUndaQjBLTVhTTmF6ZjdoLU5oSmdYa2hoZG1YRjRSdjhwLUZKYllv?oc=5",
+          "published": "2026-08-02T11:30:00+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPTE9GTWs2dXljdWg0SWxMZnR1dU04VmZjZG5OUHhkeFhJUDNYblZOZ2JLOHB1QVpIRHFhQkdpVGVxQ1FlUzZLUHh1MEZTUk9OTjVJaHFsaFNoRVdnTzIzTTVKTktxeUhrY3FnTVMxdW1BUndaQjBLTVhTTmF6ZjdoLU5oSmdYa2hoZG1YRjRSdjhwLUZKYllv?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxPTE9GTWs2dXljdWg0SWxMZnR1dU04VmZjZG5OUHhkeFhJUDNYblZOZ2JLOHB1QVpIRHFhQkdpVGVxQ1FlUzZLUHh1MEZTUk9OTjVJaHFsaFNoRVdnTzIzTTVKTktxeUhrY3FnTVMxdW1BUndaQjBLTVhTTmF6ZjdoLU5oSmdYa2hoZG1YRjRSdjhwLUZKYllv?oc=5\" target=\"_blank\">An Analyst Just Named Mark Zuckerberg's Meta a Top Large-Cap Long Idea, Citing AI-Driven Ad Momentum and an Attractive Valu…"
+        },
+        {
+          "section": "mag7",
+          "title": "Nvidia (NVDA) Teams Up With Kawasaki To Build AI Powered Shipyard Robots - Yahoo Finance UK",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNWExEWUhFaUQ2RzVjN0VRTGs2cmJBX0h0dUxVbWZKNXF1NzRoWEdxdmdGa19MUFBBaEllNU9iUDBid1F6RzJyb1dWUG4wbFoxdkFwV0NBaWg0dzZIQ0x3b0piTnIyaS1hUU1JRkVHMTZvWE1MNlMzRVBYX2dUSGozajZOVHNUUGot?oc=5",
+          "published": "2026-08-02T09:14:03+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNWExEWUhFaUQ2RzVjN0VRTGs2cmJBX0h0dUxVbWZKNXF1NzRoWEdxdmdGa19MUFBBaEllNU9iUDBid1F6RzJyb1dWUG4wbFoxdkFwV0NBaWg0dzZIQ0x3b0piTnIyaS1hUU1JRkVHMTZvWE1MNlMzRVBYX2dUSGozajZOVHNUUGot?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxNWExEWUhFaUQ2RzVjN0VRTGs2cmJBX0h0dUxVbWZKNXF1NzRoWEdxdmdGa19MUFBBaEllNU9iUDBid1F6RzJyb1dWUG4wbFoxdkFwV0NBaWg0dzZIQ0x3b0piTnIyaS1hUU1JRkVHMTZvWE1MNlMzRVBYX2dUSGozajZOVHNUUGot?oc=5\" target=\"_blank\">Nvidia (NVDA) Teams Up With Kawasaki To Build AI Powered Shipyard Robots</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo Finance UK</font>"
+        },
+        {
+          "section": "mag7",
+          "title": "Tesla (TSLA) Explores China Split As SpaceX Merger Talk Draws Attention - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMjEtR1k0YzNSdDIxZUt4V2xZNW9mZ20tMDFhbHhXdmVOWURaelBnVTBTdW5hYk1Pbm9wS0QwMm5jU1lMNDhYaF81UkFMNjBGOWF4VGs5bWdNUlhja0NSZ3ZkVU1XbUZRemRaWW9EZ3NJODFQVjE1LXhSSGJYRHBNZE5IV2YzNzdsZTVEM0FpODNRaks1YnE4TGgydlY2RWk0WEIzN19jby1kUQ?oc=5",
+          "published": "2026-08-02T07:07:00+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMjEtR1k0YzNSdDIxZUt4V2xZNW9mZ20tMDFhbHhXdmVOWURaelBnVTBTdW5hYk1Pbm9wS0QwMm5jU1lMNDhYaF81UkFMNjBGOWF4VGs5bWdNUlhja0NSZ3ZkVU1XbUZRemRaWW9EZ3NJODFQVjE1LXhSSGJYRHBNZE5IV2YzNzdsZTVEM0FpODNRaks1YnE4TGgydlY2RWk0WEIzN19jby1kUQ?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMjEtR1k0YzNSdDIxZUt4V2xZNW9mZ20tMDFhbHhXdmVOWURaelBnVTBTdW5hYk1Pbm9wS0QwMm5jU1lMNDhYaF81UkFMNjBGOWF4VGs5bWdNUlhja0NSZ3ZkVU1XbUZRemRaWW9EZ3NJODFQVjE1LXhSSGJYRHBNZE5IV2YzNzdsZTVEM0FpODNRaks1YnE4TGgydlY2RWk0WEIzN19jby1kUQ?oc=5\" target=\"_blank\">Tesla (TSLA) Explores China Split As SpaceX Merger Talk Draws Attention</a>&nbsp;&nbsp;<font colo…"
+        },
+        {
+          "section": "mag7",
+          "title": "Amazon (AMZN) Stock Fair Value Edges Higher After AWS And AI Price Target Debate - Yahoo! Finance Canada",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQbzFERzUzSk5aV1RiNVJiMFVpdEhoNTRITDRidzdKenRMb0NRdFQycVJaWENucVFMbWUzajgwX2FJTXFEaDUtTWdfa1BlVjhWQmpSRDl1VE04OG9RMzUyMXNPR2lRNS1maVdndnVBSEJmd3E0OXFGQWpENV9TdnJ2Yk4xZw?oc=5",
+          "published": "2026-08-02T05:20:00+00:00",
+          "source": "google_news_mag7",
+          "canonical": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQbzFERzUzSk5aV1RiNVJiMFVpdEhoNTRITDRidzdKenRMb0NRdFQycVJaWENucVFMbWUzajgwX2FJTXFEaDUtTWdfa1BlVjhWQmpSRDl1VE04OG9RMzUyMXNPR2lRNS1maVdndnVBSEJmd3E0OXFGQWpENV9TdnJ2Yk4xZw?oc=5",
+          "priority": 4,
+          "snippet": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxQbzFERzUzSk5aV1RiNVJiMFVpdEhoNTRITDRidzdKenRMb0NRdFQycVJaWENucVFMbWUzajgwX2FJTXFEaDUtTWdfa1BlVjhWQmpSRDl1VE04OG9RMzUyMXNPR2lRNS1maVdndnVBSEJmd3E0OXFGQWpENV9TdnJ2Yk4xZw?oc=5\" target=\"_blank\">Amazon (AMZN) Stock Fair Value Edges Higher After AWS And AI Price Target Debate</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo! Finance Canada</font>"
+        }
+      ],
+      "feeds": {
+        "seekingalpha": {
+          "status": "ok",
+          "count": 30,
+          "elapsed_s": 0.14
+        },
+        "yahoo_finance": {
+          "status": "ok",
+          "count": 50,
+          "elapsed_s": 0.12
+        },
+        "cointelegraph": {
+          "status": "ok",
+          "count": 30,
+          "elapsed_s": 0.07
+        },
+        "google_news_ai": {
+          "status": "ok",
+          "count": 100,
+          "elapsed_s": 0.61
+        },
+        "google_news_mag7": {
+          "status": "ok",
+          "count": 100,
+          "elapsed_s": 0.6
+        }
+      }
+    }
+  },
+  "pillars": {
+    "weather": {
+      "today": {
+        "name": "Today",
+        "temperature": 81,
+        "temperatureUnit": "F",
+        "windSpeed": "9 mph",
+        "windDirection": "N",
+        "shortForecast": "Mostly Sunny",
+        "detailedForecast": "Mostly sunny, with a high near 81. North wind around 9 mph.",
+        "precipChance": 9
+      },
+      "tonight": {
+        "name": "Tonight",
+        "temperature": 64,
+        "temperatureUnit": "F",
+        "windSpeed": "0 to 7 mph",
+        "windDirection": "N",
+        "shortForecast": "Mostly Clear",
+        "detailedForecast": "Mostly clear, with a low around 64. North wind 0 to 7 mph.",
+        "precipChance": 0
+      },
+      "tomorrow": null,
+      "whatToWear": "Light casual layers are enough; bring sunglasses if you will be out around midday.",
+      "source": "ok"
+    },
+    "life": {
+      "calendarToday": [],
+      "oneThing": null,
+      "oneThingToPlan": "Block one 90-minute window for the week: retirement admin, AI-business follow-up, or health logistics. Pick one, not five.",
+      "localPicks": [
+        {
+          "title": "St. Louis Art Museum",
+          "url": "https://www.slam.org/",
+          "dateLabel": "Always open",
+          "venue": "Forest Park"
+        },
+        {
+          "title": "Missouri Botanical Garden",
+          "url": "https://www.missouribotanicalgarden.org/",
+          "dateLabel": "Daily",
+          "venue": "4344 Shaw Blvd"
+        },
+        {
+          "title": "City Museum",
+          "url": "https://www.citymuseum.org/",
+          "dateLabel": "Daily",
+          "venue": "750 N 16th St"
+        },
+        {
+          "title": "Gateway Arch + Museum",
+          "url": "https://www.gatewayarch.com/",
+          "dateLabel": "Daily",
+          "venue": "Downtown STL riverfront"
+        },
+        {
+          "title": "Soulard Farmers Market",
+          "url": "https://www.soulardmarket.com/",
+          "dateLabel": "Saturday mornings",
+          "venue": "730 Carroll St"
+        }
+      ],
+      "localPicksNextWeekend": [
+        {
+          "title": "Soulard Farmers Market",
+          "url": "https://www.soulardmarket.com/",
+          "dateLabel": "Saturday mornings",
+          "venue": "730 Carroll St"
+        }
+      ],
+      "rec": {
+        "title": "Microsoft vs. Meta Platforms: Which Is the Better Magnificent Seven Stock to Buy Right Now?",
+        "type": "longread",
+        "blurb": "Directly tied to your watchlist; open the source before deciding whether it matters.",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQdHg3c3lqUVpqNndNM2VGVkExRWVNNkVPaml3QUUzOVZsWHB3MnpDb1NqWmdBellpdXpfU2NBbzJkcU5MT2NDdFAyQklFdDQ5X2wzR2pSZEkxYkhJMUtUU2F4ZGVGN2p0b2JnVzlrclpVbkRMbEU1QVBvcWg0cUxRVUM1Z3p6TFB1UUI0bkFvWVZONXJvSVJDLQ?oc=5"
+      }
+    },
+    "vacation": {
+      "upcomingTravel": [],
+      "driveDistanceIdeas": [
+        {
+          "name": "Grafton, IL",
+          "where": "",
+          "distance": "",
+          "blurb": "50 min. River-town confluence of Mississippi +",
+          "region": "Illinois"
+        },
+        {
+          "name": "Springfield, MO",
+          "where": "",
+          "distance": "",
+          "blurb": "3 hr. Bass Pro flagship + Wonders of Wildlife",
+          "region": "Missouri"
+        }
+      ],
+      "upcomingTravel14d": []
+    },
+    "retirement": {
+      "portfolioState": {},
+      "planningNote": null,
+      "weekEndReflection": "End the week by noting that portfolio data was unavailable here; Monday's first task is a clean broker-state check."
+    },
+    "executiveSummary": {
+      "opportunities": [
+        {
+          "category": "investment",
+          "title": "Review Microsoft source signal",
+          "blurb": "There is a fresh watchlist-linked item; open the source and decide whether it belongs in Monday's review.",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQdHg3c3lqUVpqNndNM2VGVkExRWVNNkVPaml3QUUzOVZsWHB3MnpDb1NqWmdBellpdXpfU2NBbzJkcU5MT2NDdFAyQklFdDQ5X2wzR2pSZEkxYkhJMUtUU2F4ZGVGN2p0b2JnVzlrclpVbkRMbEU1QVBvcWg0cUxRVUM1Z3p6TFB1UUI0bkFvWVZONXJvSVJDLQ?oc=5",
+          "expiresLabel": "before Monday open"
+        },
+        {
+          "category": "ai-tools",
+          "title": "AI landscape: Meta",
+          "blurb": "Use the source as a capability or competitive-positioning check, not a generic AI headline.",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQdHg3c3lqUVpqNndNM2VGVkExRWVNNkVPaml3QUUzOVZsWHB3MnpDb1NqWmdBellpdXpfU2NBbzJkcU5MT2NDdFAyQklFdDQ5X2wzR2pSZEkxYkhJMUtUU2F4ZGVGN2p0b2JnVzlrclpVbkRMbEU1QVBvcWg0cUxRVUM1Z3p6TFB1UUI0bkFvWVZONXJvSVJDLQ?oc=5"
+        },
+        {
+          "category": "business",
+          "title": "Save one health signal for follow-up",
+          "blurb": "The health feed has a substantive study; capture it for a clinician or personal protocol review.",
+          "sourceUrl": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01288-2/fulltext?rss=yes"
+        },
+        {
+          "category": "travel-deal",
+          "title": "Low-friction drive idea: Grafton, IL",
+          "blurb": "50 min. River-town confluence of Mississippi +"
+        },
+        {
+          "category": "tax-planning",
+          "title": "Retirement admin block",
+          "blurb": "End the week by noting that portfolio data was unavailable here; Monday's first task is a clean broker-state check.",
+          "expiresLabel": "next week"
+        }
+      ],
+      "summaryBullets": [
+        "What matters: Risk assets carried the week with S&P 500 +1.03%, Nasdaq Composite +1.77%, Bitcoin -1.35% while the 10Y Treasury sits at 4.75% (+15 bps WTD). The useful read is liquidity plus duration: keep conviction tied to source quality, not one headline.",
+        "What to carry into next week: convert the useful source links into one or two calendar blocks.",
+        "What to ignore: broad AI/local headlines that do not touch your portfolio, income, health, business, or capability stack.",
+        "Biggest opportunity: open the watchlist and AI source links before Monday and decide what deserves follow-up.",
+        "Biggest risk: treating a weekend source as a trade signal instead of a planning input."
+      ],
+      "actionItems": [
+        {
+          "rank": 1,
+          "title": "Open the top watchlist source",
+          "rationale": "It is the highest-signal investing input in the weekend feed.",
+          "effortHours": 0.25,
+          "byWhen": "before Monday open"
+        },
+        {
+          "rank": 2,
+          "title": "Schedule the retirement admin check",
+          "rationale": "End the week by noting that portfolio data was unavailable here; Monday's first task is a clean broker-state check.",
+          "effortHours": 0.5,
+          "byWhen": "next week"
+        },
+        {
+          "rank": 3,
+          "title": "Pick one local or travel option",
+          "rationale": "The weekend brief should move one real-life choice, not just summarize feeds.",
+          "effortHours": 0.25,
+          "byWhen": "by Friday"
+        }
+      ],
+      "funFact": {
+        "domain": "economics",
+        "fact": "The 10Y Treasury marker in this brief is 4.75%, a useful shorthand for retirement-income and duration pressure.",
+        "source": "home.treasury.gov"
+      }
+    },
+    "markets": {
+      "indicators": [
+        {
+          "label": "S&P 500",
+          "current": 7489.72,
+          "changeWtd": "+1.03%",
+          "source": "S&P 500"
+        },
+        {
+          "label": "Nasdaq Composite",
+          "current": 25373.854,
+          "changeWtd": "+1.77%",
+          "source": "NASDAQ Composite"
+        },
+        {
+          "label": "Bitcoin",
+          "current": 63047.14,
+          "changeWtd": "-1.35%",
+          "source": "Bitcoin USD"
+        },
+        {
+          "label": "U.S. Dollar (DXY)",
+          "current": 99.803,
+          "changeWtd": "-1.56%",
+          "source": "ICE US Dollar Index - Index - C"
+        },
+        {
+          "label": "3M Treasury",
+          "current": "3.83%",
+          "changeWtd": "-3 bps",
+          "source": "home.treasury.gov"
+        },
+        {
+          "label": "2Y Treasury",
+          "current": "4.28%",
+          "changeWtd": "+7 bps",
+          "source": "home.treasury.gov"
+        },
+        {
+          "label": "10Y Treasury",
+          "current": "4.75%",
+          "changeWtd": "+15 bps",
+          "source": "home.treasury.gov"
+        },
+        {
+          "label": "30Y Treasury",
+          "current": "5.27%",
+          "changeWtd": "+16 bps",
+          "source": "home.treasury.gov"
+        }
+      ],
+      "whyParagraph": "Risk assets carried the week with S&P 500 +1.03%, Nasdaq Composite +1.77%, Bitcoin -1.35% while the 10Y Treasury sits at 4.75% (+15 bps WTD). The useful read is liquidity plus duration: keep conviction tied to source quality, not one headline."
+    },
+    "investingThemes": {
+      "themes": [
+        {
+          "ticker": "MSFT",
+          "displayName": "Microsoft",
+          "trendLine": "Microsoft vs. Meta Platforms: Which Is the Better Magnificent Seven Stock to Buy Right Now?. Weekend read: signal only; verify against live price before acting.",
+          "source": "google_news_mag7",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQdHg3c3lqUVpqNndNM2VGVkExRWVNNkVPaml3QUUzOVZsWHB3MnpDb1NqWmdBellpdXpfU2NBbzJkcU5MT2NDdFAyQklFdDQ5X2wzR2pSZEkxYkhJMUtUU2F4ZGVGN2p0b2JnVzlrclpVbkRMbEU1QVBvcWg0cUxRVUM1Z3p6TFB1UUI0bkFvWVZONXJvSVJDLQ?oc=5"
+        },
+        {
+          "ticker": "NVDA",
+          "displayName": "NVIDIA",
+          "trendLine": "Nvidia (NVDA) Teams Up With Kawasaki To Build AI Powered Shipyard Robots. Weekend read: signal only; verify against live price before acting.",
+          "source": "google_news_mag7",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNWExEWUhFaUQ2RzVjN0VRTGs2cmJBX0h0dUxVbWZKNXF1NzRoWEdxdmdGa19MUFBBaEllNU9iUDBid1F6RzJyb1dWUG4wbFoxdkFwV0NBaWg0dzZIQ0x3b0piTnIyaS1hUU1JRkVHMTZvWE1MNlMzRVBYX2dUSGozajZOVHNUUGot?oc=5"
+        },
+        {
+          "ticker": "AAPL",
+          "displayName": "Apple",
+          "trendLine": "Apple tightens bug reporting as AI floods security teams (AAPL:NASDAQ). Weekend read: signal only; verify against live price before acting.",
+          "source": "google_news_mag7",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPdGxtV1NQTGlYazNRVk9vX3ppRUtGc0dEa2puLVVPNnpBUlZNNFFsdHYza3lOeFhQOGc0S19sbnpKUm5SV0s1ZDFMZ2FiS1U0cFJMWmlZeG55X0s3bkhqZHFNNFVuNlFGWWJWZ0FFS0lDejduSmU2a3pnOWVIeDZ4RUJRRWVLREdjOHJaSkhXd1h2dFVHSDZtd0FB?oc=5"
+        },
+        {
+          "ticker": "PLTR",
+          "displayName": "Palantir",
+          "trendLine": "Earnings Week Ahead: PLTR, AMD, PFE, DIS, SHOP, VTRS, CGC, MCD, ROKU, ABNB, and more. Weekend read: signal only; verify against live price before acting.",
+          "source": "google_news_mag7",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOTWFoSjV0YzdTeklDd1IzdVEzX19meF90TjNXWkhCX0lndTBEX0N2ZU1TX0F4UlgtQWY2ZFQ1ZXJmVFV0eC03YU42cDBBSzJrWjVLUDhzOTg1a0MtRkhmUUV5VGFVcWF1c1F0c1BlU2UxUnlSMUdsZlJnSDJrUEVnUHg5VS16WkRlak1IQU9tanY5cnduVFUyM1Y1aDl2S05TRVRPZ1hRYzB4WmNhNVJTRA?oc=5"
+        },
+        {
+          "ticker": "BTC",
+          "displayName": "Bitcoin",
+          "trendLine": "Trump Media sells another 2,628 BTC, holdings fall to 4,261 BTC. Weekend read: signal only; verify against live price before acting.",
+          "source": "cointelegraph",
+          "url": "https://cointelegraph.com/news/trump-media-2628-btc-crypto-com-4261-btc-holdings"
+        }
+      ],
+      "noMeaningfulNews": false
+    },
+    "retirementWatch": {
+      "items": [
+        {
+          "topic": "estate-planning",
+          "headline": "Circle receives New York trust charter for subsidiary",
+          "detail": "Worth opening because it touches retirement cash flow, taxes, Medicare, or household admin.",
+          "source": "cointelegraph",
+          "url": "https://cointelegraph.com/news/circle-receives-new-york-trust-charter-for-subsidiary"
+        }
+      ],
+      "noMeaningfulNews": false,
+      "planningNote": null,
+      "weekEndReflection": "End the week by noting that portfolio data was unavailable here; Monday's first task is a clean broker-state check."
+    },
+    "aiLandscape": {
+      "entries": [
+        {
+          "company": "Meta",
+          "oneLiner": "Microsoft vs. Meta Platforms: Which Is the Better Magnificent Seven Stock to Buy Right Now?",
+          "source": "google_news_mag7",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQdHg3c3lqUVpqNndNM2VGVkExRWVNNkVPaml3QUUzOVZsWHB3MnpDb1NqWmdBellpdXpfU2NBbzJkcU5MT2NDdFAyQklFdDQ5X2wzR2pSZEkxYkhJMUtUU2F4ZGVGN2p0b2JnVzlrclpVbkRMbEU1QVBvcWg0cUxRVUM1Z3p6TFB1UUI0bkFvWVZONXJvSVJDLQ?oc=5"
+        },
+        {
+          "company": "Agents",
+          "oneLiner": "Meta AI uses a second AI agent as a memory coach to keep long tasks on track - the-decoder.com",
+          "source": "google_news_mag7",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPanp1NWdVLUd3U0RWQWx4cVdubFJwM09YRkdUTjZadGZXRlJ2U0l6OFpoenVwU1JsQVU1Qkk3dzd1aFhGNDFfVWtTOWFNZV9fNTJyclpZaXRvSkRZRUVHdkgtdmZNUklvYm1LWVA5dXdtemJBTDMzSEJhMzdzOEJ3dUJwdUlFem0xY1U5UFhCcWpXTWVQeEM2NU5zbHdDSlh5Z1M0?oc=5"
+        }
+      ],
+      "noMeaningfulNews": false
+    },
+    "health": {
+      "entries": [
+        {
+          "topic": "cardiac",
+          "oneLiner": "[Articles] Multivessel coronary artery bypass grafting via small thoracotomy versus sternotomy (MIST): an investigator-initiated, international, open-label, randomised c.. Men-over-60 relevance: watch the cardiac signal; discuss application with a clinician.",
+          "source": "lancet",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01288-2/fulltext?rss=yes"
+        },
+        {
+          "topic": "longevity",
+          "oneLiner": "Learning from routine health system data builds better neuroimaging AI models. Men-over-60 relevance: watch the longevity signal; discuss application with a clinician.",
+          "source": "nature_medicine",
+          "url": "https://www.nature.com/articles/s41591-026-04567-4"
+        },
+        {
+          "topic": "glp-1",
+          "oneLiner": "[Comment] A novel unimolecular GLP1 and amylin receptor agonist for glucose and weight control. Men-over-60 relevance: watch the glp 1 signal; discuss application with a clinician.",
+          "source": "lancet",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01487-X/fulltext?rss=yes"
+        },
+        {
+          "topic": "glp-1",
+          "oneLiner": "[Articles] Efficacy and safety of once-weekly subcutaneous zenagamtide, a novel unimolecular GLP-1 and amylin receptor agonist, in type 2 diabetes: a multicentre, random.. Men-over-60 relevance: watch the glp 1 signal; discuss application with a clinician.",
+          "source": "lancet",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01248-1/fulltext?rss=yes"
+        },
+        {
+          "topic": "glp-1",
+          "oneLiner": "[Articles] Efficacy and safety of once-daily oral zenagamtide, a novel unimolecular GLP-1 and amylin receptor agonist, in adults with type 2 diabetes: a multicentre, ran.. Men-over-60 relevance: watch the glp 1 signal; discuss application with a clinician.",
+          "source": "lancet",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01247-X/fulltext?rss=yes"
+        }
+      ],
+      "noMeaningfulNews": false
+    },
+    "worthReading": {
+      "articles": [
+        {
+          "type": "article",
+          "title": "Microsoft vs. Meta Platforms: Which Is the Better Magnificent Seven Stock to Buy Right Now?",
+          "whyWorthIt": "Directly tied to your watchlist; open the source before deciding whether it matters.",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQdHg3c3lqUVpqNndNM2VGVkExRWVNNkVPaml3QUUzOVZsWHB3MnpDb1NqWmdBellpdXpfU2NBbzJkcU5MT2NDdFAyQklFdDQ5X2wzR2pSZEkxYkhJMUtUU2F4ZGVGN2p0b2JnVzlrclpVbkRMbEU1QVBvcWg0cUxRVUM1Z3p6TFB1UUI0bkFvWVZONXJvSVJDLQ?oc=5",
+          "durationLabel": "6 min read"
+        },
+        {
+          "type": "article",
+          "title": "Nvidia (NVDA) Teams Up With Kawasaki To Build AI Powered Shipyard Robots",
+          "whyWorthIt": "Directly tied to your watchlist; open the source before deciding whether it matters.",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNWExEWUhFaUQ2RzVjN0VRTGs2cmJBX0h0dUxVbWZKNXF1NzRoWEdxdmdGa19MUFBBaEllNU9iUDBid1F6RzJyb1dWUG4wbFoxdkFwV0NBaWg0dzZIQ0x3b0piTnIyaS1hUU1JRkVHMTZvWE1MNlMzRVBYX2dUSGozajZOVHNUUGot?oc=5",
+          "durationLabel": "6 min read"
+        },
+        {
+          "type": "article",
+          "title": "Apple tightens bug reporting as AI floods security teams (AAPL:NASDAQ)",
+          "whyWorthIt": "Directly tied to your watchlist; open the source before deciding whether it matters.",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPdGxtV1NQTGlYazNRVk9vX3ppRUtGc0dEa2puLVVPNnpBUlZNNFFsdHYza3lOeFhQOGc0S19sbnpKUm5SV0s1ZDFMZ2FiS1U0cFJMWmlZeG55X0s3bkhqZHFNNFVuNlFGWWJWZ0FFS0lDejduSmU2a3pnOWVIeDZ4RUJRRWVLREdjOHJaSkhXd1h2dFVHSDZtd0FB?oc=5",
+          "durationLabel": "6 min read"
+        }
+      ],
+      "videos": [],
+      "podcasts": []
+    }
+  },
+  "enrichment": {
+    "strategy": "deterministic-lifestyle-v1",
+    "generatedAt": "2026-08-02T09:01:04.118574-05:00",
+    "source": "scripts/enrich_lifestyle_edition.py"
+  }
+}
