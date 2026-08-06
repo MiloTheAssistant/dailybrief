@@ -1,0 +1,323 @@
+{
+  "date": "2026-08-06",
+  "weekday": "Thursday",
+  "kind": "dfb",
+  "title": "Daily Financial Briefing",
+  "subtitle": "Mission Control · Market Intelligence · Daily",
+  "generatedAt": "2026-08-06T12:01:41.423345+00:00",
+  "confidence": "medium",
+  "zip": "63025",
+  "sourcesCount": 5,
+  "fetchers": {
+    "rss": {
+      "seekingalpha": {
+        "status": "ok",
+        "count": 30,
+        "elapsed_s": 0.11
+      },
+      "yahoo_finance": {
+        "status": "ok",
+        "count": 43,
+        "elapsed_s": 0.1
+      },
+      "cointelegraph": {
+        "status": "ok",
+        "count": 30,
+        "elapsed_s": 0.08
+      },
+      "google_news_ai": {
+        "status": "ok",
+        "count": 100,
+        "elapsed_s": 0.58
+      },
+      "google_news_mag7": {
+        "status": "ok",
+        "count": 100,
+        "elapsed_s": 0.6
+      }
+    },
+    "calendar": {
+      "status": "ok",
+      "eventCount": 0,
+      "note": "no events in 7-day window"
+    },
+    "mail": {
+      "status": "ok",
+      "count": 6
+    },
+    "newsletters": {
+      "status": "ok",
+      "folder": "Folders/DailyBriefs",
+      "count": 20,
+      "note": "Bridge IMAP via fetch_proton_folder.py"
+    },
+    "portfolio": {
+      "status": "ok",
+      "note": "IB TWS preflighted by build_dfb_json.py --check-deps"
+    }
+  },
+  "sections": {
+    "marketHeadlines": [
+      {
+        "headline": "Pre-market summary on your portfolio: Digital Energy Holdings",
+        "source": "seekingalpha.com",
+        "url": "",
+        "whyItMatters": "Macro outlook note — context for today's cross-asset positioning and a calendar check on whether the year's expected return bands are holding.",
+        "publishedAt": "Thu, 06 Aug 2026 07:54:08 -0400",
+        "snippet": "Pre-market Portfolio Digest * As of Thu, Aug 06, 2026 07:50 ET \n\n   \n \n Yesterday's Performance \n\n Top Gainers \n\n   \n \n \nABTC:\n \n \n+6.51%\n \n \n \n \nSTRK:\n \n \n+2.71%\n \n \n \n \nSTRD:\n \n \n+2.46%\n \n \n \n Top..."
+      }
+    ],
+    "bitcoin": null,
+    "strategy": null,
+    "institutional": {
+      "etfLeagueTable": "Personalized portfolio envelope from seekingalpha.com: Pre-market summary on your portfolio: Digital Energy Holdings. Open the email for ticker-level pre-market detail.",
+      "blackrock": "Quiet day for BlackRock in the RSS window; no direct IBIT/spot-ETF flow headlines surfaced.",
+      "fidelity": "Quiet day for Fidelity in the RSS window; no direct FBTC/spot-ETF flow headlines surfaced.",
+      "regulatoryRadar": "BIS warned the AI investment surge is a flashpoint for systemic risk — debt-fueled capex could end in a 'bust'. Separately BIS flagged stablecoins risk fragmenting the global financial system. EU's EBA laid out a penalty framework for non-compliant MiCA issuers.",
+      "sovereign": "Galaxy cut its 2026 CLARITY Act odds to 50% as US Senate floor time narrows before the August recess; markets structure bill increasingly unlikely to clear this year.",
+      "tradfi": "No notable TradFi moves in today's RSS window."
+    },
+    "creatorIntel": {
+      "sentimentReading": "Mixed / cautious",
+      "sentimentNote": "Macro outlook envelopes today: 1 (see Today's Top Moves for headline-level coverage). Income/retirement-themed envelopes: SPCX.",
+      "videos": []
+    },
+    "aiRace": {
+      "weeklyMoves": [
+        {
+          "headline": "Clover outlines FY 2026 revenue of $2.92B-$3.0B as 4.5-Star rating boosts 2027 flexibility",
+          "company": "Other",
+          "whyItMatters": "AI-infra signal from curated inbox (seekingalpha.com). Open the email for the full analyst note.",
+          "source": "seekingalpha.com",
+          "url": null,
+          "publishedAt": "Wed, 05 Aug 2026 20:52:07 -0400"
+        },
+        {
+          "headline": "Clover Health GAAP EPS of $0.05 beats by $0.02, revenue of $743.17M beats by $14.9M",
+          "company": "Other",
+          "whyItMatters": "AI-infra signal from curated inbox (seekingalpha.com). Open the email for the full analyst note.",
+          "source": "seekingalpha.com",
+          "url": null,
+          "publishedAt": "Wed, 05 Aug 2026 16:37:26 -0400"
+        }
+      ],
+      "deepDiveCompany": "Google",
+      "deepDiveSummary": "Google rationing Meta's access to Gemini — echoed across multiple outlets overnight — is the most concrete read yet that frontier AI compute is a seller's market. Pair that with the twin $84.75B equity raise and the picture is consistent: 2026 capex is binding, not optional.",
+      "snapshot": {
+        "openai": "Quiet day — no major OpenAI move in RSS.",
+        "anthropic": "Quiet day — no major Anthropic move in RSS.",
+        "google": "Rationing Meta's Gemini; pricing $84.75B raise.",
+        "xai": "Grok 4.5 mentioned in overnight SA newsletter.",
+        "meta": "Locked 220MW Texas PPA; throttled by Google.",
+        "nvidia": "BioNeMo wins; custom-silicon narrative alive (AVGO TPU v9).",
+        "microsoft": "Down 23% YTD per one strategist — 'significantly overselling'."
+      }
+    },
+    "newsletters": [
+      {
+        "id": "1092",
+        "subject": "Clover outlines FY 2026 revenue of $2.92B-$3.0B as 4.5-Star rating boosts 2027 flexibility",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 05 Aug 2026 20:52:07 -0400",
+        "is_seen": false,
+        "snippet": "08:50 PM | Clover Health Investments, Corp. (CLOV) | By: SA Transcript Insights Editor, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Nvidia Stock Is A Steal Ahead Of Q2 Earnings...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1091",
+        "subject": "Clover Health Investments, Corp. 2026 Q2 - Results - Earnings Call Presentation",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 05 Aug 2026 20:51:52 -0400",
+        "is_seen": false,
+        "snippet": "Clover Health Investments, Corp. 2026 Q2 - Results - Earnings Call Presentation \n\n \n Aug 05, 2026 08:50 PM | Clover Health Investments, Corp.(CLOV) | By: SA Transcripts \n\n \n \n Read now » \n\n \n   \n You...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1090",
+        "subject": "Clover Health Investments, Corp. (CLOV) Q2 2026 Earnings Call Transcript",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 05 Aug 2026 20:51:18 -0400",
+        "is_seen": false,
+        "snippet": "Clover Health Investments, Corp. (CLOV) Q2 2026 Earnings Call Transcript \n\n \n Aug 05, 2026 08:50 PM | Clover Health Investments, Corp.(CLOV) | By: SA Transcripts \n\n \n \n Read now » \n\n \n   \n You may...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1089",
+        "subject": "The Market Takes a Breather",
+        "sender": "noresponse@email.interactivebrokers.com",
+        "date": "Wed, 05 Aug 2026 19:07:31 -0400",
+        "is_seen": false,
+        "snippet": "TRADERS' INSIGHT: \n\n \nTaking a Well-Deserved Breather \n \n \n \n Even the most robust market rallies take pauses now and again. We got off to the now all-too-common “gentlemen, start your engines” move...",
+        "url": "https://gdcdyn.interactivebrokers.com/Universal/servlet/Registration_v2.formSampleView?formdb=4155",
+        "urls": [
+          "https://gdcdyn.interactivebrokers.com/Universal/servlet/Registration_v2.formSampleView?formdb=4155"
+        ]
+      },
+      {
+        "id": "1088",
+        "subject": "Clover Health GAAP EPS of $0.05 beats by $0.02, revenue of $743.17M beats by $14.9M",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 05 Aug 2026 16:37:26 -0400",
+        "is_seen": false,
+        "snippet": "04:36 PM | Clover Health Investments, Corp. (CLOV) | By: Harsh Shukla, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Palantir's Sovereign AI Is Exactly What Bursts The AI Bubble...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1087",
+        "subject": "SPCX: SpaceX rocket stage crashes into moon after mission, scientists detect impact",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 05 Aug 2026 16:31:20 -0400",
+        "is_seen": false,
+        "snippet": "04:30 PM | Space Exploration Technologies Corp. (SPCX) | By: Rob Williams, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n The 2 Most Misunderstood 10%+ Yielding Income Investments...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1086",
+        "subject": "SPCX: SA analyst warns recession risks persist despite market resilience",
+        "sender": "account@seekingalpha.com",
+        "date": "Wed, 05 Aug 2026 16:09:47 -0400",
+        "is_seen": false,
+        "snippet": "04:08 PM | (SPCX) | By: Jason Capul, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n AMD Revenue Rockets 50%: 2 Undervalued Chip Stocks With Long-Term EPS Growth +100% \n \n \n SA...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1105",
+        "subject": "The Rise And Fall Of Situational Awareness",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 06 Aug 2026 07:56:53 -0400",
+        "is_seen": false,
+        "snippet": "}\n \n \n \n \nGood morning! Here's the latest in trending:Crude watch: Iran says it reached a Hormuz shipping route deal, but who's in control?Chief scientist: Google DeepMind CEO takes a new position at...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1104",
+        "subject": "DIVO: I'm Compounding This Tax-Free For Decades",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 06 Aug 2026 07:55:29 -0400",
+        "is_seen": false,
+        "snippet": "Download the Seeking Alpha App: \n\n \n \n Like ETF Ideas? Try our other newsletters  as well. \n\n This email was sent to you because you signed up to receive ETF Ideas. If you do not want to receive ETF...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1103",
+        "subject": "Energy Transfer Is A Beat And Raise Machine",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 06 Aug 2026 07:55:11 -0400",
+        "is_seen": false,
+        "snippet": "Energy Investing     \n \nTop Trending Article\n \n \n \n \n \n \n \n   \n \n \n \nEnergy Transfer Is A Beat And Raise Machine\n \n\n \nBy CashFlow Hunter\n \n \n \n \n \n   \n \n More Top Analysis...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1102",
+        "subject": "Pre-market summary on your portfolio: Digital Energy Holdings",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 06 Aug 2026 07:54:08 -0400",
+        "is_seen": false,
+        "snippet": "Pre-market Portfolio Digest * As of Thu, Aug 06, 2026 07:50 ET \n\n   \n \n Yesterday's Performance \n\n Top Gainers \n\n   \n \n \nABTC:\n \n \n+6.51%\n \n \n \n \nSTRK:\n \n \n+2.71%\n \n \n \n \nSTRD:\n \n \n+2.46%\n \n \n \n Top...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1101",
+        "subject": "American Bitcoin Q2 Earnings: A Better Miner, Not Yet A Better Investment",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 06 Aug 2026 07:45:14 -0400",
+        "is_seen": false,
+        "snippet": "Stocks & Sectors \n   \n   \n \nTop Trending Article\n \n \n \n \n \n \n \n   \n \n \n \nAmerican Bitcoin Q2 Earnings: A Better Miner, Not Yet A Better Investment\n \n\n \nBy Mandela Amoussou\n \n \n \n \n \n   Trending...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1100",
+        "subject": "Nvidia Stock Is A Steal Ahead Of Q2 Earnings",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 06 Aug 2026 07:43:33 -0400",
+        "is_seen": false,
+        "snippet": "Today's Featured Analysis\n \n \n \n \n \n \n \n   \n \n \n \nNvidia Stock Is A Steal Ahead Of Q2 Earnings\n \n\n \nBy Bay Area Ideas\n \n \n \n \n \n   More Trending Articles \n\n \n \n \n \n \n \n \n \n \n \n \n \n Palantir's...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1099",
+        "subject": "SPCX: SpaceX: The Revenue Beat Doesn't Fix The Capex Problem",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 06 Aug 2026 07:32:44 -0400",
+        "is_seen": false,
+        "snippet": "SpaceX: The Revenue Beat Doesn't Fix The Capex Problem \n\n \n Aug 06, 2026 07:30 AM | Space Exploration Technologies Corp.(SPCX) | By: Sharon McArd \n\n \n Space Exploration Technologies Corp. delivered a...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1098",
+        "subject": "SPCX: SpaceX IPO: The Company Falls Short",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 06 Aug 2026 02:32:41 -0400",
+        "is_seen": false,
+        "snippet": "SpaceX IPO: The Company Falls Short \n\n \n Aug 06, 2026 02:30 AM | Space Exploration Technologies Corp.(SPCX) | By: Harding Loevner \n\n \n SpaceX's space-related achievements aside, the company falls...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1097",
+        "subject": "SPCX: Cathie Wood’s ARK buys $23M SpaceX, $17M Nvidia; offloads Roblox, Palantir",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 06 Aug 2026 02:05:12 -0400",
+        "is_seen": false,
+        "snippet": "02:03 AM | Space Exploration Technologies Corp. (SPCX) | By: Arundhati Sarkar, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n 5 Relatively Secure And Cheap Dividend Stocks, Yields...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1096",
+        "subject": "SPCX: SpaceX float more than doubles as 140%-of-float share unlock begins",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 06 Aug 2026 01:48:11 -0400",
+        "is_seen": false,
+        "snippet": "01:46 AM | Space Exploration Technologies Corp. (SPCX) | By: Gaurav Batavia, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Sandisk: Apparently, It Could Have Been Better...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1095",
+        "subject": "SPCX: SpaceX: The Market May Still Be Misreading The Business",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 06 Aug 2026 01:02:31 -0400",
+        "is_seen": false,
+        "snippet": "SpaceX: The Market May Still Be Misreading The Business \n\n \n Aug 06, 2026 01:01 AM | Space Exploration Technologies Corp.(SPCX) | By: The Curious Analyst \n\n \n I reiterate Space Exploration...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1094",
+        "subject": "SPCX: SpaceX boosts Tesla Megapack purchases to $295M in Q2 to power AI buildout",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 06 Aug 2026 00:32:16 -0400",
+        "is_seen": false,
+        "snippet": "12:31 AM | Space Exploration Technologies Corp. (SPCX) | By: Arundhati Sarkar, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Harvesting 10%-Plus Yields From Our Income Farm...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1093",
+        "subject": "ServiceNow: Why The Latest Quarter Is An Opportunity To Buy",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 06 Aug 2026 00:08:02 -0400",
+        "is_seen": false,
+        "snippet": "ServiceNow: Why The Latest Quarter Is An Opportunity To Buy \n\n \n Aug 06, 2026 12:06 AM | ServiceNow, Inc.(NOW) | By: Louis Gerard \n\n \n ServiceNow remains a Strong Buy, with compelling growth, robust...",
+        "url": null,
+        "urls": []
+      }
+    ],
+    "retirement": null,
+    "health": null
+  }
+}
