@@ -1,0 +1,333 @@
+{
+  "date": "2026-08-07",
+  "weekday": "Friday",
+  "kind": "dfb",
+  "title": "Daily Financial Briefing",
+  "subtitle": "Mission Control · Market Intelligence · Daily",
+  "generatedAt": "2026-08-07T12:01:12.139024+00:00",
+  "confidence": "medium",
+  "zip": "63025",
+  "sourcesCount": 5,
+  "fetchers": {
+    "rss": {
+      "seekingalpha": {
+        "status": "ok",
+        "count": 30,
+        "elapsed_s": 0.11
+      },
+      "yahoo_finance": {
+        "status": "ok",
+        "count": 42,
+        "elapsed_s": 0.1
+      },
+      "cointelegraph": {
+        "status": "ok",
+        "count": 30,
+        "elapsed_s": 0.08
+      },
+      "google_news_ai": {
+        "status": "ok",
+        "count": 100,
+        "elapsed_s": 0.56
+      },
+      "google_news_mag7": {
+        "status": "ok",
+        "count": 100,
+        "elapsed_s": 0.52
+      }
+    },
+    "calendar": {
+      "status": "ok",
+      "eventCount": 0,
+      "note": "no events in 7-day window"
+    },
+    "mail": {
+      "status": "ok",
+      "count": 3
+    },
+    "newsletters": {
+      "status": "ok",
+      "folder": "Folders/DailyBriefs",
+      "count": 20,
+      "note": "Bridge IMAP via fetch_proton_folder.py"
+    },
+    "portfolio": {
+      "status": "ok",
+      "note": "IB TWS preflighted by build_dfb_json.py --check-deps"
+    }
+  },
+  "sections": {
+    "marketHeadlines": [
+      {
+        "headline": "Pre-market summary on your portfolio: Digital Energy Holdings",
+        "source": "seekingalpha.com",
+        "url": "",
+        "whyItMatters": "Macro outlook note — context for today's cross-asset positioning and a calendar check on whether the year's expected return bands are holding.",
+        "publishedAt": "Fri, 07 Aug 2026 07:59:02 -0400",
+        "snippet": "Pre-market Portfolio Digest * As of Fri, Aug 07, 2026 07:50 ET \n\n   \n \n Yesterday's Performance \n\n Top Gainers \n\n   \n \n \nCLOV:\n \n \n+12.56%\n \n \n \n \nSPCX:\n \n \n+6.14%\n \n \n \n \nMSFT:\n \n \n+2.54%\n \n \n \n Top..."
+      },
+      {
+        "headline": "SPCX: SpaceX: The Buy Case Still Rests On Extraordinary Assumptions (Rating Upgrade)",
+        "source": "seekingalpha.com",
+        "url": "",
+        "whyItMatters": "SPCX analyst action surfaced in curated inbox — verify against the live price tape before sizing.",
+        "publishedAt": "Fri, 07 Aug 2026 05:55:57 -0400",
+        "snippet": "SpaceX: The Buy Case Still Rests On Extraordinary Assumptions (Rating Upgrade) \n\n \n Aug 07, 2026 05:54 AM | Space Exploration Technologies Corp.(SPCX) | By: Prakhar Agarwal, CFA \n\n \n SpaceX remains..."
+      }
+    ],
+    "bitcoin": null,
+    "strategy": null,
+    "institutional": {
+      "etfLeagueTable": "Personalized portfolio envelope from seekingalpha.com: Pre-market summary on your portfolio: Digital Energy Holdings. Open the email for ticker-level pre-market detail.",
+      "blackrock": "Quiet day for BlackRock in the RSS window; no direct IBIT/spot-ETF flow headlines surfaced.",
+      "fidelity": "Quiet day for Fidelity in the RSS window; no direct FBTC/spot-ETF flow headlines surfaced.",
+      "regulatoryRadar": "BIS warned the AI investment surge is a flashpoint for systemic risk — debt-fueled capex could end in a 'bust'. Separately BIS flagged stablecoins risk fragmenting the global financial system. EU's EBA laid out a penalty framework for non-compliant MiCA issuers.",
+      "sovereign": "Galaxy cut its 2026 CLARITY Act odds to 50% as US Senate floor time narrows before the August recess; markets structure bill increasingly unlikely to clear this year.",
+      "tradfi": "SPCX analyst action via seekingalpha.com: SPCX: SpaceX: The Buy Case Still Rests On Extraordinary Assumptions (Rating Upgrade). Sourced from curated inbox; verify against the live broker tape and the relevant firm note before sizing."
+    },
+    "creatorIntel": {
+      "sentimentReading": "Bullish / active",
+      "sentimentNote": "Analyst-action signal from curated inbox: SPCX — all surfaced as TICKER-prefixed subject lines via SeekingAlpha Breaking News. Macro outlook envelopes today: 1 (see Today's Top Moves for headline-level coverage). Income/retirement-themed envelopes: SPCX.",
+      "videos": []
+    },
+    "aiRace": {
+      "weeklyMoves": [
+        {
+          "headline": "Making Sense Of The Current Labor Market",
+          "company": "Other",
+          "whyItMatters": "AI-infra signal from curated inbox (seekingalpha.com). Open the email for the full analyst note.",
+          "source": "seekingalpha.com",
+          "url": null,
+          "publishedAt": "Fri, 07 Aug 2026 07:37:24 -0400"
+        },
+        {
+          "headline": "SPCX: SpaceX: The Buy Case Still Rests On Extraordinary Assumptions (Rating Upgrade)",
+          "company": "SPCX",
+          "whyItMatters": "AI-infra signal from curated inbox (seekingalpha.com). Open the email for the full analyst note.",
+          "source": "seekingalpha.com",
+          "url": null,
+          "publishedAt": "Fri, 07 Aug 2026 05:55:57 -0400"
+        }
+      ],
+      "deepDiveCompany": "Google",
+      "deepDiveSummary": "Google rationing Meta's access to Gemini — echoed across multiple outlets overnight — is the most concrete read yet that frontier AI compute is a seller's market. Pair that with the twin $84.75B equity raise and the picture is consistent: 2026 capex is binding, not optional.",
+      "snapshot": {
+        "openai": "Quiet day — no major OpenAI move in RSS.",
+        "anthropic": "Quiet day — no major Anthropic move in RSS.",
+        "google": "Rationing Meta's Gemini; pricing $84.75B raise.",
+        "xai": "Grok 4.5 mentioned in overnight SA newsletter.",
+        "meta": "Locked 220MW Texas PPA; throttled by Google.",
+        "nvidia": "BioNeMo wins; custom-silicon narrative alive (AVGO TPU v9).",
+        "microsoft": "Down 23% YTD per one strategist — 'significantly overselling'."
+      }
+    },
+    "newsletters": [
+      {
+        "id": "1122",
+        "subject": "Forget Trump, Warsh Is The Real Threat",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 06 Aug 2026 15:58:23 -0400",
+        "is_seen": false,
+        "snippet": "Forget Trump, Warsh Is The Real Threat  \n\n Markets are misjudging risk by focusing on geopolitical noise; Kevin Warsh’s hawkish Fed stance is the real threat to equities. Warsh’s focus on balan......",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1121",
+        "subject": "SPCX: Greenlight's David Einhorn says SpaceX IPO may signal speculative market peak",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 06 Aug 2026 15:28:31 -0400",
+        "is_seen": false,
+        "snippet": "03:27 PM | Space Exploration Technologies Corp. (SPCX) | By: Rob Williams, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n DIVO: I'm Compounding This Tax-Free For Decades...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1120",
+        "subject": "The Buy-the-Dip Mindset Lives On",
+        "sender": "noresponse@email.interactivebrokers.com",
+        "date": "Thu, 06 Aug 2026 14:54:55 -0400",
+        "is_seen": false,
+        "snippet": "TRADERS' INSIGHT: \n\n \nYes, This Counts as Big “Buy the Dip” Action \n \n \n \n Among the most important of this month’s headlines are those that describe the poorly received earnings reports of key...",
+        "url": "https://gdcdyn.interactivebrokers.com/Universal/servlet/Registration_v2.formSampleView?formdb=4155",
+        "urls": [
+          "https://gdcdyn.interactivebrokers.com/Universal/servlet/Registration_v2.formSampleView?formdb=4155"
+        ]
+      },
+      {
+        "id": "1119",
+        "subject": "MSFT: SA Asks: After last Friday's sell-off, is Apple a buy, hold, or sell?",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 06 Aug 2026 13:31:20 -0400",
+        "is_seen": false,
+        "snippet": "01:30 PM | (MSFT) | By: Val Brickates Kennedy, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Rocket Lab: Strong Wins, Strong Buy \n \n \n Midday Need to Know: Warsh sticks to...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1118",
+        "subject": "Rocket Lab: Strong Wins, Strong Buy",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 06 Aug 2026 12:54:52 -0400",
+        "is_seen": false,
+        "snippet": "Top Trending Article\n \n \n \n \n \n \n \n   \n \n \n \nRocket Lab: Strong Wins, Strong Buy\n \n\n \nBy Dhierin Bechai\n \n \n \n \n \n   More Top Stock Ideas \n\n \n \n \n \n \n \n \n \n \n \n \n \n PayPal: I Won't Sell Any Shares...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1117",
+        "subject": "The 2 Most Misunderstood 10%+ Yielding Income Investments In The Market Today",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 06 Aug 2026 12:45:31 -0400",
+        "is_seen": false,
+        "snippet": "Dividend Ideas       \n \nTop Trending Article\n \n \n \n \n \n \n \n   \n \n \n \nThe 2 Most Misunderstood 10%+ Yielding Income Investments In The Market Today\n \n\n \nBy Samuel Smith\n \n \n \n \n \n   \n   More Top...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1116",
+        "subject": "SPCX: Alphabet sells more debt to fund AI ambitions",
+        "sender": "account@seekingalpha.com",
+        "date": "Thu, 06 Aug 2026 12:21:18 -0400",
+        "is_seen": false,
+        "snippet": "12:20 PM | (SPCX) | By: Amy Thielen, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Forget The Magnificent 7: Two Undervalued Dividends Built For A Different Market \n \n \n Wall...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1135",
+        "subject": "Pre-market summary on your portfolio: Digital Energy Holdings",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 07 Aug 2026 07:59:02 -0400",
+        "is_seen": false,
+        "snippet": "Pre-market Portfolio Digest * As of Fri, Aug 07, 2026 07:50 ET \n\n   \n \n Yesterday's Performance \n\n Top Gainers \n\n   \n \n \nCLOV:\n \n \n+12.56%\n \n \n \n \nSPCX:\n \n \n+6.14%\n \n \n \n \nMSFT:\n \n \n+2.54%\n \n \n \n Top...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1134",
+        "subject": "SK hynix Vs. Micron: The Memory Trade Rotates Into The Valuation Gap",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 07 Aug 2026 07:55:28 -0400",
+        "is_seen": false,
+        "snippet": "Download the Seeking Alpha App: \n\n \n \n Like ETF Ideas? Try our other newsletters  as well. \n\n This email was sent to you because you signed up to receive ETF Ideas. If you do not want to receive ETF...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1133",
+        "subject": "Energy Transfer Is Now Finally Firing On All Growth Cylinders",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 07 Aug 2026 07:55:10 -0400",
+        "is_seen": false,
+        "snippet": "Energy Investing     \n \nTop Trending Article\n \n \n \n \n \n \n \n   \n \n \n \nEnergy Transfer Is Now Finally Firing On All Growth Cylinders\n \n\n \nBy JR Research\n \n \n \n \n \n   \n \n More Top Analysis...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1132",
+        "subject": "MSFT: Mag 7 price strength needed to ‘slay’ cheap China compute threat - BofA",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 07 Aug 2026 07:55:04 -0400",
+        "is_seen": false,
+        "snippet": "07:53 AM | (MSFT) | By: SA Editor Kim Khan, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n SK hynix Vs. Micron: The Memory Trade Rotates Into The Valuation Gap \n \n \n Semiconductor...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1131",
+        "subject": "Ares Capital: Q2 Performance Bounces Back, But Some Stress Remains",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 07 Aug 2026 07:45:14 -0400",
+        "is_seen": false,
+        "snippet": "Stocks & Sectors \n   \n   \n \nTop Trending Article\n \n \n \n \n \n \n \n   \n \n \n \nAres Capital: Q2 Performance Bounces Back, But Some Stress Remains\n \n\n \nBy ADS Analytics\n \n \n \n \n \n   Trending Analysis...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1130",
+        "subject": "Sandisk: $2,000 Is The Bear Case (Rating Upgrade)",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 07 Aug 2026 07:44:07 -0400",
+        "is_seen": false,
+        "snippet": "Today's Featured Analysis\n \n \n \n \n \n \n \n   \n \n \n \nSandisk: $2,000 Is The Bear Case (Rating Upgrade)\n \n\n \nBy James Foord\n \n \n \n \n \n   More Trending Articles \n\n \n \n \n \n \n \n \n \n \n \n \n \n Michael Burry...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1129",
+        "subject": "MSFT: Take-Two backs its booking guidance with GTA 6 loaded for release",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 07 Aug 2026 07:43:26 -0400",
+        "is_seen": false,
+        "snippet": "07:42 AM | (MSFT) | By: SA Editor Clark Schultz, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Michael Burry Warns Of A 1987-Type Crash. Here's Why I Am Still Bullish \n \n \n Trade...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1128",
+        "subject": "Making Sense Of The Current Labor Market",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 07 Aug 2026 07:37:24 -0400",
+        "is_seen": false,
+        "snippet": "}\n \n \n \n \nUp for a challenge? Test your knowledge on the biggest events in the investing world over the past week. Take the latest Seeking Alpha News Quiz and see how you stack up against the...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1127",
+        "subject": "See what’s moving the markets this week",
+        "sender": "subscriptions@seekingalpha.com",
+        "date": "Fri, 07 Aug 2026 07:14:13 -0400",
+        "is_seen": false,
+        "snippet": "From breaking news to expert analysis, we break down the week’s biggest headlines that are driving uncertainty across the market. \n\n  \n\n Palantir's Sovereign AI Is Exactly What Bursts The AI Bubble...",
+        "url": "https://email-st.seekingalpha.com/oc/6a35795e733b67577001b49cry1n4.1glb/1b535f7a",
+        "urls": [
+          "https://email-st.seekingalpha.com/oc/6a35795e733b67577001b49cry1n4.1glb/1b535f7a"
+        ]
+      },
+      {
+        "id": "1126",
+        "subject": "SPCX: SpaceX: The Buy Case Still Rests On Extraordinary Assumptions (Rating Upgrade)",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 07 Aug 2026 05:55:57 -0400",
+        "is_seen": false,
+        "snippet": "SpaceX: The Buy Case Still Rests On Extraordinary Assumptions (Rating Upgrade) \n\n \n Aug 07, 2026 05:54 AM | Space Exploration Technologies Corp.(SPCX) | By: Prakhar Agarwal, CFA \n\n \n SpaceX remains...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1125",
+        "subject": "SPCX: SpaceX: The Bottom Is Likely In (Rating Upgrade)",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 07 Aug 2026 05:03:15 -0400",
+        "is_seen": false,
+        "snippet": "SpaceX: The Bottom Is Likely In (Rating Upgrade) \n\n \n Aug 07, 2026 05:01 AM | Space Exploration Technologies Corp.(SPCX) | By: The Asian Investor \n\n \n SpaceX delivered a strong Q2 earnings beat,...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1124",
+        "subject": "SPCX: SpaceX may be finding floor amid bullish options positioning- report",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 07 Aug 2026 03:57:11 -0400",
+        "is_seen": false,
+        "snippet": "03:55 AM | Space Exploration Technologies Corp. (SPCX) | By: Preeti Singh, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Sandisk: $2,000 Is The Bear Case (Rating Upgrade)...",
+        "url": null,
+        "urls": []
+      },
+      {
+        "id": "1123",
+        "subject": "SPCX: SpaceX's Starlink threat to mobile carriers is exaggerated, T-Mobile CEO says",
+        "sender": "account@seekingalpha.com",
+        "date": "Fri, 07 Aug 2026 00:38:16 -0400",
+        "is_seen": false,
+        "snippet": "12:37 AM | Space Exploration Technologies Corp. (SPCX) | By: Arundhati Sarkar, SA News Editor \n\n \n \n Read now >> \n\n   \n You may also like: \n\n \n \n Celestica Just Unloaded Bad News - Buy It \n \n \n 3...",
+        "url": null,
+        "urls": []
+      }
+    ],
+    "retirement": null,
+    "health": null
+  }
+}
